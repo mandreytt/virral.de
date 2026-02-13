@@ -79,7 +79,24 @@ section{padding:clamp(3.5rem,7vw,5.5rem) 0}
 .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--ac);animation:pulse 2s infinite}
 
 footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1px solid var(--bd)}
-@media(max-width:768px){.g3{grid-template-columns:1fr!important}.g4{grid-template-columns:repeat(2,1fr)!important}.g2{grid-template-columns:1fr!important}.vid-row{grid-template-columns:1fr!important;text-align:center!important}}
+.kpi-top{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.kpi-top-box{padding:1.4rem 1rem;background:var(--bg2);border-radius:var(--r);border:1px solid rgba(232,23,58,.12);text-align:center}
+.kpi-top-box .kpi-val{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-.03em}
+.kpi-top-box .kpi-label{font-size:.85rem;margin-top:.35rem;opacity:.65}
+.case-card{background:var(--bg2);border:1px solid rgba(232,23,58,.12);border-radius:var(--r);padding:2rem 2.2rem;margin-top:2rem}
+.case-inner{display:grid;grid-template-columns:200px 1fr;gap:2.2rem;align-items:start}
+.case-video{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.case-num{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ac);margin-bottom:.8rem}
+.case-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.8rem}
+.case-tag{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px}
+.case-tag-ac{border:1px solid rgba(232,23,58,.2);color:var(--ac);background:rgba(232,23,58,.06)}
+.case-tag-wh{border:1px solid var(--bd);color:#fff}
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem}
+.kpi-box{padding:.9rem .8rem;background:rgba(232,23,58,.04);border-radius:10px;text-align:center;border:1px solid rgba(232,23,58,.08)}
+.kpi-box .kv{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
+.kpi-box .kl{font-size:.7rem;opacity:.55;margin-top:.15rem}
+@media(max-width:768px){.g3{grid-template-columns:1fr!important}.g4{grid-template-columns:repeat(2,1fr)!important}.g2{grid-template-columns:1fr!important}.vid-row{grid-template-columns:1fr!important;text-align:center!important}.kpi-top{grid-template-columns:repeat(2,1fr)}.case-card{padding:1.4rem}.case-inner{grid-template-columns:1fr}.case-video{max-width:180px;margin:0 auto}.kpi-box .kv{font-size:1.1rem}.kpi-box{padding:.7rem .5rem}}
+@media(max-width:480px){.kpi-top{grid-template-columns:repeat(2,1fr);gap:.7rem}.kpi-top-box{padding:1rem .7rem}.kpi-top-box .kpi-val{font-size:1.6rem}.case-inner{gap:1.2rem}.case-card{padding:1rem}.kpi-row{gap:.5rem}}
 </style>
 </head>
 <body>
@@ -239,11 +256,11 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <h2 class="h2 rv">What we did for STRABAG.<br><span class="ac">What we'll do for Reflex.</span></h2>
 <p class="lead rv" style="max-width:550px;margin:.8rem auto 0">Same starting point: technical company, strong market position, zero digital visibility. 12 months later:</p>
 
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem" class="rv g4">
-<div><div style="font-size:clamp(2.2rem,4.5vw,3rem);font-weight:800">30M</div><div style="font-size:.9rem;margin-top:.2rem">organic views</div></div>
-<div><div style="font-size:clamp(2.2rem,4.5vw,3rem);font-weight:800">1M+</div><div style="font-size:.9rem;margin-top:.2rem">likes</div></div>
-<div><div style="font-size:clamp(2.2rem,4.5vw,3rem);font-weight:800">70+</div><div style="font-size:.9rem;margin-top:.2rem">videos produced</div></div>
-<div><div style="font-size:clamp(2.2rem,4.5vw,3rem);font-weight:800">€0</div><div style="font-size:.9rem;margin-top:.2rem">ad budget</div></div>
+<div class="rv kpi-top">
+<div class="kpi-top-box"><div class="kpi-val" style="color:var(--ac)">30M</div><div class="kpi-label">organic views</div></div>
+<div class="kpi-top-box"><div class="kpi-val">1M+</div><div class="kpi-label">likes</div></div>
+<div class="kpi-top-box"><div class="kpi-val">70+</div><div class="kpi-label">videos produced</div></div>
+<div class="kpi-top-box"><div class="kpi-val" style="color:var(--ac)">€0</div><div class="kpi-label">ad budget</div></div>
 </div>
 
 <!-- Lena Quote -->
@@ -258,58 +275,67 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 </div>
 
 <!-- Video 1: Viral Hit -->
-<div class="rv vid-row" style="display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:center;margin-top:3rem;text-align:left">
-<div style="border-radius:var(--r);overflow:hidden;background:var(--bg2);border:1px solid rgba(232,23,58,.12);box-shadow:0 15px 50px rgba(0,0,0,.4)"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/6FCamCBxAm?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
+<div class="rv case-card">
+<div class="case-inner">
+<div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/6FCamCBxAm?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
-<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem">
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid rgba(232,23,58,.2);color:var(--ac);background:rgba(232,23,58,.06)">Viral Hit</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">Reaction Format</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">TikTok + YouTube</span>
+<div class="case-num">01 — Viral Hit</div>
+<div class="case-tags">
+<span class="case-tag case-tag-ac">Viral Hit</span>
+<span class="case-tag case-tag-wh">Reaction Format</span>
+<span class="case-tag case-tag-wh">TikTok + YouTube</span>
 </div>
 <h3 class="h2" style="margin-bottom:.6rem">One video.<br><span class="ac">8 million views.</span></h3>
-<p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem;opacity:.85">Reaction to one of Germany's biggest streamers — Papaplatte. No ad budget. No paid partnership. Pure platform strategy.</p>
-<div style="display:flex;gap:1.2rem">
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">8M</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">views</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid #fff"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">600k</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">likes</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">€0</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">ad spend</div></div>
+<p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">Reaction to one of Germany's biggest streamers — Papaplatte. No ad budget. No paid partnership. Pure platform strategy.</p>
+<div class="kpi-row">
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">8M</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">600k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
+</div>
 </div>
 </div>
 </div>
 
-<!-- Video 2: Construction Edit (mirrored) -->
-<div class="rv vid-row" style="display:grid;grid-template-columns:1fr 220px;gap:2.5rem;align-items:center;margin-top:3rem;text-align:left">
+<!-- Video 2: Construction Edit -->
+<div class="rv case-card">
+<div class="case-inner">
+<div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/AsRdNYmYrX?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
-<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem">
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid rgba(232,23,58,.2);color:var(--ac);background:rgba(232,23,58,.06)">Construction Edit</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">Fan Community</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">Cinematic</span>
+<div class="case-num">02 — Construction Edit</div>
+<div class="case-tags">
+<span class="case-tag case-tag-ac">Construction Edit</span>
+<span class="case-tag case-tag-wh">Fan Community</span>
+<span class="case-tag case-tag-wh">Cinematic</span>
 </div>
 <h3 class="h2" style="margin-bottom:.6rem">Built for <span class="ac">Bau-Fans.</span></h3>
-<p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem;opacity:.85">High-energy construction edits that turn heavy machinery into content gold. Made for the community that loves everything about building — and grows STRABAG's audience far beyond HR.</p>
-<div style="display:flex;gap:1.2rem">
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">4.5M</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">views</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid #fff"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">320k</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">likes</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">€0</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">ad spend</div></div>
+<p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">High-energy construction edits that turn heavy machinery into content gold. Made for the community that loves everything about building — and grows STRABAG's audience far beyond HR.</p>
+<div class="kpi-row">
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">4.5M</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">320k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
 </div>
 </div>
-<div style="border-radius:var(--r);overflow:hidden;background:var(--bg2);border:1px solid rgba(232,23,58,.12);box-shadow:0 15px 50px rgba(0,0,0,.4)"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/AsRdNYmYrX?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
+</div>
 </div>
 
 <!-- Video 3: Real People -->
-<div class="rv vid-row" style="display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:center;margin-top:3rem;text-align:left">
-<div style="border-radius:var(--r);overflow:hidden;background:var(--bg2);border:1px solid rgba(232,23,58,.12);box-shadow:0 15px 50px rgba(0,0,0,.4)"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
+<div class="rv case-card">
+<div class="case-inner">
+<div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
-<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem">
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid rgba(232,23,58,.2);color:var(--ac);background:rgba(232,23,58,.06)">Employer Branding</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">Behind the Scenes</span>
-<span style="font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:100px;border:1px solid var(--bd);color:#fff">Recurring Format</span>
+<div class="case-num">03 — Employer Branding</div>
+<div class="case-tags">
+<span class="case-tag case-tag-ac">Employer Branding</span>
+<span class="case-tag case-tag-wh">Behind the Scenes</span>
+<span class="case-tag case-tag-wh">Recurring Format</span>
 </div>
 <h3 class="h2" style="margin-bottom:.6rem">Real people.<br><span class="ac">Real stories.</span></h3>
-<p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem;opacity:.85">Showing the people behind STRABAG — from construction sites to corporate offices. Recurring formats that build a community and make the brand feel human.</p>
-<div style="display:flex;gap:1.2rem">
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">2.3M</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">views</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid #fff"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">180k</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">likes</div></div>
-<div style="padding:.8rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--ac)"><div style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em">€0</div><div style="font-size:.75rem;opacity:.6;margin-top:.15rem">ad spend</div></div>
+<p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">Showing the people behind STRABAG — from construction sites to corporate offices. Recurring formats that build a community and make the brand feel human.</p>
+<div class="kpi-row">
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">2.3M</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">180k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
+</div>
 </div>
 </div>
 </div>

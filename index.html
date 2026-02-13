@@ -112,7 +112,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 .case-tag-wh{border:1px solid var(--bd);color:#fff}
 .kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem}
 .kpi-box{padding:.9rem .8rem;background:rgba(232,23,58,.04);border-radius:10px;text-align:center;border:1px solid rgba(232,23,58,.08)}
-.kpi-box .kv{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
+.kpi-box .kv{font-size:clamp(.85rem,2vw,1.1rem);font-weight:800;letter-spacing:-.02em}
 .kpi-box .kl{font-size:.7rem;opacity:.55;margin-top:.15rem}
 @media(max-width:768px){.g3{grid-template-columns:1fr!important}.g4{grid-template-columns:repeat(2,1fr)!important}.g2{grid-template-columns:1fr!important}.who-grid{grid-template-columns:1fr!important;text-align:center}.who-grid .tag{margin-left:auto;margin-right:auto}.who-grid .lead{margin-left:auto!important;margin-right:auto!important}.vid-row{grid-template-columns:1fr!important;text-align:center!important}.kpi-top{grid-template-columns:repeat(2,1fr)}.case-card{padding:1.4rem;text-align:center}.case-inner{grid-template-columns:1fr!important}.case-video{max-width:220px;margin:0 auto;width:100%}.case-inner-flip .case-video{order:-1}.case-inner-flip>div:first-child{order:1}.case-tags{justify-content:center}.case-num{text-align:center}.kpi-box .kv{font-size:1.1rem}.kpi-box{padding:.7rem .5rem}.kpi-row{justify-items:center}.rv{transform:translate3d(0,15px,0)}.rv-left{transform:translate3d(-15px,0,0)}.rv-right{transform:translate3d(15px,0,0)}.rv-scale{transform:scale3d(.96,.96,1)}.rv,.rv-left,.rv-right,.rv-scale{transition-duration:.5s}}
 @media(max-width:480px){.kpi-top{grid-template-columns:repeat(2,1fr);gap:.7rem}.kpi-top-box{padding:1rem .7rem}.kpi-top-box .kpi-val{font-size:1.6rem}.case-inner{gap:1.2rem!important}.case-card{padding:1rem}.kpi-row{gap:.5rem}.case-video{max-width:180px}}
@@ -321,8 +321,8 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <h3 class="h2" style="margin-bottom:.6rem">One video.<br><span class="ac">8 million views.</span></h3>
 <p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">Reaction to one of Germany's biggest streamers, Papaplatte. No ad budget. No paid partnership. Pure platform strategy.</p>
 <div class="kpi-row">
-<div class="kpi-box"><div class="kv" style="color:var(--ac)">8M</div><div class="kl">views</div></div>
-<div class="kpi-box"><div class="kv">600k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">8.000.000</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">600.000</div><div class="kl">likes</div></div>
 <div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
 </div>
 </div>
@@ -342,8 +342,8 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <h3 class="h2" style="margin-bottom:.6rem">Built for <span class="ac">Bau-Fans.</span></h3>
 <p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">High-energy construction edits that turn heavy machinery into content gold. Made for the community that loves everything about building, and grows STRABAG's audience far beyond HR.</p>
 <div class="kpi-row">
-<div class="kpi-box"><div class="kv" style="color:var(--ac)">4.5M</div><div class="kl">views</div></div>
-<div class="kpi-box"><div class="kv">320k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">4.500.000</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">320.000</div><div class="kl">likes</div></div>
 <div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
 </div>
 </div>
@@ -365,8 +365,8 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <h3 class="h2" style="margin-bottom:.6rem">Real people.<br><span class="ac">Real stories.</span></h3>
 <p style="font-size:1.05rem;line-height:1.7;margin-bottom:0;opacity:.85">Showing the people behind STRABAG, from construction sites to corporate offices. Recurring formats that build a community and make the brand feel human.</p>
 <div class="kpi-row">
-<div class="kpi-box"><div class="kv" style="color:var(--ac)">2.3M</div><div class="kl">views</div></div>
-<div class="kpi-box"><div class="kv">180k</div><div class="kl">likes</div></div>
+<div class="kpi-box"><div class="kv" style="color:var(--ac)">2.300.000</div><div class="kl">views</div></div>
+<div class="kpi-box"><div class="kv">180.000</div><div class="kl">likes</div></div>
 <div class="kpi-box"><div class="kv" style="color:var(--ac)">€0</div><div class="kl">ad spend</div></div>
 </div>
 </div>
@@ -397,21 +397,21 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <section id="offer" style="text-align:center"><div class="w">
 <div class="tag rv">The offer</div>
 <h2 class="h2 rv">40 videos/month for <span class="ac">Reflex.</span></h2>
-<p class="lead rv" style="max-width:500px;margin:.8rem auto 0">10 main video assets, each adapted and optimized for 4 platforms: TikTok, Instagram Reels, YouTube Shorts &amp; Snapchat.</p>
+<p class="lead rv" style="max-width:600px;margin:.8rem auto 0">We create 10 high-quality main video assets per month — each one fully scripted, professionally produced and individually adapted for 4 platforms: TikTok, Instagram Reels, YouTube Shorts &amp; Snapchat. That's 40 platform-native pieces of content, optimized for maximum reach and engagement.</p>
 
-<ul class="bl rv" style="max-width:550px;margin:2rem auto 0;font-size:1.05rem">
-<li>Strategy &amp; format development across all platforms</li>
-<li>10 main video assets with full scripts, adapted into 40 platform-native versions</li>
-<li>Regular on-site shoot days at Reflex</li>
-<li>Professional post-production with platform-specific adaptation</li>
-<li>Publishing &amp; optimization on TikTok, Instagram, YouTube, Snapchat</li>
-<li>Account management, nameclaiming &amp; verification</li>
-<li>Monthly performance reporting with recommendations</li>
+<ul class="bl rv" style="max-width:600px;margin:2rem auto 0;font-size:1.05rem">
+<li><strong>Strategy &amp; Format Development</strong> — We build a tailored content strategy for Reflex, identifying the right formats, hooks and trends for each platform to maximize organic growth.</li>
+<li><strong>10 Main Video Assets</strong> — Each month we produce 10 original videos, from scripting and storyboarding to final cut. Every asset is adapted into 4 platform-specific versions (40 total).</li>
+<li><strong>Regular On-Site Shoot Days</strong> — Our production team comes directly to your Reflex locations. We capture authentic, high-energy content that resonates with your audience.</li>
+<li><strong>Professional Post-Production</strong> — Full editing, color grading, motion graphics, sound design and subtitles. Each video is fine-tuned for the specific requirements and best practices of every platform.</li>
+<li><strong>Publishing &amp; Optimization</strong> — We handle the entire distribution across TikTok, Instagram, YouTube and Snapchat — including optimal posting times, hashtag strategies and SEO-optimized descriptions.</li>
+<li><strong>Account Management</strong> — Complete setup and management of all social media accounts, including nameclaiming, verification, community management and direct audience engagement.</li>
+<li><strong>Monthly Performance Reporting</strong> — Detailed analytics and insights on reach, engagement and growth across all platforms. Including data-driven recommendations for the next month's content.</li>
 </ul>
 
 <div class="price rv">
 <div style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--ac);position:relative;z-index:2">€38,000 / month</div>
-<div style="font-size:.95rem;margin-top:.3rem;position:relative;z-index:2;opacity:.8">Strategy · Production · Distribution · Analysis<br>Paid media budget not included.</div>
+<div style="font-size:.95rem;margin-top:.3rem;position:relative;z-index:2;opacity:.8">Strategy · Production · Distribution · Analysis<br>Paid media budget not included. Minimum contract period: 6 months.</div>
 </div>
 </div></section>
 

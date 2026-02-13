@@ -17,11 +17,23 @@ nav .w{display:flex;justify-content:space-between;align-items:center}
 @media(max-width:768px){.nk{display:none}}
 
 /* Animations */
-.rv{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s}.rv.v{opacity:1;transform:none}
-@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.rv.v{opacity:1;transform:none}
+.rv-left{opacity:0;transform:translateX(-40px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.rv-left.v{opacity:1;transform:none}
+.rv-right{opacity:0;transform:translateX(40px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.rv-right.v{opacity:1;transform:none}
+.rv-scale{opacity:0;transform:scale(.92);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.rv-scale.v{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}
+.parallax{transition:transform .1s linear}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 @keyframes glow{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.15)}}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes count-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pill{transition:transform .3s ease,box-shadow .3s ease}.pill:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(232,23,58,.15)}
+.case-card{transition:transform .3s ease,box-shadow .3s ease}.case-card:hover{transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.kpi-top-box{transition:transform .3s ease,border-color .3s ease}.kpi-top-box:hover{transform:translateY(-3px);border-color:var(--ac)}
+.btn{transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-2px)}
+.tc{transition:transform .3s ease,box-shadow .3s ease}.tc:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
 
 /* Type */
 h1,h2,h3{font-weight:700;letter-spacing:-.025em;line-height:1.1}
@@ -95,8 +107,8 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 .kpi-box{padding:.9rem .8rem;background:rgba(232,23,58,.04);border-radius:10px;text-align:center;border:1px solid rgba(232,23,58,.08)}
 .kpi-box .kv{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
 .kpi-box .kl{font-size:.7rem;opacity:.55;margin-top:.15rem}
-@media(max-width:768px){.g3{grid-template-columns:1fr!important}.g4{grid-template-columns:repeat(2,1fr)!important}.g2{grid-template-columns:1fr!important}.vid-row{grid-template-columns:1fr!important;text-align:center!important}.kpi-top{grid-template-columns:repeat(2,1fr)}.case-card{padding:1.4rem}.case-inner{grid-template-columns:1fr}.case-video{max-width:180px;margin:0 auto}.kpi-box .kv{font-size:1.1rem}.kpi-box{padding:.7rem .5rem}}
-@media(max-width:480px){.kpi-top{grid-template-columns:repeat(2,1fr);gap:.7rem}.kpi-top-box{padding:1rem .7rem}.kpi-top-box .kpi-val{font-size:1.6rem}.case-inner{gap:1.2rem}.case-card{padding:1rem}.kpi-row{gap:.5rem}}
+@media(max-width:768px){.g3{grid-template-columns:1fr!important}.g4{grid-template-columns:repeat(2,1fr)!important}.g2{grid-template-columns:1fr!important}.vid-row{grid-template-columns:1fr!important;text-align:center!important}.kpi-top{grid-template-columns:repeat(2,1fr)}.case-card{padding:1.4rem;text-align:center}.case-inner{grid-template-columns:1fr!important}.case-video{max-width:220px;margin:0 auto;width:100%}.kpi-box .kv{font-size:1.1rem}.kpi-box{padding:.7rem .5rem}.kpi-row{justify-items:center}}
+@media(max-width:480px){.kpi-top{grid-template-columns:repeat(2,1fr);gap:.7rem}.kpi-top-box{padding:1rem .7rem}.kpi-top-box .kpi-val{font-size:1.6rem}.case-inner{gap:1.2rem!important}.case-card{padding:1rem}.kpi-row{gap:.5rem}.case-video{max-width:180px}}
 </style>
 </head>
 <body>
@@ -110,7 +122,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <section class="hero"><div class="w" style="display:flex;flex-direction:column;align-items:center">
 <div class="badge" style="opacity:0;animation:up .5s ease .2s forwards"><span class="dot"></span>Strategic Proposal</div>
 <h1 class="h1" style="opacity:0;animation:up .5s ease .3s forwards">Building the <span class="ac">Reflex</span> brand<br>in a new fashion.</h1>
-<p class="lead" style="max-width:580px;margin:1.3rem auto 2rem;opacity:0;animation:up .5s ease .4s forwards">Repositioning Reflex Winkelmann as a corporate, employer &amp; product brand through vertical video — produced, posted &amp; optimized across TikTok, Instagram, YouTube &amp; Snapchat.</p>
+<p class="lead" style="max-width:580px;margin:1.3rem auto 2rem;opacity:0;animation:up .5s ease .4s forwards">Repositioning Reflex Winkelmann as a corporate, employer &amp; product brand on social media — strategy, content &amp; community across TikTok, Instagram, YouTube &amp; Snapchat.</p>
 <div style="display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;opacity:0;animation:up .5s ease .5s forwards"><a href="#offer" class="btn bp">See the offer →</a><a href="#cta" class="btn bo">Next steps</a></div>
 </div></section>
 
@@ -120,9 +132,9 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <section id="who" style="text-align:center"><div class="w">
 <div class="tag rv">Who we are</div>
 <h2 class="h2 rv">This is <span class="ac">Virral.</span></h2>
-<p class="lead rv" style="max-width:600px;margin:.8rem auto 0">Vertical-video agency founded by creators who built millions of followers. We turned that into a system that works for industrial brands.</p>
+<p class="lead rv" style="max-width:600px;margin:.8rem auto 0">Social media powerhouse founded by creators who built millions of followers. We turn reach into results — for the biggest brands in the game.</p>
 
-<div class="rv" style="margin-top:2.5rem;border-radius:var(--r);overflow:hidden;border:1px solid rgba(232,23,58,.12)">
+<div class="rv-scale" style="margin-top:2.5rem;max-width:600px;margin-left:auto;margin-right:auto;border-radius:var(--r);overflow:hidden;border:1px solid rgba(232,23,58,.12);box-shadow:0 15px 50px rgba(0,0,0,.3)">
 <img src="team.jpg" alt="Virral Team" style="width:100%;display:block"/>
 </div>
 
@@ -150,10 +162,10 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <div class="tag rv">The setup</div>
 <h3 class="h2 rv" style="margin-bottom:.5rem">Our plan for <span class="ac">Reflex.</span></h3>
 <p class="lead rv" style="max-width:550px;margin:.8rem auto 2rem">This is the proven system we'll deploy for Reflex — adapted from 50+ brand partnerships.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="rv g3">
-<div class="pill"><div class="pill-icon">🎬</div><h3>40 videos/month</h3><p style="font-size:.9rem;line-height:1.55">10 main assets, adapted &amp; optimized for each of the 4 platforms.</p></div>
-<div class="pill"><div class="pill-icon">📱</div><h3>4 platforms</h3><p style="font-size:.9rem;line-height:1.55">TikTok, Instagram Reels, YouTube Shorts, Snapchat.</p></div>
-<div class="pill"><div class="pill-icon">⚡</div><h3>Full service</h3><p style="font-size:.9rem;line-height:1.55">Strategy → Production → Distribution → Reporting.</p></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="g3">
+<div class="rv rv-d1 pill"><div class="pill-icon">🎬</div><h3>40 videos/month</h3><p style="font-size:.9rem;line-height:1.55">10 main assets, adapted &amp; optimized for each of the 4 platforms.</p></div>
+<div class="rv rv-d2 pill"><div class="pill-icon">📱</div><h3>4 platforms</h3><p style="font-size:.9rem;line-height:1.55">TikTok, Instagram Reels, YouTube Shorts, Snapchat.</p></div>
+<div class="rv rv-d3 pill"><div class="pill-icon">⚡</div><h3>Full service</h3><p style="font-size:.9rem;line-height:1.55">Strategy → Production → Distribution → Reporting.</p></div>
 </div>
 </div>
 
@@ -267,11 +279,11 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <h2 class="h2 rv">What we did for STRABAG.<br><span class="ac">What we'll do for Reflex.</span></h2>
 <p class="lead rv" style="max-width:550px;margin:.8rem auto 0">Same starting point: technical company, strong market position, zero digital visibility. 12 months later:</p>
 
-<div class="rv kpi-top">
-<div class="kpi-top-box"><div class="kpi-val" style="color:var(--ac)">30M</div><div class="kpi-label">organic views</div></div>
-<div class="kpi-top-box"><div class="kpi-val">1M+</div><div class="kpi-label">likes</div></div>
-<div class="kpi-top-box"><div class="kpi-val">70+</div><div class="kpi-label">videos produced</div></div>
-<div class="kpi-top-box"><div class="kpi-val" style="color:var(--ac)">€0</div><div class="kpi-label">ad budget</div></div>
+<div class="kpi-top">
+<div class="rv rv-d1 kpi-top-box"><div class="kpi-val" style="color:var(--ac)">30M</div><div class="kpi-label">organic views</div></div>
+<div class="rv rv-d2 kpi-top-box"><div class="kpi-val">1M+</div><div class="kpi-label">likes</div></div>
+<div class="rv rv-d3 kpi-top-box"><div class="kpi-val">70+</div><div class="kpi-label">videos produced</div></div>
+<div class="rv rv-d4 kpi-top-box"><div class="kpi-val" style="color:var(--ac)">€0</div><div class="kpi-label">ad budget</div></div>
 </div>
 
 <!-- Lena Quote -->
@@ -286,7 +298,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 </div>
 
 <!-- Video 1: Viral Hit -->
-<div class="rv case-card">
+<div class="rv-left case-card">
 <div class="case-inner">
 <div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/6FCamCBxAm?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
@@ -308,7 +320,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 </div>
 
 <!-- Video 2: Construction Edit -->
-<div class="rv case-card">
+<div class="rv-right case-card">
 <div class="case-inner">
 <div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/AsRdNYmYrX?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
@@ -330,7 +342,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 </div>
 
 <!-- Video 3: Real People -->
-<div class="rv case-card">
+<div class="rv-left case-card">
 <div class="case-inner">
 <div class="case-video"><div style="aspect-ratio:9/16;position:relative"><iframe src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23E8173A&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen allow="autoplay;fullscreen"></iframe></div></div>
 <div>
@@ -352,7 +364,7 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 </div>
 
 <!-- Screenshots Gallery -->
-<div class="rv" style="margin-top:3.5rem">
+<div class="rv-scale" style="margin-top:3.5rem">
 <h3 class="h3" style="text-align:center;margin-bottom:.5rem">The results speak <span class="ac">for themselves.</span></h3>
 <p style="text-align:center;font-size:.95rem;opacity:.7;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">Real analytics from STRABAG's TikTok and YouTube channels — built and managed by Virral.</p>
 
@@ -436,9 +448,24 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <footer><p>© 2025 Virral</p></footer>
 
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.rv').forEach(function(el){o.observe(el)});
+/* Reveal on scroll — supports .rv, .rv-left, .rv-right, .rv-scale */
+var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(function(el){o.observe(el)});
+
+/* Smooth anchor scroll */
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id==='#')return;var t=document.querySelector(id);if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-70,behavior:'smooth'})}})});
+
+/* Animated counter for KPI values */
+var co=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){var el=entry.target;var text=el.textContent;var num=parseFloat(text.replace(/[^0-9.]/g,''));if(isNaN(num))return;var suffix=text.replace(/[0-9.]/g,'');var dur=1200;var start=performance.now();var startVal=0;function step(now){var p=Math.min((now-start)/dur,1);p=1-Math.pow(1-p,3);var cur=startVal+p*(num-startVal);if(num>=1)cur=Math.round(cur);else cur=cur.toFixed(1);el.textContent=cur+suffix;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step);co.unobserve(el)}})},{threshold:.3});
+document.querySelectorAll('.kpi-val,.kv').forEach(function(el){co.observe(el)});
+
+/* Parallax on scroll for hero */
+var hero=document.querySelector('.hero');
+if(hero){window.addEventListener('scroll',function(){var s=window.scrollY;if(s<window.innerHeight){hero.style.transform='translateY('+s*0.3+'px)';hero.style.opacity=1-s/(window.innerHeight*1.2)}},{passive:true})}
+
+/* Nav shrink on scroll */
+var nav=document.querySelector('nav');
+if(nav){window.addEventListener('scroll',function(){if(window.scrollY>50){nav.style.padding='.4rem 0';nav.style.borderBottomColor='rgba(232,23,58,.15)'}else{nav.style.padding='.65rem 0';nav.style.borderBottomColor='var(--bd)'}},{passive:true})}
 </script>
 </body>
 </html>

@@ -78,8 +78,7 @@ section{padding:clamp(3.5rem,7vw,5.5rem) 0;overflow:hidden}
 .vid{max-width:300px;margin:0 auto;border-radius:var(--r);overflow:hidden;background:var(--bg2);border:1px solid rgba(232,23,58,.12);box-shadow:0 15px 50px rgba(0,0,0,.4)}
 
 /* Price */
-.price{background:var(--bg2);border:2px solid var(--ac);border-radius:var(--r);padding:2.5rem;text-align:center;max-width:480px;margin:2rem auto;position:relative;overflow:hidden}
-.price::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,23,58,.04),transparent 70%);pointer-events:none}
+.price{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:2.2rem;text-align:center;max-width:480px;margin:2rem auto;position:relative;overflow:hidden}
 
 /* CTA */
 .cta{text-align:center;position:relative;overflow:hidden}.cta::before{content:'';position:absolute;top:50%;left:50%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,23,58,.04),transparent 60%);transform:translate(-50%,-50%);animation:glow 6s ease-in-out infinite}
@@ -396,21 +395,58 @@ footer{text-align:center;padding:1.2rem;font-size:.7rem;opacity:.3;border-top:1p
 <section id="offer" style="text-align:center"><div class="w">
 <div class="tag rv">The offer</div>
 <h2 class="h2 rv">40 videos/month for <span class="ac">Reflex.</span></h2>
-<p class="lead rv" style="max-width:600px;margin:.8rem auto 0">We create 10 high-quality main video assets per month — each one fully scripted, professionally produced and individually adapted for 4 platforms: TikTok, Instagram Reels, YouTube Shorts &amp; Snapchat. That's 40 platform-native pieces of content, optimized for maximum reach and engagement.</p>
+<p class="lead rv" style="max-width:640px;margin:.8rem auto 0">10 high-quality main video assets per month, fully scripted and professionally produced. Each asset individually adapted for TikTok, Instagram Reels, YouTube Shorts and Snapchat. 40 platform-native pieces of content, optimized for reach and engagement.</p>
 
-<ul class="bl rv" style="max-width:600px;margin:2rem auto 0;font-size:1.05rem">
-<li><strong>Strategy &amp; Format Development</strong> — We build a tailored content strategy for Reflex, identifying the right formats, hooks and trends for each platform to maximize organic growth.</li>
-<li><strong>10 Main Video Assets</strong> — Each month we produce 10 original videos, from scripting and storyboarding to final cut. Every asset is adapted into 4 platform-specific versions (40 total).</li>
-<li><strong>Regular On-Site Shoot Days</strong> — Our production team comes directly to your Reflex locations. We capture authentic, high-energy content that resonates with your audience.</li>
-<li><strong>Professional Post-Production</strong> — Full editing, color grading, motion graphics, sound design and subtitles. Each video is fine-tuned for the specific requirements and best practices of every platform.</li>
-<li><strong>Publishing &amp; Optimization</strong> — We handle the entire distribution across TikTok, Instagram, YouTube and Snapchat — including optimal posting times, hashtag strategies and SEO-optimized descriptions.</li>
-<li><strong>Account Management</strong> — Complete setup and management of all social media accounts, including nameclaiming, verification, community management and direct audience engagement.</li>
-<li><strong>Monthly Performance Reporting</strong> — Detailed analytics and insights on reach, engagement and growth across all platforms. Including data-driven recommendations for the next month's content.</li>
-</ul>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;text-align:left" class="rv g3">
 
-<div class="price rv">
-<div style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--ac);position:relative;z-index:2">€38,000 / month</div>
-<div style="font-size:.95rem;margin-top:.3rem;position:relative;z-index:2;opacity:.8">Strategy · Production · Distribution · Analysis<br>Paid media budget not included. Minimum contract period: 6 months.</div>
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">01</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">Strategy &amp; Formats</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">Tailored content strategy for Reflex. We identify the right formats, hooks and trends for each platform to drive organic growth.</p>
+</div>
+
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">02</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">10 Video Assets</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">10 original videos per month, from scripting to final cut. Every asset adapted into 4 platform-specific versions (40 total).</p>
+</div>
+
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">03</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">On-Site Production</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">Our team comes directly to your locations. Authentic, high-energy content that connects with your audience.</p>
+</div>
+
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">04</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">Post-Production</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">Editing, color grading, motion graphics, sound design and subtitles. Fine-tuned for the requirements of every platform.</p>
+</div>
+
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">05</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">Publishing &amp; Optimization</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">Full distribution across all platforms. Optimal posting times, hashtag strategies and SEO-optimized descriptions included.</p>
+</div>
+
+<div style="padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2)">
+<div style="font-size:1.3rem;margin-bottom:.5rem">06</div>
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:.5rem">Account Management</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7">Setup and management of all social media accounts. Nameclaiming, verification, community management and audience engagement.</p>
+</div>
+
+</div>
+
+<div style="margin-top:2.5rem;padding:1.5rem;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg2);max-width:640px;margin-left:auto;margin-right:auto;text-align:left;display:flex;align-items:center;gap:1.2rem" class="rv">
+<div style="font-size:1.3rem">07</div>
+<div><h4 style="font-size:1rem;font-weight:700;margin-bottom:.3rem">Monthly Performance Reporting</h4>
+<p style="font-size:.88rem;line-height:1.6;opacity:.7;margin:0">Detailed analytics on reach, engagement and growth across all platforms. Data-driven recommendations for continuous improvement.</p></div>
+</div>
+
+<div class="price rv" style="margin-top:2.5rem">
+<div style="font-size:clamp(2rem,4vw,2.8rem);font-weight:800;position:relative;z-index:2">€38,000<span style="font-size:.5em;font-weight:500;opacity:.6"> / month</span></div>
+<div style="font-size:.9rem;margin-top:.5rem;position:relative;z-index:2;opacity:.6">Strategy · Production · Distribution · Analysis</div>
+<div style="font-size:.82rem;margin-top:.3rem;position:relative;z-index:2;opacity:.45">Paid media budget not included. Minimum contract period: 6 months.</div>
 </div>
 </div></section>
 

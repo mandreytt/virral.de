@@ -351,7 +351,7 @@ h2 span{color:var(--a)}
 .cc2-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
 .cc2-stats span{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.85)}
 .cc2-brands{font-size:.7rem;color:var(--w3);font-weight:500}
-@media(max-width:768px){.cg2{grid-template-columns:1fr}.cc2{aspect-ratio:4/5}}
+@media(max-width:768px){.cc2{aspect-ratio:4/5}}
 
 
 
@@ -673,15 +673,13 @@ h2 span{color:var(--a)}
   .cx-tags{gap:4px!important;flex-wrap:wrap}
   .cx-tag{font-size:.55rem!important;padding:3px 7px!important}
   
-  /* FIX 10: Creator cards grid */
-  .cg2{grid-template-columns:1fr 1fr!important;gap:12px!important}
-  .cc2{aspect-ratio:3/4}
+  /* FIX 10: Creator cards grid - slider handles mobile layout */
 }
 
 @media(max-width:480px){
   .cx-phone{width:75px!important;height:130px!important}
   .cx-videos{gap:6px!important}
-  .cg2{grid-template-columns:1fr!important;max-width:280px;margin:0 auto}
+  .cg2{max-width:100%!important}
   .cx-content-card{padding:12px!important}
   .cx-kpis{gap:8px!important}
   .cx-kv{font-size:.8rem!important}
@@ -725,10 +723,65 @@ h2 span{color:var(--a)}
 @media(max-width:768px){.d-desk{display:none}.d-mob{display:inline}}
 
 
-/* FIX: Creator cards mobile - full width, proper sizing */
+/* FIX: Creator cards mobile - horizontal swipe slider */
+.cc2-cta-slide{display:none}
+.cg2-dots{display:none}
 @media(max-width:768px){
-  .cg2{grid-template-columns:1fr!important;max-width:100%!important;gap:16px!important;margin:0 auto!important}
-  .cc2{aspect-ratio:4/5!important}
+  .cg2{
+    display:flex!important;
+    overflow-x:auto!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    gap:0!important;
+    max-width:100%!important;
+    margin:0 -20px!important;
+    padding:0 20px!important;
+    scrollbar-width:none!important;
+    scroll-padding:0 20px!important;
+  }
+  .cg2::-webkit-scrollbar{display:none}
+  .cg2 > .cc2,
+  .cg2 > .cc2-cta-slide{
+    flex:0 0 calc(100vw - 40px)!important;
+    scroll-snap-align:center!important;
+    aspect-ratio:4/5!important;
+    max-width:none!important;
+    border-radius:var(--r2)!important;
+  }
+  .cc2-cta-slide{
+    display:flex!important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(135deg,rgba(254,44,85,.1),rgba(254,44,85,.03));
+    border:1px solid rgba(254,44,85,.2);
+    border-radius:var(--r2);
+    padding:32px 28px;
+    gap:16px;
+  }
+  .cc2-cta-slide .cta-icon{
+    width:64px;height:64px;border-radius:50%;
+    background:rgba(254,44,85,.12);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:8px;
+  }
+  .cc2-cta-slide .cta-icon svg{width:28px;height:28px;stroke:var(--a);fill:none;stroke-width:2}
+  .cc2-cta-slide h4{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
+  .cc2-cta-slide p{font-size:.82rem;color:var(--w2);line-height:1.6;max-width:280px}
+  .cg2-dots{
+    display:flex!important;
+    justify-content:center;
+    gap:8px;
+    margin-top:20px;
+  }
+  .cg2-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:rgba(255,255,255,.15);
+    transition:all .3s;
+    border:none;padding:0;cursor:pointer;
+  }
+  .cg2-dot.active{background:var(--a);transform:scale(1.2)}
   .cc2-overlay{padding:16px!important}
   .cc2-name{font-size:1.2rem!important}
   .cc2-role{font-size:.72rem!important}
@@ -1074,6 +1127,22 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 </div>
 </div>
 
+<!-- 4th slide: CTA card (mobile only) -->
+<div class="cc2-cta-slide">
+<div class="cta-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg></div>
+<h4>Dein Creator-Match wartet.</h4>
+<p>1.000+ exklusive Creator von Micro bis Millionen-Reichweite. Wir finden die perfekte Besetzung.</p>
+<a href="#contact" class="bp">Creator anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+
+</div>
+
+<!-- Dot indicators (mobile only) -->
+<div class="cg2-dots">
+<button class="cg2-dot active" data-idx="0"></button>
+<button class="cg2-dot" data-idx="1"></button>
+<button class="cg2-dot" data-idx="2"></button>
+<button class="cg2-dot" data-idx="3"></button>
 </div>
 
 <div class="cg-cta" style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:32px 40px;margin-top:32px;background:linear-gradient(135deg,rgba(254,44,85,.08),rgba(254,44,85,.02));border:1px solid rgba(254,44,85,.15);border-radius:var(--r2)">
@@ -1434,5 +1503,29 @@ document.addEventListener('DOMContentLoaded',function(){
     iframes.forEach(function(iframe){iframe.src=iframe.getAttribute('data-src');iframe.removeAttribute('data-src')});
   }
 });
+</script>
+<script>
+(function(){
+  var slider=document.querySelector('.cg2');
+  var dots=document.querySelectorAll('.cg2-dot');
+  if(!slider||!dots.length)return;
+  function getSlides(){return slider.querySelectorAll('.cc2,.cc2-cta-slide')}
+  function updateDots(){
+    var slides=getSlides();
+    var scrollLeft=slider.scrollLeft;
+    var slideWidth=slides[0].offsetWidth;
+    var idx=Math.round(scrollLeft/slideWidth);
+    idx=Math.max(0,Math.min(idx,dots.length-1));
+    dots.forEach(function(d,i){d.classList.toggle('active',i===idx)});
+  }
+  slider.addEventListener('scroll',updateDots,{passive:true});
+  dots.forEach(function(dot){
+    dot.addEventListener('click',function(){
+      var idx=parseInt(dot.dataset.idx);
+      var slides=getSlides();
+      if(slides[idx]){slides[idx].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}
+    });
+  });
+})();
 </script>
 </body></html>

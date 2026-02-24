@@ -22,9 +22,9 @@
 .cx-photo .cx-sub{font-size:.62rem!important}
 .cx-photo .cx-tag{font-size:.6rem!important;padding:4px 10px!important}
 .cx-photo .cx-tags{margin-bottom:14px!important}
-.cx-stack{gap:140px!important}
-.cx-wrap{padding-top:56px!important}
-.cx-logo{top:0!important;transform:translate(-50%,0)!important}
+.cx-stack{gap:220px!important}
+.cx-wrap{padding-top:72px!important}
+.cx-logo{top:4px!important;transform:translate(-50%,0)!important}
 }
 
 /* ========== Background Gradient Glows ========== */

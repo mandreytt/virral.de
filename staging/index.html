@@ -566,22 +566,36 @@ if(nt&&navMob){
 function closeNav(){navMob.classList.remove('open');document.body.style.overflow=''}
 </script>
 <script>
-/* Performance: Click-to-load iframes — no iframe loaded until user clicks */
+/* Lazy-load vidzflow iframes via IntersectionObserver — thumbnail loads when visible, video only on play */
 document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('iframe[data-src]').forEach(function(iframe){
-    var parent=iframe.parentElement;
-    if(!parent)return;
-    parent.style.position=parent.style.position||'relative';
-    var overlay=document.createElement('div');
-    overlay.className='vf-play';
-    parent.appendChild(overlay);
-    overlay.addEventListener('click',function(e){
-      e.stopPropagation();
-      iframe.src=iframe.getAttribute('data-src');
-      iframe.removeAttribute('data-src');
-      overlay.classList.add('loaded');
-    });
+  var iframes=document.querySelectorAll('iframe[data-src]');
+  iframes.forEach(function(iframe){
+    var src=iframe.dataset.src||'';
+    var needsOverlay=src.indexOf('ctp=true')!==-1;
+    if(needsOverlay){
+      var parent=iframe.parentElement;
+      if(!parent)return;
+      parent.style.position=parent.style.position||'relative';
+      var overlay=document.createElement('div');
+      overlay.className='vf-play';
+      parent.appendChild(overlay);
+    }
   });
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      var iframe=entry.target;
+      if(!iframe.dataset.src)return;
+      iframe.src=iframe.dataset.src;
+      delete iframe.dataset.src;
+      iframe.addEventListener('load',function(){
+        var ov=iframe.parentElement&&iframe.parentElement.querySelector('.vf-play');
+        if(ov)setTimeout(function(){ov.classList.add('loaded')},400);
+      });
+      observer.unobserve(iframe);
+    });
+  },{rootMargin:'300px'});
+  iframes.forEach(function(iframe){observer.observe(iframe)});
 });
 </script>
 <script>

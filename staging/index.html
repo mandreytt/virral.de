@@ -623,4 +623,41 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 })();
 </script>
+<script>
+/* Scroll reveal animations */
+(function(){
+  var items=[
+    {s:'.sh',c:'rv'},{s:'.sc',c:'rv'},{s:'.tc',c:'rv'},
+    {s:'.cc',c:'rv'},{s:'.cc2',c:'rv-s'},{s:'.cx-wrap',c:'rv'},
+    {s:'.pc',c:'rv'},{s:'.award-inner',c:'rv-s'},
+    {s:'.bts-g',c:'rv'},{s:'.lc',c:'rv-s'},
+    {s:'.sg',c:'rv'},{s:'.hero-grid',c:'rv'},
+    {s:'.cx-card',c:'rv'},{s:'.case',c:'rv'},
+    {s:'.svc-cta-bar',c:'rv'},{s:'.cg-cta',c:'rv'},
+    {s:'.hero-float',c:'rv-s'},{s:'.trust .sg .si',c:'rv'}
+  ];
+  /* staggered children */
+  var stagger=['.sc','.tc','.cc','.cc2','.pc','.si'];
+  items.forEach(function(item){
+    document.querySelectorAll(item.s).forEach(function(el){
+      el.classList.add(item.c);
+    });
+  });
+  /* Add stagger delays */
+  stagger.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el,i){
+      var d=i%6;if(d>0)el.classList.add('rvd'+Math.min(d,5));
+    });
+  });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('rvv');
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv,.rv-s,.rv-l,.rv-r').forEach(function(el){obs.observe(el)});
+})();
+</script>
 </body></html>

@@ -27,6 +27,10 @@
 .cx-logo{top:4px!important;transform:translate(-50%,0)!important}
 }
 
+/* ========== Card Spacing Fix (all viewports) ========== */
+.cx-stack{gap:160px!important}
+.cx-wrap{padding-top:80px!important}
+
 /* ========== Background Gradient Glows ========== */
 .hero::after{content:'';position:absolute;top:5%;right:-12%;width:700px;height:700px;background:radial-gradient(circle,rgba(254,44,85,.07) 0%,rgba(139,92,246,.03) 40%,transparent 70%);pointer-events:none;z-index:0;filter:blur(80px)}
 .svc::before{content:'';position:absolute;top:-15%;left:-8%;width:600px;height:500px;background:radial-gradient(circle,rgba(254,44,85,.05) 0%,transparent 70%);pointer-events:none;z-index:0;filter:blur(90px)}

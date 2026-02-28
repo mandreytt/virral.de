@@ -27,6 +27,13 @@
 .cx-logo{top:4px!important;transform:translate(-50%,0)!important}
 }
 
+/* ========== Process Staircase ========== */
+.prc{align-items:end!important}
+.pc:nth-child(1){min-height:190px}
+.pc:nth-child(2){min-height:230px}
+.pc:nth-child(3){min-height:270px}
+.pc:nth-child(4){min-height:310px}
+
 /* ========== Card Spacing Fix (all viewports) ========== */
 .cx-stack{display:flex!important;flex-direction:column!important;gap:100px!important}
 .cx-wrap{padding-top:50px!important;position:relative!important}
@@ -84,4 +91,5 @@
 .cx-logo{position:absolute!important;top:18px!important;left:50%!important;transform:translate(-50%,0)!important;width:60px!important;height:60px!important;border-radius:14px!important;z-index:5!important}
 .cx-content-card{padding-top:44px!important}
 .cx-photo-content{padding-top:44px!important}
+.pc:nth-child(1),.pc:nth-child(2),.pc:nth-child(3),.pc:nth-child(4){min-height:auto!important}
 }

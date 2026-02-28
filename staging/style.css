@@ -29,8 +29,8 @@
 
 /* ========== Video Slider Readability ========== */
 .vc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.5) 40%,transparent 100%);pointer-events:none;z-index:2;border-radius:0 0 16px 16px}
-.vb{bottom:32px!important;left:12px!important;right:12px!important;background:none!important;border:none!important;padding:0!important;font-size:.9rem!important;font-weight:800!important;letter-spacing:-.01em;z-index:3!important;text-shadow:0 1px 6px rgba(0,0,0,.4)}
-.vc-views{top:auto!important;bottom:10px!important;left:12px!important;right:auto!important;background:rgba(254,44,85,.9)!important;border:1px solid rgba(254,44,85,.6)!important;border-radius:100px!important;padding:4px 10px!important;font-size:.7rem!important;font-weight:700!important;color:#fff!important;z-index:3!important;box-shadow:0 2px 8px rgba(254,44,85,.3)}
+.vb{bottom:38px!important;left:12px!important;right:12px!important;background:none!important;border:none!important;padding:0!important;font-size:.9rem!important;font-weight:800!important;letter-spacing:-.01em;z-index:3!important;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.vc-views{top:auto!important;bottom:12px!important;left:12px!important;right:auto!important;background:rgba(254,44,85,.9)!important;border:1px solid rgba(254,44,85,.6)!important;border-radius:100px!important;padding:4px 10px!important;font-size:.7rem!important;font-weight:700!important;color:#fff!important;z-index:3!important;box-shadow:0 2px 8px rgba(254,44,85,.3)}
 .vc-views svg{width:12px!important;height:12px!important;stroke:#fff!important}
 
 /* ========== Logo Slider Seamless Loop ========== */

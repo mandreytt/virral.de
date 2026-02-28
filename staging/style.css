@@ -29,7 +29,7 @@
 
 /* ========== Card Spacing Fix (all viewports) ========== */
 .cx-stack{display:flex!important;flex-direction:column!important;gap:100px!important}
-.cx-wrap{padding-top:130px!important;position:relative!important}
+.cx-wrap{padding-top:50px!important;position:relative!important}
 
 /* ========== Background Gradient Glows ========== */
 .hero::after{content:'';position:absolute;top:5%;right:-12%;width:700px;height:700px;background:radial-gradient(circle,rgba(254,44,85,.07) 0%,rgba(139,92,246,.03) 40%,transparent 70%);pointer-events:none;z-index:0;filter:blur(80px)}
@@ -80,6 +80,8 @@
 /* ========== Mobile Card Spacing (final override) ========== */
 @media(max-width:768px){
 .cx-stack{display:flex!important;flex-direction:column!important;gap:72px!important}
-.cx-wrap{padding-top:96px!important;position:relative!important}
+.cx-wrap{padding-top:48px!important;position:relative!important}
 .cx-logo{position:absolute!important;top:18px!important;left:50%!important;transform:translate(-50%,0)!important;width:60px!important;height:60px!important;border-radius:14px!important;z-index:5!important}
+.cx-content-card{padding-top:44px!important}
+.cx-photo-content{padding-top:44px!important}
 }

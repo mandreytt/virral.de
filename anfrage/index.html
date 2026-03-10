@@ -75,8 +75,13 @@
 .mf-testi-phone{width:clamp(140px,16vw,200px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.4);background:#000}
 .mf-testi-phone iframe{width:100%;height:100%;border:none}
 .mf-testi-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}
-.mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px}
-.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain}
+.mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
+.mf-testi-logo:hover{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.08)}
+.mf-testi-logo.tl-active{border-color:rgba(254,44,85,.4);background:rgba(254,44,85,.06)}
+.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain;position:relative;z-index:1}
+.mf-testi-logo .tl-bar{position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--a);border-radius:0 2px 0 0;z-index:2}
+.mf-testi-logo.tl-active .tl-bar{animation:tl-fill 4s linear forwards}
+@keyframes tl-fill{from{width:0}to{width:100%}}
 
 /* Footer */
 .ft{border-top:1px solid var(--bd);padding:32px 0;margin-top:auto}
@@ -214,7 +219,7 @@
 
 <!-- RIGHT: Testimonial -->
 <div class="mf-testi-side">
-<!-- Testimonial 1: Manuel Schaub / EDEKA (steps 1, 5) -->
+<!-- Testimonial 1: Manuel Schaub / EDEKA -->
 <div class="mf-testi mf-testi-active" data-testi="1">
 <div class="mf-testi-card mf-testi-red">
 <div class="mf-testi-top">
@@ -223,16 +228,16 @@
 </div>
 <div class="mf-testi-quote">&bdquo;Wir sind mit der Arbeitgebermarke EDEKA Südwest im Fokus der Jugendlichen angekommen.&ldquo;</div>
 <div class="mf-testi-video">
-<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-active" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
-<!-- Testimonial 2: Fabian Heuel / Jochen Schweizer (steps 2, 3) -->
+<!-- Testimonial 2: Fabian Heuel / Jochen Schweizer -->
 <div class="mf-testi" data-testi="2">
 <div class="mf-testi-card mf-testi-green">
 <div class="mf-testi-top">
@@ -241,16 +246,16 @@
 </div>
 <div class="mf-testi-quote">&bdquo;Wir haben unsere Social-Präsenz auf ein neues Level gehoben.&ldquo;</div>
 <div class="mf-testi-video">
-<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/8HtJqJvEWU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-active" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
-<!-- Testimonial 3: Lena Barkovic / STRABAG (step 4) -->
+<!-- Testimonial 3: Lena Barkovic / STRABAG -->
 <div class="mf-testi" data-testi="3">
 <div class="mf-testi-card" style="background:linear-gradient(160deg,#0a1530 0%,#0a1020 40%,#0f1a1a 100%)">
 <div class="mf-testi-top">
@@ -259,12 +264,12 @@
 </div>
 <div class="mf-testi-quote">&bdquo;Einen starken Launch unseres STRABAG-TikTok Kanals hingelegt &ndash; starke Reichweiten, und das alles organisch.&ldquo;</div>
 <div class="mf-testi-video">
-<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-active" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -294,23 +299,58 @@
 
   var steps = form.querySelectorAll('.mf-step');
   var testis = document.querySelectorAll('.mf-testi');
-  var testiMap = {1:'1',2:'2',3:'2',4:'3',5:'1'};
   var current = 1;
   var data = {};
+  var activeTesti = 1;
+  var testiTimer = null;
 
-  function goTo(n) {
-    steps.forEach(function(s){ s.classList.remove('mf-step-active'); });
-    var next = form.querySelector('.mf-step[data-step="'+n+'"]');
-    if (next) next.classList.add('mf-step-active');
-
+  function showTesti(n) {
+    activeTesti = n;
     testis.forEach(function(t){ t.classList.remove('mf-testi-active'); });
-    var ti = document.querySelector('.mf-testi[data-testi="'+testiMap[n]+'"]');
+    var ti = document.querySelector('.mf-testi[data-testi="'+n+'"]');
     if (ti) {
       ti.classList.add('mf-testi-active');
       ti.querySelectorAll('iframe[data-src]').forEach(function(f){
         if (!f.src) f.src = f.getAttribute('data-src');
       });
     }
+    // Update active logo indicators on ALL testimonial cards
+    document.querySelectorAll('.mf-testi-logo').forEach(function(l){
+      l.classList.remove('tl-active');
+      // restart bar animation
+      var bar = l.querySelector('.tl-bar');
+      if (bar) { bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
+    });
+    document.querySelectorAll('.mf-testi-logo[data-tl="'+n+'"]').forEach(function(l){
+      l.classList.add('tl-active');
+    });
+  }
+
+  function startTestiTimer() {
+    clearInterval(testiTimer);
+    testiTimer = setInterval(function(){
+      var next = activeTesti >= 3 ? 1 : activeTesti + 1;
+      showTesti(next);
+    }, 4000);
+  }
+
+  // Click on logos to switch
+  document.addEventListener('click', function(e){
+    var logo = e.target.closest('.mf-testi-logo[data-tl]');
+    if (!logo) return;
+    var target = parseInt(logo.getAttribute('data-tl'));
+    showTesti(target);
+    startTestiTimer(); // reset timer on manual click
+  });
+
+  // Start auto-rotation
+  showTesti(1);
+  startTestiTimer();
+
+  function goTo(n) {
+    steps.forEach(function(s){ s.classList.remove('mf-step-active'); });
+    var next = form.querySelector('.mf-step[data-step="'+n+'"]');
+    if (next) next.classList.add('mf-step-active');
     current = n;
   }
 

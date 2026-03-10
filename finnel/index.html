@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finnel — Creator, Musiker & Co-Founder virral</title>
+<meta name="description" content="Finnel: YouTube Creator des Jahres, 5 Mrd.+ Views, 4.2M TikTok Follower. Kooperationen mit EDEKA, Jochen Schweizer, Nintendo, CLAAS u.v.m.">
+<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:hidden;font-size:15px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(5,5,5,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bd)}.ni{display:flex;align-items:center;justify-content:space-between}.nlogo{display:flex;align-items:center;text-decoration:none;color:var(--w)}.nlogo svg{height:18px;width:auto;fill:currentColor}.nls{display:flex;gap:28px;align-items:center}.na{font-size:.82rem;font-weight:500;color:var(--w2);transition:color .3s}.na:hover{color:var(--w)}.nc{padding:9px 22px;background:var(--a);color:#fff;border-radius:100px;font-size:.82rem;font-weight:600;transition:all .3s}.nc:hover{background:var(--ah)}.nm{display:none;flex-direction:column;gap:4px;width:22px;cursor:pointer}.nm span{height:1.5px;background:var(--w);border-radius:2px;display:block}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ===== HERO ===== */
+.fn-hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden}
+.fn-hero::before{content:'';position:absolute;top:-40%;right:-20%;width:70%;height:80%;background:radial-gradient(ellipse,rgba(254,44,85,.08) 0%,transparent 70%);pointer-events:none}
+.fn-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,5rem);align-items:center;position:relative;z-index:1}
+.fn-hero-img{position:relative}
+.fn-hero-img img{width:100%;border-radius:var(--r3);aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.fn-hero-badge{position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:8px}
+.fn-hero-badge span{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.72rem;font-weight:700;color:var(--w);width:fit-content}
+.fn-tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;background:var(--as);border:1px solid rgba(254,44,85,.15);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--a);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.fn-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--a);animation:glow 2s infinite}
+@keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
+.fn-h1{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.045em;margin-bottom:16px}
+.fn-h1 span{color:var(--a)}
+.fn-sub{font-size:clamp(.9rem,1.2vw,1rem);color:var(--w2);max-width:480px;line-height:1.8;margin-bottom:32px}
+.fn-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px}
+.fn-stat{text-align:center;padding:16px 8px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
+.fn-stat-v{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:800;letter-spacing:-.02em}
+.fn-stat-l{font-size:.68rem;color:var(--w3);margin-top:2px;font-weight:500}
+.fn-stat-icon{margin-bottom:6px}
+.fn-stat-icon svg{width:16px;height:16px}
+.fn-btns{display:flex;gap:12px;flex-wrap:wrap}
+.fn-btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--a);color:#fff;font-weight:700;font-size:.9rem;border-radius:100px;transition:all .3s;text-decoration:none}
+.fn-btn-p:hover{background:var(--ah);transform:translateY(-2px);box-shadow:0 8px 24px var(--ag)}
+.fn-btn-p svg{width:16px;height:16px}
+.fn-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:1px solid var(--bd2);color:var(--w);font-weight:500;font-size:.88rem;border-radius:100px;transition:all .3s;text-decoration:none}
+.fn-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04)}
+.fn-socials{display:flex;gap:20px;margin-top:32px;padding-top:24px;border-top:1px solid var(--bd)}
+.fn-social{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--w2);font-weight:600;transition:color .3s}
+.fn-social:hover{color:var(--w)}
+.fn-social svg{width:16px;height:16px}
+
+/* ===== SECTION SHARED ===== */
+.sec{padding:clamp(60px,10vw,120px) 0}
+.sh{text-align:center;margin-bottom:clamp(36px,5vw,56px)}
+.sh h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:12px}
+.sh h2 span{color:var(--a)}
+.sh p{color:var(--w2);max-width:560px;margin:0 auto;font-size:.92rem;line-height:1.7}
+.tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;background:var(--as);border:1px solid rgba(254,44,85,.15);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--a);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+
+/* ===== AWARD / PRESS ===== */
+.fn-award{background:var(--bg2)}
+.fn-award-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+.fn-award-img{border-radius:var(--r3);overflow:hidden}
+.fn-award-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.fn-award-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);border-radius:100px;font-size:.72rem;font-weight:700;color:#ff4444;margin-bottom:16px}
+.fn-award-badge svg{width:16px;height:16px;fill:#ff0000}
+.fn-award-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+.fn-award-sub{color:var(--w2);font-size:.85rem;margin-bottom:20px}
+.fn-award-quote{font-size:clamp(1rem,1.5vw,1.2rem);font-style:italic;color:var(--w);line-height:1.6;padding:20px 24px;background:rgba(255,255,255,.03);border-left:3px solid var(--a);border-radius:0 var(--r) var(--r) 0;margin-bottom:12px}
+.fn-award-src{font-size:.75rem;color:var(--w3);margin-bottom:28px}
+.fn-award-src a{color:var(--a);text-decoration:underline;text-underline-offset:2px}
+.fn-award-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.fn-af{text-align:center;padding:16px 8px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
+.fn-af-v{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
+.fn-af-l{font-size:.68rem;color:var(--w3);margin-top:2px}
+
+/* ===== VIDEOS ===== */
+.fn-videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fn-vid-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;transition:all .4s var(--e)}
+.fn-vid-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.fn-vid-phone{aspect-ratio:9/16;overflow:hidden;background:#000;position:relative}
+.fn-vid-phone iframe{width:100%;height:100%;border:none}
+.fn-vid-info{padding:16px}
+.fn-vid-title{font-size:.85rem;font-weight:700;margin-bottom:4px}
+.fn-vid-meta{font-size:.72rem;color:var(--w3)}
+
+/* ===== DORFKINDER ===== */
+.fn-dk{background:var(--bg2)}
+.fn-dk-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+.fn-dk-visual{position:relative;border-radius:var(--r3);overflow:hidden;cursor:pointer}
+.fn-dk-visual img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 20%}
+.fn-dk-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);transition:background .3s}
+.fn-dk-visual:hover .fn-dk-play{background:rgba(0,0,0,.15)}
+.fn-dk-play-btn{width:64px;height:64px;border-radius:50%;background:var(--a);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(254,44,85,.4);transition:transform .3s}
+.fn-dk-visual:hover .fn-dk-play-btn{transform:scale(1.1)}
+.fn-dk-play-btn svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+.fn-dk-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+.fn-dk-sub{color:var(--w2);font-size:.88rem;line-height:1.7;margin-bottom:24px}
+.fn-dk-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+.fn-dk-kpi{padding:16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
+.fn-dk-kv{font-size:1.2rem;font-weight:800}
+.fn-dk-kl{font-size:.7rem;color:var(--w3);margin-top:2px}
+.fn-dk-tags{display:flex;flex-wrap:wrap;gap:8px}
+.fn-dk-tag{padding:6px 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.72rem;color:var(--w2);font-weight:600}
+
+/* ===== PODCAST ===== */
+.fn-pod-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+.fn-pod-visual{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:var(--r3);padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;aspect-ratio:1/1;max-width:400px}
+.fn-pod-logo{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--w3);margin-bottom:4px}
+.fn-pod-cover{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;line-height:1.15}
+.fn-pod-cover span{color:var(--a)}
+.fn-pod-ard{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid var(--bd);border-radius:100px;font-size:.75rem;font-weight:700;color:var(--w2)}
+.fn-pod-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+.fn-pod-sub{color:var(--w2);font-size:.88rem;line-height:1.7;margin-bottom:24px}
+.fn-pod-topics{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.fn-pod-topic{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);font-size:.85rem;color:var(--w2)}
+.fn-pod-topic svg{width:18px;height:18px;color:var(--a);flex-shrink:0}
+
+/* ===== ZIELGRUPPE ===== */
+.fn-zg{background:var(--bg2)}
+.fn-zg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fn-zg-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,36px);text-align:center;transition:all .4s var(--e)}
+.fn-zg-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.fn-zg-icon{width:56px;height:56px;border-radius:50%;background:var(--as);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.fn-zg-icon svg{width:24px;height:24px;color:var(--a)}
+.fn-zg-h{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.fn-zg-p{font-size:.82rem;color:var(--w2);line-height:1.6}
+.fn-zg-val{font-size:1.4rem;font-weight:800;color:var(--a);margin-bottom:4px}
+
+/* ===== BRANDS / KOOPS ===== */
+.fn-brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fn-brand{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;transition:all .4s var(--e);min-height:140px}
+.fn-brand:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.fn-brand img{height:36px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain}
+.fn-brand-name{font-size:.72rem;color:var(--w3);font-weight:600}
+
+/* ===== FORMATE ===== */
+.fn-fmt{background:var(--bg2)}
+.fn-fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fn-fmt-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,32px);transition:all .4s var(--e)}
+.fn-fmt-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.fn-fmt-emoji{font-size:2rem;margin-bottom:12px}
+.fn-fmt-h{font-size:1rem;font-weight:800;margin-bottom:8px}
+.fn-fmt-p{font-size:.82rem;color:var(--w2);line-height:1.6}
+
+/* ===== CTA ===== */
+.fn-cta{text-align:center;padding:clamp(80px,12vw,160px) 0}
+.fn-cta-inner{background:linear-gradient(160deg,rgba(254,44,85,.08) 0%,rgba(254,44,85,.02) 100%);border:1px solid rgba(254,44,85,.12);border-radius:var(--r3);padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px)}
+.fn-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:16px}
+.fn-cta h2 span{color:var(--a)}
+.fn-cta p{color:var(--w2);max-width:500px;margin:0 auto 32px;font-size:.92rem;line-height:1.7}
+
+/* ===== FOOTER ===== */
+.ft{border-top:1px solid var(--bd);padding:40px 0}
+.ft-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ft-links{display:flex;gap:20px;font-size:.78rem}
+.ft-links a{color:var(--w3);transition:color .3s}
+.ft-links a:hover{color:var(--w)}
+.ft-copy{font-size:.72rem;color:var(--w3)}
+
+/* ===== REVEAL ===== */
+.rv,.rv-s{opacity:0;transform:translateY(32px);transition:opacity .8s var(--e),transform .8s var(--e)}.rv-s{transform:translateY(24px) scale(.97)}.rvv{opacity:1;transform:translateY(0) scale(1)}.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}.rvd4{transition-delay:.4s}.rvd5{transition-delay:.5s}
+
+/* ===== MOBILE ===== */
+@media(max-width:1024px){.fn-hero-grid{grid-template-columns:1fr}.fn-hero-img{max-width:400px;margin:0 auto 40px;order:-1}}
+@media(max-width:900px){
+.fn-award-inner,.fn-dk-inner,.fn-pod-inner{grid-template-columns:1fr}
+.fn-videos-grid{grid-template-columns:repeat(2,1fr)}
+.fn-stats{grid-template-columns:repeat(2,1fr)}
+.fn-brands-grid{grid-template-columns:repeat(2,1fr)}
+.fn-zg-grid,.fn-fmt-grid{grid-template-columns:1fr}
+.fn-award-facts{grid-template-columns:repeat(2,1fr)}
+.fn-pod-visual{max-width:100%;aspect-ratio:auto;padding:40px}
+}
+@media(max-width:768px){
+.nls{display:none}.nm{display:flex}
+.fn-hero{padding:100px 0 60px}
+.fn-videos-grid{grid-template-columns:1fr}
+.fn-brands-grid{grid-template-columns:repeat(2,1fr)}
+.fn-dk-kpis{grid-template-columns:1fr}
+.fn-btns{flex-direction:column}
+.fn-btn-p,.fn-btn-s{text-align:center;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav><div class="w"><div class="ni">
+<a href="/" class="nlogo"><svg viewBox="0 0 1312 368" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg></a>
+<div class="nls">
+<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="/#creators" class="na">Creator</a><a href="/anfrage" class="nc">Anfrage starten</a>
+</div>
+<button class="nm" aria-label="Menü"><span></span><span></span><span></span></button>
+</div></div></nav>
+
+<!-- HERO -->
+<section class="fn-hero">
+<div class="w">
+<div class="fn-hero-grid">
+<div>
+<div class="fn-tag"><span class="dot"></span> Creator Media Kit</div>
+<h1 class="fn-h1">Finnel<br><span>YouTube Creator des Jahres</span></h1>
+<p class="fn-sub">Finn Lorenzen, besser bekannt als Finnel — Creator, Musiker und Co-Founder von virral. Mit über 5 Milliarden Views einer der reichweitenstärksten deutschen Creator und die Brücke zwischen Brand-Storytelling und Gen Z Kultur.</p>
+
+<div class="fn-stats">
+<div class="fn-stat">
+<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#fe2c55"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 100 12.63 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1-.13z"/></svg></div>
+<div class="fn-stat-v">4.2M</div>
+<div class="fn-stat-l">TikTok Follower</div>
+</div>
+<div class="fn-stat">
+<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#ff0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+<div class="fn-stat-v">1.8M</div>
+<div class="fn-stat-l">YouTube Abos</div>
+</div>
+<div class="fn-stat">
+<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#f77bb0"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947C23.784 2.69 21.365.272 17.013.072 15.733.014 15.325 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/></svg></div>
+<div class="fn-stat-v">544K</div>
+<div class="fn-stat-l">Instagram</div>
+</div>
+<div class="fn-stat">
+<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#fffc00"><path d="M12.166 0C5.452 0 .038 5.373.038 12.033c0 3.592 1.578 6.812 4.076 9.025l-.036 2.888 2.787-1.548a12.08 12.08 0 005.3 1.202c6.714 0 12.128-5.373 12.128-12.033C24.294 5.373 18.88 0 12.166 0z"/></svg></div>
+<div class="fn-stat-v">565K</div>
+<div class="fn-stat-l">Snapchat</div>
+</div>
+</div>
+
+<div class="fn-btns">
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
+<a href="#formate" class="fn-btn-s">Formate entdecken</a>
+</div>
+</div>
+
+<div class="fn-hero-img">
+<img src="/img/img-09.webp" alt="Finnel">
+<div class="fn-hero-badge">
+<span>🔥 5 Mrd.+ Views</span>
+<span>Co-Founder virral</span>
+<span>YouTube Creator des Jahres</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AWARD / PRESSE -->
+<section class="sec fn-award">
+<div class="w">
+<div class="fn-award-inner rv-s">
+<div class="fn-award-img">
+<img src="/img/img-15.webp" alt="Andreas Briese übergibt Finnel den YouTube Creator des Jahres Award">
+</div>
+<div>
+<div class="fn-award-badge"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube Creator des Jahres</div>
+<h2 class="fn-award-h">Ausgezeichnet von YouTube Deutschland</h2>
+<p class="fn-award-sub">Andreas Briese, Head of YouTube Deutschland, übergibt Finnel persönlich die Auszeichnung als YouTube Creator des Jahres — die höchste Ehrung der Plattform in Deutschland.</p>
+<div class="fn-award-quote">"Dieser 19-Jährige ist der deutsche Überflieger des Jahres"</div>
+<div class="fn-award-src">— Der Spiegel · <a href="https://www.spiegel.de/netzwelt/web/youtube-jahrescharts-finnel-ist-der-deutsche-ueberflieger-des-jahres-a-49c27d6b-7e2d-4170-861c-1e8814848750" target="_blank" rel="noopener">Artikel lesen ↗</a></div>
+<div class="fn-award-facts">
+<div class="fn-af"><div class="fn-af-v">5 Mrd.+</div><div class="fn-af-l">Gesamt-Views</div></div>
+<div class="fn-af"><div class="fn-af-v">#1</div><div class="fn-af-l">YouTube DE</div></div>
+<div class="fn-af"><div class="fn-af-v">7M+</div><div class="fn-af-l">Follower gesamt</div></div>
+<div class="fn-af"><div class="fn-af-v">#12</div><div class="fn-af-l">DE Singlecharts</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BEST-OF VIDEOS -->
+<section class="sec" id="videos">
+<div class="w">
+<div class="sh"><div class="tag">Content</div><h2>Best-of <span>Videos</span></h2><p>Formate, die Millionen von Menschen erreichen — auf TikTok, YouTube und Instagram.</p></div>
+<div class="fn-videos-grid">
+<div class="fn-vid-card rv-s">
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-info"><div class="fn-vid-title">EDEKA Karriere</div><div class="fn-vid-meta">12,4 Mio. Views · TikTok</div></div>
+</div>
+<div class="fn-vid-card rv-s rvd1">
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/cYhxpaYnLe?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-info"><div class="fn-vid-title">EDEKA Content</div><div class="fn-vid-meta">6,8 Mio. Views · TikTok</div></div>
+</div>
+<div class="fn-vid-card rv-s rvd2">
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/2ENSUZCVRR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-info"><div class="fn-vid-title">EDEKA Shorts</div><div class="fn-vid-meta">3,2 Mio. Views · YouTube Shorts</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DORFKINDER -->
+<section class="sec fn-dk" id="dorfkinder">
+<div class="w">
+<div class="fn-dk-inner rv-s">
+<div class="fn-dk-visual" onclick="window.open('https://www.youtube.com/watch?v=1pPBtgf0_Co','_blank')">
+<img src="/img/img-17.webp" alt="Dorfkinder x CLAAS">
+<div class="fn-dk-play"><div class="fn-dk-play-btn"><svg viewBox="0 0 24 24"><polygon points="9.5 7.5 16.5 12 9.5 16.5"/></svg></div></div>
+</div>
+<div>
+<div class="tag">Musik & Entertainment</div>
+<h2 class="fn-dk-h">Dorfkinder</h2>
+<p class="fn-dk-sub">Der virale Hit "Dorfkinder" erreichte #12 in den deutschen Singlecharts, #1 auf den YouTube Trend Charts und wurde zum kulturellen Phänomen einer ganzen Generation. Strategische Adaption für CLAAS als "Dorfkinder (CLAAS Edition)": Neues Songwriting und maßgeschneiderte Videoproduktion überführten den viralen Erfolg nativ in die Markenwelt — released via Epic/VIRRAL.</p>
+<div class="fn-dk-kpis">
+<div class="fn-dk-kpi"><div class="fn-dk-kv">12 Mio.</div><div class="fn-dk-kl">Video-Aufrufe</div></div>
+<div class="fn-dk-kpi"><div class="fn-dk-kv">1 Mio.+</div><div class="fn-dk-kl">Likes</div></div>
+<div class="fn-dk-kpi"><div class="fn-dk-kv">1 Mio.+</div><div class="fn-dk-kl">Streams</div></div>
+<div class="fn-dk-kpi"><div class="fn-dk-kv">Gold</div><div class="fn-dk-kl">Schallplatte</div></div>
+</div>
+<div class="fn-dk-tags">
+<span class="fn-dk-tag">Label & Distribution</span>
+<span class="fn-dk-tag">Songwriting</span>
+<span class="fn-dk-tag">Musikvideo-Regie</span>
+<span class="fn-dk-tag">Brand Partnership</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ARD PODCAST -->
+<section class="sec" id="podcast">
+<div class="w">
+<div class="fn-pod-inner rv-s">
+<div class="fn-pod-visual">
+<div class="fn-pod-logo">ARD Podcast</div>
+<div class="fn-pod-cover">Finnel und <span>das Geld</span></div>
+<p style="color:var(--w2);font-size:.82rem;line-height:1.6;max-width:280px">Der Finanz-Podcast für die junge Generation — präsentiert von der ARD.</p>
+<div class="fn-pod-ard"><svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--a)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> ARD Audiothek</div>
+</div>
+<div>
+<div class="tag">Podcast</div>
+<h2 class="fn-pod-h">Finnel und das Geld</h2>
+<p class="fn-pod-sub">Produziert von DASDING (SWR) für die ARD. Zusammen mit Co-Host Max Dehling bringt Finnel einer jungen Zielgruppe Finanzthemen auf seine Art näher — authentisch, unterhaltsam und auf Augenhöhe. Ein Format, das zeigt: Finnel funktioniert weit über klassischen Social-Content hinaus.</p>
+<div class="fn-pod-topics">
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg> Regelmäßige neue Folgen</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> Zielgruppe 16–29 Jahre</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ARD Audiothek & alle Plattformen</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Finanzen, Sparen, Investieren, Karriere</div>
+</div>
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Podcast-Kooperation anfragen</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ZIELGRUPPE -->
+<section class="sec fn-zg" id="zielgruppe">
+<div class="w">
+<div class="sh"><div class="tag">Audience</div><h2>Die <span>Zielgruppe</span></h2><p>Finnels Community ist jung, engagiert und kaufkräftig — die perfekte Brücke in die Gen Z.</p></div>
+<div class="fn-zg-grid">
+<div class="fn-zg-card rv-s">
+<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+<div class="fn-zg-val">70%</div>
+<div class="fn-zg-h">16–24 Jahre</div>
+<div class="fn-zg-p">Der Großteil der Community gehört zur Gen Z — die kaufkräftigste und digitalste Zielgruppe Deutschlands.</div>
+</div>
+<div class="fn-zg-card rv-s rvd1">
+<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<div class="fn-zg-val">DACH</div>
+<div class="fn-zg-h">Region</div>
+<div class="fn-zg-p">Primär deutschsprachige Community aus Deutschland, Österreich und der Schweiz — ideal für DACH-Kampagnen.</div>
+</div>
+<div class="fn-zg-card rv-s rvd2">
+<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+<div class="fn-zg-val">8%+</div>
+<div class="fn-zg-h">Engagement Rate</div>
+<div class="fn-zg-p">Überdurchschnittliches Engagement dank authentischem Content und einer hochaktiven, loyalen Community.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KOOPERATIONS-FORMATE -->
+<section class="sec fn-fmt" id="formate">
+<div class="w">
+<div class="sh"><div class="tag">Kooperation</div><h2>Formate & <span>Möglichkeiten</span></h2><p>Von klassischer Integration bis hin zu kompletten Brand-Kampagnen — flexibel und maßgeschneidert.</p></div>
+<div class="fn-fmt-grid">
+<div class="fn-fmt-card rv-s">
+<div class="fn-fmt-emoji">🎬</div>
+<div class="fn-fmt-h">Social Integration</div>
+<div class="fn-fmt-p">Native Einbindung in TikTok, YouTube Shorts oder Instagram Reels. Authentisch, kreativ und perfekt auf die Zielgruppe zugeschnitten.</div>
+</div>
+<div class="fn-fmt-card rv-s rvd1">
+<div class="fn-fmt-emoji">📺</div>
+<div class="fn-fmt-h">YouTube Longform</div>
+<div class="fn-fmt-p">Dedizierte YouTube-Videos mit tiefem Storytelling. Ideal für erklärungsbedürftige Produkte und Brand-Narratives.</div>
+</div>
+<div class="fn-fmt-card rv-s rvd2">
+<div class="fn-fmt-emoji">🎵</div>
+<div class="fn-fmt-h">Musik & Entertainment</div>
+<div class="fn-fmt-p">Brand-Songs, Musikvideo-Produktionen und Entertainment-Formate wie "Dorfkinder" — virales Potenzial inklusive.</div>
+</div>
+<div class="fn-fmt-card rv-s rvd3">
+<div class="fn-fmt-emoji">🎙️</div>
+<div class="fn-fmt-h">Podcast Sponsoring</div>
+<div class="fn-fmt-p">Integration im ARD Podcast "Finnel und das Geld" — direkter Zugang zu einer jungen, finanzbewussten Zielgruppe.</div>
+</div>
+<div class="fn-fmt-card rv-s rvd4">
+<div class="fn-fmt-emoji">📸</div>
+<div class="fn-fmt-h">Event & Offline</div>
+<div class="fn-fmt-p">Live-Auftritte, Meet & Greets und Event-Aktivierungen mit hoher Social-Amplification und Fanansprache.</div>
+</div>
+<div class="fn-fmt-card rv-s rvd5">
+<div class="fn-fmt-emoji">🚀</div>
+<div class="fn-fmt-h">Always-On Kampagne</div>
+<div class="fn-fmt-p">Langfristige Partnerschaften mit regelmäßigem Content über mehrere Plattformen — für nachhaltigen Markenaufbau.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BRANDS -->
+<section class="sec" id="brands">
+<div class="w">
+<div class="sh"><div class="tag">Referenzen</div><h2>Marken, die <span>vertrauen</span></h2><p>Finnel hat bereits mit führenden Marken und Unternehmen zusammengearbeitet.</p></div>
+<div class="fn-brands-grid">
+<div class="fn-brand rv-s"><img src="/img/img-02.webp" alt="EDEKA"><div class="fn-brand-name">EDEKA</div></div>
+<div class="fn-brand rv-s rvd1"><img src="/img/img-01.webp" alt="Jochen Schweizer"><div class="fn-brand-name">Jochen Schweizer</div></div>
+<div class="fn-brand rv-s rvd2"><img src="/img/img-16.webp" alt="CLAAS" style="filter:none;opacity:1"><div class="fn-brand-name">CLAAS</div></div>
+<div class="fn-brand rv-s rvd3"><img src="/img/img-03.webp" alt="Nintendo" style="height:28px"><div class="fn-brand-name">Nintendo</div></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="fn-cta">
+<div class="w">
+<div class="fn-cta-inner rv-s">
+<div class="tag">Let's go</div>
+<h2>Bereit für eine <span>Kooperation?</span></h2>
+<p>Du willst mit Finnel zusammenarbeiten? Lass uns über dein Projekt sprechen — von der ersten Idee bis zum fertigen Content.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
+<a href="mailto:hello@virral.de" class="fn-btn-s">hello@virral.de</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="w"><div class="ft-inner">
+<div class="ft-copy">&copy; 2026 virral GmbH</div>
+<div class="ft-links">
+<a href="/impressum.html">Impressum</a>
+<a href="/datenschutz.html">Datenschutz</a>
+<a href="mailto:hello@virral.de">hello@virral.de</a>
+</div>
+</div></div></footer>
+
+<script>
+/* Lazy load iframes */
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var iframe = e.target;
+        if(iframe.dataset.src && !iframe.src){
+          iframe.src = iframe.dataset.src;
+        }
+        obs.unobserve(iframe);
+      }
+    });
+  },{rootMargin:'200px'});
+  document.querySelectorAll('iframe[data-src]').forEach(function(f){ obs.observe(f); });
+})();
+
+/* Scroll reveal */
+(function(){
+  var items=[{s:'.sh',c:'rv'},{s:'.fn-vid-card',c:'rv-s'},{s:'.fn-zg-card',c:'rv-s'},{s:'.fn-fmt-card',c:'rv-s'},{s:'.fn-brand',c:'rv-s'},{s:'.fn-award-inner',c:'rv-s'},{s:'.fn-dk-inner',c:'rv-s'},{s:'.fn-pod-inner',c:'rv-s'},{s:'.fn-cta-inner',c:'rv-s'},{s:'.fn-hero-grid',c:'rv'}];
+  items.forEach(function(item){
+    document.querySelectorAll(item.s).forEach(function(el){ el.classList.add(item.c); });
+  });
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('rvv'); obs.unobserve(entry.target); }
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv,.rv-s').forEach(function(el){obs.observe(el)});
+})();
+</script>
+</body>
+</html>

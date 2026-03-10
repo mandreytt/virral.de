@@ -11,36 +11,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ===== HERO ===== */
-.fn-hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden}
-.fn-hero::before{content:'';position:absolute;top:-40%;right:-20%;width:70%;height:80%;background:radial-gradient(ellipse,rgba(254,44,85,.08) 0%,transparent 70%);pointer-events:none}
-.fn-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,5rem);align-items:center;position:relative;z-index:1}
-.fn-hero-img{position:relative}
-.fn-hero-img img{width:100%;border-radius:var(--r3);aspect-ratio:3/4;object-fit:cover;object-position:center top}
-.fn-hero-badge{position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:8px}
-.fn-hero-badge span{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.72rem;font-weight:700;color:var(--w);width:fit-content}
-.fn-tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;background:var(--as);border:1px solid rgba(254,44,85,.15);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--a);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
-.fn-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--a);animation:glow 2s infinite}
-@keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
-.fn-h1{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.06;letter-spacing:-.045em;margin-bottom:16px}
-.fn-h1 span{color:var(--a)}
-.fn-sub{font-size:clamp(.9rem,1.2vw,1rem);color:var(--w2);max-width:480px;line-height:1.8;margin-bottom:32px}
-.fn-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px}
-.fn-stat{text-align:center;padding:16px 8px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
-.fn-stat-v{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:800;letter-spacing:-.02em}
-.fn-stat-l{font-size:.68rem;color:var(--w3);margin-top:2px;font-weight:500}
-.fn-stat-icon{margin-bottom:6px}
-.fn-stat-icon svg{width:16px;height:16px}
-.fn-btns{display:flex;gap:12px;flex-wrap:wrap}
+/* ===== HERO — FULL BLEED ===== */
+.fn-hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.fn-hero-bg{position:absolute;inset:0}
+.fn-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.fn-hero-grad{position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(6,6,8,.7) 40%,rgba(6,6,8,.2) 70%,rgba(6,6,8,.4) 100%)}
+.fn-hero-content{position:relative;z-index:2;padding:0 0 clamp(48px,8vw,80px);width:100%}
+.fn-hero-inner{max-width:720px}
+.fn-hero-kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(254,44,85,.1);border:1px solid rgba(254,44,85,.2);border-radius:100px;font-size:.68rem;font-weight:700;color:var(--a);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.fn-hero-kicker .pulse{width:8px;height:8px;border-radius:50%;background:var(--a);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.fn-h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.05em;margin-bottom:20px}
+.fn-h1 span{background:linear-gradient(135deg,#fe2c55,#ff6b8a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fn-sub{font-size:clamp(.88rem,1.2vw,1rem);color:var(--w2);max-width:540px;line-height:1.8;margin-bottom:32px}
+.fn-hero-row{display:flex;gap:clamp(24px,4vw,48px);align-items:center;flex-wrap:wrap}
+.fn-hero-stat{text-align:left}
+.fn-hero-stat-v{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em}
+.fn-hero-stat-l{font-size:.68rem;color:var(--w3);font-weight:500;margin-top:1px}
+.fn-hero-btns{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
 .fn-btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--a);color:#fff;font-weight:700;font-size:.9rem;border-radius:100px;transition:all .3s;text-decoration:none}
 .fn-btn-p:hover{background:var(--ah);transform:translateY(-2px);box-shadow:0 8px 24px var(--ag)}
 .fn-btn-p svg{width:16px;height:16px}
-.fn-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:1px solid var(--bd2);color:var(--w);font-weight:500;font-size:.88rem;border-radius:100px;transition:all .3s;text-decoration:none}
-.fn-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04)}
-.fn-socials{display:flex;gap:20px;margin-top:32px;padding-top:24px;border-top:1px solid var(--bd)}
-.fn-social{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--w2);font-weight:600;transition:color .3s}
-.fn-social:hover{color:var(--w)}
-.fn-social svg{width:16px;height:16px}
+.fn-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:rgba(255,255,255,.06);border:1px solid var(--bd2);color:var(--w);font-weight:600;font-size:.88rem;border-radius:100px;transition:all .3s;text-decoration:none;backdrop-filter:blur(12px)}
+.fn-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
 
 /* ===== SECTION SHARED ===== */
 .sec{padding:clamp(60px,10vw,120px) 0}
@@ -49,6 +42,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .sh h2 span{color:var(--a)}
 .sh p{color:var(--w2);max-width:560px;margin:0 auto;font-size:.92rem;line-height:1.7}
 .tag{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;background:var(--as);border:1px solid rgba(254,44,85,.15);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--a);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+
+/* ===== MARQUEE TICKER ===== */
+.fn-ticker{overflow:hidden;padding:20px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2)}
+.fn-ticker-track{display:flex;gap:48px;animation:ticker 20s linear infinite;width:max-content}
+.fn-ticker-item{display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:.82rem;font-weight:700;color:var(--w3);flex-shrink:0}
+.fn-ticker-item span{color:var(--a)}
 
 /* ===== AWARD / PRESS ===== */
 .fn-award{background:var(--bg2)}
@@ -67,6 +66,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-af-v{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
 .fn-af-l{font-size:.68rem;color:var(--w3);margin-top:2px}
 
+/* ===== SONGS TIMELINE ===== */
+.fn-songs{background:var(--bg);position:relative;overflow:hidden}
+.fn-songs::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(254,44,85,.06) 0%,transparent 70%);pointer-events:none}
+.fn-tl{position:relative;display:flex;flex-direction:column;gap:0}
+.fn-tl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,rgba(254,44,85,.3) 10%,rgba(254,44,85,.3) 90%,transparent);transform:translateX(-50%)}
+.fn-tl-item{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;position:relative;padding:clamp(32px,4vw,56px) 0}
+.fn-tl-item:nth-child(even) .fn-tl-video{order:2}
+.fn-tl-item:nth-child(even) .fn-tl-info{order:1;text-align:right}
+.fn-tl-item:nth-child(even) .fn-tl-kpis{justify-content:flex-end}
+.fn-tl-item:nth-child(even) .fn-tl-tags{justify-content:flex-end}
+.fn-tl-dot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:var(--a);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--a),0 0 20px rgba(254,44,85,.3);z-index:2}
+.fn-tl-year{position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% - 36px));background:var(--a);color:#fff;padding:4px 14px;border-radius:100px;font-size:.72rem;font-weight:800;letter-spacing:.05em;z-index:2;white-space:nowrap}
+.fn-tl-video{border-radius:var(--r2);overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;border:1px solid var(--bd)}
+.fn-tl-video iframe{width:100%;height:100%;border:none}
+.fn-tl-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;font-size:.65rem;font-weight:700;margin-bottom:12px;width:fit-content}
+.fn-tl-badge-gold{background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,180,0,.08));border:1px solid rgba(255,215,0,.25);color:#ffd700}
+.fn-tl-badge-brand{background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.15);color:var(--a)}
+.fn-tl-badge-viral{background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.15);color:#2ecc71}
+.fn-tl-badge-new{background:rgba(78,95,253,.08);border:1px solid rgba(78,95,253,.15);color:#7b8aff}
+.fn-tl-h{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:8px}
+.fn-tl-sub{color:var(--w2);font-size:.84rem;line-height:1.7;margin-bottom:20px}
+.fn-tl-kpis{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.fn-tl-kpi{padding:8px 16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;min-width:80px}
+.fn-tl-kpi-v{font-size:1rem;font-weight:800;letter-spacing:-.02em}
+.fn-tl-kpi-l{font-size:.62rem;color:var(--w3);margin-top:1px}
+.fn-tl-tags{display:flex;flex-wrap:wrap;gap:6px}
+.fn-tl-tag{padding:4px 12px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.65rem;color:var(--w2);font-weight:600}
+
 /* ===== VIDEOS ===== */
 .fn-videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .fn-vid-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;transition:all .4s var(--e)}
@@ -77,32 +104,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-vid-title{font-size:.85rem;font-weight:700;margin-bottom:4px}
 .fn-vid-meta{font-size:.72rem;color:var(--w3)}
 
-/* ===== DORFKINDER ===== */
-.fn-dk{background:var(--bg2)}
-.fn-dk-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center}
-.fn-dk-visual{position:relative;border-radius:var(--r3);overflow:hidden;cursor:pointer}
-.fn-dk-visual img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 20%}
-.fn-dk-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);transition:background .3s}
-.fn-dk-visual:hover .fn-dk-play{background:rgba(0,0,0,.15)}
-.fn-dk-play-btn{width:64px;height:64px;border-radius:50%;background:var(--a);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(254,44,85,.4);transition:transform .3s}
-.fn-dk-visual:hover .fn-dk-play-btn{transform:scale(1.1)}
-.fn-dk-play-btn svg{width:24px;height:24px;fill:#fff;margin-left:3px}
-.fn-dk-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
-.fn-dk-sub{color:var(--w2);font-size:.88rem;line-height:1.7;margin-bottom:24px}
-.fn-dk-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
-.fn-dk-kpi{padding:16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
-.fn-dk-kv{font-size:1.2rem;font-weight:800}
-.fn-dk-kl{font-size:.7rem;color:var(--w3);margin-top:2px}
-.fn-dk-tags{display:flex;flex-wrap:wrap;gap:8px}
-.fn-dk-tag{padding:6px 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.72rem;color:var(--w2);font-weight:600}
-
 /* ===== PODCAST ===== */
 .fn-pod-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,4vw,4rem);align-items:center}
-.fn-pod-visual{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:var(--r3);padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;aspect-ratio:1/1;max-width:400px}
-.fn-pod-logo{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--w3);margin-bottom:4px}
-.fn-pod-cover{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;line-height:1.15}
-.fn-pod-cover span{color:var(--a)}
-.fn-pod-ard{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid var(--bd);border-radius:100px;font-size:.75rem;font-weight:700;color:var(--w2)}
+.fn-pod-visual{border-radius:var(--r3);overflow:hidden}
+.fn-pod-visual img{width:100%;height:auto;border-radius:var(--r3)}
 .fn-pod-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
 .fn-pod-sub{color:var(--w2);font-size:.88rem;line-height:1.7;margin-bottom:24px}
 .fn-pod-topics{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
@@ -120,7 +125,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-zg-p{font-size:.82rem;color:var(--w2);line-height:1.6}
 .fn-zg-val{font-size:1.4rem;font-weight:800;color:var(--a);margin-bottom:4px}
 
-/* ===== BRANDS / KOOPS ===== */
+/* ===== BRANDS ===== */
 .fn-brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .fn-brand{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;transition:all .4s var(--e);min-height:140px}
 .fn-brand:hover{border-color:var(--bd2);transform:translateY(-4px)}
@@ -154,25 +159,40 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 /* ===== REVEAL ===== */
 .rv,.rv-s{opacity:0;transform:translateY(32px);transition:opacity .8s var(--e),transform .8s var(--e)}.rv-s{transform:translateY(24px) scale(.97)}.rvv{opacity:1;transform:translateY(0) scale(1)}.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}.rvd4{transition-delay:.4s}.rvd5{transition-delay:.5s}
 
+/* ===== TICKER KEYFRAME ===== */
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
 /* ===== MOBILE ===== */
-@media(max-width:1024px){.fn-hero-grid{grid-template-columns:1fr}.fn-hero-img{max-width:400px;margin:0 auto 40px;order:-1}}
+@media(max-width:1024px){
+.fn-hero-inner{max-width:100%}
+.fn-award-inner,.fn-pod-inner{grid-template-columns:1fr}
+.fn-tl::before{left:24px}
+.fn-tl-item{grid-template-columns:1fr;padding-left:56px}
+.fn-tl-item:nth-child(even) .fn-tl-video{order:0}
+.fn-tl-item:nth-child(even) .fn-tl-info{order:0;text-align:left}
+.fn-tl-item:nth-child(even) .fn-tl-kpis{justify-content:flex-start}
+.fn-tl-item:nth-child(even) .fn-tl-tags{justify-content:flex-start}
+.fn-tl-dot{left:24px}
+.fn-tl-year{left:24px;transform:translate(-50%,calc(-50% - 36px))}
+}
 @media(max-width:900px){
-.fn-award-inner,.fn-dk-inner,.fn-pod-inner{grid-template-columns:1fr}
 .fn-videos-grid{grid-template-columns:repeat(2,1fr)}
-.fn-stats{grid-template-columns:repeat(2,1fr)}
 .fn-brands-grid{grid-template-columns:repeat(2,1fr)}
 .fn-zg-grid,.fn-fmt-grid{grid-template-columns:1fr}
 .fn-award-facts{grid-template-columns:repeat(2,1fr)}
-.fn-pod-visual{max-width:100%;aspect-ratio:auto;padding:40px}
 }
 @media(max-width:768px){
 .nls{display:none}.nm{display:flex}
-.fn-hero{padding:100px 0 60px}
+.fn-hero{min-height:80vh}
+.fn-h1{font-size:clamp(2.4rem,8vw,3.5rem)}
+.fn-hero-row{gap:16px}
+.fn-hero-stat-v{font-size:1.2rem}
+.fn-hero-btns{flex-direction:column}
+.fn-btn-p,.fn-btn-s{text-align:center;justify-content:center}
 .fn-videos-grid{grid-template-columns:1fr}
 .fn-brands-grid{grid-template-columns:repeat(2,1fr)}
-.fn-dk-kpis{grid-template-columns:1fr}
-.fn-btns{flex-direction:column}
-.fn-btn-p,.fn-btn-s{text-align:center;justify-content:center}
+.fn-tl-kpis{gap:6px}
+.fn-tl-kpi{min-width:60px;padding:6px 10px}
 }
 </style>
 </head>
@@ -182,62 +202,60 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <nav><div class="w"><div class="ni">
 <a href="/" class="nlogo"><svg viewBox="0 0 1312 368" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg></a>
 <div class="nls">
-<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="/#creators" class="na">Creator</a><a href="/anfrage" class="nc">Anfrage starten</a>
+<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="#songs" class="na">Songs</a><a href="#podcast" class="na">Podcast</a><a href="/anfrage" class="nc">Anfrage starten</a>
 </div>
 <button class="nm" aria-label="Menü"><span></span><span></span><span></span></button>
 </div></div></nav>
 
-<!-- HERO -->
+<!-- HERO — FULL BLEED IMAGE -->
 <section class="fn-hero">
-<div class="w">
-<div class="fn-hero-grid">
-<div>
-<div class="fn-tag"><span class="dot"></span> Creator Media Kit</div>
-<h1 class="fn-h1">Finnel<br><span>YouTube Creator des Jahres</span></h1>
-<p class="fn-sub">Finn Lorenzen, besser bekannt als Finnel — Creator, Musiker und Co-Founder von virral. Mit über 5 Milliarden Views einer der reichweitenstärksten deutschen Creator und die Brücke zwischen Brand-Storytelling und Gen Z Kultur.</p>
-
-<div class="fn-stats">
-<div class="fn-stat">
-<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#fe2c55"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 100 12.63 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1-.13z"/></svg></div>
-<div class="fn-stat-v">4.2M</div>
-<div class="fn-stat-l">TikTok Follower</div>
-</div>
-<div class="fn-stat">
-<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#ff0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
-<div class="fn-stat-v">1.8M</div>
-<div class="fn-stat-l">YouTube Abos</div>
-</div>
-<div class="fn-stat">
-<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#f77bb0"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947C23.784 2.69 21.365.272 17.013.072 15.733.014 15.325 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/></svg></div>
-<div class="fn-stat-v">544K</div>
-<div class="fn-stat-l">Instagram</div>
-</div>
-<div class="fn-stat">
-<div class="fn-stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" style="color:#fffc00"><path d="M12.166 0C5.452 0 .038 5.373.038 12.033c0 3.592 1.578 6.812 4.076 9.025l-.036 2.888 2.787-1.548a12.08 12.08 0 005.3 1.202c6.714 0 12.128-5.373 12.128-12.033C24.294 5.373 18.88 0 12.166 0z"/></svg></div>
-<div class="fn-stat-v">565K</div>
-<div class="fn-stat-l">Snapchat</div>
-</div>
-</div>
-
-<div class="fn-btns">
-<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
-<a href="#formate" class="fn-btn-s">Formate entdecken</a>
-</div>
-</div>
-
-<div class="fn-hero-img">
+<div class="fn-hero-bg">
 <img src="/img/img-09.webp" alt="Finnel">
-<div class="fn-hero-badge">
-<span>🔥 5 Mrd.+ Views</span>
-<span>Co-Founder virral</span>
-<span>YouTube Creator des Jahres</span>
+<div class="fn-hero-grad"></div>
 </div>
+<div class="w fn-hero-content">
+<div class="fn-hero-inner">
+<div class="fn-hero-kicker"><span class="pulse"></span> Creator Media Kit</div>
+<h1 class="fn-h1">Finnel<br><span>Creator des Jahres.</span></h1>
+<p class="fn-sub">Finn Lorenzen — Creator, Musiker und Co-Founder von virral. Mit 5 Milliarden Views die Brücke zwischen Brand-Storytelling und Gen Z Kultur.</p>
+<div class="fn-hero-row">
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">5 Mrd.+</div><div class="fn-hero-stat-l">Views gesamt</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">4.2M</div><div class="fn-hero-stat-l">TikTok</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">1.8M</div><div class="fn-hero-stat-l">YouTube</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">544K</div><div class="fn-hero-stat-l">Instagram</div></div>
+</div>
+<div class="fn-hero-btns">
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
+<a href="#songs" class="fn-btn-s">Discography</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- AWARD / PRESSE -->
+<!-- TICKER -->
+<div class="fn-ticker">
+<div class="fn-ticker-track">
+<div class="fn-ticker-item"><span>#1</span> YouTube Trend Charts</div>
+<div class="fn-ticker-item"><span>#12</span> Offizielle Deutsche Singlecharts</div>
+<div class="fn-ticker-item"><span>#1</span> TikTok DE Hot 50</div>
+<div class="fn-ticker-item"><span>Gold</span> Schallplatte</div>
+<div class="fn-ticker-item"><span>100M+</span> Streams</div>
+<div class="fn-ticker-item"><span>ARD</span> Podcast Host</div>
+<div class="fn-ticker-item"><span>Epic</span> Records</div>
+<div class="fn-ticker-item"><span>EDEKA</span> · Jochen Schweizer · Nintendo · CLAAS</div>
+<!-- duplicate for seamless loop -->
+<div class="fn-ticker-item"><span>#1</span> YouTube Trend Charts</div>
+<div class="fn-ticker-item"><span>#12</span> Offizielle Deutsche Singlecharts</div>
+<div class="fn-ticker-item"><span>#1</span> TikTok DE Hot 50</div>
+<div class="fn-ticker-item"><span>Gold</span> Schallplatte</div>
+<div class="fn-ticker-item"><span>100M+</span> Streams</div>
+<div class="fn-ticker-item"><span>ARD</span> Podcast Host</div>
+<div class="fn-ticker-item"><span>Epic</span> Records</div>
+<div class="fn-ticker-item"><span>EDEKA</span> · Jochen Schweizer · Nintendo · CLAAS</div>
+</div>
+</div>
+
+<!-- AWARD -->
 <section class="sec fn-award">
 <div class="w">
 <div class="fn-award-inner rv-s">
@@ -261,8 +279,121 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 </section>
 
+<!-- SONGS TIMELINE -->
+<section class="sec fn-songs" id="songs">
+<div class="w">
+<div class="sh rv">
+<div class="tag">Discography</div>
+<h2>Finnel <span>Songs</span></h2>
+<p>Von viralen Hymnen bis zur Brand-Kooperation — Musik, die Reichweite schafft und Marken in die Popkultur einbettet.</p>
+</div>
+
+<div class="fn-tl">
+
+<!-- SONG 1: Erste Million (Feb 2022) -->
+<div class="fn-tl-item rv-s">
+<div class="fn-tl-dot"></div>
+<div class="fn-tl-year">Feb 2022</div>
+<div class="fn-tl-video">
+<iframe data-src="https://www.youtube.com/embed/aBiLW-pdD1w" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="fn-tl-info">
+<div class="fn-tl-badge fn-tl-badge-new">🚀 Debut Single</div>
+<h3 class="fn-tl-h">Erste Million</h3>
+<p class="fn-tl-sub">Mit gerade mal 17 Jahren veröffentlicht Finnel seine Debütsingle — eine satirische Hymne auf Luxus-Flexing und den Traum von der ersten Million. Prada, Porsche, Privatjet: Der Track parodiert deutsche Meme-Kultur rund um den "BWL-Justus" und wurde zum viralen Soundtrack einer ganzen TikTok-Generation. #2 auf den TikTok Hot Charts.</p>
+<div class="fn-tl-kpis">
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">#2</div><div class="fn-tl-kpi-l">TikTok Hot 5</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">18K+</div><div class="fn-tl-kpi-l">TikTok Sounds</div></div>
+</div>
+<div class="fn-tl-tags">
+<span class="fn-tl-tag">Debut</span>
+<span class="fn-tl-tag">wiwewa / Sony Music</span>
+<span class="fn-tl-tag">Meme-Kultur</span>
+</div>
+</div>
+</div>
+
+<!-- SONG 2: Geringverdiener (Sep 2022) -->
+<div class="fn-tl-item rv-s">
+<div class="fn-tl-dot"></div>
+<div class="fn-tl-year">Sep 2022</div>
+<div class="fn-tl-video">
+<iframe data-src="https://www.youtube.com/embed/ypIaLA-Lhqg" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="fn-tl-info">
+<div class="fn-tl-badge fn-tl-badge-viral">🔥 Viral Hit</div>
+<h3 class="fn-tl-h">Geringverdiener</h3>
+<p class="fn-tl-sub">"Aus dem Weg, Geringverdiener!" — als Alter Ego "Fridolin" zerlegt Finnel die Luxus-Obsession einer ganzen Generation. Rolls-Royce, Brunch in Paris, Golfen auf Sylt mit Christian Lindner: So absurd, dass es schon wieder real klingt. Der Track ging massiv viral auf TikTok, löste eine Welle an Reaction-Videos aus und wurde zum Meme-Phänomen.</p>
+<div class="fn-tl-kpis">
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">650K+</div><div class="fn-tl-kpi-l">TikTok Likes</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">Viral</div><div class="fn-tl-kpi-l">TikTok Sound</div></div>
+</div>
+<div class="fn-tl-tags">
+<span class="fn-tl-tag">virral Original</span>
+<span class="fn-tl-tag">Satire</span>
+<span class="fn-tl-tag">Meme-Phänomen</span>
+</div>
+</div>
+</div>
+
+<!-- SONG 3: Dorfkinder (Jul 2023) -->
+<div class="fn-tl-item rv-s">
+<div class="fn-tl-dot"></div>
+<div class="fn-tl-year">Juli 2023</div>
+<div class="fn-tl-video">
+<iframe data-src="https://www.youtube.com/embed/3SdKODqdNZw" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="fn-tl-info">
+<div class="fn-tl-badge fn-tl-badge-gold">🏆 Goldene Schallplatte</div>
+<h3 class="fn-tl-h">Dorfkinder</h3>
+<p class="fn-tl-sub">Die Hymne einer ganzen Generation. "Dorfkinder" feiert Landleben, Schützenfest und Kreisliga — und wurde über Nacht zum kulturellen Phänomen. Gedreht in Finnels Heimatort Wang mit dem FC Wang und der Freiwilligen Feuerwehr. 21.000+ TikTok-Creations in nur zwei Wochen, #1 TikTok DE Hot 50, "Hot Artist of the Week" — und YouTube Creator des Jahres 2023. Produziert von Stard Ova, released via Epic/VIRRAL.</p>
+<div class="fn-tl-kpis">
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">45M+</div><div class="fn-tl-kpi-l">YouTube Views</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">100M+</div><div class="fn-tl-kpi-l">Streams</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">#12</div><div class="fn-tl-kpi-l">DE Charts</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">#1</div><div class="fn-tl-kpi-l">YT Trends</div></div>
+</div>
+<div class="fn-tl-tags">
+<span class="fn-tl-tag">virral Original</span>
+<span class="fn-tl-tag">Epic Records</span>
+<span class="fn-tl-tag">#1 TikTok DE Hot 50</span>
+<span class="fn-tl-tag">#33 AT Charts</span>
+</div>
+</div>
+</div>
+
+<!-- SONG 4: Dorfkinder CLAAS Edition (Nov 2025) -->
+<div class="fn-tl-item rv-s">
+<div class="fn-tl-dot"></div>
+<div class="fn-tl-year">Nov 2025</div>
+<div class="fn-tl-video">
+<iframe data-src="https://www.youtube.com/embed/1pPBtgf0_Co" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<div class="fn-tl-info">
+<div class="fn-tl-badge fn-tl-badge-brand">🤝 Brand Partnership</div>
+<h3 class="fn-tl-h">Dorfkinder <span style="color:var(--a)">(CLAAS Edition)</span></h3>
+<p class="fn-tl-sub">Die Blueprint für Branded Music: CLAAS — Weltmarktführer für Landtechnik seit 1913 — wird zum primären Künstler auf Spotify & Co. Neues Songwriting, maßgeschneidertes Video und Einbindung in die offizielle "Ernteplaylist": So wird aus einer viralen Hymne ein natives Kampagnen-Asset. Das Original generierte 21.000+ TikTok-Creations in zwei Wochen — diese Energie fließt direkt in die Markenwelt. Released via Epic/VIRRAL.</p>
+<div class="fn-tl-kpis">
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">12M+</div><div class="fn-tl-kpi-l">Video Views</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">1M+</div><div class="fn-tl-kpi-l">Likes</div></div>
+<div class="fn-tl-kpi"><div class="fn-tl-kpi-v">21K+</div><div class="fn-tl-kpi-l">TikTok Creations</div></div>
+</div>
+<div class="fn-tl-tags">
+<span class="fn-tl-tag">virral Original</span>
+<span class="fn-tl-tag">Brand Collab</span>
+<span class="fn-tl-tag">CLAAS seit 1913</span>
+<span class="fn-tl-tag">Ernteplaylist</span>
+<span class="fn-tl-tag">Epic Records</span>
+</div>
+</div>
+</div>
+
+</div><!-- /fn-tl -->
+</div>
+</section>
+
 <!-- BEST-OF VIDEOS -->
-<section class="sec" id="videos">
+<section class="sec" id="videos" style="background:var(--bg2)">
 <div class="w">
 <div class="sh"><div class="tag">Content</div><h2>Best-of <span>Videos</span></h2><p>Formate, die Millionen von Menschen erreichen — auf TikTok, YouTube und Instagram.</p></div>
 <div class="fn-videos-grid">
@@ -282,44 +413,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 </section>
 
-<!-- DORFKINDER -->
-<section class="sec fn-dk" id="dorfkinder">
-<div class="w">
-<div class="fn-dk-inner rv-s">
-<div class="fn-dk-visual" onclick="window.open('https://www.youtube.com/watch?v=1pPBtgf0_Co','_blank')">
-<img src="/img/img-17.webp" alt="Dorfkinder x CLAAS">
-<div class="fn-dk-play"><div class="fn-dk-play-btn"><svg viewBox="0 0 24 24"><polygon points="9.5 7.5 16.5 12 9.5 16.5"/></svg></div></div>
-</div>
-<div>
-<div class="tag">Musik & Entertainment</div>
-<h2 class="fn-dk-h">Dorfkinder</h2>
-<p class="fn-dk-sub">Der virale Hit "Dorfkinder" erreichte #12 in den deutschen Singlecharts, #1 auf den YouTube Trend Charts und wurde zum kulturellen Phänomen einer ganzen Generation. Strategische Adaption für CLAAS als "Dorfkinder (CLAAS Edition)": Neues Songwriting und maßgeschneiderte Videoproduktion überführten den viralen Erfolg nativ in die Markenwelt — released via Epic/VIRRAL.</p>
-<div class="fn-dk-kpis">
-<div class="fn-dk-kpi"><div class="fn-dk-kv">12 Mio.</div><div class="fn-dk-kl">Video-Aufrufe</div></div>
-<div class="fn-dk-kpi"><div class="fn-dk-kv">1 Mio.+</div><div class="fn-dk-kl">Likes</div></div>
-<div class="fn-dk-kpi"><div class="fn-dk-kv">1 Mio.+</div><div class="fn-dk-kl">Streams</div></div>
-<div class="fn-dk-kpi"><div class="fn-dk-kv">Gold</div><div class="fn-dk-kl">Schallplatte</div></div>
-</div>
-<div class="fn-dk-tags">
-<span class="fn-dk-tag">Label & Distribution</span>
-<span class="fn-dk-tag">Songwriting</span>
-<span class="fn-dk-tag">Musikvideo-Regie</span>
-<span class="fn-dk-tag">Brand Partnership</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-
 <!-- ARD PODCAST -->
 <section class="sec" id="podcast">
 <div class="w">
 <div class="fn-pod-inner rv-s">
 <div class="fn-pod-visual">
-<div class="fn-pod-logo">ARD Podcast</div>
-<div class="fn-pod-cover">Finnel und <span>das Geld</span></div>
-<p style="color:var(--w2);font-size:.82rem;line-height:1.6;max-width:280px">Der Finanz-Podcast für die junge Generation — präsentiert von der ARD.</p>
-<div class="fn-pod-ard"><svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--a)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> ARD Audiothek</div>
+<img src="/img/img-22.jpeg" alt="Finnel und das Geld — ARD Podcast">
 </div>
 <div>
 <div class="tag">Podcast</div>
@@ -364,7 +463,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 </section>
 
-<!-- KOOPERATIONS-FORMATE -->
+<!-- FORMATE -->
 <section class="sec fn-fmt" id="formate">
 <div class="w">
 <div class="sh"><div class="tag">Kooperation</div><h2>Formate & <span>Möglichkeiten</span></h2><p>Von klassischer Integration bis hin zu kompletten Brand-Kampagnen — flexibel und maßgeschneidert.</p></div>
@@ -381,8 +480,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 <div class="fn-fmt-card rv-s rvd2">
 <div class="fn-fmt-emoji">🎵</div>
-<div class="fn-fmt-h">Musik & Entertainment</div>
-<div class="fn-fmt-p">Brand-Songs, Musikvideo-Produktionen und Entertainment-Formate wie "Dorfkinder" — virales Potenzial inklusive.</div>
+<div class="fn-fmt-h">Branded Music</div>
+<div class="fn-fmt-p">Brand-Songs wie die CLAAS Edition von "Dorfkinder" — virales Potenzial, das eure Marke nativ in die Popkultur einbettet.</div>
 </div>
 <div class="fn-fmt-card rv-s rvd3">
 <div class="fn-fmt-emoji">🎙️</div>
@@ -460,7 +559,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 
 /* Scroll reveal */
 (function(){
-  var items=[{s:'.sh',c:'rv'},{s:'.fn-vid-card',c:'rv-s'},{s:'.fn-zg-card',c:'rv-s'},{s:'.fn-fmt-card',c:'rv-s'},{s:'.fn-brand',c:'rv-s'},{s:'.fn-award-inner',c:'rv-s'},{s:'.fn-dk-inner',c:'rv-s'},{s:'.fn-pod-inner',c:'rv-s'},{s:'.fn-cta-inner',c:'rv-s'},{s:'.fn-hero-grid',c:'rv'}];
+  var items=[{s:'.sh',c:'rv'},{s:'.fn-vid-card',c:'rv-s'},{s:'.fn-zg-card',c:'rv-s'},{s:'.fn-fmt-card',c:'rv-s'},{s:'.fn-brand',c:'rv-s'},{s:'.fn-award-inner',c:'rv-s'},{s:'.fn-pod-inner',c:'rv-s'},{s:'.fn-cta-inner',c:'rv-s'},{s:'.fn-tl-item',c:'rv-s'}];
   items.forEach(function(item){
     document.querySelectorAll(item.s).forEach(function(el){ el.classList.add(item.c); });
   });

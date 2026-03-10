@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anfrage — virral</title>
+<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:hidden;font-size:15px;min-height:100vh;display:flex;flex-direction:column}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(5,5,5,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bd)}.ni{display:flex;align-items:center;justify-content:space-between}.nlogo{display:flex;align-items:center;text-decoration:none;color:var(--w)}.nlogo svg{height:18px;width:auto;fill:currentColor}.na{font-size:.82rem;font-weight:500;color:var(--w2);transition:color .3s}.na:hover{color:var(--w)}.nls{display:flex;gap:28px;align-items:center}.nc{padding:9px 22px;background:var(--a);color:#fff;border-radius:100px;font-size:.82rem;font-weight:600;transition:all .3s}.nc:hover{background:var(--ah)}.nm{display:none;flex-direction:column;gap:4px;width:22px;cursor:pointer}.nm span{height:1.5px;background:var(--w);border-radius:2px;display:block}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ========== Multi-Step Form ========== */
+.mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
+.mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
+.mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column}
+.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:32px}
+.mf-step{display:none;flex-direction:column;flex:1}
+.mf-step-active{display:flex}
+.mf-label{font-size:.88rem;color:var(--w2);margin-bottom:20px}
+.mf-fields{display:flex;flex-direction:column;gap:12px}
+.mf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mf-field input{width:100%;padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:var(--r);color:var(--w);font-family:var(--f);font-size:.88rem;transition:border-color .3s}
+.mf-field input:focus{outline:none;border-color:rgba(255,255,255,.2)}
+.mf-field input::placeholder{color:var(--w3)}
+.mf-field input.mf-error{border-color:var(--a);background:rgba(254,44,85,.04)}
+.mf-error-msg{font-size:.78rem;color:var(--a);margin-top:10px;display:none;align-items:center;gap:6px;animation:mf-shake .4s ease}
+.mf-error-msg.visible{display:flex}
+@keyframes mf-shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+.mf-phone-field{position:relative;display:flex;align-items:stretch}
+.mf-phone-prefix{display:flex;align-items:center;gap:6px;padding:0 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-right:none;border-radius:var(--r) 0 0 var(--r);font-size:.82rem;color:var(--w2);white-space:nowrap}
+.mf-phone-field input{border-radius:0 var(--r) var(--r) 0}
+.mf-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mf-option{padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:all .25s;font-size:.88rem;color:var(--w2)}
+.mf-option:hover{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.05)}
+.mf-option.selected{border-color:var(--a);background:rgba(254,44,85,.06);color:var(--w)}
+.mf-check{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--bd);transition:all .25s;flex-shrink:0}
+.mf-option.selected .mf-check{border-color:var(--a);background:var(--a);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:14px;background-position:center;background-repeat:no-repeat}
+.mf-nav{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:28px}
+.mf-btn{display:inline-flex;align-items:center;gap:6px;padding:14px 28px;border-radius:100px;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .3s;border:none;font-family:var(--f)}
+.mf-btn svg{width:16px;height:16px}
+.mf-btn-next,.mf-btn-submit{background:var(--w);color:var(--bg);padding:14px 32px}
+.mf-btn-next:hover{background:#fff;transform:translateY(-1px)}
+.mf-btn-submit{background:var(--a);color:#fff}
+.mf-btn-submit:hover{background:var(--ah);box-shadow:0 6px 20px var(--ag);transform:translateY(-1px)}
+.mf-btn-back{background:rgba(255,255,255,.06);color:var(--w2);border:1px solid var(--bd)}
+.mf-btn-back:hover{background:rgba(255,255,255,.1);color:var(--w)}
+.mf-counter{margin-left:auto;font-size:.82rem;color:var(--w3);font-weight:600}
+.mf-privacy{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.75rem;color:var(--w3);line-height:1.6;cursor:pointer}
+.mf-privacy input[type="checkbox"]{width:18px;height:18px;border-radius:4px;accent-color:var(--a);margin-top:1px;flex-shrink:0;cursor:pointer}
+.mf-privacy a{color:var(--a);text-decoration:underline;text-underline-offset:2px}
+.mf-contact-bar{display:flex;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid var(--bd);flex-wrap:wrap}
+.mf-contact-item{display:flex;align-items:center;gap:10px;color:var(--w2);font-size:.78rem;transition:color .3s}
+.mf-contact-item:hover{color:var(--w)}
+.mf-contact-item svg{color:var(--w3);flex-shrink:0}
+.mf-contact-item strong{display:block;color:var(--w);font-weight:600;font-size:.82rem}
+.mf-contact-item span{display:block;font-size:.7rem;color:var(--w3)}
+.mf-success{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:1;padding:40px 0}
+.mf-success-icon{width:64px;height:64px;border-radius:50%;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.mf-success-icon svg{width:32px;height:32px}
+.mf-success h3{font-size:1.4rem;font-weight:800;margin-bottom:8px}
+.mf-success p{color:var(--w2);font-size:.9rem;line-height:1.7}
+.mf-testi-side{position:relative;overflow:hidden}
+.mf-testi{display:none;height:100%}
+.mf-testi-active{display:block}
+.mf-testi-card{height:100%;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:16px}
+.mf-testi-red{background:linear-gradient(160deg,#2a1015 0%,#1a0a0d 40%,#0f1a1a 100%)}
+.mf-testi-green{background:linear-gradient(160deg,#0a2a1a 0%,#0a1a14 40%,#0f1a1a 100%)}
+.mf-testi-top{display:flex;align-items:center;gap:12px}
+.mf-testi-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.1);flex-shrink:0}
+.mf-testi-avatar img{width:100%;height:100%;object-fit:cover}
+.mf-testi-name{font-size:.88rem;font-weight:700}
+.mf-testi-role{font-size:.72rem;color:var(--w3)}
+.mf-testi-quote{font-size:clamp(1rem,1.6vw,1.25rem);font-weight:600;line-height:1.45;color:var(--w)}
+.mf-testi-video{flex:1;display:flex;align-items:center;justify-content:center;padding:8px 0}
+.mf-testi-phone{width:clamp(140px,16vw,200px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.4);background:#000}
+.mf-testi-phone iframe{width:100%;height:100%;border:none}
+.mf-testi-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}
+.mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px}
+.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain}
+
+/* Footer */
+.ft{border-top:1px solid var(--bd);padding:32px 0;margin-top:auto}
+.ft-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ft-links{display:flex;gap:20px;font-size:.78rem}
+.ft-links a{color:var(--w3);transition:color .3s}
+.ft-links a:hover{color:var(--w)}
+.ft-copy{font-size:.72rem;color:var(--w3)}
+
+/* Mobile */
+@media(max-width:900px){
+.mf-inner{grid-template-columns:1fr}
+.mf-testi-side{display:none}
+.mf-row{grid-template-columns:1fr}
+.mf-options{grid-template-columns:1fr}
+.mf-form-side{padding:24px 20px}
+.mf-title{font-size:1.4rem}
+.mf-page{padding:80px 0 40px}
+}
+@media(max-width:768px){
+.nls{display:none}
+.nm{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav><div class="w"><div class="ni">
+<a href="/" class="nlogo"><svg viewBox="0 0 1312 368" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg></a>
+<div class="nls">
+<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="/#creators" class="na">Creator</a><a href="/#process" class="na">Prozess</a>
+</div>
+<button class="nm" aria-label="Menü"><span></span><span></span><span></span></button>
+</div></div></nav>
+
+<!-- FORM -->
+<main class="mf-page">
+<div class="w">
+<div class="mf-card">
+<div class="mf-inner">
+
+<!-- LEFT: Form -->
+<div class="mf-form-side">
+<h2 class="mf-title">Unverbindliches<br>Erstgespräch vereinbaren.</h2>
+
+<!-- Step 1: Personal Info -->
+<div class="mf-step mf-step-active" data-step="1">
+<div class="mf-label">Deine persönlichen Informationen:</div>
+<div class="mf-fields">
+<div class="mf-row">
+<div class="mf-field"><input type="text" name="name" placeholder="Dein Name" required></div>
+<div class="mf-field"><input type="email" name="email" placeholder="Deine Email" required></div>
+</div>
+<div class="mf-row">
+<div class="mf-field"><input type="text" name="company" placeholder="Unternehmen"></div>
+<div class="mf-field mf-phone-field">
+<div class="mf-phone-prefix"><span>🇩🇪</span> +49</div>
+<input type="tel" name="phone" placeholder="Deine Telefonnummer">
+</div>
+</div>
+</div>
+<div class="mf-error-msg" id="mf-err-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span></span></div>
+<div class="mf-nav">
+<div></div>
+<button type="button" class="mf-btn mf-btn-next" data-next="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> Nächster Schritt</button>
+<div class="mf-counter">1/5</div>
+</div>
+<div class="mf-contact-bar">
+<a href="mailto:hello@virral.de" class="mf-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:20px;height:20px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg><div><strong>hello@virral.de</strong><span>Email</span></div></a>
+<a href="tel:+4922129256316" class="mf-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:20px;height:20px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div><strong>+49 221 29256316</strong><span>Hotline</span></div></a>
+</div>
+</div>
+
+<!-- Step 2: Service -->
+<div class="mf-step" data-step="2">
+<div class="mf-label">Welcher Service trifft am meisten zu:</div>
+<div class="mf-options" data-name="service">
+<div class="mf-option" data-value="Creator Kampagne"><span>Creator Kampagne</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="Beratung"><span>Beratung</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="Brand Channel"><span>Brand Channel</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="Sonstiges"><span>Sonstiges</span><div class="mf-check"></div></div>
+</div>
+<div class="mf-nav">
+<button type="button" class="mf-btn mf-btn-back" data-prev="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> zurück</button>
+<button type="button" class="mf-btn mf-btn-next" data-next="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> weiter</button>
+<div class="mf-counter">2/5</div>
+</div>
+</div>
+
+<!-- Step 3: Budget -->
+<div class="mf-step" data-step="3">
+<div class="mf-label">Budget für das Projekt:</div>
+<div class="mf-options" data-name="budget">
+<div class="mf-option" data-value="€10k bis €30k"><span>€10k bis €30k</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="€30 bis €70k"><span>€30 bis €70k</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="€70k bis €150k"><span>€70k bis €150k</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="€150k oder mehr"><span>€150k oder mehr</span><div class="mf-check"></div></div>
+</div>
+<div class="mf-nav">
+<button type="button" class="mf-btn mf-btn-back" data-prev="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> zurück</button>
+<button type="button" class="mf-btn mf-btn-next" data-next="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> weiter</button>
+<div class="mf-counter">3/5</div>
+</div>
+</div>
+
+<!-- Step 4: Timeline -->
+<div class="mf-step" data-step="4">
+<div class="mf-label">Wann soll es losgehen?</div>
+<div class="mf-options" data-name="timeline">
+<div class="mf-option" data-value="ASAP!"><span>ASAP!</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="Binnen 7 Tagen"><span>Binnen 7 Tagen</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="Binnen 14 Tagen"><span>Binnen 14 Tagen</span><div class="mf-check"></div></div>
+<div class="mf-option" data-value="30+ Tage"><span>30+ Tage</span><div class="mf-check"></div></div>
+</div>
+<label class="mf-privacy"><input type="checkbox" name="privacy" required><span>Ich bin mit den <a href="/datenschutz.html" target="_blank">Hinweisen zum Datenschutz</a> einverstanden & stimme der Verarbeitung meiner Daten zur Beantwortung und Verarbeitung meiner Anfrage zu.</span></label>
+<div class="mf-error-msg" id="mf-err-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span></span></div>
+<div class="mf-nav">
+<button type="button" class="mf-btn mf-btn-back" data-prev="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> zurück</button>
+<button type="button" class="mf-btn mf-btn-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> Senden</button>
+<div class="mf-counter">4/5</div>
+</div>
+</div>
+
+<!-- Step 5: Success -->
+<div class="mf-step" data-step="5">
+<div class="mf-success">
+<div class="mf-success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+<h3>Anfrage erfolgreich gesendet!</h3>
+<p>Wir melden uns innerhalb von 24 Stunden bei dir. Bis gleich!</p>
+</div>
+</div>
+
+</div>
+
+<!-- RIGHT: Testimonial -->
+<div class="mf-testi-side">
+<!-- Testimonial 1: Manuel Schaub / EDEKA (steps 1, 5) -->
+<div class="mf-testi mf-testi-active" data-testi="1">
+<div class="mf-testi-card mf-testi-red">
+<div class="mf-testi-top">
+<div class="mf-testi-avatar"><img src="/img/img-12.avif" alt="Manuel Schaub"></div>
+<div><div class="mf-testi-name">Manuel Schaub</div><div class="mf-testi-role">Teamlead Personalmarketing, EDEKA Südwest</div></div>
+</div>
+<div class="mf-testi-quote">&bdquo;Wir sind mit der Arbeitgebermarke EDEKA Südwest im Fokus der Jugendlichen angekommen.&ldquo;</div>
+<div class="mf-testi-video">
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+<div class="mf-testi-logos">
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2: Fabian Heuel / Jochen Schweizer (steps 2, 3) -->
+<div class="mf-testi" data-testi="2">
+<div class="mf-testi-card mf-testi-green">
+<div class="mf-testi-top">
+<div class="mf-testi-avatar"><img src="/img/img-13.webp" alt="Fabian Heuel"></div>
+<div><div class="mf-testi-name">Fabian Heuel</div><div class="mf-testi-role">Teamlead Brand & Social, Jochen Schweizer</div></div>
+</div>
+<div class="mf-testi-quote">&bdquo;Wir haben unsere Social-Präsenz auf ein neues Level gehoben.&ldquo;</div>
+<div class="mf-testi-video">
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/8HtJqJvEWU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+<div class="mf-testi-logos">
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3: Lena Barkovic / STRABAG (step 4) -->
+<div class="mf-testi" data-testi="3">
+<div class="mf-testi-card" style="background:linear-gradient(160deg,#0a1530 0%,#0a1020 40%,#0f1a1a 100%)">
+<div class="mf-testi-top">
+<div class="mf-testi-avatar"><img src="/img/img-14.webp" alt="Lena Barkovic"></div>
+<div><div class="mf-testi-name">Lena Barkovic</div><div class="mf-testi-role">Teamlead Social Media, STRABAG AG</div></div>
+</div>
+<div class="mf-testi-quote">&bdquo;Einen starken Launch unseres STRABAG-TikTok Kanals hingelegt &ndash; starke Reichweiten, und das alles organisch.&ldquo;</div>
+<div class="mf-testi-video">
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+<div class="mf-testi-logos">
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="w"><div class="ft-inner">
+<div class="ft-copy">&copy; 2026 virral GmbH</div>
+<div class="ft-links">
+<a href="/impressum.html">Impressum</a>
+<a href="/datenschutz.html">Datenschutz</a>
+<a href="mailto:hello@virral.de">hello@virral.de</a>
+</div>
+</div></div></footer>
+
+<script>
+/* Multi-Step Form */
+(function(){
+  var FORMSPREE_ID = 'FORM_ID'; // Replace with your Formspree form ID
+  var form = document.querySelector('.mf-form-side');
+  if (!form) return;
+
+  var steps = form.querySelectorAll('.mf-step');
+  var testis = document.querySelectorAll('.mf-testi');
+  var testiMap = {1:'1',2:'2',3:'2',4:'3',5:'1'};
+  var current = 1;
+  var data = {};
+
+  function goTo(n) {
+    steps.forEach(function(s){ s.classList.remove('mf-step-active'); });
+    var next = form.querySelector('.mf-step[data-step="'+n+'"]');
+    if (next) next.classList.add('mf-step-active');
+
+    testis.forEach(function(t){ t.classList.remove('mf-testi-active'); });
+    var ti = document.querySelector('.mf-testi[data-testi="'+testiMap[n]+'"]');
+    if (ti) {
+      ti.classList.add('mf-testi-active');
+      ti.querySelectorAll('iframe[data-src]').forEach(function(f){
+        if (!f.src) f.src = f.getAttribute('data-src');
+      });
+    }
+    current = n;
+  }
+
+  function showError(id, msg) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.querySelector('span').textContent = msg;
+    el.classList.remove('visible');
+    void el.offsetWidth; // restart animation
+    el.classList.add('visible');
+  }
+  function hideError(id) {
+    var el = document.getElementById(id);
+    if (el) el.classList.remove('visible');
+  }
+  function clearFieldErrors() {
+    form.querySelectorAll('.mf-error').forEach(function(f){ f.classList.remove('mf-error'); });
+  }
+
+  function validateStep1() {
+    clearFieldErrors();
+    hideError('mf-err-1');
+    var name = form.querySelector('input[name="name"]');
+    var email = form.querySelector('input[name="email"]');
+    if (!name.value.trim()) {
+      name.classList.add('mf-error');
+      name.focus();
+      showError('mf-err-1', 'Bitte gib deinen Namen ein.');
+      return false;
+    }
+    if (!email.value.trim()) {
+      email.classList.add('mf-error');
+      email.focus();
+      showError('mf-err-1', 'Bitte gib deine E-Mail-Adresse ein.');
+      return false;
+    }
+    if (!email.value.includes('@') || !email.value.includes('.')) {
+      email.classList.add('mf-error');
+      email.focus();
+      showError('mf-err-1', 'Bitte gib eine gültige E-Mail-Adresse ein.');
+      return false;
+    }
+    data.name = name.value.trim();
+    data.email = email.value.trim();
+    data.company = form.querySelector('input[name="company"]').value.trim();
+    data.phone = form.querySelector('input[name="phone"]').value.trim();
+    return true;
+  }
+
+  form.querySelectorAll('.mf-btn-next').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var next = parseInt(this.getAttribute('data-next'));
+      if (current === 1 && !validateStep1()) return;
+      var opts = form.querySelector('.mf-step[data-step="'+current+'"] .mf-options');
+      if (opts) {
+        var sel = opts.querySelector('.mf-option.selected');
+        if (sel) data[opts.getAttribute('data-name')] = sel.getAttribute('data-value');
+      }
+      goTo(next);
+    });
+  });
+
+  form.querySelectorAll('.mf-btn-back').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      goTo(parseInt(this.getAttribute('data-prev')));
+    });
+  });
+
+  form.querySelectorAll('.mf-options').forEach(function(group){
+    group.querySelectorAll('.mf-option').forEach(function(opt){
+      opt.addEventListener('click', function(){
+        group.querySelectorAll('.mf-option').forEach(function(o){ o.classList.remove('selected'); });
+        this.classList.add('selected');
+      });
+    });
+  });
+
+  // Clear errors on input
+  form.querySelectorAll('input[type="text"],input[type="email"],input[type="tel"]').forEach(function(inp){
+    inp.addEventListener('input', function(){
+      this.classList.remove('mf-error');
+      hideError('mf-err-1');
+    });
+  });
+  var privBox = form.querySelector('input[name="privacy"]');
+  if (privBox) privBox.addEventListener('change', function(){ hideError('mf-err-4'); });
+
+  var submitBtn = form.querySelector('.mf-btn-submit');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function(){
+      var opts = form.querySelector('.mf-step[data-step="4"] .mf-options');
+      if (opts) {
+        var sel = opts.querySelector('.mf-option.selected');
+        if (sel) data.timeline = sel.getAttribute('data-value');
+      }
+      var priv = form.querySelector('input[name="privacy"]');
+      hideError('mf-err-4');
+      if (!priv.checked) {
+        showError('mf-err-4', 'Bitte stimme den Datenschutzhinweisen zu.');
+        priv.focus();
+        return;
+      }
+
+      submitBtn.textContent = 'Wird gesendet...';
+      submitBtn.disabled = true;
+
+      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      }).then(function(r){
+        if (r.ok) { goTo(5); } else { fallback(); }
+      }).catch(function(){ fallback(); });
+
+      function fallback() {
+        var body = Object.entries(data).map(function(e){return e[0]+': '+e[1]}).join('%0A');
+        window.location.href = 'mailto:hello@virral.de?subject=Anfrage%20über%20virral.de&body=' + body;
+        goTo(5);
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

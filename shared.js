@@ -73,5 +73,13 @@
       +'</div></footer>';
   }
   }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initFooter)}else{initFooter()}
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',initFooter);
+  }else{
+    initFooter();
+  }
+  /* Fallback: retry footer init if element wasn't in DOM yet */
+  if(!document.querySelector('footer.ft')){
+    window.addEventListener('load',initFooter);
+  }
 })();

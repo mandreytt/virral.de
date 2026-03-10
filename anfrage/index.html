@@ -13,9 +13,9 @@
 .mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
 .mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
 .mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
-.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end}
-.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:40px}
-.mf-step{display:none;flex-direction:column;flex:1}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column}
+.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:auto}
+.mf-step{display:none;flex-direction:column}
 .mf-step-active{display:flex}
 .mf-label{font-size:.88rem;color:var(--w2);margin-bottom:20px}
 .mf-fields{display:flex;flex-direction:column;gap:12px}
@@ -36,7 +36,7 @@
 .mf-option.selected{border-color:var(--a);background:rgba(254,44,85,.06);color:var(--w)}
 .mf-check{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--bd);transition:all .25s;flex-shrink:0}
 .mf-option.selected .mf-check{border-color:var(--a);background:var(--a);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:14px;background-position:center;background-repeat:no-repeat}
-.mf-nav{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:28px}
+.mf-nav{display:flex;align-items:center;gap:12px;padding-top:28px}
 .mf-btn{display:inline-flex;align-items:center;gap:6px;padding:14px 28px;border-radius:100px;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .3s;border:none;font-family:var(--f)}
 .mf-btn svg{width:16px;height:16px}
 .mf-btn-next,.mf-btn-submit{background:var(--w);color:var(--bg);padding:14px 32px}

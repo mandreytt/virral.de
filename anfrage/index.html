@@ -13,8 +13,8 @@
 .mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
 .mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
 .mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
-.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column}
-.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:auto}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end}
+.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:32px}
 .mf-step{display:none;flex-direction:column}
 .mf-step-active{display:flex}
 .mf-label{font-size:.88rem;color:var(--w2);margin-bottom:20px}
@@ -71,7 +71,7 @@
 .mf-testi-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.1);flex-shrink:0}
 .mf-testi-avatar img{width:100%;height:100%;object-fit:cover}
 .mf-testi-name{font-size:.88rem;font-weight:700}
-.mf-testi-role{font-size:.72rem;color:var(--w3)}
+.mf-testi-role{font-size:.78rem;color:var(--w2);line-height:1.4}
 .mf-testi-quote{font-size:clamp(1rem,1.6vw,1.25rem);font-weight:600;line-height:1.45;color:var(--w);min-height:4.4em}
 .mf-testi-video{flex:1;display:flex;align-items:center;justify-content:center;padding:8px 0}
 .mf-testi-phone{width:clamp(140px,16vw,200px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.4);background:#000}
@@ -88,7 +88,7 @@
 .mf-testi-logo.tl-strabag{background:rgba(220,30,30,.12);border-color:rgba(220,30,30,.25)}
 .mf-testi-logo.tl-strabag:hover{background:rgba(220,30,30,.18)}
 .mf-testi-logo .tl-bar{position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--a);border-radius:0 2px 0 0;z-index:2}
-.mf-testi-logo.tl-active .tl-bar{animation:tl-fill 4s linear forwards}
+.mf-testi-logo.tl-active .tl-bar{animation:tl-fill 5s linear forwards}
 @keyframes tl-fill{from{width:0}to{width:100%}}
 
 /* Footer */
@@ -325,7 +325,7 @@
     testiTimer = setInterval(function(){
       var next = activeTesti >= 3 ? 1 : activeTesti + 1;
       showTesti(next);
-    }, 4000);
+    }, 5000);
   }
 
   // Click on logos to switch

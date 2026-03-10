@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jochen Schweizer × virral — Case Study</title>
+<meta name="description" content="Wie virral die komplette Social-Präsenz von Jochen Schweizer verantwortet: Strategie, Content, Produktion und Community. 32 Mio. organische Views, +400% Watchtime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1);--js:#0d7fac}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:clip;font-size:15px}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}
+.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.sec{padding:clamp(60px,10vw,120px) 0}
+.sh{text-align:center;margin-bottom:clamp(40px,6vw,64px)}
+.sh h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+.sh h2 span{color:var(--a)}
+.sh p{font-size:.92rem;color:var(--w2);max-width:520px;margin:0 auto;line-height:1.7}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--a);background:var(--as);border:1px solid rgba(254,44,85,.15);padding:5px 14px;border-radius:100px;margin-bottom:16px}
+
+/* ===== HERO ===== */
+.js-hero{position:relative;min-height:85vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
+.js-hero-bg{position:absolute;inset:0}
+.js-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.js-hero-grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,8,.3) 0%,rgba(6,6,8,.6) 50%,rgba(6,6,8,.95) 80%,#060608 100%)}
+.js-hero-content{position:relative;z-index:2;padding-bottom:clamp(48px,8vw,80px);max-width:720px}
+.js-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(13,127,172,.1);border:1px solid rgba(13,127,172,.25);border-radius:100px;margin-bottom:24px}
+.js-hero-badge img{height:22px;width:auto}
+.js-hero-badge span{font-size:.78rem;font-weight:600;color:var(--w2)}
+.js-h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px}
+.js-h1 span{color:var(--a)}
+.js-sub{font-size:clamp(.88rem,1.2vw,1rem);color:var(--w2);line-height:1.75;margin-bottom:32px;max-width:560px}
+.js-hero-stats{display:flex;gap:clamp(24px,4vw,48px);flex-wrap:wrap;margin-bottom:32px}
+.js-hero-stat{display:flex;flex-direction:column}
+.js-hero-stat strong{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;color:var(--w)}
+.js-hero-stat span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.js-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Buttons */
+.js-btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--a);color:#fff;border-radius:100px;font-size:.88rem;font-weight:700;transition:all .4s var(--e);border:none;cursor:pointer}
+.js-btn-p:hover{background:var(--ah);transform:translateY(-2px);box-shadow:0 8px 32px var(--ag)}
+.js-btn-p svg{width:16px;height:16px}
+.js-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:rgba(255,255,255,.06);color:var(--w);border:1px solid var(--bd);border-radius:100px;font-size:.88rem;font-weight:600;transition:all .4s var(--e);backdrop-filter:blur(12px);cursor:pointer}
+.js-btn-s:hover{background:rgba(255,255,255,.12);border-color:var(--bd2);transform:translateY(-2px)}
+
+/* ===== PARTNERSHIP BAR ===== */
+.js-partner{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:24px 0}
+.js-partner-inner{display:flex;align-items:center;justify-content:center;gap:clamp(32px,5vw,64px);flex-wrap:wrap}
+.js-partner-item{display:flex;flex-direction:column;align-items:center;gap:4px}
+.js-partner-item strong{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:800;letter-spacing:-.02em}
+.js-partner-item span{font-size:.7rem;color:var(--w3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.js-partner-div{width:1px;height:32px;background:var(--bd)}
+
+/* ===== CAMPAIGN SECTION ===== */
+.js-camp{position:relative;overflow:hidden}
+.js-camp::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(254,44,85,.06) 0%,transparent 70%);pointer-events:none}
+.js-camp-inner{position:relative;z-index:1}
+.js-camp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,56px);align-items:center}
+.js-camp-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.js-camp-vid{border-radius:var(--r2);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;transition:all .4s var(--e)}
+.js-camp-vid:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:var(--bd2)}
+.js-camp-vid iframe{width:100%;height:100%;border:none}
+.js-camp-text h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+.js-camp-text h2 span{color:var(--a)}
+.js-camp-text p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px}
+.js-camp-kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.js-camp-kpi{padding:16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
+.js-camp-kpi strong{display:block;font-size:1.1rem;font-weight:800;color:var(--w);margin-bottom:2px}
+.js-camp-kpi span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+/* ===== EVENT SECTION ===== */
+.js-event{background:linear-gradient(180deg,var(--bg) 0%,#0c080a 50%,var(--bg) 100%);position:relative;overflow:hidden}
+.js-event::before{content:'';position:absolute;bottom:-100px;right:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(254,44,85,.05) 0%,transparent 70%);pointer-events:none}
+.js-event-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,56px);align-items:center;position:relative;z-index:1}
+.js-event-text h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+.js-event-text h2 span{color:var(--a)}
+.js-event-text p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px}
+.js-event-visual{position:relative}
+.js-event-phone{max-width:240px;margin:0 auto;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 24px 80px rgba(0,0,0,.5);background:#000}
+.js-event-phone iframe{width:100%;height:100%;border:none}
+.js-event-img{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);box-shadow:0 24px 80px rgba(0,0,0,.5);aspect-ratio:16/10;background:#000}
+.js-event-img img{width:100%;height:100%;object-fit:cover}
+.js-event-kpis{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.js-event-kpi{padding:10px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.82rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.js-event-kpi svg{width:16px;height:16px;color:var(--a);flex-shrink:0}
+
+/* ===== QUOTE SECTION ===== */
+.js-quote-sec{background:var(--bg2)}
+.js-quote-inner{max-width:720px;margin:0 auto;text-align:center}
+.js-quote-avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid rgba(255,255,255,.1);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.js-quote-avatar img{width:100%;height:100%;object-fit:cover}
+.js-quote-text{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;line-height:1.55;margin-bottom:20px;font-style:italic;color:var(--w);position:relative}
+.js-quote-text::before{content:'\201E';font-size:3rem;color:var(--a);opacity:.5;position:absolute;top:-12px;left:-20px;font-style:normal;line-height:1}
+.js-quote-name{font-size:.88rem;font-weight:700}
+.js-quote-role{font-size:.78rem;color:var(--w2)}
+
+/* ===== SERVICES ===== */
+.js-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.js-service{padding:24px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .4s var(--e);text-align:center}
+.js-service:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.js-service-icon{width:48px;height:48px;border-radius:14px;background:var(--as);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.js-service-icon svg{width:22px;height:22px;color:var(--a)}
+.js-service h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
+.js-service p{font-size:.75rem;color:var(--w3);line-height:1.6}
+
+/* ===== RESULTS ===== */
+.js-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.js-result{padding:28px 24px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);text-align:center;transition:all .4s var(--e)}
+.js-result:hover{border-color:rgba(254,44,85,.2);transform:translateY(-4px)}
+.js-result strong{display:block;font-size:clamp(1.6rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;background:linear-gradient(135deg,var(--a),#ff6b8a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.js-result span{font-size:.75rem;color:var(--w3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+
+/* ===== CTA ===== */
+.js-cta{padding:clamp(60px,10vw,100px) 0}
+.js-cta-inner{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);padding:clamp(40px,5vw,64px);text-align:center;position:relative;overflow:hidden}
+.js-cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--a),transparent)}
+.js-cta-avatar{width:80px;height:80px;border-radius:50%;overflow:hidden;margin:0 auto 16px;border:3px solid rgba(255,255,255,.1);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.js-cta-avatar img{width:100%;height:100%;object-fit:cover}
+.js-cta-name{font-size:1rem;font-weight:700;margin-bottom:2px}
+.js-cta-role{font-size:.78rem;color:var(--w3);margin-bottom:6px}
+.js-cta-avail{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;color:#4ade80;margin-bottom:24px}
+.js-cta-avail .pd{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.js-cta h2{font-size:clamp(1.4rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
+.js-cta h2 span{color:var(--a)}
+.js-cta>p,.js-cta-inner>p{font-size:.88rem;color:var(--w2);max-width:440px;margin:0 auto 28px;line-height:1.7}
+.js-cta-checks{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.js-cta-check{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--w2)}
+.js-cta-check svg{width:16px;height:16px;color:var(--a)}
+
+/* ===== REVEAL ANIMATION ===== */
+.rv,.rv-s{opacity:0;transform:translateY(32px);transition:opacity .7s var(--e),transform .7s var(--e)}
+.rvv{opacity:1;transform:translateY(0)}
+.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+.js-camp-grid,.js-event-grid{grid-template-columns:1fr}
+.js-camp-videos{max-width:500px}
+.js-services-grid,.js-results-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+.js-hero{min-height:70vh}
+.js-hero-stats{gap:20px}
+.js-camp-videos{grid-template-columns:repeat(3,1fr);max-width:100%}
+.js-services-grid,.js-results-grid{grid-template-columns:1fr 1fr}
+.js-partner-div{display:none}
+.js-quote-text::before{left:0}
+}
+@media(max-width:480px){
+.js-services-grid{grid-template-columns:1fr}
+.js-results-grid{grid-template-columns:1fr 1fr}
+.js-hero-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div id="shared-nav"></div>
+<script src="/shared.js"></script>
+
+<!-- HERO -->
+<section class="js-hero">
+<div class="js-hero-bg">
+<img src="/img/img-19.webp" alt="Jochen Schweizer × virral">
+<div class="js-hero-grad"></div>
+</div>
+<div class="w">
+<div class="js-hero-content rv">
+<div class="js-hero-badge">
+<img src="/img/img-18.webp" alt="Jochen Schweizer">
+<span>Full-Service Partnerschaft</span>
+</div>
+<h1 class="js-h1">Social Media auf ein<br>neues <span>Level.</span></h1>
+<p class="js-sub">Als feste Social-Agentur verantworten wir die komplette Social-Präsenz von Jochen Schweizer: Strategie, Content-Konzeption, Produktion und Community — als verlängerter Arm des internen Teams.</p>
+<div class="js-hero-stats">
+<div class="js-hero-stat"><strong>2 Jahre</strong><span>Partnerschaft</span></div>
+<div class="js-hero-stat"><strong>32 Mio.</strong><span>Organische Views</span></div>
+<div class="js-hero-stat"><strong>+400%</strong><span>Watchtime</span></div>
+</div>
+<div class="js-hero-btns">
+<a href="/anfrage" class="js-btn-p">Projekt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<a href="#kampagne" class="js-btn-s">Case Study ansehen</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PARTNERSHIP BAR -->
+<section class="js-partner">
+<div class="w">
+<div class="js-partner-inner rv">
+<div class="js-partner-item"><strong>32 Mio.</strong><span>Organische Views</span></div>
+<div class="js-partner-div"></div>
+<div class="js-partner-item"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
+<div class="js-partner-div"></div>
+<div class="js-partner-item"><strong>+400%</strong><span>Watchtime</span></div>
+<div class="js-partner-div"></div>
+<div class="js-partner-item"><strong>Full Service</strong><span>2 Jahre Partnerschaft</span></div>
+</div>
+</div>
+</section>
+
+<!-- ALWAYS ON KAMPAGNE -->
+<section class="sec js-camp" id="kampagne">
+<div class="w">
+<div class="js-camp-inner">
+<div class="sh rv"><div class="tag">Always On</div><h2>Brandkampagnen mit <span>Performance.</span></h2><p>Performancestarker Vertical Content — kreativ, authentisch und genau auf die Zielgruppe zugeschnitten.</p></div>
+
+<div class="js-camp-grid">
+<div class="js-camp-videos rv-s">
+<div class="js-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd3"><iframe data-src="https://app.vidzflow.com/v/19XrYmDTge?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+
+<div class="rv-s">
+<div class="tag">Full Service</div>
+<div class="js-camp-text">
+<h2>Always On <span>Kampagnen</span></h2>
+<p>Wir konzipieren, produzieren und veröffentlichen laufend Vertical Content für den Jochen Schweizer TikTok und Instagram Kanal — immer am Puls der Trends und Zielgruppe.</p>
+</div>
+
+<div class="js-camp-kpis">
+<div class="js-camp-kpi"><strong>5,1 Mio.</strong><span>Views Top-Video</span></div>
+<div class="js-camp-kpi"><strong>3,8 Mio.</strong><span>Views Kampagne</span></div>
+<div class="js-camp-kpi"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
+<div class="js-camp-kpi"><strong>2,4 Mio.</strong><span>Views Content</span></div>
+</div>
+
+<a href="/anfrage" class="js-btn-p">Kampagne starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OFFLINE AKTIVIERUNGEN -->
+<section class="sec js-event" id="event">
+<div class="w">
+<div class="js-event-grid">
+
+<div class="rv-s">
+<div class="tag">Offline Aktivierung</div>
+<h2 style="font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px">Halloween Party mit<br><span style="color:var(--a)">100+ Creators.</span></h2>
+<p style="font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px">Für Jochen Schweizer haben wir ein Creator-Event konzipiert und umgesetzt, das für maximale Reichweite und Aufmerksamkeit sorgte: 100+ Creator, eine spektakuläre Location und Content, der viral ging.</p>
+
+<div class="js-event-kpis">
+<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>50 Mio. Views</div>
+<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>100+ Creator</div>
+<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>250+ Assets</div>
+</div>
+
+<a href="/anfrage" class="js-btn-p">Event anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+
+<div class="js-event-visual rv-s">
+<div class="js-event-img">
+<img src="/img/img-19.webp" alt="Jochen Schweizer Halloween Party" loading="lazy">
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="sec js-quote-sec">
+<div class="w">
+<div class="js-quote-inner rv-s">
+<div class="js-quote-avatar"><img src="/img/img-13.webp" alt="Fabian Heuel"></div>
+<div class="js-quote-text">Virral hat unsere Brandkampagnen mit performancestarkem Vertical Content maßgeblich vorangetrieben. Die Videoideen waren kreativ, authentisch und genau auf die Zielgruppe zugeschnitten. Die Reichweite und Resonanz zeigen klar: Wir haben unsere Social-Präsenz auf ein neues Level gehoben.</div>
+<div class="js-quote-name">Fabian Heuel</div>
+<div class="js-quote-role">Teamlead Brand & Social, Jochen Schweizer mydays Group</div>
+</div>
+</div>
+</section>
+
+<!-- ERGEBNISSE -->
+<section class="sec" id="ergebnisse">
+<div class="w">
+<div class="sh rv"><div class="tag">Ergebnisse</div><h2>Messbare <span>Resultate.</span></h2><p>Die Zusammenarbeit spricht für sich — in Zahlen, die überzeugen.</p></div>
+<div class="js-results-grid">
+<div class="js-result rv-s"><strong>32 Mio.</strong><span>Organische Views</span></div>
+<div class="js-result rv-s rvd1"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
+<div class="js-result rv-s rvd2"><strong>+400%</strong><span>Watchtime</span></div>
+<div class="js-result rv-s rvd3"><strong>50 Mio.</strong><span>Event Reichweite</span></div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" style="background:var(--bg2)">
+<div class="w">
+<div class="sh rv"><div class="tag">Leistungen</div><h2>Was wir für Jochen Schweizer <span>leisten.</span></h2><p>Alles aus einer Hand — von Strategie bis Community Management.</p></div>
+<div class="js-services-grid">
+<div class="js-service rv-s">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+<h3>Strategie</h3>
+<p>Social-Media-Strategie passend zur Marke und Zielgruppe</p>
+</div>
+<div class="js-service rv-s rvd1">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<h3>Content-Konzeption</h3>
+<p>Kreative Ideen für Vertical und Horizontal Content</p>
+</div>
+<div class="js-service rv-s rvd2">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+<h3>Produktion</h3>
+<p>Professionelle Video- und Fotoproduktion vor Ort</p>
+</div>
+<div class="js-service rv-s rvd3">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+<h3>Community</h3>
+<p>Community Management und aktive Interaktion</p>
+</div>
+<div class="js-service rv-s">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3>Creator Booking</h3>
+<p>Buchung und Koordination von 100+ Creators</p>
+</div>
+<div class="js-service rv-s rvd1">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<h3>Event-Konzeption</h3>
+<p>Planung und Umsetzung von Creator-Events</p>
+</div>
+<div class="js-service rv-s rvd2">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+<h3>Performance</h3>
+<p>Datengetriebene Optimierung für maximale Reichweite</p>
+</div>
+<div class="js-service rv-s rvd3">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+<h3>Brand Integration</h3>
+<p>Nahtlose Markenintegration in jeden Content</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="js-cta">
+<div class="w">
+<div class="js-cta-inner rv-s">
+<div class="js-cta-avatar"><img src="/img/Moritz.png" alt="Moritz von Schaabner" loading="lazy"></div>
+<div class="js-cta-name">Moritz von Schaabner</div>
+<div class="js-cta-role">Strategische Projektplanung</div>
+<div class="js-cta-avail"><div class="pd"></div>Verfügbar</div>
+<h2>Bereit für eure <span>Erfolgsgeschichte?</span></h2>
+<p>Lass uns gemeinsam besprechen, wie wir eure Social-Media-Präsenz auf das nächste Level heben.</p>
+<div class="js-cta-checks">
+<div class="js-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Kostenfreie Erstberatung</div>
+<div class="js-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Individuelles Konzept</div>
+<div class="js-cta-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Full-Service Umsetzung</div>
+</div>
+<a href="/anfrage" class="js-btn-p">Erstberatung sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
+</section>
+
+<div id="shared-footer"></div>
+
+<script>
+/* Reveal animations */
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('rvv');obs.unobserve(e.target)}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv,.rv-s').forEach(function(el){obs.observe(el)});
+
+  /* Lazy load iframes */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var iframe=e.target;
+        if(iframe.dataset.src&&!iframe.src){iframe.src=iframe.dataset.src}
+        io.unobserve(iframe);
+      }
+    });
+  },{rootMargin:'200px'});
+  document.querySelectorAll('iframe[data-src]').forEach(function(f){io.observe(f)});
+})();
+</script>
+</body>
+</html>

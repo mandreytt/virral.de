@@ -13,7 +13,7 @@
 .mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
 .mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
 .mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
-.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end}
 .mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:40px}
 .mf-step{display:none;flex-direction:column;flex:1}
 .mf-step-active{display:flex}
@@ -64,14 +64,15 @@
 .mf-testi{display:none;height:100%}
 .mf-testi-active{display:block}
 .mf-testi-card{height:100%;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:16px}
-.mf-testi-red{background:linear-gradient(160deg,#2a1015 0%,#1a0a0d 40%,#0f1a1a 100%)}
-.mf-testi-green{background:linear-gradient(160deg,#0a2a1a 0%,#0a1a14 40%,#0f1a1a 100%)}
+.mf-testi-yellow{background:linear-gradient(160deg,#2a2510 0%,#1a1808 40%,#12110a 100%)}
+.mf-testi-teal{background:linear-gradient(160deg,#0a2a2a 0%,#081a1a 40%,#0a1212 100%)}
+.mf-testi-red{background:linear-gradient(160deg,#2a1015 0%,#1a0a0d 40%,#120a0a 100%)}
 .mf-testi-top{display:flex;align-items:center;gap:12px}
 .mf-testi-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.1);flex-shrink:0}
 .mf-testi-avatar img{width:100%;height:100%;object-fit:cover}
 .mf-testi-name{font-size:.88rem;font-weight:700}
 .mf-testi-role{font-size:.72rem;color:var(--w3)}
-.mf-testi-quote{font-size:clamp(1rem,1.6vw,1.25rem);font-weight:600;line-height:1.45;color:var(--w);min-height:2.9em}
+.mf-testi-quote{font-size:clamp(1rem,1.6vw,1.25rem);font-weight:600;line-height:1.45;color:var(--w);min-height:4.4em}
 .mf-testi-video{flex:1;display:flex;align-items:center;justify-content:center;padding:8px 0}
 .mf-testi-phone{width:clamp(140px,16vw,200px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.4);background:#000}
 .mf-testi-phone iframe{width:100%;height:100%;border:none}
@@ -222,7 +223,7 @@
 <div class="mf-testi-side">
 <!-- Testimonial 1: Manuel Schaub / EDEKA -->
 <div class="mf-testi mf-testi-active" data-testi="1">
-<div class="mf-testi-card mf-testi-red">
+<div class="mf-testi-card mf-testi-yellow">
 <div class="mf-testi-top">
 <div class="mf-testi-avatar"><img src="/img/img-12.avif" alt="Manuel Schaub"></div>
 <div><div class="mf-testi-name">Manuel Schaub</div><div class="mf-testi-role">Teamlead Personalmarketing, EDEKA Südwest</div></div>
@@ -240,7 +241,7 @@
 </div>
 <!-- Testimonial 2: Fabian Heuel / Jochen Schweizer -->
 <div class="mf-testi" data-testi="2">
-<div class="mf-testi-card mf-testi-green">
+<div class="mf-testi-card mf-testi-teal">
 <div class="mf-testi-top">
 <div class="mf-testi-avatar"><img src="/img/img-13.webp" alt="Fabian Heuel"></div>
 <div><div class="mf-testi-name">Fabian Heuel</div><div class="mf-testi-role">Teamlead Brand & Social, Jochen Schweizer</div></div>
@@ -258,7 +259,7 @@
 </div>
 <!-- Testimonial 3: Lena Barkovic / STRABAG -->
 <div class="mf-testi" data-testi="3">
-<div class="mf-testi-card" style="background:linear-gradient(160deg,#0a1530 0%,#0a1020 40%,#0f1a1a 100%)">
+<div class="mf-testi-card mf-testi-red">
 <div class="mf-testi-top">
 <div class="mf-testi-avatar"><img src="/img/img-14.webp" alt="Lena Barkovic"></div>
 <div><div class="mf-testi-name">Lena Barkovic</div><div class="mf-testi-role">Teamlead Social Media, STRABAG AG</div></div>

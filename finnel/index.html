@@ -99,12 +99,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 /* ===== VIDEOS ===== */
 .fn-videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:680px;margin:0 auto}
 .fn-vid-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;transition:all .4s var(--e)}
-.fn-vid-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.fn-vid-card:hover{border-color:var(--bd2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
 .fn-vid-phone{aspect-ratio:9/16;overflow:hidden;background:#000;position:relative}
 .fn-vid-phone iframe{width:100%;height:100%;border:none}
-.fn-vid-info{padding:16px}
-.fn-vid-title{font-size:.85rem;font-weight:700;margin-bottom:4px}
-.fn-vid-meta{font-size:.72rem;color:var(--w3)}
+.fn-vid-info{padding:14px 16px 18px}
+.fn-vid-title{font-size:.82rem;font-weight:700;margin-bottom:10px;line-height:1.35}
+.fn-vid-views{font-size:1.05rem;font-weight:800;color:var(--a);letter-spacing:-.02em}
+.fn-vid-platform{font-size:.68rem;color:var(--w3);margin-top:2px;display:flex;align-items:center;gap:5px}
+.fn-vid-platform svg{width:12px;height:12px;opacity:.5}
 
 /* ===== LONGFORM ===== */
 .fn-lf{position:relative;overflow:hidden}
@@ -484,15 +486,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="fn-videos-grid">
 <div class="fn-vid-card rv-s">
 <div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/kPSoMWVWz2?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="fn-vid-info"><div class="fn-vid-title">Wie hoch ist dein Kontostand?</div><div class="fn-vid-meta">7 Mio. Views · Plattformübergreifend</div></div>
+<div class="fn-vid-info"><div class="fn-vid-title">Wie hoch ist dein Kontostand?</div><div class="fn-vid-views">7.000.000+ Views</div><div class="fn-vid-platform"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Plattformübergreifend</div></div>
 </div>
 <div class="fn-vid-card rv-s rvd1">
 <div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/7oL16WfOMt?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="fn-vid-info"><div class="fn-vid-title">Alles was du malst kaufe ich dir</div><div class="fn-vid-meta">9 Mio. Views · Plattformübergreifend</div></div>
+<div class="fn-vid-info"><div class="fn-vid-title">Alles was du malst kaufe ich dir</div><div class="fn-vid-views">9.000.000+ Views</div><div class="fn-vid-platform"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Plattformübergreifend</div></div>
 </div>
 <div class="fn-vid-card rv-s rvd2">
 <div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/UQZR9jmMP5?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="fn-vid-info"><div class="fn-vid-title">Kinder in 2026</div><div class="fn-vid-meta">7 Mio. Views · Plattformübergreifend</div></div>
+<div class="fn-vid-info"><div class="fn-vid-title">Kinder in 2026</div><div class="fn-vid-views">7.000.000+ Views</div><div class="fn-vid-platform"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Plattformübergreifend</div></div>
 </div>
 </div>
 <div style="text-align:center;margin-top:clamp(32px,4vw,48px)"><a href="/anfrage" class="fn-btn-p">Content-Kooperation anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>

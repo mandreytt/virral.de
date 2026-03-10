@@ -160,10 +160,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 
 /* ===== CTA ===== */
 .fn-cta{text-align:center;padding:clamp(80px,12vw,160px) 0}
-.fn-cta-inner{background:linear-gradient(160deg,rgba(254,44,85,.08) 0%,rgba(254,44,85,.02) 100%);border:1px solid rgba(254,44,85,.12);border-radius:var(--r3);padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px)}
-.fn-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:16px}
+.fn-cta-inner{background:linear-gradient(90deg,#fe2c55,#ff6b8a,#fe2c55) top/100% 4px no-repeat,var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:visible;position:relative;display:flex;flex-direction:column;align-items:center;padding:0 48px 48px}
+.fn-cta-avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--a);margin-top:-80px;box-shadow:0 12px 40px rgba(254,44,85,.25);flex-shrink:0;position:relative;z-index:2;background:var(--card)}
+.fn-cta-avatar img{width:100%;height:100%;object-fit:cover}
+.fn-cta-name{font-size:1.4rem;font-weight:800;margin-top:20px;margin-bottom:4px}
+.fn-cta-role{font-size:.85rem;color:var(--w3);margin-bottom:14px}
+.fn-cta-avail{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.15);border-radius:100px;font-size:.82rem;font-weight:600;color:#2ecc71;margin-bottom:32px}
+.fn-cta-avail .pd{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulse 2s infinite}
+.fn-cta-label{font-size:.72rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.fn-cta h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.15}
 .fn-cta h2 span{color:var(--a)}
-.fn-cta p{color:var(--w2);max-width:500px;margin:0 auto 32px;font-size:.92rem;line-height:1.7}
+.fn-cta p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:28px;max-width:520px}
+.fn-cta-checks{display:flex;gap:24px;margin-bottom:28px;justify-content:center;flex-wrap:wrap}
+.fn-cta-check{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--w2)}
+.fn-cta-check-icon{width:20px;height:20px;border-radius:50%;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fn-cta-check-icon svg{width:12px;height:12px}
+@media(max-width:768px){.fn-cta-inner{padding:0 24px 36px}.fn-cta-checks{flex-direction:column;align-items:center;gap:12px}}
 
 /* ===== FOOTER ===== */
 .ft{border-top:1px solid var(--bd);padding:40px 0}
@@ -570,13 +582,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <section class="fn-cta">
 <div class="w">
 <div class="fn-cta-inner rv-s">
-<div class="tag">Let's go</div>
-<h2>Bereit für eine <span>Kooperation?</span></h2>
-<p>Du willst mit Finnel zusammenarbeiten? Lass uns über dein Projekt sprechen — von der ersten Idee bis zum fertigen Content.</p>
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
-<a href="mailto:hello@virral.de" class="fn-btn-s">hello@virral.de</a>
+
+<div class="fn-cta-avatar">
+<img loading="lazy" decoding="async" src="/img/Moritz.png" alt="Moritz von Schaabner">
 </div>
+
+<div class="fn-cta-name">Moritz von Schaabner</div>
+<div class="fn-cta-role">Strategische Projektplanung</div>
+<div class="fn-cta-avail"><div class="pd"></div>Verfügbar</div>
+
+<div class="fn-cta-label">Kostenfrei & unverbindlich</div>
+<h2>Lass uns über dein <span>Projekt sprechen.</span></h2>
+<p>In 30 Minuten analysieren wir eure Social-Präsenz, identifizieren Wachstumshebel und zeigen, wie virral euch konkret weiterhelfen kann.</p>
+
+<div class="fn-cta-checks">
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>30 Min Call</div>
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Individuelle Analyse</div>
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Antwort in 60 Min</div>
+</div>
+
+<a href="/anfrage" class="fn-btn-p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 </div>
 </section>

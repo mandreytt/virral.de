@@ -37,11 +37,8 @@
 @keyframes mq-logos{0%{transform:translateX(0)}100%{transform:translateX(-25%)}}
 .mt{animation:mq-logos 30s linear infinite!important}
 
-/* ========== Process Staircase ========== */
-.prc{align-items:end!important}
-.pc:nth-child(1){min-height:190px}
-.pc:nth-child(2){min-height:230px}
-.pc:nth-child(3){min-height:270px}
+/* ========== Process Cards ========== */
+.prc{align-items:stretch!important}
 .pc:nth-child(4){min-height:310px}
 
 /* ========== Card Spacing Fix (all viewports) ========== */

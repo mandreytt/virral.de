@@ -48,6 +48,7 @@
   }
 
   /* ===== FOOTER ===== */
+  function initFooter(){
   var ftEl=document.getElementById('shared-footer');
   if(ftEl){
     ftEl.outerHTML='<footer class="ft"><div class="w">'
@@ -71,4 +72,6 @@
       +'<div class="ftbt"><div>&copy; 2026 virral GmbH. Alle Rechte vorbehalten.</div><div>Social First Agency · Köln, Deutschland</div></div>'
       +'</div></footer>';
   }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initFooter)}else{initFooter()}
 })();

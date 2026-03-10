@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jochen Schweizer × virral — Case Study</title>
-<meta name="description" content="Wie virral die komplette Social-Präsenz von Jochen Schweizer verantwortet: Strategie, Content, Produktion und Community. 32 Mio. organische Views, +400% Watchtime.">
+<meta name="description" content="Wie virral mit Jochen Schweizer 100 Mio. organische Views, 3 Kampagnen und ein Creator House realisiert hat. Full-Service Social Media seit 2024.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#0d7fac;--ah:#0a6a91;--ag:rgba(13,127,172,.25);--as:rgba(13,127,172,.1);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1);--js:#0d7fac}
+:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#0d7fac;--ah:#0a6a91;--ag:rgba(13,127,172,.25);--as:rgba(13,127,172,.1);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip}
 body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:clip;font-size:15px}
@@ -22,23 +22,24 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .sh p{font-size:.92rem;color:var(--w2);max-width:520px;margin:0 auto;line-height:1.7}
 .tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--a);background:var(--as);border:1px solid rgba(13,127,172,.2);padding:5px 14px;border-radius:100px;margin-bottom:16px}
 
-/* ===== HERO ===== */
-.js-hero{position:relative;min-height:85vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
-.js-hero-bg{position:absolute;inset:0}
-.js-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
-.js-hero-grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,8,.3) 0%,rgba(6,6,8,.6) 50%,rgba(6,6,8,.95) 80%,#060608 100%)}
-.js-hero-content{position:relative;z-index:2;padding-bottom:clamp(48px,8vw,80px);max-width:720px}
-.js-hero-logo{margin-bottom:28px}
-.js-hero-logo img{height:clamp(48px,8vw,72px);width:auto;filter:brightness(0) invert(1);opacity:.95}
-.js-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(13,127,172,.1);border:1px solid rgba(13,127,172,.25);border-radius:100px;margin-bottom:24px}
-.js-hero-badge img{height:22px;width:auto}
+/* ===== HERO WITH VIDEO BG ===== */
+.js-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.js-hero-bg{position:absolute;inset:0;z-index:0}
+.js-hero-bg iframe{width:100%;height:100%;border:none;pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;object-fit:cover}
+@media(min-aspect-ratio:16/9){.js-hero-bg iframe{width:100%;height:auto;min-height:100vh}}
+@media(max-aspect-ratio:16/9){.js-hero-bg iframe{width:auto;height:100%;min-width:100vw}}
+.js-hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(6,6,8,.4) 30%,rgba(6,6,8,.75) 65%,#060608 100%)}
+.js-hero-content{position:relative;z-index:2;padding-bottom:clamp(48px,8vw,80px);max-width:760px}
+.js-hero-logo{margin-bottom:24px}
+.js-hero-logo img{height:clamp(52px,9vw,80px);width:auto;filter:brightness(0) invert(1);opacity:.95;drop-shadow:0 4px 20px rgba(0,0,0,.5)}
+.js-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(13,127,172,.12);border:1px solid rgba(13,127,172,.3);border-radius:100px;margin-bottom:24px;backdrop-filter:blur(12px)}
 .js-hero-badge span{font-size:.78rem;font-weight:600;color:var(--w2)}
-.js-h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px}
+.js-h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
 .js-h1 span{color:var(--a)}
 .js-sub{font-size:clamp(.88rem,1.2vw,1rem);color:var(--w2);line-height:1.75;margin-bottom:32px;max-width:560px}
 .js-hero-stats{display:flex;gap:clamp(24px,4vw,48px);flex-wrap:wrap;margin-bottom:32px}
 .js-hero-stat{display:flex;flex-direction:column}
-.js-hero-stat strong{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;color:var(--w)}
+.js-hero-stat strong{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;color:var(--w)}
 .js-hero-stat span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 .js-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 
@@ -46,16 +47,31 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .js-btn-p{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--a);color:#fff;border-radius:100px;font-size:.88rem;font-weight:700;transition:all .4s var(--e);border:none;cursor:pointer}
 .js-btn-p:hover{background:var(--ah);transform:translateY(-2px);box-shadow:0 8px 32px var(--ag)}
 .js-btn-p svg{width:16px;height:16px}
-.js-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:rgba(255,255,255,.06);color:var(--w);border:1px solid var(--bd);border-radius:100px;font-size:.88rem;font-weight:600;transition:all .4s var(--e);backdrop-filter:blur(12px);cursor:pointer}
-.js-btn-s:hover{background:rgba(255,255,255,.12);border-color:var(--bd2);transform:translateY(-2px)}
+.js-btn-s{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:rgba(255,255,255,.08);color:var(--w);border:1px solid var(--bd2);border-radius:100px;font-size:.88rem;font-weight:600;transition:all .4s var(--e);backdrop-filter:blur(12px);cursor:pointer}
+.js-btn-s:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
 
 /* ===== PARTNERSHIP BAR ===== */
-.js-partner{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:24px 0}
-.js-partner-inner{display:flex;align-items:center;justify-content:center;gap:clamp(32px,5vw,64px);flex-wrap:wrap}
+.js-partner{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:28px 0}
+.js-partner-inner{display:flex;align-items:center;justify-content:center;gap:clamp(28px,5vw,56px);flex-wrap:wrap}
 .js-partner-item{display:flex;flex-direction:column;align-items:center;gap:4px}
 .js-partner-item strong{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:800;letter-spacing:-.02em}
 .js-partner-item span{font-size:.7rem;color:var(--w3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .js-partner-div{width:1px;height:32px;background:var(--bd)}
+
+/* ===== ABOUT / PROJEKTUMFANG ===== */
+.js-about{position:relative;overflow:hidden}
+.js-about::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(circle,rgba(13,127,172,.06) 0%,transparent 70%);pointer-events:none}
+.js-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,56px);align-items:start;position:relative;z-index:1}
+.js-about-text h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+.js-about-text h2 span{color:var(--a)}
+.js-about-text p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px}
+.js-scope-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.js-scope-tag{padding:8px 16px;background:rgba(13,127,172,.08);border:1px solid rgba(13,127,172,.18);border-radius:100px;font-size:.78rem;font-weight:600;color:var(--a)}
+.js-about-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.js-about-stat{padding:20px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);text-align:center;transition:all .4s var(--e)}
+.js-about-stat:hover{border-color:rgba(13,127,172,.2);transform:translateY(-2px)}
+.js-about-stat strong{display:block;font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:900;letter-spacing:-.03em;background:linear-gradient(135deg,var(--a),#3db8e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+.js-about-stat span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 
 /* ===== CAMPAIGN SECTION ===== */
 .js-camp{position:relative;overflow:hidden}
@@ -73,41 +89,39 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .js-camp-kpi{padding:16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
 .js-camp-kpi strong{display:block;font-size:1.1rem;font-weight:800;color:var(--w);margin-bottom:2px}
 .js-camp-kpi span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.js-camp-highlights{margin-bottom:24px}
+.js-camp-highlights li{font-size:.85rem;color:var(--w2);line-height:1.7;padding:4px 0 4px 20px;position:relative}
+.js-camp-highlights li::before{content:'';position:absolute;left:0;top:12px;width:8px;height:8px;border-radius:50%;background:var(--a);opacity:.6}
 
-/* ===== EVENT SECTION ===== */
-.js-event{background:linear-gradient(180deg,var(--bg) 0%,#0c080a 50%,var(--bg) 100%);position:relative;overflow:hidden}
-.js-event::before{content:'';position:absolute;bottom:-100px;right:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(13,127,172,.07) 0%,transparent 70%);pointer-events:none}
-.js-event-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,56px);align-items:center;position:relative;z-index:1}
-.js-event-text h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
-.js-event-text h2 span{color:var(--a)}
-.js-event-text p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px}
-.js-event-visual{position:relative}
-.js-event-phone{max-width:240px;margin:0 auto;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 24px 80px rgba(0,0,0,.5);background:#000}
-.js-event-phone iframe{width:100%;height:100%;border:none}
-.js-event-img{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);box-shadow:0 24px 80px rgba(0,0,0,.5);aspect-ratio:16/10;background:#000}
-.js-event-img img{width:100%;height:100%;object-fit:cover}
-.js-event-kpis{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px}
-.js-event-kpi{padding:10px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.82rem;font-weight:600;display:flex;align-items:center;gap:8px}
-.js-event-kpi svg{width:16px;height:16px;color:var(--a);flex-shrink:0}
+/* ===== CREATOR HOUSE ===== */
+.js-house{background:linear-gradient(180deg,var(--bg) 0%,#080a0f 50%,var(--bg) 100%);position:relative;overflow:hidden}
+.js-house::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(13,127,172,.08) 0%,transparent 70%);pointer-events:none}
+.js-house-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,56px);align-items:center;position:relative;z-index:1}
+.js-house-vid{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);box-shadow:0 24px 80px rgba(0,0,0,.5);aspect-ratio:9/16;max-width:320px;margin:0 auto;background:#000}
+.js-house-vid iframe{width:100%;height:100%;border:none}
+.js-house-text h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+.js-house-text h2 span{color:var(--a)}
+.js-house-text p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px}
+.js-house-facts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.js-house-fact{padding:10px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.82rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.js-house-fact svg{width:16px;height:16px;color:var(--a);flex-shrink:0}
+
+/* ===== TV AD ===== */
+.js-tv{position:relative;overflow:hidden}
+.js-tv::before{content:'';position:absolute;bottom:-100px;right:10%;width:600px;height:500px;background:radial-gradient(circle,rgba(13,127,172,.06) 0%,transparent 70%);pointer-events:none}
+.js-tv-inner{position:relative;z-index:1;max-width:900px;margin:0 auto}
+.js-tv-embed{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);box-shadow:0 24px 80px rgba(0,0,0,.5);aspect-ratio:16/9;background:#000;margin-bottom:32px}
+.js-tv-embed iframe{width:100%;height:100%;border:none}
 
 /* ===== QUOTE SECTION ===== */
 .js-quote-sec{background:var(--bg2)}
 .js-quote-inner{max-width:720px;margin:0 auto;text-align:center}
 .js-quote-avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid rgba(255,255,255,.1);box-shadow:0 8px 32px rgba(0,0,0,.3)}
 .js-quote-avatar img{width:100%;height:100%;object-fit:cover}
-.js-quote-text{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;line-height:1.55;margin-bottom:20px;font-style:italic;color:var(--w);position:relative}
-.js-quote-text::before{content:'\201E';font-size:3rem;color:var(--a);opacity:.5;position:absolute;top:-12px;left:-20px;font-style:normal;line-height:1}
+.js-quote-text{font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:500;line-height:1.6;margin-bottom:20px;font-style:italic;color:var(--w);position:relative;padding:0 20px}
+.js-quote-text::before{content:'\201E';font-size:3rem;color:var(--a);opacity:.5;position:absolute;top:-12px;left:-8px;font-style:normal;line-height:1}
 .js-quote-name{font-size:.88rem;font-weight:700}
 .js-quote-role{font-size:.78rem;color:var(--w2)}
-
-/* ===== SERVICES ===== */
-.js-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.js-service{padding:24px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .4s var(--e);text-align:center}
-.js-service:hover{border-color:var(--bd2);transform:translateY(-4px)}
-.js-service-icon{width:48px;height:48px;border-radius:14px;background:var(--as);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-.js-service-icon svg{width:22px;height:22px;color:var(--a)}
-.js-service h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
-.js-service p{font-size:.75rem;color:var(--w3);line-height:1.6}
 
 /* ===== RESULTS ===== */
 .js-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -115,6 +129,15 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .js-result:hover{border-color:rgba(13,127,172,.25);transform:translateY(-4px)}
 .js-result strong{display:block;font-size:clamp(1.6rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;background:linear-gradient(135deg,var(--a),#3db8e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
 .js-result span{font-size:.75rem;color:var(--w3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+
+/* ===== SERVICES ===== */
+.js-services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.js-service{padding:24px 16px;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .4s var(--e);text-align:center}
+.js-service:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.js-service-icon{width:48px;height:48px;border-radius:14px;background:var(--as);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.js-service-icon svg{width:22px;height:22px;color:var(--a)}
+.js-service h3{font-size:.82rem;font-weight:700;margin-bottom:6px}
+.js-service p{font-size:.72rem;color:var(--w3);line-height:1.6}
 
 /* ===== CTA ===== */
 .js-cta{padding:clamp(60px,10vw,100px) 0}
@@ -134,29 +157,39 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .js-cta-check{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--w2)}
 .js-cta-check svg{width:16px;height:16px;color:var(--a)}
 
+/* ===== TIMELINE DIVIDER ===== */
+.js-timeline-label{text-align:center;padding:clamp(32px,5vw,48px) 0;position:relative}
+.js-timeline-label::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--bd)}
+.js-timeline-label span{position:relative;z-index:1;background:var(--bg);padding:0 24px;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--a)}
+
 /* ===== REVEAL ANIMATION ===== */
 .rv,.rv-s{opacity:0;transform:translateY(32px);transition:opacity .7s var(--e),transform .7s var(--e)}
+.rv-s{transform:translateY(20px);transition-duration:.5s}
 .rvv{opacity:1;transform:translateY(0)}
-.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}
+.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}.rvd4{transition-delay:.4s}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
-.js-camp-grid,.js-event-grid{grid-template-columns:1fr}
+.js-camp-grid,.js-about-grid,.js-house-grid{grid-template-columns:1fr}
 .js-camp-videos{max-width:500px}
-.js-services-grid,.js-results-grid{grid-template-columns:repeat(2,1fr)}
+.js-services-grid{grid-template-columns:repeat(3,1fr)}
+.js-results-grid{grid-template-columns:repeat(2,1fr)}
+.js-house-vid{max-width:260px}
 }
 @media(max-width:768px){
-.js-hero{min-height:70vh}
+.js-hero{min-height:80vh}
 .js-hero-stats{gap:20px}
 .js-camp-videos{grid-template-columns:repeat(3,1fr);max-width:100%}
 .js-services-grid,.js-results-grid{grid-template-columns:1fr 1fr}
+.js-about-stats{grid-template-columns:1fr 1fr}
 .js-partner-div{display:none}
 .js-quote-text::before{left:0}
 }
 @media(max-width:480px){
-.js-services-grid{grid-template-columns:1fr}
+.js-services-grid{grid-template-columns:1fr 1fr}
 .js-results-grid{grid-template-columns:1fr 1fr}
 .js-hero-btns{flex-direction:column}
+.js-about-stats{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -165,10 +198,10 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <div id="shared-nav"></div>
 <script src="/shared.js"></script>
 
-<!-- HERO -->
+<!-- ==================== HERO ==================== -->
 <section class="js-hero">
 <div class="js-hero-bg">
-<img src="/img/img-19.webp" alt="Jochen Schweizer × virral">
+<iframe src="https://app.vidzflow.com/v/ROmFWvM7kq?dq=576&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%230d7fac&controls=" allow="autoplay" loading="eager"></iframe>
 <div class="js-hero-grad"></div>
 </div>
 <div class="w">
@@ -177,44 +210,78 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <img src="/img/img-18.webp" alt="Jochen Schweizer">
 </div>
 <div class="js-hero-badge">
-<span>Full-Service Partnerschaft</span>
+<span>Full-Service Partnerschaft seit 2024</span>
 </div>
-<h1 class="js-h1">Social Media auf ein<br>neues <span>Level.</span></h1>
-<p class="js-sub">Als feste Social-Agentur verantworten wir die komplette Social-Präsenz von Jochen Schweizer: Strategie, Content-Konzeption, Produktion und Community — als verlängerter Arm des internen Teams.</p>
+<h1 class="js-h1">Erlebnisse, die<br><span>viral gehen.</span></h1>
+<p class="js-sub">Seit zwei Jahren sind wir die Social-Agentur von Jochen Schweizer. Wir beraten die Inhouse Content-Produktion, entwickeln social-first Formate und produzieren organischen als auch Paid Content, der regelmäßig neue Bestwerte erzielt.</p>
 <div class="js-hero-stats">
-<div class="js-hero-stat"><strong>2 Jahre</strong><span>Partnerschaft</span></div>
-<div class="js-hero-stat"><strong>32 Mio.</strong><span>Organische Views</span></div>
-<div class="js-hero-stat"><strong>+400%</strong><span>Watchtime</span></div>
+<div class="js-hero-stat"><strong>100 Mio.+</strong><span>Gesamt-Views</span></div>
+<div class="js-hero-stat"><strong>50+</strong><span>Videos</span></div>
+<div class="js-hero-stat"><strong>2024–2026</strong><span>Partnerschaft</span></div>
 </div>
 <div class="js-hero-btns">
-<a href="/anfrage" class="js-btn-p">Projekt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
-<a href="#kampagne" class="js-btn-s">Case Study ansehen</a>
+<a href="/anfrage" class="js-btn-p">Kostenfreie Erstberatung <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<a href="#kampagnen" class="js-btn-s">Case Studies ansehen</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PARTNERSHIP BAR -->
+<!-- ==================== PARTNERSHIP BAR ==================== -->
 <section class="js-partner">
 <div class="w">
 <div class="js-partner-inner rv">
-<div class="js-partner-item"><strong>32 Mio.</strong><span>Organische Views</span></div>
+<div class="js-partner-item"><strong>100 Mio.+</strong><span>Gesamt-Views</span></div>
 <div class="js-partner-div"></div>
 <div class="js-partner-item"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
 <div class="js-partner-div"></div>
-<div class="js-partner-item"><strong>+400%</strong><span>Watchtime</span></div>
+<div class="js-partner-item"><strong>Top 5</strong><span>YouTube Trends</span></div>
 <div class="js-partner-div"></div>
-<div class="js-partner-item"><strong>Full Service</strong><span>2 Jahre Partnerschaft</span></div>
+<div class="js-partner-item"><strong>Full Service</strong><span>Seit 2024</span></div>
 </div>
 </div>
 </section>
 
-<!-- ALWAYS ON KAMPAGNE -->
-<section class="sec js-camp" id="kampagne">
+<!-- ==================== PROJEKTUMFANG ==================== -->
+<section class="sec js-about" id="projektumfang">
+<div class="w">
+<div class="js-about-grid">
+
+<div class="rv">
+<div class="tag">Projektumfang</div>
+<div class="js-about-text">
+<h2>Die Social-Agentur hinter <span>Jochen Schweizer.</span></h2>
+<p>Jochen Schweizer ist der Marktführer für Erlebnisgutscheine in Deutschland und Teil der ProSiebenSat.1-Gruppe. Ab 2020 wurde der Fokus schrittweise auf digitale Kanäle verlagert, um jüngere Zielgruppen zu erreichen. Die zentrale Herausforderung: Erlebnis-Content ist in der Produktion besonders aufwendig — insbesondere durch die actionfokussierte Positionierung der Marke.</p>
+<p>Seit 2024 verantworten wir als feste Social-Agentur die komplette Content-Strategie: von Konzeption über Produktion bis zur Paid-Optimierung. Dabei entwickeln wir social-first Formate, die die emotionale Inszenierung von Erlebnissen auch im Vertical-Video-Kontext skalierbar und mit hoher Werbewirkung ermöglichen.</p>
+</div>
+<div class="js-scope-tags">
+<span class="js-scope-tag">Konzeption</span>
+<span class="js-scope-tag">Organic Content</span>
+<span class="js-scope-tag">Paid Ads</span>
+<span class="js-scope-tag">Workshops</span>
+<span class="js-scope-tag">Brand Activation</span>
+</div>
+</div>
+
+<div class="rv-s">
+<div class="js-about-stats">
+<div class="js-about-stat rvd1"><strong>100 Mio.+</strong><span>Gesamt-Views</span></div>
+<div class="js-about-stat rvd2"><strong>50+</strong><span>Videos produziert</span></div>
+<div class="js-about-stat rvd3"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
+<div class="js-about-stat rvd4"><strong>400%</strong><span>Verbesserte Watchtime</span></div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ==================== KAMPAGNE 2024 ==================== -->
+<div class="js-timeline-label" id="kampagnen"><span>Kampagne 2024</span></div>
+
+<section class="sec js-camp" id="kampagne-2024">
 <div class="w">
 <div class="js-camp-inner">
-<div class="sh rv"><div class="tag">Always On</div><h2>Brandkampagnen mit <span>Performance.</span></h2><p>Performancestarker Vertical Content — kreativ, authentisch und genau auf die Zielgruppe zugeschnitten.</p></div>
-
 <div class="js-camp-grid">
 <div class="js-camp-videos rv-s">
 <div class="js-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
@@ -223,17 +290,24 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 </div>
 
 <div class="rv-s">
-<div class="tag">Full Service</div>
+<div class="tag">Erste Zusammenarbeit</div>
 <div class="js-camp-text">
-<h2>Always On <span>Kampagnen</span></h2>
-<p>Wir konzipieren, produzieren und veröffentlichen laufend Vertical Content für den Jochen Schweizer TikTok und Instagram Kanal — immer am Puls der Trends und Zielgruppe.</p>
+<h2>Das „Lücken füllen"-<span>Format.</span></h2>
+<p>Für die erste Zusammenarbeit wurde Finnel als Creator ausgewählt — auf Basis seiner viralen Formate. Ziel: Die Marke Jochen Schweizer im Vertical-Video-Umfeld neu denken und eine skalierbare Formatbasis schaffen.</p>
 </div>
 
+<ul class="js-camp-highlights">
+<li>Kooperation über 5 Videos im Test-&-Learn-Ansatz</li>
+<li>Entwicklung von zwei Brand-Formaten zur Validierung viraler Ansätze</li>
+<li>Street-Comedy-Format: Passanten mit Erlebnissen überraschen</li>
+<li>Challenge-Mechanik „Lücken füllen" mit viraler TikTok-Logik</li>
+</ul>
+
 <div class="js-camp-kpis">
-<div class="js-camp-kpi"><strong>5,1 Mio.</strong><span>Views Top-Video</span></div>
-<div class="js-camp-kpi"><strong>3,8 Mio.</strong><span>Views Kampagne</span></div>
-<div class="js-camp-kpi"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
-<div class="js-camp-kpi"><strong>2,4 Mio.</strong><span>Views Content</span></div>
+<div class="js-camp-kpi"><strong>10,8 Mio.</strong><span>Organische Views</span></div>
+<div class="js-camp-kpi"><strong>572k</strong><span>Engagements</span></div>
+<div class="js-camp-kpi"><strong>Top 5</strong><span>YouTube Trends</span></div>
+<div class="js-camp-kpi"><strong>10</strong><span>Virrale Videos</span></div>
 </div>
 
 <a href="/anfrage" class="js-btn-p">Kampagne starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
@@ -243,110 +317,192 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 </div>
 </section>
 
-<!-- OFFLINE AKTIVIERUNGEN -->
-<section class="sec js-event" id="event">
+<!-- ==================== SOMMER KAMPAGNE 2025 ==================== -->
+<div class="js-timeline-label"><span>Sommer 2025</span></div>
+
+<section class="sec js-camp" id="kampagne-sommer">
 <div class="w">
-<div class="js-event-grid">
-
-<div class="rv-s">
-<div class="tag">Offline Aktivierung</div>
-<h2 style="font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px">Halloween Party mit<br><span style="color:var(--a)">100+ Creators.</span></h2>
-<p style="font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px">Für Jochen Schweizer haben wir ein Creator-Event konzipiert und umgesetzt, das für maximale Reichweite und Aufmerksamkeit sorgte: 100+ Creator, eine spektakuläre Location und Content, der viral ging.</p>
-
-<div class="js-event-kpis">
-<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>50 Mio. Views</div>
-<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>100+ Creator</div>
-<div class="js-event-kpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>250+ Assets</div>
+<div class="js-camp-inner">
+<div class="js-camp-grid" style="direction:rtl">
+<div style="direction:ltr" class="rv-s">
+<div class="tag">Sommerkampagne</div>
+<div class="js-camp-text">
+<h2>Kanalübergreifende <span>Kampagnenlogik.</span></h2>
+<p>Aufbauend auf dem „Lücken füllen"-Format wurde die Zusammenarbeit strategisch ausgeweitet. Ziel: Jochen Schweizer erstmals in einer kanalübergreifenden Kampagnenlogik inszenieren und Markenbekanntheit gezielt mit Produktkommunikation verbinden.</p>
 </div>
 
-<a href="/anfrage" class="js-btn-p">Event anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<ul class="js-camp-highlights">
+<li>Finnel als Testimonial in Querformat-Video-Ad für YouTube & Instream</li>
+<li>Leuchtturm-Erlebnis: Fallschirmsprung aus dem Heißluftballon</li>
+<li>Emotionale Erzählweise für die Zielgruppe 18–35 Jahre</li>
+<li>Content komplett auf den Jochen Schweizer Kanal verlagert</li>
+</ul>
+
+<div class="js-camp-kpis">
+<div class="js-camp-kpi"><strong>+11 Mio.</strong><span>Views</span></div>
+<div class="js-camp-kpi"><strong>572k</strong><span>Engagements</span></div>
+<div class="js-camp-kpi"><strong>4x</strong><span>Günstigerer CPV</span></div>
+<div class="js-camp-kpi"><strong>+10</strong><span>Virrale Videos</span></div>
 </div>
 
-<div class="js-event-visual rv-s">
-<div class="js-event-img">
-<img src="/img/img-19.webp" alt="Jochen Schweizer Halloween Party" loading="lazy">
-</div>
+<a href="/anfrage" class="js-btn-p">Kampagne anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 
+<div style="direction:ltr" class="js-camp-videos rv-s">
+<div class="js-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd3"><iframe data-src="https://app.vidzflow.com/v/19XrYmDTge?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+</div>
 </div>
 </div>
 </section>
 
-<!-- TESTIMONIAL -->
+<!-- ==================== XMAS KAMPAGNE 2025 ==================== -->
+<div class="js-timeline-label"><span>Weihnachten 2025</span></div>
+
+<section class="sec js-camp" id="kampagne-xmas">
+<div class="w">
+<div class="js-camp-inner">
+<div class="js-camp-grid">
+<div class="js-camp-videos rv-s">
+<div class="js-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="js-camp-vid rvd3"><iframe data-src="https://app.vidzflow.com/v/19XrYmDTge?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+
+<div class="rv-s">
+<div class="tag">Weihnachtskampagne</div>
+<div class="js-camp-text">
+<h2>Verschenk dein <span>Limit.</span></h2>
+<p>Ziel: Jochen Schweizer als relevante Geschenkidee zu Weihnachten positionieren und Erlebnisgeschenke klar gegenüber klassischen Geschenken hervorheben. Erstmals mit zwei Creatorn und klarer Rollenverteilung.</p>
+</div>
+
+<ul class="js-camp-highlights">
+<li>Mandre: Neues Storytelling-Format „Verschenk dein Limit" — Brand & Emotion</li>
+<li>Finnel: Bewährte Formate mit Fokus auf Produkt-USPs & Sales</li>
+<li>Schwerpunkt auf Motorsport als Top-Erlebniskategorie</li>
+<li>22% des gesamten Engagements 2025 durch 10 Mandre-Videos</li>
+</ul>
+
+<div class="js-camp-kpis">
+<div class="js-camp-kpi"><strong>10,8 Mio.</strong><span>Organische Views</span></div>
+<div class="js-camp-kpi"><strong>572k</strong><span>Engagements</span></div>
+<div class="js-camp-kpi"><strong>1,9%</strong><span>Engagement-Rate</span></div>
+<div class="js-camp-kpi"><strong>vs. 0,6%</strong><span>Inhouse Benchmark</span></div>
+</div>
+
+<a href="/anfrage" class="js-btn-p">Kampagne starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== CREATOR HOUSE ==================== -->
+<section class="sec js-house" id="creator-house">
+<div class="w">
+<div class="sh rv"><div class="tag">Brand Activation</div><h2>Jochen Schweizer <span>Creator House.</span></h2><p>7 Creator. 3 Tage. 3 Erlebnisse. Ein Chalet in Österreich. Organisiert und umgesetzt von virral.</p></div>
+
+<div class="js-house-grid">
+<div class="rv-s">
+<div class="js-house-text">
+<h2>15 Mio. Views in <span>3 Tagen.</span></h2>
+<p>Für Jochen Schweizer haben wir ein Creator House in einem Chalet in Österreich konzipiert und komplett umgesetzt. 7 handverlesene Creator erlebten drei Tage voller Action: Helikopterflug, Heißluftballon und eine unvergessliche Erlebnisreise — alles powered by Jochen Schweizer.</p>
+<p>Das Ergebnis: 15 Millionen organische Views in nur 3 Tagen. Content, der die Marke erlebbar macht und viral geht.</p>
+</div>
+
+<div class="js-house-facts">
+<div class="js-house-fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>7 Creator</div>
+<div class="js-house-fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>3 Tage</div>
+<div class="js-house-fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>15 Mio. Views</div>
+</div>
+
+<a href="/anfrage" class="js-btn-p">Creator House anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+
+<div class="rv-s">
+<div class="js-house-vid">
+<!-- PLATZHALTER: Vidzflow Creator House Video -->
+<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(13,127,172,.15),rgba(13,127,172,.05));color:var(--w3);font-size:.8rem;text-align:center;padding:20px">Video wird geladen...</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== TV-WERBUNG ==================== -->
+<section class="sec js-tv" id="tv-werbung">
+<div class="w">
+<div class="sh rv"><div class="tag">Querformat</div><h2>Die <span>TV-Werbung.</span></h2><p>Neben Vertical Content haben wir für Jochen Schweizer auch eine Querformat-Video-Ad für YouTube und Instream produziert.</p></div>
+<div class="js-tv-inner rv-s">
+<div class="js-tv-embed">
+<iframe data-src="https://www.youtube-nocookie.com/embed/kczLem3O7vE?rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== TESTIMONIAL ==================== -->
 <section class="sec js-quote-sec">
 <div class="w">
 <div class="js-quote-inner rv-s">
 <div class="js-quote-avatar"><img src="/img/img-13.webp" alt="Fabian Heuel"></div>
-<div class="js-quote-text">Virral hat unsere Brandkampagnen mit performancestarkem Vertical Content maßgeblich vorangetrieben. Die Videoideen waren kreativ, authentisch und genau auf die Zielgruppe zugeschnitten. Die Reichweite und Resonanz zeigen klar: Wir haben unsere Social-Präsenz auf ein neues Level gehoben.</div>
+<div class="js-quote-text">Virral hat mit neuen Formaten und dem Einsatz von passenden Creatorn unsere Brandkampagnen maßgeblich vorangetrieben und unsere Full Views mit gleichem Budget deutlich steigern. Ihr als Creator geprägter Blick war eine völlig neue Herangehensweise und wir konnten durch einen hohen Knowhow-Transfer unser Social Team und unsere inhouse Agentur inhaltlich weiterentwickeln.</div>
 <div class="js-quote-name">Fabian Heuel</div>
-<div class="js-quote-role">Teamlead Brand & Social, Jochen Schweizer mydays Group</div>
+<div class="js-quote-role">Team Lead Brand & Social Media, Jochen Schweizer mydays Group</div>
 </div>
 </div>
 </section>
 
-<!-- ERGEBNISSE -->
+<!-- ==================== ERGEBNISSE ==================== -->
 <section class="sec" id="ergebnisse">
 <div class="w">
 <div class="sh rv"><div class="tag">Ergebnisse</div><h2>Messbare <span>Resultate.</span></h2><p>Die Zusammenarbeit spricht für sich — in Zahlen, die überzeugen.</p></div>
 <div class="js-results-grid">
-<div class="js-result rv-s"><strong>32 Mio.</strong><span>Organische Views</span></div>
+<div class="js-result rv-s"><strong>100 Mio.+</strong><span>Gesamt-Views</span></div>
 <div class="js-result rv-s rvd1"><strong>5,0%+</strong><span>Engagement-Rate</span></div>
-<div class="js-result rv-s rvd2"><strong>+400%</strong><span>Watchtime</span></div>
-<div class="js-result rv-s rvd3"><strong>50 Mio.</strong><span>Event Reichweite</span></div>
+<div class="js-result rv-s rvd2"><strong>Top 5</strong><span>YouTube Trends</span></div>
+<div class="js-result rv-s rvd3"><strong>400%</strong><span>Mehr Watchtime</span></div>
 </div>
 </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ==================== LEISTUNGEN ==================== -->
 <section class="sec" style="background:var(--bg2)">
 <div class="w">
-<div class="sh rv"><div class="tag">Leistungen</div><h2>Was wir für Jochen Schweizer <span>leisten.</span></h2><p>Alles aus einer Hand — von Strategie bis Community Management.</p></div>
+<div class="sh rv"><div class="tag">Leistungen</div><h2>Was wir für Jochen Schweizer <span>leisten.</span></h2><p>Alles aus einer Hand — von Strategie bis Brand Activation.</p></div>
 <div class="js-services-grid">
 <div class="js-service rv-s">
 <div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-<h3>Strategie</h3>
-<p>Social-Media-Strategie passend zur Marke und Zielgruppe</p>
+<h3>Konzeption</h3>
+<p>Social-Strategie & Format-Entwicklung</p>
 </div>
 <div class="js-service rv-s rvd1">
-<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-<h3>Content-Konzeption</h3>
-<p>Kreative Ideen für Vertical und Horizontal Content</p>
-</div>
-<div class="js-service rv-s rvd2">
 <div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
-<h3>Produktion</h3>
-<p>Professionelle Video- und Fotoproduktion vor Ort</p>
-</div>
-<div class="js-service rv-s rvd3">
-<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-<h3>Community</h3>
-<p>Community Management und aktive Interaktion</p>
-</div>
-<div class="js-service rv-s">
-<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-<h3>Creator Booking</h3>
-<p>Buchung und Koordination von 100+ Creators</p>
-</div>
-<div class="js-service rv-s rvd1">
-<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-<h3>Event-Konzeption</h3>
-<p>Planung und Umsetzung von Creator-Events</p>
+<h3>Organic Content</h3>
+<p>Vertical & Horizontal Video</p>
 </div>
 <div class="js-service rv-s rvd2">
 <div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-<h3>Performance</h3>
-<p>Datengetriebene Optimierung für maximale Reichweite</p>
+<h3>Paid Ads</h3>
+<p>Performance-Optimierung & Skalierung</p>
 </div>
 <div class="js-service rv-s rvd3">
-<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-<h3>Brand Integration</h3>
-<p>Nahtlose Markenintegration in jeden Content</p>
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<h3>Workshops</h3>
+<p>Knowhow-Transfer ins Inhouse-Team</p>
+</div>
+<div class="js-service rv-s rvd4">
+<div class="js-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3>Brand Activation</h3>
+<p>Creator House & Events</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- CTA -->
+<!-- ==================== CTA ==================== -->
 <section class="js-cta">
 <div class="w">
 <div class="js-cta-inner rv-s">
@@ -369,8 +525,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <div id="shared-footer"></div>
 
 <script>
-/* Reveal animations */
 (function(){
+  /* Reveal animations */
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){e.target.classList.add('rvv');obs.unobserve(e.target)}

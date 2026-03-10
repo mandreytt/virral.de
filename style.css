@@ -176,3 +176,16 @@
 .mf-form-side{padding:24px 20px}
 .mf-title{font-size:1.4rem}
 }
+
+/* Section Background Gradients */
+.hero{background:linear-gradient(180deg,#060608 0%,#0a0812 40%,#08061a 70%,#060608 100%)}
+.vids{background:linear-gradient(180deg,#060608 0%,#0c0818 50%,#060608 100%)}
+.svc{background:linear-gradient(180deg,#060608 0%,#0a0614 40%,#06081a 80%,#060608 100%)}
+#creators{background:linear-gradient(180deg,#060608 0%,#10060c 40%,#0a0616 80%,#060608 100%)}
+.testi{background:linear-gradient(180deg,#0c0c0f 0%,#100c18 50%,#0c0c0f 100%)}
+.award{background:linear-gradient(180deg,#060608 0%,#06081a 50%,#060608 100%)}
+#cases{background:linear-gradient(180deg,#0c0c0f 0%,#0e0a18 40%,#0a0e1a 70%,#0c0c0f 100%)}
+.bts{background:linear-gradient(180deg,#0c0c0f 0%,#0c0a18 50%,#0c0c0f 100%)}
+#process{background:linear-gradient(180deg,#060608 0%,#080618 40%,#0c061a 70%,#060608 100%)}
+.lead{background:linear-gradient(180deg,#060608 0%,#10060e 40%,#0a0818 80%,#0c0c0f 100%)}
+.mf-page{background:linear-gradient(180deg,#060608 0%,#0a0614 30%,#08061a 60%,#0c0810 100%)}

@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anfrage — virral</title>
-<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:hidden;font-size:15px;min-height:100vh;display:flex;flex-direction:column}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(5,5,5,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bd)}.ni{display:flex;align-items:center;justify-content:space-between}.nlogo{display:flex;align-items:center;text-decoration:none;color:var(--w)}.nlogo svg{height:18px;width:auto;fill:currentColor}.na{font-size:.82rem;font-weight:500;color:var(--w2);transition:color .3s}.na:hover{color:var(--w)}.nls{display:flex;gap:28px;align-items:center}.nc{padding:9px 22px;background:var(--a);color:#fff;border-radius:100px;font-size:.82rem;font-weight:600;transition:all .3s}.nc:hover{background:var(--ah)}.nm{display:none;flex-direction:column;gap:4px;width:22px;cursor:pointer}.nm span{height:1.5px;background:var(--w);border-radius:2px;display:block}</style>
+<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:clip;font-size:15px;min-height:100vh;display:flex;flex-direction:column}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(5,5,5,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bd)}.ni{display:flex;align-items:center;justify-content:space-between}.nlogo{display:flex;align-items:center;text-decoration:none;color:var(--w)}.nlogo svg{height:18px;width:auto;fill:currentColor}.na{font-size:.82rem;font-weight:500;color:var(--w2);transition:color .3s}.na:hover{color:var(--w)}.nls{display:flex;gap:28px;align-items:center}.nc{padding:9px 22px;background:var(--a);color:#fff;border-radius:100px;font-size:.82rem;font-weight:600;transition:all .3s}.nc:hover{background:var(--ah)}.nm{display:none;flex-direction:column;gap:4px;width:22px;cursor:pointer}.nm span{height:1.5px;background:var(--w);border-radius:2px;display:block}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 <style>
 /* ========== Multi-Step Form ========== */
 .mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
 .mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
 .mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
-.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column}
-.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:32px}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:40px}
 .mf-step{display:none;flex-direction:column;flex:1}
 .mf-step-active{display:flex}
 .mf-label{font-size:.88rem;color:var(--w2);margin-bottom:20px}
@@ -78,7 +79,13 @@
 .mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
 .mf-testi-logo:hover{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.08)}
 .mf-testi-logo.tl-active{border-color:rgba(254,44,85,.4);background:rgba(254,44,85,.06)}
-.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain;position:relative;z-index:1}
+.mf-testi-logo img{max-height:28px;width:auto;object-fit:contain;position:relative;z-index:1}
+.mf-testi-logo.tl-edeka{background:rgba(255,210,0,.12);border-color:rgba(255,210,0,.25)}
+.mf-testi-logo.tl-edeka:hover{background:rgba(255,210,0,.18)}
+.mf-testi-logo.tl-jochen{background:rgba(0,180,190,.12);border-color:rgba(0,180,190,.25)}
+.mf-testi-logo.tl-jochen:hover{background:rgba(0,180,190,.18)}
+.mf-testi-logo.tl-strabag{background:rgba(220,30,30,.12);border-color:rgba(220,30,30,.25)}
+.mf-testi-logo.tl-strabag:hover{background:rgba(220,30,30,.18)}
 .mf-testi-logo .tl-bar{position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--a);border-radius:0 2px 0 0;z-index:2}
 .mf-testi-logo.tl-active .tl-bar{animation:tl-fill 4s linear forwards}
 @keyframes tl-fill{from{width:0}to{width:100%}}
@@ -109,14 +116,8 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav><div class="w"><div class="ni">
-<a href="/" class="nlogo"><svg viewBox="0 0 1312 368" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg></a>
-<div class="nls">
-<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="/#creators" class="na">Creator</a><a href="/#process" class="na">Prozess</a>
-</div>
-<button class="nm" aria-label="Menü"><span></span><span></span><span></span></button>
-</div></div></nav>
+<div id="shared-nav"></div>
+<script src="/shared.js"></script>
 
 <!-- FORM -->
 <main class="mf-page">
@@ -231,9 +232,9 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo tl-active" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-edeka tl-active" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-jochen" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-strabag" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -249,9 +250,9 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo tl-active" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-edeka" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-jochen tl-active" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-strabag" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -267,9 +268,9 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo tl-active" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-edeka" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-jochen" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-strabag tl-active" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -280,15 +281,7 @@
 </div>
 </main>
 
-<!-- FOOTER -->
-<footer class="ft"><div class="w"><div class="ft-inner">
-<div class="ft-copy">&copy; 2026 virral GmbH</div>
-<div class="ft-links">
-<a href="/impressum.html">Impressum</a>
-<a href="/datenschutz.html">Datenschutz</a>
-<a href="mailto:hello@virral.de">hello@virral.de</a>
-</div>
-</div></div></footer>
+<div id="shared-footer"></div>
 
 <script>
 /* Multi-Step Form */

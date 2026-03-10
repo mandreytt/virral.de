@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finnel — Creator, Musiker & Co-Founder virral</title>
 <meta name="description" content="Finnel: YouTube Creator des Jahres, 5 Mrd.+ Views, 4.2M TikTok Follower. Kooperationen mit EDEKA, Jochen Schweizer, Nintendo, CLAAS u.v.m.">
-<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:hidden;font-size:15px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+<style>:root{--bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#16161a;--w:#f0ece6;--w2:#a8a29e;--w3:#6b665c;--a:#fe2c55;--ah:#e52249;--ag:rgba(254,44,85,.22);--as:rgba(254,44,85,.07);--bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.12);--f:'Inter',system-ui,-apple-system,sans-serif;--r:12px;--r2:20px;--r3:28px;--e:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip}body{font-family:var(--f);background:var(--bg);color:var(--w);line-height:1.65;overflow-x:clip;font-size:15px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}ul{list-style:none}.w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(5,5,5,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--bd)}.ni{display:flex;align-items:center;justify-content:space-between}.nlogo{display:flex;align-items:center;text-decoration:none;color:var(--w)}.nlogo svg{height:18px;width:auto;fill:currentColor}.nls{display:flex;gap:28px;align-items:center}.na{font-size:.82rem;font-weight:500;color:var(--w2);transition:color .3s}.na:hover{color:var(--w)}.nc{padding:9px 22px;background:var(--a);color:#fff;border-radius:100px;font-size:.82rem;font-weight:600;transition:all .3s}.nc:hover{background:var(--ah)}.nm{display:none;flex-direction:column;gap:4px;width:22px;cursor:pointer}.nm span{height:1.5px;background:var(--w);border-radius:2px;display:block}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 <style>
 /* ===== HERO — FULL BLEED ===== */
 .fn-hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end}
@@ -104,6 +105,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-vid-title{font-size:.85rem;font-weight:700;margin-bottom:4px}
 .fn-vid-meta{font-size:.72rem;color:var(--w3)}
 
+/* ===== LONGFORM ===== */
+.fn-lf{position:relative;overflow:hidden}
+.fn-lf::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(254,44,85,.06) 0%,transparent 70%);pointer-events:none}
+.fn-lf-inner{position:relative;z-index:1}
+.fn-lf-video{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:16/9;box-shadow:0 32px 80px rgba(0,0,0,.6);margin-bottom:clamp(32px,5vw,56px)}
+.fn-lf-video iframe{width:100%;height:100%;border:none}
+.fn-lf-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:start}
+.fn-lf-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin-bottom:16px}
+.fn-lf-h span{color:var(--a)}
+.fn-lf-p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px}
+.fn-lf-case{display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r2);margin-bottom:24px}
+.fn-lf-case-badge{padding:6px 14px;background:var(--a);border-radius:100px;font-size:.7rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0}
+.fn-lf-case-text{font-size:.82rem;color:var(--w2);line-height:1.5}
+.fn-lf-case-text strong{color:var(--w)}
+.fn-lf-features{display:flex;flex-direction:column;gap:16px}
+.fn-lf-feat{display:flex;gap:16px;align-items:flex-start}
+.fn-lf-feat-icon{width:44px;height:44px;border-radius:12px;background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fn-lf-feat-icon svg{width:20px;height:20px;color:var(--a)}
+.fn-lf-feat-h{font-size:.9rem;font-weight:700;margin-bottom:3px}
+.fn-lf-feat-p{font-size:.78rem;color:var(--w3);line-height:1.6}
+@media(max-width:900px){.fn-lf-grid{grid-template-columns:1fr}}
+
 /* ===== PODCAST ===== */
 .fn-pod-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,4vw,4rem);align-items:center}
 .fn-pod-visual{border-radius:var(--r3);overflow:hidden}
@@ -116,20 +139,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 
 /* ===== ZIELGRUPPE ===== */
 .fn-zg{background:var(--bg2)}
-.fn-zg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.fn-zg-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,36px);text-align:center;transition:all .4s var(--e)}
-.fn-zg-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
-.fn-zg-icon{width:56px;height:56px;border-radius:50%;background:var(--as);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
-.fn-zg-icon svg{width:24px;height:24px;color:var(--a)}
-.fn-zg-h{font-size:1.05rem;font-weight:800;margin-bottom:8px}
-.fn-zg-p{font-size:.82rem;color:var(--w2);line-height:1.6}
-.fn-zg-val{font-size:1.4rem;font-weight:800;color:var(--a);margin-bottom:4px}
+.fn-zg-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(28px,4vw,44px);max-width:700px;margin:0 auto}
+.fn-zg-tabs{display:flex;gap:10px;margin-bottom:clamp(24px,3vw,36px);flex-wrap:wrap}
+.fn-zg-tab{padding:10px 22px;border-radius:100px;font-size:.88rem;font-weight:600;color:var(--w2);background:rgba(255,255,255,.04);border:1px solid var(--bd);cursor:pointer;transition:all .3s var(--e);user-select:none}
+.fn-zg-tab.active{background:var(--w);color:var(--bg);border-color:var(--w);font-weight:700}
+.fn-zg-tab:hover:not(.active){border-color:var(--bd2);color:var(--w)}
+.fn-zg-panel{display:none}.fn-zg-panel.active{display:block}
+
+/* Bar chart */
+.fn-zg-bar-row{margin-bottom:20px}
+.fn-zg-bar-row:last-child{margin-bottom:0}
+.fn-zg-bar-label{font-size:.92rem;font-weight:600;color:var(--w);margin-bottom:6px}
+.fn-zg-bar-wrap{display:flex;align-items:center;gap:16px}
+.fn-zg-bar-track{flex:1;height:10px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.fn-zg-bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,#c026d3,#a855f7);transition:width 1s var(--e);width:0}
+.fn-zg-bar-val{font-size:.95rem;font-weight:800;color:var(--w);min-width:52px;text-align:right}
+
+/* Donut chart */
+.fn-zg-donut-wrap{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,48px);flex-wrap:wrap;padding:16px 0}
+.fn-zg-donut-svg{width:180px;height:180px;transform:rotate(-90deg)}
+.fn-zg-donut-circle{fill:none;stroke-width:28;stroke-linecap:round;transition:stroke-dasharray 1.2s var(--e)}
+.fn-zg-donut-legend{display:flex;flex-direction:column;gap:20px}
+.fn-zg-legend-item{display:flex;align-items:center;gap:10px}
+.fn-zg-legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.fn-zg-legend-val{font-size:clamp(1.4rem,2.5vw,1.8rem);font-weight:900;letter-spacing:-.03em;color:var(--w)}
+.fn-zg-legend-label{font-size:.82rem;color:var(--w2);font-weight:500}
 
 /* ===== BRANDS ===== */
 .fn-brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .fn-brand{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;transition:all .4s var(--e);min-height:140px}
 .fn-brand:hover{border-color:var(--bd2);transform:translateY(-4px)}
-.fn-brand img{height:36px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain}
+.fn-brand img{height:36px;width:auto;object-fit:contain}
 .fn-brand-name{font-size:.72rem;color:var(--w3);font-weight:600}
 
 /* ===== FORMATE ===== */
@@ -141,12 +181,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-fmt-h{font-size:1rem;font-weight:800;margin-bottom:8px}
 .fn-fmt-p{font-size:.82rem;color:var(--w2);line-height:1.6}
 
+/* ===== SAT.1 TV ===== */
+.fn-tv{background:var(--bg2);position:relative;overflow:hidden}
+.fn-tv::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(254,44,85,.08) 0%,transparent 70%);pointer-events:none}
+.fn-tv-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;position:relative;z-index:1}
+.fn-tv-video{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:16/9;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.fn-tv-video iframe{width:100%;height:100%;border:none}
+.fn-tv-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.15);border-radius:var(--r);margin-bottom:20px}
+.fn-tv-badge-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#0038a8,#009cde);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:900;color:#fff;line-height:1}
+.fn-tv-badge-text{font-size:.78rem;color:var(--w2);line-height:1.3}
+.fn-tv-badge-text strong{color:var(--w);display:block;font-weight:700}
+.fn-tv-h{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin-bottom:16px}
+.fn-tv-h span{color:var(--a)}
+.fn-tv-p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:24px;max-width:480px}
+.fn-tv-quote{position:relative;padding:20px 24px;background:rgba(255,255,255,.03);border-left:3px solid var(--a);border-radius:0 var(--r) var(--r) 0;margin-bottom:24px}
+.fn-tv-quote p{font-size:.88rem;color:var(--w);font-style:italic;line-height:1.7}
+.fn-tv-quote cite{display:block;font-size:.75rem;color:var(--w3);font-style:normal;margin-top:8px}
+.fn-tv-highlights{display:flex;gap:16px;flex-wrap:wrap}
+.fn-tv-hl{display:flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.78rem;font-weight:600;color:var(--w2)}
+.fn-tv-hl svg{width:16px;height:16px;color:var(--a);flex-shrink:0}
+@media(max-width:1024px){.fn-tv-inner{grid-template-columns:1fr}.fn-tv-video{max-width:600px}}
+@media(max-width:768px){.fn-tv-highlights{flex-direction:column}}
+
 /* ===== CTA ===== */
 .fn-cta{text-align:center;padding:clamp(80px,12vw,160px) 0}
-.fn-cta-inner{background:linear-gradient(160deg,rgba(254,44,85,.08) 0%,rgba(254,44,85,.02) 100%);border:1px solid rgba(254,44,85,.12);border-radius:var(--r3);padding:clamp(40px,6vw,72px) clamp(24px,4vw,56px)}
-.fn-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:16px}
+.fn-cta-inner{background:linear-gradient(90deg,#fe2c55,#ff6b8a,#fe2c55) top/100% 4px no-repeat,var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:visible;position:relative;display:flex;flex-direction:column;align-items:center;padding:0 48px 48px}
+.fn-cta-avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--a);margin-top:-80px;box-shadow:0 12px 40px rgba(254,44,85,.25);flex-shrink:0;position:relative;z-index:2;background:var(--card)}
+.fn-cta-avatar img{width:100%;height:100%;object-fit:cover}
+.fn-cta-name{font-size:1.4rem;font-weight:800;margin-top:20px;margin-bottom:4px}
+.fn-cta-role{font-size:.85rem;color:var(--w3);margin-bottom:14px}
+.fn-cta-avail{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.15);border-radius:100px;font-size:.82rem;font-weight:600;color:#2ecc71;margin-bottom:32px}
+.fn-cta-avail .pd{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulse 2s infinite}
+.fn-cta-label{font-size:.72rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.fn-cta h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.15}
 .fn-cta h2 span{color:var(--a)}
-.fn-cta p{color:var(--w2);max-width:500px;margin:0 auto 32px;font-size:.92rem;line-height:1.7}
+.fn-cta p{font-size:.88rem;color:var(--w2);line-height:1.75;margin-bottom:28px;max-width:520px}
+.fn-cta-checks{display:flex;gap:24px;margin-bottom:28px;justify-content:center;flex-wrap:wrap}
+.fn-cta-check{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--w2)}
+.fn-cta-check-icon{width:20px;height:20px;border-radius:50%;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fn-cta-check-icon svg{width:12px;height:12px}
+@media(max-width:768px){.fn-cta-inner{padding:0 24px 36px}.fn-cta-checks{flex-direction:column;align-items:center;gap:12px}}
 
 /* ===== FOOTER ===== */
 .ft{border-top:1px solid var(--bd);padding:40px 0}
@@ -178,8 +252,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 @media(max-width:900px){
 .fn-videos-grid{grid-template-columns:repeat(2,1fr)}
 .fn-brands-grid{grid-template-columns:repeat(2,1fr)}
-.fn-zg-grid,.fn-fmt-grid{grid-template-columns:1fr}
+.fn-fmt-grid{grid-template-columns:1fr}
 .fn-award-facts{grid-template-columns:repeat(2,1fr)}
+.fn-zg-donut-svg{width:140px;height:140px}
 }
 @media(max-width:768px){
 .nls{display:none}.nm{display:flex}
@@ -194,23 +269,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .fn-tl-kpis{gap:6px}
 .fn-tl-kpi{min-width:60px;padding:6px 10px}
 }
+/* Section Background Gradients */
+.fn-hero{background:linear-gradient(180deg,#060608 0%,#0a0812 40%,#10061a 70%,#060608 100%)}
+.fn-award{background:linear-gradient(180deg,#060608 0%,#06081a 50%,#060608 100%)}
+.fn-songs{background:linear-gradient(180deg,#060608 0%,#0c0818 40%,#0a0614 70%,#060608 100%)}
+#videos{background:linear-gradient(180deg,#0c0c0f 0%,#0e0a18 50%,#0c0c0f 100%)}
+.fn-lf{background:linear-gradient(180deg,#060608 0%,#08061a 40%,#0c0816 70%,#060608 100%)}
+#podcast{background:linear-gradient(180deg,#060608 0%,#0a0616 50%,#060608 100%)}
+.fn-zg{background:linear-gradient(180deg,#060608 0%,#10060e 40%,#0a0818 70%,#060608 100%)}
+.fn-fmt{background:linear-gradient(180deg,#060608 0%,#0c0818 50%,#060608 100%)}
+#brands{background:linear-gradient(180deg,#060608 0%,#06081a 50%,#060608 100%)}
+.fn-tv{background:linear-gradient(180deg,#060608 0%,#0a0614 40%,#08061c 70%,#060608 100%)}
+.fn-cta{background:linear-gradient(180deg,#060608 0%,#10060e 40%,#0a0818 80%,#0c0c0f 100%)}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav><div class="w"><div class="ni">
-<a href="/" class="nlogo"><svg viewBox="0 0 1312 368" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg></a>
-<div class="nls">
-<a href="/" class="na">Home</a><a href="/#cases" class="na">Case Studies</a><a href="#songs" class="na">Songs</a><a href="#podcast" class="na">Podcast</a><a href="/anfrage" class="nc">Anfrage starten</a>
-</div>
-<button class="nm" aria-label="Menü"><span></span><span></span><span></span></button>
-</div></div></nav>
+<div id="shared-nav"></div>
+<script src="/shared.js"></script>
 
 <!-- HERO — FULL BLEED IMAGE -->
 <section class="fn-hero">
 <div class="fn-hero-bg">
-<img src="/img/img-09.webp" alt="Finnel">
+<img src="/img/img-23.jpg" alt="Finnel">
 <div class="fn-hero-grad"></div>
 </div>
 <div class="w fn-hero-content">
@@ -220,9 +301,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <p class="fn-sub">Finn Lorenzen — Creator, Musiker und Co-Founder von virral. Mit 5 Milliarden Views die Brücke zwischen Brand-Storytelling und Gen Z Kultur.</p>
 <div class="fn-hero-row">
 <div class="fn-hero-stat"><div class="fn-hero-stat-v">5 Mrd.+</div><div class="fn-hero-stat-l">Views gesamt</div></div>
-<div class="fn-hero-stat"><div class="fn-hero-stat-v">4.2M</div><div class="fn-hero-stat-l">TikTok</div></div>
-<div class="fn-hero-stat"><div class="fn-hero-stat-v">1.8M</div><div class="fn-hero-stat-l">YouTube</div></div>
-<div class="fn-hero-stat"><div class="fn-hero-stat-v">544K</div><div class="fn-hero-stat-l">Instagram</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">4.2M</div><div class="fn-hero-stat-l">TikTok Abonnenten</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">1.8M</div><div class="fn-hero-stat-l">YouTube Abonnenten</div></div>
+<div class="fn-hero-stat"><div class="fn-hero-stat-v">544K</div><div class="fn-hero-stat-l">Instagram Abonnenten</div></div>
 </div>
 <div class="fn-hero-btns">
 <a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
@@ -398,39 +479,85 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="sh"><div class="tag">Content</div><h2>Best-of <span>Videos</span></h2><p>Formate, die Millionen von Menschen erreichen — auf TikTok, YouTube und Instagram.</p></div>
 <div class="fn-videos-grid">
 <div class="fn-vid-card rv-s">
-<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/kPSoMWVWz2?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
 <div class="fn-vid-info"><div class="fn-vid-title">EDEKA Karriere</div><div class="fn-vid-meta">12,4 Mio. Views · TikTok</div></div>
 </div>
 <div class="fn-vid-card rv-s rvd1">
-<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/cYhxpaYnLe?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/7oL16WfOMt?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
 <div class="fn-vid-info"><div class="fn-vid-title">EDEKA Content</div><div class="fn-vid-meta">6,8 Mio. Views · TikTok</div></div>
 </div>
 <div class="fn-vid-card rv-s rvd2">
-<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/2ENSUZCVRR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+<div class="fn-vid-phone"><iframe data-src="https://app.vidzflow.com/v/UQZR9jmMP5?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
 <div class="fn-vid-info"><div class="fn-vid-title">EDEKA Shorts</div><div class="fn-vid-meta">3,2 Mio. Views · YouTube Shorts</div></div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- ARD PODCAST -->
+<!-- LONGFORM VIDEO-PRODUKTION -->
+<section class="sec fn-lf" id="longform">
+<div class="w">
+<div class="sh"><div class="tag">Videoproduktion</div><h2>Hochwertige <span>Longform Videos</span></h2><p>YouTube-Content auf TV-Niveau — produziert von virral mit einem großen Team, professionellem Equipment und cineastischem Anspruch.</p></div>
+
+<div class="fn-lf-inner rv-s">
+<div class="fn-lf-video">
+<iframe src="https://www.youtube.com/embed/KVOepgiFERY" title="Finnel x AIDA — Longform Videoproduktion by virral" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<div class="fn-lf-grid">
+<div>
+<h3 class="fn-lf-h">Produktion auf <span>höchstem Niveau.</span></h3>
+<p class="fn-lf-p">Für Finnel produziert virral aufwendige Longform-Videos mit großem Produktionsteam — von Kamera und Regie über Licht und Ton bis hin zu professioneller Post-Production. Unser Anspruch: YouTube-Videos, die sich qualitativ nicht hinter TV-Produktionen verstecken müssen.</p>
+
+<div class="fn-lf-case">
+<div class="fn-lf-case-badge">Case</div>
+<div class="fn-lf-case-text"><strong>AIDA Cruises Kampagne</strong> — Mehrtägiger Dreh an Bord, cineastische Bildsprache, Storytelling das Millionen erreicht.</div>
+</div>
+
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg> Videoproduktion anfragen</a>
+</div>
+
+<div class="fn-lf-features">
+<div class="fn-lf-feat">
+<div class="fn-lf-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+<div><div class="fn-lf-feat-h">Cineastische Qualität</div><div class="fn-lf-feat-p">Professionelle Kameras, Drohnen, Gimbal-Setups und Farbkorrektur für einen Look auf Broadcast-Niveau.</div></div>
+</div>
+<div class="fn-lf-feat">
+<div class="fn-lf-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+<div><div class="fn-lf-feat-h">Großes Produktionsteam</div><div class="fn-lf-feat-p">Regie, Kamera, Ton, Licht, Schnitt — ein eingespieltes Team, das auch mehrtägige Drehs professionell umsetzt.</div></div>
+</div>
+<div class="fn-lf-feat">
+<div class="fn-lf-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<div><div class="fn-lf-feat-h">Storytelling mit Strategie</div><div class="fn-lf-feat-p">Jedes Video folgt einem durchdachten Narrativ — optimiert für Watch-Time, Engagement und Markenwahrnehmung.</div></div>
+</div>
+<div class="fn-lf-feat">
+<div class="fn-lf-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+<div><div class="fn-lf-feat-h">Full-Service Post-Production</div><div class="fn-lf-feat-p">Schnitt, Motion Graphics, Color Grading, Sound Design — alles aus einer Hand für ein perfektes Endprodukt.</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PODCAST-PRODUKTION -->
 <section class="sec" id="podcast">
 <div class="w">
 <div class="fn-pod-inner rv-s">
 <div class="fn-pod-visual">
-<img src="/img/img-22.jpeg" alt="Finnel und das Geld — ARD Podcast">
+<img src="/img/img-22.jpeg" alt="Finnel und das Geld — ARD Podcast Case Study">
 </div>
 <div>
-<div class="tag">Podcast</div>
-<h2 class="fn-pod-h">Finnel und das Geld</h2>
-<p class="fn-pod-sub">Produziert von DASDING (SWR) für die ARD. Zusammen mit Co-Host Max Dehling bringt Finnel einer jungen Zielgruppe Finanzthemen auf seine Art näher — authentisch, unterhaltsam und auf Augenhöhe. Ein Format, das zeigt: Finnel funktioniert weit über klassischen Social-Content hinaus.</p>
+<div class="tag">Podcast-Produktion</div>
+<h2 class="fn-pod-h">Wir produzieren <span style="color:var(--a)">Podcasts.</span></h2>
+<p class="fn-pod-sub">Von Konzept über Produktion bis Distribution — virral entwickelt Podcast-Formate, die Zielgruppen erreichen und Marken positionieren. Mit „Finnel und das Geld" (produziert von DASDING/SWR für die ARD) haben wir bereits bewiesen, dass wir Formate auf höchstem Niveau umsetzen.</p>
 <div class="fn-pod-topics">
-<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg> Regelmäßige neue Folgen</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg> Konzept, Produktion & Post-Production</div>
 <div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> Zielgruppe 16–29 Jahre</div>
-<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ARD Audiothek & alle Plattformen</div>
-<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Finanzen, Sparen, Investieren, Karriere</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Case: „Finnel und das Geld" · ARD</div>
+<div class="fn-pod-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> Spotify, Apple Podcasts, ARD Audiothek & mehr</div>
 </div>
-<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Podcast-Kooperation anfragen</a>
+<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Podcast-Projekt anfragen</a>
 </div>
 </div>
 </div>
@@ -440,25 +567,58 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <section class="sec fn-zg" id="zielgruppe">
 <div class="w">
 <div class="sh"><div class="tag">Audience</div><h2>Die <span>Zielgruppe</span></h2><p>Finnels Community ist jung, engagiert und kaufkräftig — die perfekte Brücke in die Gen Z.</p></div>
-<div class="fn-zg-grid">
 <div class="fn-zg-card rv-s">
-<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-<div class="fn-zg-val">70%</div>
-<div class="fn-zg-h">16–24 Jahre</div>
-<div class="fn-zg-p">Der Großteil der Community gehört zur Gen Z — die kaufkräftigste und digitalste Zielgruppe Deutschlands.</div>
+
+<div class="fn-zg-tabs">
+<button class="fn-zg-tab active" data-tab="geschlecht">Geschlecht</button>
+<button class="fn-zg-tab" data-tab="land">Land</button>
+<button class="fn-zg-tab" data-tab="alter">Alter</button>
 </div>
-<div class="fn-zg-card rv-s rvd1">
-<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-<div class="fn-zg-val">DACH</div>
-<div class="fn-zg-h">Region</div>
-<div class="fn-zg-p">Primär deutschsprachige Community aus Deutschland, Österreich und der Schweiz — ideal für DACH-Kampagnen.</div>
+
+<!-- Geschlecht: Donut -->
+<div class="fn-zg-panel active" id="zg-geschlecht">
+<div class="fn-zg-donut-wrap">
+<div class="fn-zg-donut-legend" style="text-align:right">
+<div>
+<div class="fn-zg-legend-val">55,9%</div>
+<div class="fn-zg-legend-label"><span>Männer</span> <span class="fn-zg-legend-dot" style="display:inline-block;vertical-align:middle;margin-left:6px;background:linear-gradient(135deg,#c026d3,#e879f9)"></span></div>
 </div>
-<div class="fn-zg-card rv-s rvd2">
-<div class="fn-zg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-<div class="fn-zg-val">8%+</div>
-<div class="fn-zg-h">Engagement Rate</div>
-<div class="fn-zg-p">Überdurchschnittliches Engagement dank authentischem Content und einer hochaktiven, loyalen Community.</div>
 </div>
+<svg class="fn-zg-donut-svg" viewBox="0 0 200 200">
+<defs><linearGradient id="donutGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c026d3"/><stop offset="100%" stop-color="#e879f9"/></linearGradient></defs>
+<circle class="fn-zg-donut-circle" cx="100" cy="100" r="78" stroke="rgba(255,255,255,.06)" stroke-dasharray="490 490"/>
+<circle class="fn-zg-donut-circle" cx="100" cy="100" r="78" stroke="#7c3aed" stroke-dasharray="0 490" data-target="216" style="stroke-linecap:butt"/>
+<circle class="fn-zg-donut-circle" cx="100" cy="100" r="78" stroke="url(#donutGrad)" stroke-dasharray="0 490" data-target="274"/>
+</svg>
+<div class="fn-zg-donut-legend">
+<div>
+<div class="fn-zg-legend-val">44,1%</div>
+<div class="fn-zg-legend-label"><span class="fn-zg-legend-dot" style="display:inline-block;vertical-align:middle;margin-right:6px;background:#7c3aed"></span> Frauen</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Land: Bars -->
+<div class="fn-zg-panel" id="zg-land">
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">Deutschland</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="85.1"></div></div><div class="fn-zg-bar-val">85,1%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">Österreich</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="6.9"></div></div><div class="fn-zg-bar-val">6,9%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">Schweiz</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="4.1"></div></div><div class="fn-zg-bar-val">4,1%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">Italien</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="0.9"></div></div><div class="fn-zg-bar-val">0,9%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">Türkei</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="0.4"></div></div><div class="fn-zg-bar-val">0,4%</div></div></div>
+</div>
+
+<!-- Alter: Bars -->
+<div class="fn-zg-panel" id="zg-alter">
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">13–17</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="17.2"></div></div><div class="fn-zg-bar-val">17,2%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">18–24</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="28.3"></div></div><div class="fn-zg-bar-val">28,3%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">25–34</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="30.9"></div></div><div class="fn-zg-bar-val">30,9%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">35–44</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="16.2"></div></div><div class="fn-zg-bar-val">16,2%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">45–54</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="5.6"></div></div><div class="fn-zg-bar-val">5,6%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">55–64</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="1.3"></div></div><div class="fn-zg-bar-val">1,3%</div></div></div>
+<div class="fn-zg-bar-row"><div class="fn-zg-bar-label">65+</div><div class="fn-zg-bar-wrap"><div class="fn-zg-bar-track"><div class="fn-zg-bar-fill" data-width="0.5"></div></div><div class="fn-zg-bar-val">0,5%</div></div></div>
+</div>
+
 </div>
 </div>
 </section>
@@ -509,8 +669,45 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="fn-brands-grid">
 <div class="fn-brand rv-s"><img src="/img/img-02.webp" alt="EDEKA"><div class="fn-brand-name">EDEKA</div></div>
 <div class="fn-brand rv-s rvd1"><img src="/img/img-01.webp" alt="Jochen Schweizer"><div class="fn-brand-name">Jochen Schweizer</div></div>
-<div class="fn-brand rv-s rvd2"><img src="/img/img-16.webp" alt="CLAAS" style="filter:none;opacity:1"><div class="fn-brand-name">CLAAS</div></div>
-<div class="fn-brand rv-s rvd3"><img src="/img/img-03.webp" alt="Nintendo" style="height:28px"><div class="fn-brand-name">Nintendo</div></div>
+<div class="fn-brand rv-s rvd2"><img src="/img/img-16.webp" alt="CLAAS"><div class="fn-brand-name">CLAAS</div></div>
+<div class="fn-brand rv-s rvd3"><img src="/img/img-06.webp" alt="Nintendo"><div class="fn-brand-name">Nintendo</div></div>
+<div class="fn-brand rv-s rvd4"><img src="/img/img-04.svg" alt="STRABAG"><div class="fn-brand-name">STRABAG</div></div>
+<div class="fn-brand rv-s rvd5"><img src="/img/img-07.webp" alt="Hitschies"><div class="fn-brand-name">Hitschies</div></div>
+<div class="fn-brand rv-s"><div style="font-size:1.3rem;font-weight:900;letter-spacing:-.02em;color:var(--w);opacity:.85">ABOUT YOU</div><div class="fn-brand-name">About You</div></div>
+</div>
+</div>
+</section>
+
+<!-- SAT.1 FRÜHSTÜCKSFERNSEHEN -->
+<section class="sec fn-tv">
+<div class="w">
+<div class="fn-tv-inner rv-s">
+
+<div class="fn-tv-video">
+<iframe src="https://www.youtube.com/embed/t6eTKfqXbK8" title="Finnel im SAT.1 Frühstücksfernsehen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<div>
+<div class="fn-tv-badge">
+<div class="fn-tv-badge-icon">SAT<span style="font-size:.55rem">.1</span></div>
+<div class="fn-tv-badge-text"><strong>Frühstücksfernsehen</strong>Live im deutschen TV</div>
+</div>
+
+<h2 class="fn-tv-h">Vom Internet ins <span>Fernsehen.</span></h2>
+<p class="fn-tv-p">Finnel wurde als einer der erfolgreichsten deutschen Creator ins SAT.1 Frühstücksfernsehen eingeladen — ein Zeichen dafür, dass Social-Media-Reichweite längst in der Mainstream-Medienlandschaft angekommen ist.</p>
+
+<div class="fn-tv-quote">
+<p>„Wenn das Fernsehen anklopft, weißt du, dass du etwas richtig gemacht hast."</p>
+<cite>— Finnel, Creator & Co-Founder virral</cite>
+</div>
+
+<div class="fn-tv-highlights">
+<div class="fn-tv-hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>Live-TV Auftritt</div>
+<div class="fn-tv-hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Millionen Zuschauer</div>
+<div class="fn-tv-hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Creator-Pionier</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
@@ -519,26 +716,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <section class="fn-cta">
 <div class="w">
 <div class="fn-cta-inner rv-s">
-<div class="tag">Let's go</div>
-<h2>Bereit für eine <span>Kooperation?</span></h2>
-<p>Du willst mit Finnel zusammenarbeiten? Lass uns über dein Projekt sprechen — von der ersten Idee bis zum fertigen Content.</p>
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<a href="/anfrage" class="fn-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
-<a href="mailto:hello@virral.de" class="fn-btn-s">hello@virral.de</a>
+
+<div class="fn-cta-avatar">
+<img loading="lazy" decoding="async" src="/img/Moritz.png" alt="Moritz von Schaabner">
 </div>
+
+<div class="fn-cta-name">Moritz von Schaabner</div>
+<div class="fn-cta-role">Strategische Projektplanung</div>
+<div class="fn-cta-avail"><div class="pd"></div>Verfügbar</div>
+
+<div class="fn-cta-label">Kostenfrei & unverbindlich</div>
+<h2>Lass uns über dein <span>Projekt sprechen.</span></h2>
+<p>In 30 Minuten analysieren wir eure Social-Präsenz, identifizieren Wachstumshebel und zeigen, wie virral euch konkret weiterhelfen kann.</p>
+
+<div class="fn-cta-checks">
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>30 Min Call</div>
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Individuelle Analyse</div>
+<div class="fn-cta-check"><div class="fn-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Antwort in 60 Min</div>
+</div>
+
+<a href="/anfrage" class="fn-btn-p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="ft"><div class="w"><div class="ft-inner">
-<div class="ft-copy">&copy; 2026 virral GmbH</div>
-<div class="ft-links">
-<a href="/impressum.html">Impressum</a>
-<a href="/datenschutz.html">Datenschutz</a>
-<a href="mailto:hello@virral.de">hello@virral.de</a>
-</div>
-</div></div></footer>
+<div id="shared-footer"></div>
 
 <script>
 /* Lazy load iframes */
@@ -555,6 +757,47 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
     });
   },{rootMargin:'200px'});
   document.querySelectorAll('iframe[data-src]').forEach(function(f){ obs.observe(f); });
+})();
+
+/* Zielgruppe tabs */
+(function(){
+  var tabs=document.querySelectorAll('.fn-zg-tab');
+  var panels={'geschlecht':document.getElementById('zg-geschlecht'),'land':document.getElementById('zg-land'),'alter':document.getElementById('zg-alter')};
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){
+      tabs.forEach(function(t){t.classList.remove('active')});
+      tab.classList.add('active');
+      Object.values(panels).forEach(function(p){p.classList.remove('active')});
+      panels[tab.dataset.tab].classList.add('active');
+      animatePanel(tab.dataset.tab);
+    });
+  });
+  function animatePanel(name){
+    if(name==='geschlecht'){
+      panels[name].querySelectorAll('.fn-zg-donut-circle[data-target]').forEach(function(c){
+        var t=c.dataset.target;
+        c.style.transition='none';c.setAttribute('stroke-dasharray','0 490');
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          c.style.transition='stroke-dasharray 1.2s cubic-bezier(.16,1,.3,1)';
+          c.setAttribute('stroke-dasharray',t+' 490');
+        })});
+      });
+    }else{
+      panels[name].querySelectorAll('.fn-zg-bar-fill').forEach(function(b){
+        b.style.transition='none';b.style.width='0';
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          b.style.transition='width 1s cubic-bezier(.16,1,.3,1)';
+          b.style.width=b.dataset.width+'%';
+        })});
+      });
+    }
+  }
+  /* Initial animation on scroll */
+  var zgCard=document.querySelector('.fn-zg-card');
+  var zgObs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting){animatePanel('geschlecht');zgObs.unobserve(zgCard);}
+  },{threshold:0.2});
+  if(zgCard) zgObs.observe(zgCard);
 })();
 
 /* Scroll reveal */

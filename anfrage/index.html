@@ -75,7 +75,8 @@
 .mf-testi-phone{width:clamp(140px,16vw,200px);aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.4);background:#000}
 .mf-testi-phone iframe{width:100%;height:100%;border:none}
 .mf-testi-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:auto}
-.mf-testi-logo{padding:14px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;text-align:center;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--w2);line-height:1.2}
+.mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px}
+.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain}
 
 /* Footer */
 .ft{border-top:1px solid var(--bd);padding:32px 0;margin-top:auto}
@@ -213,37 +214,57 @@
 
 <!-- RIGHT: Testimonial -->
 <div class="mf-testi-side">
+<!-- Testimonial 1: Manuel Schaub / EDEKA (steps 1, 5) -->
 <div class="mf-testi mf-testi-active" data-testi="1">
 <div class="mf-testi-card mf-testi-red">
 <div class="mf-testi-top">
-<div class="mf-testi-avatar"><img src="/img/Moritz.png" alt="Fabian Heuel"></div>
-<div><div class="mf-testi-name">Fabian Heuel</div><div class="mf-testi-role">Teamlead Brand & Social</div></div>
+<div class="mf-testi-avatar"><img src="/img/img-12.avif" alt="Manuel Schaub"></div>
+<div><div class="mf-testi-name">Manuel Schaub</div><div class="mf-testi-role">Teamlead Personalmarketing, EDEKA Südwest</div></div>
 </div>
-<div class="mf-testi-quote">Auf den Punkt getroffen! Ich freue mich schon auf das nächste Projekt.</div>
+<div class="mf-testi-quote">&bdquo;Wir sind mit der Arbeitgebermarke EDEKA Südwest im Fokus der Jugendlichen angekommen.&ldquo;</div>
 <div class="mf-testi-video">
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo">JOCHEN<br>SCHWEIZER</div>
-<div class="mf-testi-logo">Nintendo</div>
-<div class="mf-testi-logo">STRABAG</div>
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
+<!-- Testimonial 2: Fabian Heuel / Jochen Schweizer (steps 2, 3) -->
 <div class="mf-testi" data-testi="2">
 <div class="mf-testi-card mf-testi-green">
 <div class="mf-testi-top">
-<div class="mf-testi-avatar"><img src="/img/Moritz.png" alt="Silja Guelicher"></div>
-<div><div class="mf-testi-name">Silja Guelicher</div><div class="mf-testi-role">Senior PR & Licensing Manager</div></div>
+<div class="mf-testi-avatar"><img src="/img/img-13.webp" alt="Fabian Heuel"></div>
+<div><div class="mf-testi-name">Fabian Heuel</div><div class="mf-testi-role">Teamlead Brand & Social, Jochen Schweizer</div></div>
 </div>
-<div class="mf-testi-quote">&bdquo;Wir waren überrascht, wie klar und direkt die Kommunikation war.</div>
+<div class="mf-testi-quote">&bdquo;Wir haben unsere Social-Präsenz auf ein neues Level gehoben.&ldquo;</div>
 <div class="mf-testi-video">
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/8HtJqJvEWU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo">JOCHEN<br>SCHWEIZER</div>
-<div class="mf-testi-logo">Nintendo</div>
-<div class="mf-testi-logo">STRABAG</div>
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3: Lena Barkovic / STRABAG (step 4) -->
+<div class="mf-testi" data-testi="3">
+<div class="mf-testi-card" style="background:linear-gradient(160deg,#0a1530 0%,#0a1020 40%,#0f1a1a 100%)">
+<div class="mf-testi-top">
+<div class="mf-testi-avatar"><img src="/img/img-14.webp" alt="Lena Barkovic"></div>
+<div><div class="mf-testi-name">Lena Barkovic</div><div class="mf-testi-role">Teamlead Social Media, STRABAG AG</div></div>
+</div>
+<div class="mf-testi-quote">&bdquo;Einen starken Launch unseres STRABAG-TikTok Kanals hingelegt &ndash; starke Reichweiten, und das alles organisch.&ldquo;</div>
+<div class="mf-testi-video">
+<div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
+</div>
+<div class="mf-testi-logos">
+<div class="mf-testi-logo"><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo"><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo"><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -273,7 +294,7 @@
 
   var steps = form.querySelectorAll('.mf-step');
   var testis = document.querySelectorAll('.mf-testi');
-  var testiMap = {1:'1',2:'2',3:'2',4:'1',5:'1'};
+  var testiMap = {1:'1',2:'2',3:'2',4:'3',5:'1'};
   var current = 1;
   var data = {};
 

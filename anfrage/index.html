@@ -13,8 +13,8 @@
 .mf-page{flex:1;display:flex;align-items:center;padding:100px 0 60px}
 .mf-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
 .mf-inner{display:grid;grid-template-columns:1fr 1fr;min-height:580px}
-.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column}
-.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:32px}
+.mf-form-side{padding:clamp(32px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+.mf-title{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;margin-bottom:40px}
 .mf-step{display:none;flex-direction:column;flex:1}
 .mf-step-active{display:flex}
 .mf-label{font-size:.88rem;color:var(--w2);margin-bottom:20px}
@@ -79,7 +79,13 @@
 .mf-testi-logo{padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center;min-height:52px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
 .mf-testi-logo:hover{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.08)}
 .mf-testi-logo.tl-active{border-color:rgba(254,44,85,.4);background:rgba(254,44,85,.06)}
-.mf-testi-logo img{max-height:28px;width:auto;filter:grayscale(1) brightness(2);opacity:.7;object-fit:contain;position:relative;z-index:1}
+.mf-testi-logo img{max-height:28px;width:auto;object-fit:contain;position:relative;z-index:1}
+.mf-testi-logo.tl-edeka{background:rgba(255,210,0,.12);border-color:rgba(255,210,0,.25)}
+.mf-testi-logo.tl-edeka:hover{background:rgba(255,210,0,.18)}
+.mf-testi-logo.tl-jochen{background:rgba(0,180,190,.12);border-color:rgba(0,180,190,.25)}
+.mf-testi-logo.tl-jochen:hover{background:rgba(0,180,190,.18)}
+.mf-testi-logo.tl-strabag{background:rgba(220,30,30,.12);border-color:rgba(220,30,30,.25)}
+.mf-testi-logo.tl-strabag:hover{background:rgba(220,30,30,.18)}
 .mf-testi-logo .tl-bar{position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--a);border-radius:0 2px 0 0;z-index:2}
 .mf-testi-logo.tl-active .tl-bar{animation:tl-fill 4s linear forwards}
 @keyframes tl-fill{from{width:0}to{width:100%}}
@@ -226,9 +232,9 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo tl-active" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-edeka tl-active" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-jochen" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-strabag" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -244,9 +250,9 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-edeka" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
 <div class="mf-testi-logo tl-active" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
-<div class="mf-testi-logo" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
+<div class="mf-testi-logo tl-strabag" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>
 </div>
@@ -262,8 +268,8 @@
 <div class="mf-testi-phone"><iframe data-src="https://app.vidzflow.com/v/eaWMlT2WIr?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 <div class="mf-testi-logos">
-<div class="mf-testi-logo" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
-<div class="mf-testi-logo" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
+<div class="mf-testi-logo tl-edeka" data-tl="1"><span class="tl-bar"></span><img src="/img/img-02.webp" alt="EDEKA"></div>
+<div class="mf-testi-logo tl-jochen" data-tl="2"><span class="tl-bar"></span><img src="/img/img-01.webp" alt="Jochen Schweizer"></div>
 <div class="mf-testi-logo tl-active" data-tl="3"><span class="tl-bar"></span><img src="/img/img-04.svg" alt="STRABAG"></div>
 </div>
 </div>

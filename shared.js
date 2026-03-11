@@ -95,4 +95,28 @@
   if(!document.querySelector('footer.ft')){
     window.addEventListener('load',initFooter);
   }
+
+  /* ===== COOKIE BANNER ===== */
+  if(!localStorage.getItem('cookie_consent')){
+    var cb=document.createElement('div');
+    cb.id='cookie-banner';
+    cb.innerHTML='<div class="cb-inner">'
+      +'<div class="cb-text">'
+      +'<strong>Cookies & Datenschutz</strong>'
+      +'<p>Wir nutzen Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten. Mehr dazu in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>'
+      +'</div>'
+      +'<div class="cb-btns">'
+      +'<button class="cb-accept" id="cb-accept">Akzeptieren</button>'
+      +'<button class="cb-decline" id="cb-decline">Nur notwendige</button>'
+      +'</div>'
+      +'</div>';
+    document.body.appendChild(cb);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){cb.classList.add('show')})});
+    document.getElementById('cb-accept').addEventListener('click',function(){
+      localStorage.setItem('cookie_consent','all');cb.classList.remove('show');setTimeout(function(){cb.remove()},400);
+    });
+    document.getElementById('cb-decline').addEventListener('click',function(){
+      localStorage.setItem('cookie_consent','essential');cb.classList.remove('show');setTimeout(function(){cb.remove()},400);
+    });
+  }
 })();

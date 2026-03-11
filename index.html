@@ -542,38 +542,63 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!vt) return;
   var activeCard = null;
 
-  // Click on a video card: pause slider, mark as active
+  function stopVideo(card) {
+    if (!card) return;
+    var iframe = card.querySelector('iframe');
+    if (iframe && iframe.src) {
+      iframe.dataset.src = iframe.src;
+      iframe.src = 'about:blank';
+      var ov = card.querySelector('.vf-play');
+      if (ov) ov.classList.remove('loaded');
+    }
+  }
+
+  function deactivate() {
+    stopVideo(activeCard);
+    activeCard = null;
+    vt.style.animationPlayState = 'running';
+  }
+
+  // Click on a video card: pause slider
   vt.addEventListener('click', function(e) {
     var card = e.target.closest('.vc');
     if (!card) return;
     if (activeCard === card) {
-      // Second click on same card = resume
-      activeCard = null;
-      vt.style.animationPlayState = 'running';
+      deactivate();
     } else {
+      if (activeCard) stopVideo(activeCard);
       activeCard = card;
       vt.style.animationPlayState = 'paused';
     }
   });
 
-  // Click outside slider = resume
+  // Click outside slider = stop video & resume
   document.addEventListener('click', function(e) {
     if (activeCard && !e.target.closest('.vt')) {
-      activeCard = null;
-      vt.style.animationPlayState = 'running';
+      deactivate();
     }
   });
 
-  // If active card scrolls out of viewport, resume
+  // If active card leaves viewport, stop video & resume
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (!entry.isIntersecting && entry.target === activeCard) {
-        activeCard = null;
-        vt.style.animationPlayState = 'running';
+        deactivate();
       }
     });
   }, { threshold: 0.3 });
   vt.querySelectorAll('.vc').forEach(function(c) { io.observe(c); });
+
+  // If entire slider section leaves viewport, stop any playing video
+  var sectionObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting && activeCard) {
+        deactivate();
+      }
+    });
+  }, { threshold: 0 });
+  var vidsSection = document.querySelector('.vids');
+  if (vidsSection) sectionObs.observe(vidsSection);
 });
 </script>
 

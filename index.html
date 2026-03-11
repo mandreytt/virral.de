@@ -922,7 +922,9 @@ document.addEventListener('DOMContentLoaded',function(){
     msg.style.opacity='0';
     msg.style.transform='translateY(10px) scale(.95)';
     dismissed=true;
-    avatar.classList.add('pulse');
+    avatar.style.opacity='0';
+    avatar.style.transform='scale(.5)';
+    avatar.classList.remove('pulse');
   }
 
   // Show avatar after 3s

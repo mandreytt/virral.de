@@ -530,12 +530,22 @@
 </div>
 
 <!-- Email form -->
-<form id="nl-form" style="display:flex;gap:10px;max-width:440px" onsubmit="return nlSubmit(event)">
+<form id="nl-form" style="display:flex;flex-direction:column;gap:10px;max-width:440px" onsubmit="return nlSubmit(event)">
+<div style="display:flex;gap:10px">
 <div style="flex:1;position:relative">
-<svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-<input type="email" placeholder="deine@email.de" required style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+<input type="text" name="firstname" placeholder="Vorname" required style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
 </div>
-<button type="submit" class="bp" style="white-space:nowrap;flex-shrink:0;border:none;cursor:pointer">Anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+<div style="flex:1;position:relative">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4"/></svg>
+<input type="text" name="company" placeholder="Unternehmen" style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
+</div>
+</div>
+<div style="position:relative">
+<svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<input type="email" name="email" placeholder="deine@email.de" required style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
+</div>
+<button type="submit" class="bp" style="white-space:nowrap;border:none;cursor:pointer;width:100%;justify-content:center">Kostenlos anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
 </form>
 <label style="display:flex;align-items:flex-start;gap:8px;margin-top:12px;cursor:pointer;max-width:440px">
 <input type="checkbox" id="nl-privacy" required style="margin-top:3px;accent-color:var(--a);flex-shrink:0;width:16px;height:16px;cursor:pointer">
@@ -614,7 +624,9 @@ var HS_FORM_ID = 'DEIN_FORM_ID';
 function nlSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('nl-form');
-  var email = form.querySelector('input[type="email"]').value;
+  var email = form.querySelector('input[name="email"]').value;
+  var firstname = form.querySelector('input[name="firstname"]').value;
+  var company = form.querySelector('input[name="company"]').value;
   var privacy = document.getElementById('nl-privacy');
   if (!privacy.checked) {
     privacy.focus();
@@ -631,7 +643,11 @@ function nlSubmit(e) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      fields: [{ name: 'email', value: email }],
+      fields: [
+        { name: 'email', value: email },
+        { name: 'firstname', value: firstname },
+        { name: 'company', value: company }
+      ],
       context: { pageUri: window.location.href, pageName: document.title },
       legalConsentOptions: {
         consent: {

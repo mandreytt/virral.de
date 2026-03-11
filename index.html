@@ -519,6 +519,14 @@
 <div style="width:36px;height:36px;border-radius:10px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2" style="width:18px;height:18px"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
 <div><div style="font-size:.85rem;font-weight:700">Plattform-Updates</div><div style="font-size:.75rem;color:var(--w3)">Algorithmus-Änderungen & neue Features</div></div>
 </div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:36px;height:36px;border-radius:10px;background:rgba(255,149,0,.1);border:1px solid rgba(255,149,0,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2" style="width:18px;height:18px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<div><div style="font-size:.85rem;font-weight:700">Exklusive Creator Insights</div><div style="font-size:.75rem;color:var(--w3)">Learnings von Millionen-Reichweite Creators</div></div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:36px;height:36px;border-radius:10px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" style="width:18px;height:18px"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<div><div style="font-size:.85rem;font-weight:700">Webinare & Events</div><div style="font-size:.75rem;color:var(--w3)">Exklusiver Zugang zu Live-Sessions rund um organisches Wachstum</div></div>
+</div>
 </div>
 
 <!-- Email form -->
@@ -797,6 +805,111 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv,.rv-s,.rv-l,.rv-r').forEach(function(el){obs.observe(el)});
+})();
+</script>
+
+<!-- Newsletter Chat Bubble -->
+<div id="nl-chat" style="position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none">
+
+<!-- Chat message popup -->
+<div id="nl-chat-msg" style="pointer-events:auto;background:var(--card);border:1px solid var(--bd2);border-radius:16px 16px 4px 16px;padding:16px 18px;max-width:300px;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;transform:translateY(10px) scale(.95);transition:all .4s var(--e)">
+<div style="font-size:.82rem;font-weight:700;margin-bottom:6px">Hey! 👋 Kennst du schon unseren Newsletter?</div>
+<div style="font-size:.75rem;color:var(--w2);line-height:1.65;margin-bottom:12px">Alle 14 Tage exklusive Creator Insights von Millionen-Creators, Trend-Reports & Zugang zu Webinaren rund um Social Media Wachstum. Kostenlos.</div>
+<a href="#nl-form" id="nl-chat-cta" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--a);color:#fff;border-radius:100px;font-size:.78rem;font-weight:700;transition:all .3s;text-decoration:none;pointer-events:auto">Jetzt anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<button id="nl-chat-close" style="position:absolute;top:8px;right:10px;background:none;border:none;color:var(--w3);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1;pointer-events:auto">&times;</button>
+</div>
+
+<!-- Avatar bubble -->
+<div id="nl-chat-avatar" style="pointer-events:auto;width:60px;height:60px;border-radius:50%;overflow:hidden;border:3px solid var(--a);box-shadow:0 8px 28px rgba(254,44,85,.35);cursor:pointer;transition:all .3s;position:relative;flex-shrink:0;opacity:0;transform:scale(.5);background:#000">
+<img src="img/img-09.webp" alt="Finnel" style="width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;bottom:2px;right:2px;width:14px;height:14px;background:#2ecc71;border-radius:50%;border:2px solid var(--card)"></div>
+</div>
+</div>
+
+<style>
+#nl-chat-avatar:hover{transform:scale(1.1)!important;box-shadow:0 12px 36px rgba(254,44,85,.45)}
+#nl-chat-cta:hover{background:var(--ah);box-shadow:0 4px 16px rgba(254,44,85,.4)}
+@keyframes nlBubblePulse{0%,100%{box-shadow:0 8px 28px rgba(254,44,85,.35)}50%{box-shadow:0 8px 28px rgba(254,44,85,.55),0 0 0 8px rgba(254,44,85,.1)}}
+#nl-chat-avatar.pulse{animation:nlBubblePulse 2s ease-in-out infinite}
+@media(max-width:768px){#nl-chat{bottom:80px;right:16px}#nl-chat-msg{max-width:260px;padding:14px}#nl-chat-avatar{width:52px;height:52px}}
+</style>
+
+<script>
+(function(){
+  var chat=document.getElementById('nl-chat');
+  var msg=document.getElementById('nl-chat-msg');
+  var avatar=document.getElementById('nl-chat-avatar');
+  var closeBtn=document.getElementById('nl-chat-close');
+  if(!chat||!msg||!avatar)return;
+  var msgOpen=false;
+  var dismissed=false;
+
+  // Show avatar after 3s
+  setTimeout(function(){
+    avatar.style.opacity='1';
+    avatar.style.transform='scale(1)';
+    avatar.classList.add('pulse');
+  },3000);
+
+  // Show message after 6s
+  setTimeout(function(){
+    if(!dismissed){
+      msg.style.opacity='1';
+      msg.style.transform='translateY(0) scale(1)';
+      msgOpen=true;
+      avatar.classList.remove('pulse');
+    }
+  },6000);
+
+  // Toggle message on avatar click
+  avatar.addEventListener('click',function(){
+    if(dismissed){
+      dismissed=false;
+      msg.style.opacity='1';
+      msg.style.transform='translateY(0) scale(1)';
+      msgOpen=true;
+      avatar.classList.remove('pulse');
+    } else if(msgOpen){
+      msg.style.opacity='0';
+      msg.style.transform='translateY(10px) scale(.95)';
+      msgOpen=false;
+    } else {
+      msg.style.opacity='1';
+      msg.style.transform='translateY(0) scale(1)';
+      msgOpen=true;
+      avatar.classList.remove('pulse');
+    }
+  });
+
+  // Close button
+  closeBtn.addEventListener('click',function(e){
+    e.stopPropagation();
+    msg.style.opacity='0';
+    msg.style.transform='translateY(10px) scale(.95)';
+    msgOpen=false;
+    dismissed=true;
+    avatar.classList.add('pulse');
+  });
+
+  // CTA click: scroll to newsletter & close
+  document.getElementById('nl-chat-cta').addEventListener('click',function(){
+    msg.style.opacity='0';
+    msg.style.transform='translateY(10px) scale(.95)';
+    msgOpen=false;
+    dismissed=true;
+  });
+
+  // Hide when at newsletter section
+  var nlSection=document.querySelector('#nl-form');
+  if(nlSection){
+    var nlObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        chat.style.opacity=entry.isIntersecting?'0':'1';
+        chat.style.pointerEvents=entry.isIntersecting?'none':'auto';
+      });
+    },{threshold:0.1});
+    nlObs.observe(nlSection.closest('section'));
+  }
 })();
 </script>
 

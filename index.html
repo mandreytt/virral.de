@@ -538,32 +538,42 @@ document.querySelectorAll('a[href^="#"]').forEach(l=>{l.addEventListener('click'
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const vt = document.querySelector('.vt');
+  var vt = document.querySelector('.vt');
   if (!vt) return;
-  
-  // Listen for messages from vidzflow iframes (play/pause events)
-  window.addEventListener('message', function(e) {
-    if (e.data && typeof e.data === 'object') {
-      if (e.data.event === 'play' || e.data.type === 'play') {
-        vt.style.animationPlayState = 'paused';
-      } else if (e.data.event === 'pause' || e.data.type === 'pause' || e.data.event === 'ended' || e.data.type === 'ended') {
-        vt.style.animationPlayState = 'running';
-      }
+  var activeCard = null;
+
+  // Click on a video card: pause slider, mark as active
+  vt.addEventListener('click', function(e) {
+    var card = e.target.closest('.vc');
+    if (!card) return;
+    if (activeCard === card) {
+      // Second click on same card = resume
+      activeCard = null;
+      vt.style.animationPlayState = 'running';
+    } else {
+      activeCard = card;
+      vt.style.animationPlayState = 'paused';
     }
   });
-  
-  // Fallback: pause on click, resume when clicking outside
-  vt.querySelectorAll('.vc').forEach(function(card) {
-    card.addEventListener('click', function() {
-      vt.style.animationPlayState = 'paused';
-    });
-  });
-  
+
+  // Click outside slider = resume
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('.vc')) {
+    if (activeCard && !e.target.closest('.vt')) {
+      activeCard = null;
       vt.style.animationPlayState = 'running';
     }
   });
+
+  // If active card scrolls out of viewport, resume
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting && entry.target === activeCard) {
+        activeCard = null;
+        vt.style.animationPlayState = 'running';
+      }
+    });
+  }, { threshold: 0.3 });
+  vt.querySelectorAll('.vc').forEach(function(c) { io.observe(c); });
 });
 </script>
 

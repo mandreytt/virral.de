@@ -13,6 +13,13 @@
       +'<a href="/#cases" class="na">Case Studies</a>'
       +'<a href="/#creators" class="na">Creator</a>'
       +'<a href="/#process" class="na">Prozess</a>'
+      +'<a href="tel:+4922129256316" class="nav-avail">'
+      +'<img src="/img/andre.jpg" alt="Andre Braun" class="nav-avail-img">'
+      +'<span class="nav-avail-dot"></span>'
+      +'<span class="nav-avail-txt">Erreichbar</span>'
+      +'<span class="nav-avail-sep">·</span>'
+      +'<span class="nav-avail-phone">+49 221 29256316</span>'
+      +'</a>'
       +'<a href="/anfrage" class="nc">Kostenfreie Erstberatung</a>'
       +'</div>'
       +'<button class="nm" id="nt" aria-label="Menü"><span></span><span></span><span></span></button>'
@@ -95,6 +102,21 @@
   if(!document.querySelector('footer.ft')){
     window.addEventListener('load',initFooter);
   }
+
+  /* ===== NAV AVAILABILITY BADGE STYLES ===== */
+  var navStyle=document.createElement('style');
+  navStyle.textContent=''
+    +'.nav-avail{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:100px;text-decoration:none;transition:all .3s;animation:navAvailFadeIn .6s ease-out}'
+    +'.nav-avail:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.15)}'
+    +'.nav-avail-img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.15);flex-shrink:0}'
+    +'.nav-avail-dot{width:7px;height:7px;border-radius:50%;background:#2ecc71;flex-shrink:0;animation:navDotPulse 2s ease-in-out infinite}'
+    +'.nav-avail-txt{font-size:.75rem;font-weight:600;color:#2ecc71}'
+    +'.nav-avail-sep{font-size:.75rem;color:rgba(255,255,255,.3)}'
+    +'.nav-avail-phone{font-size:.75rem;font-weight:500;color:rgba(255,255,255,.7)}'
+    +'@keyframes navDotPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(46,204,113,.4)}50%{opacity:1;box-shadow:0 0 0 4px rgba(46,204,113,0)}}'
+    +'@keyframes navAvailFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}'
+    +'@media(max-width:768px){.nav-avail{display:none}}';
+  document.head.appendChild(navStyle);
 
   /* ===== COOKIE BANNER ===== */
   if(!localStorage.getItem('cookie_consent')){

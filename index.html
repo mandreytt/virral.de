@@ -537,13 +537,9 @@
 <input type="text" name="firstname" placeholder="Vorname" required style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
 </div>
 <div style="flex:1;position:relative">
-<svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4"/></svg>
-<input type="text" name="company" placeholder="Unternehmen" style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
-</div>
-</div>
-<div style="position:relative">
 <svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 <input type="email" name="email" placeholder="deine@email.de" required style="width:100%;padding:14px 14px 14px 40px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.88rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
+</div>
 </div>
 <button type="submit" class="bp" style="white-space:nowrap;border:none;cursor:pointer;width:100%;justify-content:center">Kostenlos anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
 </form>
@@ -618,15 +614,14 @@
    Ersetze PORTAL_ID und FORM_ID mit deinen HubSpot-Werten.
    HubSpot Portal: Settings → Account → Hub ID
    HubSpot Form:   Marketing → Forms → Create form → Form ID aus der URL */
-var HS_PORTAL_ID = 'DEIN_PORTAL_ID';
-var HS_FORM_ID = 'DEIN_FORM_ID';
+var HS_PORTAL_ID = '146589181';
+var HS_FORM_ID = '3b5d3f50-a999-40ee-b395-b6c15b1be8c1';
 
 function nlSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('nl-form');
   var email = form.querySelector('input[name="email"]').value;
   var firstname = form.querySelector('input[name="firstname"]').value;
-  var company = form.querySelector('input[name="company"]').value;
   var privacy = document.getElementById('nl-privacy');
   if (!privacy.checked) {
     privacy.focus();
@@ -639,14 +634,13 @@ function nlSubmit(e) {
   btn.disabled = true;
 
   // HubSpot Forms API
-  fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS_PORTAL_ID + '/' + HS_FORM_ID, {
+  fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/' + HS_PORTAL_ID + '/' + HS_FORM_ID, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       fields: [
         { name: 'email', value: email },
-        { name: 'firstname', value: firstname },
-        { name: 'company', value: company }
+        { name: 'firstname', value: firstname }
       ],
       context: { pageUri: window.location.href, pageName: document.title },
       legalConsentOptions: {
@@ -913,13 +907,23 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <script>
 (function(){
-  var chat=document.getElementById('nl-chat');
   var msg=document.getElementById('nl-chat-msg');
   var avatar=document.getElementById('nl-chat-avatar');
   var closeBtn=document.getElementById('nl-chat-close');
-  if(!chat||!msg||!avatar)return;
-  var msgOpen=false;
+  if(!msg||!avatar)return;
   var dismissed=false;
+
+  function showMsg(){
+    msg.style.opacity='1';
+    msg.style.transform='translateY(0) scale(1)';
+    avatar.classList.remove('pulse');
+  }
+  function hideMsg(){
+    msg.style.opacity='0';
+    msg.style.transform='translateY(10px) scale(.95)';
+    dismissed=true;
+    avatar.classList.add('pulse');
+  }
 
   // Show avatar after 3s
   setTimeout(function(){
@@ -928,52 +932,20 @@ document.addEventListener('DOMContentLoaded',function(){
     avatar.classList.add('pulse');
   },3000);
 
-  // Show message after 6s
+  // Show message after 6s - stays until closed
   setTimeout(function(){
-    if(!dismissed){
-      msg.style.opacity='1';
-      msg.style.transform='translateY(0) scale(1)';
-      msgOpen=true;
-      avatar.classList.remove('pulse');
-    }
+    if(!dismissed) showMsg();
   },6000);
 
-  // Toggle message on avatar click
+  // Avatar click: reopen if dismissed
   avatar.addEventListener('click',function(){
-    if(dismissed){
-      dismissed=false;
-      msg.style.opacity='1';
-      msg.style.transform='translateY(0) scale(1)';
-      msgOpen=true;
-      avatar.classList.remove('pulse');
-    } else if(msgOpen){
-      msg.style.opacity='0';
-      msg.style.transform='translateY(10px) scale(.95)';
-      msgOpen=false;
-    } else {
-      msg.style.opacity='1';
-      msg.style.transform='translateY(0) scale(1)';
-      msgOpen=true;
-      avatar.classList.remove('pulse');
-    }
+    if(dismissed){ dismissed=false; showMsg(); }
   });
 
-  // Close button
+  // Close only on X click
   closeBtn.addEventListener('click',function(e){
     e.stopPropagation();
-    msg.style.opacity='0';
-    msg.style.transform='translateY(10px) scale(.95)';
-    msgOpen=false;
-    dismissed=true;
-    avatar.classList.add('pulse');
-  });
-
-  // CTA click: scroll to newsletter & close
-  document.getElementById('nl-chat-cta').addEventListener('click',function(){
-    msg.style.opacity='0';
-    msg.style.transform='translateY(10px) scale(.95)';
-    msgOpen=false;
-    dismissed=true;
+    hideMsg();
   });
 })();
 </script>

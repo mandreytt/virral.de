@@ -24,12 +24,10 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--a);background:var(--as);border:1px solid rgba(13,127,172,.2);padding:5px 14px;border-radius:100px;margin-bottom:16px}
 
 /* ===== HERO WITH VIDEO BG ===== */
-.js-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.js-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
 .js-hero-bg{position:absolute;inset:0;z-index:0}
-.js-hero-bg iframe{width:100%;height:100%;border:none;pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;object-fit:cover}
-@media(min-aspect-ratio:16/9){.js-hero-bg iframe{width:100%;height:auto;min-height:100vh}}
-@media(max-aspect-ratio:16/9){.js-hero-bg iframe{width:auto;height:100%;min-width:100vw}}
-.js-hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(6,6,8,.35) 30%,rgba(6,6,8,.75) 65%,#060608 100%)}
+.js-hero-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,177.78vh);height:max(100vh,56.25vw);border:none;pointer-events:none}
+.js-hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 0%,rgba(6,6,8,.3) 30%,rgba(6,6,8,.7) 60%,var(--bg) 100%)}
 .js-hero-content{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,60px);max-width:760px}
 .js-hero-logo{margin-bottom:28px;display:inline-block}
 .js-hero-logo img{height:clamp(60px,10vw,90px);width:auto;border-radius:18px}
@@ -326,10 +324,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <div class="w">
 <div class="js-camp-inner">
 <div class="js-camp-grid" style="direction:rtl">
-<div class="js-camp-videos rv-s" style="direction:ltr">
-<div class="js-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/yMOi8QbcoQ?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="js-camp-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/xt5zgQHJHd?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="js-camp-vid rvd3"><iframe data-src="https://app.vidzflow.com/v/DExfrVlHNx?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="rv-s" style="direction:ltr">
+<div class="js-tv-embed" style="margin-bottom:0"><iframe data-src="https://www.youtube-nocookie.com/embed/kczLem3O7vE?rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe></div>
 </div>
 
 <div class="rv-s" style="direction:ltr">
@@ -464,6 +460,12 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 
 <div class="js-house-grid">
 <div class="rv-s">
+<div class="js-house-vid">
+<iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
+</div>
+</div>
+
+<div class="rv-s">
 <div class="js-house-text">
 <h2>50 Mio. Views in <span>einer Nacht.</span></h2>
 <p>Offline-Aktivierungen neu gedacht: Mit einer der größten jährlichen Creator Halloween Parties schafft virral exklusive Brand-Momente, die an nur einem Abend über 50 Millionen organische Views für Jochen Schweizer generieren.</p>
@@ -477,24 +479,6 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 </div>
 
 <a href="/anfrage" class="js-btn-p">Event anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
-</div>
-
-<div class="rv-s">
-<div class="js-house-vid">
-<iframe data-src="https://app.vidzflow.com/v/zlDkOeJPoU?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%230d7fac&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== TV-WERBUNG ==================== -->
-<section class="sec js-tv" id="tv-werbung">
-<div class="w">
-<div class="sh rv"><div class="tag">Querformat</div><h2>Die <span>TV-Werbung.</span></h2><p>Neben Vertical Content haben wir für Jochen Schweizer auch eine Querformat-Video-Ad für YouTube und Instream produziert.</p></div>
-<div class="js-tv-inner rv-s">
-<div class="js-tv-embed">
-<iframe data-src="https://www.youtube-nocookie.com/embed/kczLem3O7vE?rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
 </div>
 </div>
 </div>

@@ -498,15 +498,58 @@
 </div>
 
 <div class="w" style="position:relative;z-index:1">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center" class="nl-grid">
+<div class="nl-grid">
 
-<!-- Left: Content -->
-<div>
+<!-- 1. Text intro -->
+<div class="nl-text">
 <div class="tag">Newsletter</div>
 <h2 style="margin-bottom:16px">Social Trends direkt in dein <span>Postfach.</span></h2>
-<p style="font-size:.9rem;color:var(--w2);line-height:1.8;margin-bottom:24px;max-width:480px">Alle 14 Tage kuratieren wir die wichtigsten TikTok- & Social-Trends - kompakt, praxisnah und ready to use für deinen Inhouse-Content.</p>
+<p style="font-size:.9rem;color:var(--w2);line-height:1.8;max-width:480px">Alle 14 Tage kuratieren wir die wichtigsten TikTok- & Social-Trends - kompakt, praxisnah und ready to use für deinen Inhouse-Content.</p>
+</div>
 
-<div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
+<!-- 2. Visual graphic -->
+<div class="nl-visual" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:420px">
+<div style="width:280px;background:var(--card);border:1px solid var(--bd2);border-radius:20px;padding:24px;position:relative;z-index:2;box-shadow:0 24px 60px rgba(0,0,0,.4)">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+<div style="width:32px;height:32px;border-radius:8px;background:var(--a);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="width:16px;height:16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><div style="font-size:.78rem;font-weight:700">virral Trend Report</div><div style="font-size:.6rem;color:var(--w3)">Ausgabe #24 · März 2026</div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="padding:12px;background:rgba(254,44,85,.06);border:1px solid rgba(254,44,85,.12);border-radius:10px">
+<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:var(--a)"></div><div style="font-size:.65rem;font-weight:700;color:var(--a)">TRENDING</div></div>
+<div style="font-size:.75rem;font-weight:700">Split-Screen POVs</div>
+<div style="font-size:.65rem;color:var(--w3)">+340% Engagement vs. Standard</div>
+</div>
+<div style="padding:12px;background:rgba(78,95,253,.06);border:1px solid rgba(78,95,253,.12);border-radius:10px">
+<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:#4E5FFD"></div><div style="font-size:.65rem;font-weight:700;color:#4E5FFD">SOUND ALERT</div></div>
+<div style="font-size:.75rem;font-weight:700">Neuer Viral-Sound erkannt</div>
+<div style="font-size:.65rem;color:var(--w3)">Jetzt nutzen bevor er mainstream wird</div>
+</div>
+<div style="padding:12px;background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.12);border-radius:10px">
+<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:#2ecc71"></div><div style="font-size:.65rem;font-weight:700;color:#2ecc71">PLAYBOOK</div></div>
+<div style="font-size:.75rem;font-weight:700">Hook-Formeln für Brand Content</div>
+<div style="font-size:.65rem;color:var(--w3)">3 Templates zum sofort Umsetzen</div>
+</div>
+</div>
+</div>
+<!-- Floating elements -->
+<div style="position:absolute;top:20px;right:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat1 6s ease-in-out infinite;z-index:3">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(254,44,85,.12);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2" style="width:14px;height:14px"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+<div><div style="font-size:.72rem;font-weight:700">+12.400</div><div style="font-size:.55rem;color:var(--w3)">Leser</div></div>
+</div>
+<div style="position:absolute;bottom:30px;left:0;background:var(--card);border:1px solid rgba(46,204,113,.15);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat2 7s ease-in-out infinite;z-index:3">
+<div style="font-size:1.2rem">🔥</div>
+<div><div style="font-size:.72rem;font-weight:700">Alle 14 Tage</div><div style="font-size:.55rem;color:var(--w3)">Nächste Ausgabe: 24. März</div></div>
+</div>
+<div style="position:absolute;top:50px;left:-10px;background:var(--card);border:1px solid var(--bd);border-radius:100px;padding:6px 12px;display:flex;align-items:center;gap:6px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat3 5s ease-in-out infinite;z-index:1">
+<svg viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2" style="width:12px;height:12px"><polyline points="20 6 9 17 4 12"/></svg>
+<span style="font-size:.65rem;font-weight:600;color:#2ecc71">100% kostenlos</span>
+</div>
+</div>
+
+<!-- 3. Features list -->
+<div class="nl-features">
+<div style="display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;align-items:center;gap:12px">
 <div style="width:36px;height:36px;border-radius:10px;background:rgba(254,44,85,.1);border:1px solid rgba(254,44,85,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2" style="width:18px;height:18px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
 <div><div style="font-size:.85rem;font-weight:700">Trending Formate & Sounds</div><div style="font-size:.75rem;color:var(--w3)">Was gerade viral geht - bevor es alle machen</div></div>
@@ -528,10 +571,12 @@
 <div><div style="font-size:.85rem;font-weight:700">Webinare & Events</div><div style="font-size:.75rem;color:var(--w3)">Exklusiver Zugang zu Live-Sessions rund um organisches Wachstum</div></div>
 </div>
 </div>
+</div>
 
-<!-- Email form -->
-<form id="nl-form" style="display:flex;flex-direction:column;gap:14px;max-width:480px" onsubmit="return nlSubmit(event)">
-<div style="display:flex;gap:12px">
+<!-- 4. Signup form -->
+<div class="nl-signup">
+<form id="nl-form" style="display:flex;flex-direction:column;gap:16px;max-width:480px" onsubmit="return nlSubmit(event)">
+<div style="display:flex;gap:12px" class="nl-inputs">
 <div style="flex:1;position:relative">
 <svg viewBox="0 0 24 24" fill="none" stroke="var(--w3)" stroke-width="2" style="width:16px;height:16px;position:absolute;left:14px;top:50%;transform:translateY(-50%)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 <input type="text" name="firstname" placeholder="Vorname" required style="width:100%;padding:15px 16px 15px 42px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.9rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
@@ -541,70 +586,38 @@
 <input type="email" name="email" placeholder="deine@email.de" required style="width:100%;padding:15px 16px 15px 42px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--w);font-size:.9rem;font-family:var(--f);outline:none;transition:border-color .3s" onfocus="this.style.borderColor='var(--a)'" onblur="this.style.borderColor='var(--bd2)'">
 </div>
 </div>
-<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;max-width:480px;margin-top:2px">
+<label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
 <input type="checkbox" id="nl-privacy" required style="margin-top:3px;accent-color:var(--a);flex-shrink:0;width:16px;height:16px;cursor:pointer">
 <span style="font-size:.72rem;color:var(--w3);line-height:1.5">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="/datenschutz.html" style="color:var(--a);text-decoration:underline;text-underline-offset:2px">Datenschutzerklärung</a> zu. Abmeldung jederzeit möglich.</span>
 </label>
 <button type="submit" class="bp" style="white-space:nowrap;border:none;cursor:pointer;width:100%;justify-content:center">Kostenlos anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
 </form>
-<div style="font-size:.7rem;color:var(--w3);margin-top:4px">Kostenlos. Kein Spam. Alle 14 Tage.</div>
-</div>
-
-<!-- Right: Visual graphic -->
-<div style="position:relative;display:flex;align-items:center;justify-content:center;min-height:420px" class="nl-visual">
-
-<!-- Main card -->
-<div style="width:280px;background:var(--card);border:1px solid var(--bd2);border-radius:20px;padding:24px;position:relative;z-index:2;box-shadow:0 24px 60px rgba(0,0,0,.4)">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-<div style="width:32px;height:32px;border-radius:8px;background:var(--a);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="width:16px;height:16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-<div><div style="font-size:.78rem;font-weight:700">virral Trend Report</div><div style="font-size:.6rem;color:var(--w3)">Ausgabe #24 · März 2026</div></div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:8px">
-<div style="padding:12px;background:rgba(254,44,85,.06);border:1px solid rgba(254,44,85,.12);border-radius:10px">
-<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:var(--a)"></div><div style="font-size:.65rem;font-weight:700;color:var(--a)">TRENDING</div></div>
-<div style="font-size:.75rem;font-weight:700">Split-Screen POVs</div>
-<div style="font-size:.65rem;color:var(--w3)">+340% Engagement vs. Standard</div>
-</div>
-<div style="padding:12px;background:rgba(78,95,253,.06);border:1px solid rgba(78,95,253,.12);border-radius:10px">
-<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:#4E5FFD"></div><div style="font-size:.65rem;font-weight:700;color:#4E5FFD">SOUND ALERT</div></div>
-<div style="font-size:.75rem;font-weight:700">Neuer Viral-Sound erkannt</div>
-<div style="font-size:.65rem;color:var(--w3)">Jetzt nutzen bevor er mainstream wird</div>
-</div>
-<div style="padding:12px;background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.12);border-radius:10px">
-<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><div style="width:6px;height:6px;border-radius:50%;background:#2ecc71"></div><div style="font-size:.65rem;font-weight:700;color:#2ecc71">PLAYBOOK</div></div>
-<div style="font-size:.75rem;font-weight:700">Hook-Formeln für Brand Content</div>
-<div style="font-size:.65rem;color:var(--w3)">3 Templates zum sofort Umsetzen</div>
-</div>
-</div>
-</div>
-
-<!-- Floating elements -->
-<div style="position:absolute;top:20px;right:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat1 6s ease-in-out infinite;z-index:3">
-<div style="width:28px;height:28px;border-radius:8px;background:rgba(254,44,85,.12);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2" style="width:14px;height:14px"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-<div><div style="font-size:.72rem;font-weight:700">+12.400</div><div style="font-size:.55rem;color:var(--w3)">Leser</div></div>
-</div>
-
-<div style="position:absolute;bottom:30px;left:0;background:var(--card);border:1px solid rgba(46,204,113,.15);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat2 7s ease-in-out infinite;z-index:3">
-<div style="font-size:1.2rem">🔥</div>
-<div><div style="font-size:.72rem;font-weight:700">Alle 14 Tage</div><div style="font-size:.55rem;color:var(--w3)">Nächste Ausgabe: 24. März</div></div>
-</div>
-
-<div style="position:absolute;top:50px;left:-10px;background:var(--card);border:1px solid var(--bd);border-radius:100px;padding:6px 12px;display:flex;align-items:center;gap:6px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:nlFloat3 5s ease-in-out infinite;z-index:1">
-<svg viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2" style="width:12px;height:12px"><polyline points="20 6 9 17 4 12"/></svg>
-<span style="font-size:.65rem;font-weight:600;color:#2ecc71">100% kostenlos</span>
-</div>
-
+<div style="font-size:.7rem;color:var(--w3);margin-top:6px">Kostenlos. Kein Spam. Alle 14 Tage.</div>
 </div>
 
 </div>
 </div>
 
 <style>
+.nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.nl-text{grid-column:1;grid-row:1}
+.nl-visual{grid-column:2;grid-row:1/4;align-self:center}
+.nl-features{grid-column:1;grid-row:2}
+.nl-signup{grid-column:1;grid-row:3}
 @keyframes nlFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes nlFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 @keyframes nlFloat3{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(2deg)}}
-@media(max-width:768px){.nl-grid{grid-template-columns:1fr!important;text-align:center}.nl-grid .tag{justify-content:center}.nl-grid form{max-width:100%!important;flex-direction:column}.nl-grid form button{width:100%}.nl-visual{min-height:360px!important;margin-top:16px;order:-1}.nl-grid>div:first-child>div:nth-child(4){align-items:center}}
+@media(max-width:768px){
+.nl-grid{grid-template-columns:1fr!important;gap:24px!important;text-align:left}
+.nl-text{order:1;grid-column:1;grid-row:auto}
+.nl-text .tag{justify-content:flex-start}
+.nl-visual{order:2;grid-column:1;grid-row:auto;min-height:320px!important;transform:scale(.85);transform-origin:center}
+.nl-features{order:3;grid-column:1;grid-row:auto}
+.nl-signup{order:4;grid-column:1;grid-row:auto}
+.nl-signup form{max-width:100%!important}
+.nl-inputs{flex-direction:column!important}
+.nl-signup form button{width:100%}
+}
 </style>
 </section>
 

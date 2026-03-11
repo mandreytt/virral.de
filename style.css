@@ -205,3 +205,4 @@
 .cb-decline{padding:10px 22px;background:transparent;color:var(--w2);border:1px solid var(--bd2);border-radius:100px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:var(--f)}
 .cb-decline:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.18);color:var(--w)}
 @media(max-width:600px){.cb-inner{flex-direction:column;gap:14px;padding:18px 20px}.cb-btns{width:100%;gap:8px}.cb-accept,.cb-decline{flex:1;text-align:center;padding:12px 16px}}
+@media(max-width:768px){.bts-g>div:not(.bts-vid){text-align:center}.ffn .bts-g>div{text-align:center}.cx-cta-wrap{text-align:center}}

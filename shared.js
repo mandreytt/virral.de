@@ -77,7 +77,7 @@
       +'<li><a href="#">Köln, Deutschland</a></li>'
       +'<li><a href="tel:+4922129256316">+49 221 29256316</a></li>'
       +'<li><a href="mailto:hello@virral.de">hello@virral.de</a></li>'
-      +'<li style="margin-top:10px"><a href="/#nl-form">Newsletter</a></li>'
+      +'<li style="margin-top:10px"><a href="/#newsletter">Newsletter</a></li>'
       +'<li><a href="/impressum.html">Impressum</a></li>'
       +'<li><a href="/datenschutz.html">Datenschutz</a></li>'
       +'</ul></div>'

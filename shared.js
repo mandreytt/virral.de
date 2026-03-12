@@ -141,4 +141,12 @@
       localStorage.setItem('cookie_consent','essential');cb.classList.remove('show');setTimeout(function(){cb.remove()},400);
     });
   }
+  /* ===== HUBSPOT TRACKING ===== */
+  var hs=document.createElement('script');
+  hs.type='text/javascript';
+  hs.id='hs-script-loader';
+  hs.async=true;
+  hs.defer=true;
+  hs.src='//js-eu1.hs-scripts.com/146589181.js';
+  document.body.appendChild(hs);
 })();

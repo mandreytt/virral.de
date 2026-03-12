@@ -141,16 +141,6 @@
       localStorage.setItem('cookie_consent','essential');cb.classList.remove('show');setTimeout(function(){cb.remove()},400);
     });
   }
-  /* ===== LEADFEEDER TRACKING ===== */
-  (function(ss,ex){
-    window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));};
-    (function(d,s){
-      var fs=d.getElementsByTagName(s)[0];
-      function ce(src){var cs=d.createElement(s);cs.src=src;cs.async=1;fs.parentNode.insertBefore(cs,fs);}
-      ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js');
-    })(document,'script');
-  })('DzLR5a5A1EWaBoQ2');
-
   /* ===== HUBSPOT TRACKING ===== */
   var hs=document.createElement('script');
   hs.type='text/javascript';

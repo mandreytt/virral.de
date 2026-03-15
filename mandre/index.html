@@ -46,8 +46,8 @@
 .ma-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
 
 /* ===== SECTION SHARED ===== */
-.sec{padding:clamp(60px,10vw,120px) 0}
-.sh{text-align:center;margin-bottom:clamp(36px,5vw,56px)}
+.sec{padding:clamp(36px,6vw,64px) 0}
+.sh{text-align:center;margin-bottom:clamp(20px,3vw,32px)}
 .sh h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:12px}
 .sh h2 span{color:var(--a)}
 .sh p{color:var(--w2);max-width:560px;margin:0 auto;font-size:.92rem;line-height:1.7}
@@ -61,9 +61,9 @@
 
 /* ===== CONTENT SECTIONS ===== */
 .ma-section{background:linear-gradient(180deg,#060608 0%,#0e0608 40%,#0c060a 70%,#060608 100%)}
-.ma-content-block{margin-bottom:clamp(36px,6vw,60px)}
+.ma-content-block{margin-bottom:clamp(24px,4vw,40px)}
 .ma-content-block:last-child{margin-bottom:0}
-.ma-content-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:center}
+.ma-content-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.5rem);align-items:center}
 .ma-content-inner.reverse{direction:rtl}
 .ma-content-inner.reverse>*{direction:ltr}
 .ma-content-text{}
@@ -143,6 +143,33 @@
 .ma-fmt-emoji{font-size:2rem;margin-bottom:12px}
 .ma-fmt-h{font-size:1rem;font-weight:800;margin-bottom:8px}
 .ma-fmt-p{font-size:.82rem;color:var(--w2);line-height:1.6}
+
+/* ===== JOCHEN SCHWEIZER ===== */
+.ma-js{background:linear-gradient(180deg,#060608 0%,#08101a 40%,#060e18 70%,#060608 100%);position:relative;overflow:hidden}
+.ma-js::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(13,127,172,.08) 0%,transparent 70%);pointer-events:none}
+.ma-js-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
+.ma-js-video{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;max-width:280px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.ma-js-video iframe{width:100%;height:100%;border:none}
+.ma-js-logo{height:48px;width:auto;margin-bottom:20px;border-radius:12px}
+.ma-js-h{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin-bottom:12px}
+.ma-js-h span{color:#0d7fac}
+.ma-js-p{font-size:.85rem;color:var(--w2);line-height:1.75;margin-bottom:24px}
+.ma-js-highlights{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.ma-js-hl{display:flex;gap:12px;align-items:flex-start}
+.ma-js-hl-icon{width:32px;height:32px;border-radius:8px;background:rgba(13,127,172,.1);border:1px solid rgba(13,127,172,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ma-js-hl-icon svg{width:16px;height:16px;color:#0d7fac}
+.ma-js-hl-text{font-size:.82rem;color:var(--w2);line-height:1.6}
+.ma-js-hl-text strong{color:var(--w);font-weight:700}
+.ma-js-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+.ma-js-kpi{background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);padding:16px;text-align:center}
+.ma-js-kpi strong{display:block;font-size:clamp(1.1rem,2vw,1.4rem);font-weight:900;color:#0d7fac;letter-spacing:-.02em}
+.ma-js-kpi span{font-size:.72rem;color:var(--w3);font-weight:500}
+.ma-js-quote{font-size:.82rem;color:var(--w2);line-height:1.7;font-style:italic;border-left:3px solid #0d7fac;padding-left:16px;margin-bottom:24px}
+.ma-js-quote-by{font-size:.72rem;color:var(--w3);font-style:normal;margin-top:8px;font-weight:600}
+.ma-js-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#0d7fac;color:#fff;font-weight:700;font-size:.88rem;border-radius:100px;transition:all .3s;text-decoration:none}
+.ma-js-btn:hover{background:#0a6a91;transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,127,172,.3)}
+.ma-js-btn svg{width:16px;height:16px}
+@media(max-width:768px){.ma-js-inner{grid-template-columns:1fr}.ma-js-video{max-width:220px}}
 
 /* ===== CTA ===== */
 .ma-cta{text-align:center;padding:clamp(80px,12vw,160px) 0;background:linear-gradient(180deg,#060608 0%,#10060a 40%,#0c0608 80%,#0c0c0f 100%)}
@@ -487,6 +514,39 @@
 </div>
 </div>
 <div style="text-align:center;margin-top:clamp(32px,4vw,48px)"><a href="/anfrage" class="ma-btn-p">Format auswählen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
+</div>
+</section>
+
+<!-- ===== JOCHEN SCHWEIZER BRAND FACE ===== -->
+<section class="sec ma-js" id="jochen-schweizer">
+<div class="w">
+<div class="sh"><div class="tag" style="background:rgba(13,127,172,.1);border-color:rgba(13,127,172,.2);color:#0d7fac">Brand Face</div><h2>Jochen Schweizer <span style="color:#0d7fac">× Mandre</span></h2><p>Seit der Weihnachtskampagne 2025 ist Mandre festes Brand Face von Jochen Schweizer - mit eigenem Storytelling-Format und starken Ergebnissen.</p></div>
+<div class="ma-js-inner rv-s">
+<div class="ma-js-video">
+<iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
+</div>
+<div>
+<div class="ma-js-h">„Verschenk dein <span>Limit.</span>"</div>
+<div class="ma-js-p">Als Brand Face von Jochen Schweizer verbindet Mandre authentisches Storytelling mit emotionaler Markenkommunikation. Das Ergebnis: Erlebnisgeschenke, die durch echte Geschichten und echte Emotionen verkauft werden.</div>
+
+<div class="ma-js-highlights">
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="ma-js-hl-text"><strong>Eigenes Storytelling-Format</strong> — „Verschenk dein Limit" mit Brand & Emotion</div></div>
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="ma-js-hl-text"><strong>22% des gesamten Engagements</strong> — durch nur 10 Mandre-Videos in 2025</div></div>
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="ma-js-hl-text"><strong>3× höhere Engagement-Rate</strong> — vs. Inhouse-Benchmark (1,9% vs. 0,6%)</div></div>
+</div>
+
+<div class="ma-js-kpis">
+<div class="ma-js-kpi"><strong>3,8 Mio.</strong><span>Views pro Video</span></div>
+<div class="ma-js-kpi"><strong>10,8 Mio.</strong><span>Kampagnen-Views</span></div>
+<div class="ma-js-kpi"><strong>572k</strong><span>Engagements</span></div>
+<div class="ma-js-kpi"><strong>1,9%</strong><span>Engagement-Rate</span></div>
+</div>
+
+<div class="ma-js-quote">„Virral hat unsere Brandkampagnen mit performancestarkem Vertical Content maßgeblich vorangetrieben."<div class="ma-js-quote-by">Fabian Heuel, Head of Social Media — Jochen Schweizer mydays Group</div></div>
+
+<a href="/jochen-schweizer" class="ma-js-btn">Case Study ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
 </div>
 </section>
 

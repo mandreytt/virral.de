@@ -44,8 +44,24 @@
 
 /* Hero visual */
 .ma-hero-visual{display:flex;justify-content:center;align-items:flex-end;position:relative}
-.ma-hero-img{max-height:clamp(400px,55vh,600px);width:auto;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(254,44,85,.15)) drop-shadow(0 8px 24px rgba(0,0,0,.4));animation:maHeroFloat 6s ease-in-out infinite}
-@keyframes maHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.ma-hero-img{max-height:clamp(450px,65vh,680px);width:auto;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 24px 80px rgba(254,44,85,.2)) drop-shadow(0 8px 32px rgba(0,0,0,.5))}
+/* Decorative elements */
+.ma-hero-visual::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:clamp(280px,30vw,400px);height:clamp(280px,30vw,400px);background:radial-gradient(circle,rgba(254,44,85,.18) 0%,rgba(254,44,85,.04) 50%,transparent 70%);border-radius:50%;z-index:0;animation:maGlowPulse 4s ease-in-out infinite}
+.ma-hero-visual::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:70%;height:40px;background:radial-gradient(ellipse,rgba(0,0,0,.5) 0%,transparent 70%);border-radius:50%;z-index:1}
+.ma-hero-deco{position:absolute;z-index:0;pointer-events:none}
+.ma-hero-deco-ring{width:clamp(320px,35vw,480px);height:clamp(320px,35vw,480px);border:2px solid rgba(254,44,85,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:maRingSpin 30s linear infinite}
+.ma-hero-deco-ring2{width:clamp(380px,42vw,560px);height:clamp(380px,42vw,560px);border:1px dashed rgba(254,44,85,.06);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:maRingSpin 45s linear infinite reverse}
+.ma-hero-deco-dots{top:10%;right:-10%;opacity:.3}
+.ma-hero-deco-dots span{display:block;width:6px;height:6px;border-radius:50%;background:var(--a);margin:12px 0;animation:maFadeInOut 3s ease-in-out infinite}
+.ma-hero-deco-dots span:nth-child(2){animation-delay:.5s;opacity:.6}
+.ma-hero-deco-dots span:nth-child(3){animation-delay:1s;opacity:.4}
+.ma-hero-deco-cross{top:15%;left:5%;width:20px;height:20px;opacity:.15;animation:maRingSpin 20s linear infinite}
+.ma-hero-deco-cross::before,.ma-hero-deco-cross::after{content:'';position:absolute;background:var(--a)}
+.ma-hero-deco-cross::before{width:100%;height:2px;top:50%;transform:translateY(-50%)}
+.ma-hero-deco-cross::after{height:100%;width:2px;left:50%;transform:translateX(-50%)}
+@keyframes maGlowPulse{0%,100%{opacity:.7;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.08)}}
+@keyframes maRingSpin{0%{transform:translate(-50%,-50%) rotate(0deg)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes maFadeInOut{0%,100%{opacity:.2}50%{opacity:.6}}
 
 /* ===== SECTION SHARED ===== */
 .sec{padding:clamp(60px,10vw,120px) 0}
@@ -170,7 +186,7 @@
 @media(max-width:1024px){
 .ma-hero-grid{grid-template-columns:1fr}
 .ma-hero-visual{margin-top:32px}
-.ma-hero-img{max-height:350px}
+.ma-hero-img{max-height:400px}
 .ma-content-inner{grid-template-columns:1fr}
 .ma-content-inner.reverse{direction:ltr}
 .ma-yt-grid{grid-template-columns:repeat(2,1fr);max-width:360px}
@@ -207,8 +223,8 @@
 <div class="ma-hero-grid">
 <div class="ma-hero-info rv">
 <div class="ma-hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Exklusiver Creator</div>
-<h1 class="ma-h1">Mandre.<br><span>Entertainment.</span></h1>
-<p class="ma-sub">Von Überraschungsballons über MythBusters bis hin zu aufwändigen YouTube-Produktionen - Mandre kreiert Content, der Millionen bewegt und Marken unvergesslich macht.</p>
+<h1 class="ma-h1">Mandre.<br><span>2,1 Mrd. Views.</span></h1>
+<p class="ma-sub">Von Überraschungsballons über MythBusters bis hin zu aufwändigen YouTube-Produktionen - Content, der Millionen bewegt und Marken unvergesslich macht.</p>
 
 <div class="ma-hero-stats">
 <div class="ma-stat"><div class="ma-stat-v">2,1 Mrd.+</div><div class="ma-stat-l">Views gesamt</div></div>
@@ -223,7 +239,11 @@
 </div></div>
 
 <div class="ma-hero-visual rv rvd2">
-<img src="/img/Andre freigestellt.png" alt="Mandre" class="ma-hero-img" loading="eager">
+<div class="ma-hero-deco ma-hero-deco-ring"></div>
+<div class="ma-hero-deco ma-hero-deco-ring2"></div>
+<div class="ma-hero-deco ma-hero-deco-dots"><span></span><span></span><span></span></div>
+<div class="ma-hero-deco ma-hero-deco-cross"></div>
+<img src="/img/Andre freigestellt (1).png" alt="Mandre" class="ma-hero-img" loading="eager">
 </div>
 </div>
 </div>

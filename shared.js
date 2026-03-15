@@ -14,7 +14,7 @@
       +'<a href="/#creators" class="na">Creator</a>'
       +'<a href="/#process" class="na">Prozess</a>'
       +'<a href="tel:+4922129256316" class="nav-avail">'
-      +'<img src="/img/img-24.webp" alt="Andre Braun" class="nav-avail-img">'
+      +'<img src="/img/Profilbild Andre (2).jpg" alt="Andre Braun" class="nav-avail-img">'
       +'<span class="nav-avail-dot"></span>'
       +'<span class="nav-avail-txt">Erreichbar</span>'
       +'<span class="nav-avail-sep">·</span>'
@@ -77,7 +77,7 @@
       +'<div><div class="ftct">Creators</div><ul class="ftls">'
       +'<li><a href="/finnel">Finnel</a></li>'
       +'<li><a href="/mandre">Mandre</a></li>'
-      +'<li><a href="/opa-werner">Opa Werner</a></li>'
+
       +'<li style="margin-top:10px"><a href="/creators">Mehr erfahren →</a></li>'
       +'</ul></div>'
       +'<div><div class="ftct">Kontakt</div><ul class="ftls">'

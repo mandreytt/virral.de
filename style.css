@@ -16,7 +16,7 @@
 .cx-photo .cx-photo-bg{position:relative!important;height:240px!important;flex-shrink:0!important;border-radius:16px 16px 0 0!important;overflow:hidden!important}
 .cx-photo .cx-photo-content{padding-top:20px!important}
 .cx-photo .cx-kpi{background:rgba(255,255,255,.04)!important;backdrop-filter:none!important}
-.cx-photo .cx-yt{bottom:auto!important;top:200px!important;right:12px!important;z-index:4!important}
+.cx-photo .cx-yt{bottom:auto!important;top:200px!important;right:auto!important;left:12px!important;z-index:4!important}
 .cx-photo .cx-h{font-size:1.35rem!important;margin-bottom:10px!important}
 .cx-photo .cx-p{font-size:.82rem!important;line-height:1.75!important}
 .cx-photo .cx-sub{font-size:.62rem!important}

@@ -891,10 +891,10 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>
 
 <!-- Newsletter Chat Bubble -->
-<div id="nl-chat" style="position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none">
+<div id="nl-chat" style="position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:8px;pointer-events:none">
 
 <!-- Typing indicator -->
-<div id="nl-chat-typing" style="pointer-events:none;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(10px);transition:all .4s var(--e);margin-bottom:-4px">
+<div id="nl-chat-typing" style="pointer-events:none;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(10px);transition:all .4s var(--e)">
 <div style="background:rgba(255,255,255,.92);border-radius:16px 16px 4px 16px;padding:10px 16px;box-shadow:0 4px 16px rgba(0,0,0,.15);display:flex;align-items:center;gap:5px">
 <span class="nl-dot" style="width:7px;height:7px;border-radius:50%;background:#999;animation:nlTyping 1.4s infinite;animation-delay:0s"></span>
 <span class="nl-dot" style="width:7px;height:7px;border-radius:50%;background:#999;animation:nlTyping 1.4s infinite;animation-delay:.2s"></span>
@@ -903,7 +903,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </div>
 
 <!-- Chat message popup -->
-<div id="nl-chat-msg" style="pointer-events:auto;background:var(--card);border:1px solid var(--bd2);border-radius:16px 16px 4px 16px;padding:16px 18px;max-width:300px;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;transform:translateY(10px) scale(.95);transition:all .4s var(--e)">
+<div id="nl-chat-msg" style="pointer-events:auto;background:var(--card);border:1px solid var(--bd2);border-radius:16px 16px 4px 16px;padding:16px 18px;max-width:300px;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;transform:translateY(10px) scale(.95);transition:all .4s var(--e);display:none">
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
 <div style="width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--a)"><img src="img/img-23.jpg" alt="Finnel" style="width:100%;height:100%;object-fit:cover"></div>
 <div style="font-size:.75rem;font-weight:800;color:var(--w)">Finnel</div>
@@ -916,7 +916,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- Avatar bubble -->
 <div id="nl-chat-avatar" style="pointer-events:auto;position:relative;flex-shrink:0;cursor:pointer;opacity:0;transform:scale(.5);transition:all .3s;width:60px;height:60px">
-<div style="width:60px;height:60px;border-radius:50%;overflow:hidden;border:3px solid var(--a);box-shadow:0 8px 28px rgba(254,44,85,.35);background:var(--bg)">
+<div style="width:60px;height:60px;border-radius:50%;overflow:hidden;border:3px solid var(--a);box-shadow:0 8px 28px rgba(254,44,85,.35);background:transparent">
 <img src="img/img-23.jpg" alt="Finnel" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
 </div>
 <div style="position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#2ecc71;border-radius:50%;border:2px solid var(--bg);z-index:4"></div>
@@ -952,8 +952,11 @@ document.addEventListener('DOMContentLoaded',function(){
   function showMsg(){
     hideTyping();
     setTimeout(function(){
-      msg.style.opacity='1';
-      msg.style.transform='translateY(0) scale(1)';
+      msg.style.display='block';
+      requestAnimationFrame(function(){requestAnimationFrame(function(){
+        msg.style.opacity='1';
+        msg.style.transform='translateY(0) scale(1)';
+      })});
       avatar.classList.remove('pulse');
     },300);
   }

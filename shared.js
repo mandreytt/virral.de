@@ -14,7 +14,7 @@
       +'<a href="/#creators" class="na">Creator</a>'
       +'<a href="/#process" class="na">Prozess</a>'
       +'<a href="tel:+4922129256316" class="nav-avail">'
-      +'<img src="/img/img-24.webp" alt="Andre Braun" class="nav-avail-img">'
+      +'<img src="/img/Profilbild Andre (2).jpg" alt="Andre Braun" class="nav-avail-img">'
       +'<span class="nav-avail-dot"></span>'
       +'<span class="nav-avail-txt">Erreichbar</span>'
       +'<span class="nav-avail-sep">·</span>'

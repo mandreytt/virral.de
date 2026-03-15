@@ -77,7 +77,7 @@
       +'<div><div class="ftct">Creators</div><ul class="ftls">'
       +'<li><a href="/finnel">Finnel</a></li>'
       +'<li><a href="/mandre">Mandre</a></li>'
-
+      +'<li>Opa Werner</li>'
       +'<li style="margin-top:10px"><a href="/creators">Mehr erfahren →</a></li>'
       +'</ul></div>'
       +'<div><div class="ftct">Kontakt</div><ul class="ftls">'

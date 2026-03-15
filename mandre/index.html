@@ -46,7 +46,7 @@
 .ma-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
 
 /* ===== SECTION SHARED ===== */
-.sec{padding:clamp(36px,6vw,64px) 0}
+.sec{padding:clamp(48px,8vw,96px) 0}
 .sh{text-align:center;margin-bottom:clamp(20px,3vw,32px)}
 .sh h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:12px}
 .sh h2 span{color:var(--a)}
@@ -59,38 +59,25 @@
 .ma-ticker-item{display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:.82rem;font-weight:700;color:var(--w3);flex-shrink:0}
 .ma-ticker-item span{color:var(--a)}
 
-/* ===== CONTENT SECTIONS ===== */
-.ma-section{background:linear-gradient(180deg,#060608 0%,#0e0608 40%,#0c060a 70%,#060608 100%)}
-.ma-content-block{margin-bottom:clamp(24px,4vw,40px)}
-.ma-content-block:last-child{margin-bottom:0}
-.ma-content-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2vw,1.5rem);align-items:center}
-.ma-content-inner.reverse{direction:rtl}
-.ma-content-inner.reverse>*{direction:ltr}
-.ma-content-text{}
-.ma-content-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:16px;font-size:.68rem;font-weight:700;color:var(--w3);text-transform:uppercase;letter-spacing:.08em}
-.ma-content-h{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
-.ma-content-h span{color:var(--a)}
-.ma-content-p{color:var(--w2);font-size:.85rem;line-height:1.75;margin-bottom:20px}
-.ma-content-highlights{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
-.ma-content-hl{display:flex;gap:14px;align-items:flex-start}
-.ma-content-hl-icon{width:36px;height:36px;border-radius:10px;background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ma-content-hl-icon svg{width:18px;height:18px;color:var(--a)}
-.ma-content-hl-title{font-size:.88rem;font-weight:700;margin-bottom:2px}
-.ma-content-hl-text{font-size:.78rem;color:var(--w3);line-height:1.6}
-.ma-content-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
-.ma-content-kpi{text-align:center;padding:16px 8px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r)}
-.ma-content-kpi-v{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
-.ma-content-kpi-l{font-size:.65rem;color:var(--w3);margin-top:2px}
-
-/* Visual containers */
-.ma-visual{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:var(--card);position:relative}
-.ma-visual-placeholder{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:linear-gradient(135deg,rgba(254,44,85,.03),rgba(254,44,85,.08))}
-.ma-visual-placeholder svg{width:48px;height:48px;color:var(--a);opacity:.5}
-.ma-visual-placeholder span{font-size:.78rem;color:var(--w3);font-weight:600}
-.ma-phones{display:flex;gap:12px;justify-content:center;align-items:center;padding:clamp(16px,2vw,24px)}
-.ma-phone{position:relative;width:clamp(110px,11vw,150px);border-radius:14px;overflow:hidden;aspect-ratio:9/16;box-shadow:0 8px 32px rgba(0,0,0,.4);border:2px solid rgba(255,255,255,.08);transition:transform .4s var(--e);background:#000}
-.ma-phone:nth-child(2){transform:scale(1.04)}
-.ma-phone:hover{transform:translateY(-4px)}
+/* ===== CONTENT SECTIONS (JS-style) ===== */
+.ma-cs{position:relative;overflow:hidden}
+.ma-cs::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(254,44,85,.06) 0%,transparent 70%);pointer-events:none}
+.ma-cs-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
+.ma-cs-video{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;max-width:280px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.ma-cs-video iframe{width:100%;height:100%;border:none}
+.ma-cs-h{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin-bottom:12px}
+.ma-cs-h span{color:var(--a)}
+.ma-cs-p{font-size:.85rem;color:var(--w2);line-height:1.75;margin-bottom:24px}
+.ma-cs-highlights{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.ma-cs-hl{display:flex;gap:12px;align-items:flex-start}
+.ma-cs-hl-icon{width:32px;height:32px;border-radius:8px;background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ma-cs-hl-icon svg{width:16px;height:16px;color:var(--a)}
+.ma-cs-hl-text{font-size:.82rem;color:var(--w2);line-height:1.6}
+.ma-cs-hl-text strong{color:var(--w);font-weight:700}
+.ma-cs-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:var(--a);color:#fff;font-weight:700;font-size:.88rem;border-radius:100px;transition:all .3s;text-decoration:none}
+.ma-cs-btn:hover{background:var(--ah);transform:translateY(-2px);box-shadow:0 8px 24px var(--ag)}
+.ma-cs-btn svg{width:16px;height:16px}
+@media(max-width:768px){.ma-cs-inner{grid-template-columns:1fr}.ma-cs-video{max-width:220px}}
 
 /* YouTube Longform section */
 .ma-lf{position:relative;overflow:hidden;background:linear-gradient(180deg,#060608 0%,#0e0608 40%,#0c060a 70%,#060608 100%)}
@@ -276,117 +263,99 @@
 </div>
 </div>
 
-<!-- ===== CONTENT SECTIONS ===== -->
-<section class="ma-section sec" id="content">
+<!-- ===== 1: ÜBERRASCHUNGSBALLONS ===== -->
+<section class="sec ma-cs" id="ballons">
 <div class="w">
+<div class="sh"><div class="tag">Vertical Content</div><h2>Überraschungs&shy;ballons mit <span>Brand Integration</span></h2><p>Mandres Signature-Format: Überraschungsballons mit nahtloser Markenintegration. Produkte werden organisch in den Content eingebunden.</p></div>
+<div class="ma-cs-inner rv-s">
+<div class="ma-cs-video">
+<iframe data-src="https://app.vidzflow.com/v/hMj7nYheqn?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
+</div>
+<div>
+<div class="ma-cs-h">Produkt-Placements, die <span>nicht wie Werbung wirken.</span></div>
+<div class="ma-cs-p">In den Überraschungsballons versteckt Mandre Produkte und überrascht damit Menschen auf der Straße. Die Marke wird Teil des Erlebnisses - authentisch, emotional und mit Millionenreichweite.</div>
+<div class="ma-cs-highlights">
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="ma-cs-hl-text"><strong>Echte Emotionen</strong> — Überraschungsmomente, die viral gehen</div></div>
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ma-cs-hl-text"><strong>Native Placements</strong> — Nintendo, Heuel & mehr - organisch integriert</div></div>
+</div>
+<a href="/anfrage" class="ma-cs-btn">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
+</div>
+</section>
 
-<!-- 1: Überraschungsballons -->
-<div class="ma-content-block rv">
-<div class="sh">
-<div class="tag">Vertical Content</div>
-<h2>Überraschungs&shy;ballons mit <span>Brand Integration</span></h2>
-<p>Mandres Signature-Format: Überraschungsballons mit nahtloser Markenintegration. Produkte werden organisch in den Content eingebunden - von Nintendo bis Heuel.</p>
+<!-- ===== 2: MYTHBUSTERS ===== -->
+<section class="sec ma-cs" id="mythbusters">
+<div class="w">
+<div class="sh"><div class="tag">Shortform · Educational</div><h2>MythBusters: <span>Was passiert, wenn...?</span></h2><p>Educational Entertainment im Shortformat. Mandre testet Mythen und beantwortet Fragen, die sich jeder schon mal gestellt hat.</p></div>
+<div class="ma-cs-inner rv-s" style="direction:rtl">
+<div style="direction:ltr">
+<div class="ma-cs-h">Deine Brand wird Teil des <span>Experiments.</span></div>
+<div class="ma-cs-p">„Was passiert, wenn man in eine Kreissäge fasst?" - Fragen wie diese beantwortet Mandre mit aufwändigen Experimenten. Starke Hooks sorgen für hohe Watchtime - deine Marke kann nativ ins Experiment integriert werden.</div>
+<div class="ma-cs-highlights">
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div><div class="ma-cs-hl-text"><strong>Starke Hooks</strong> — Hohe Watchtime durch Neugier-getriebene Fragestellungen</div></div>
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ma-cs-hl-text"><strong>Brand Integration</strong> — Deine Marke wird Teil des Experiments</div></div>
 </div>
+<a href="/anfrage" class="ma-cs-btn">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+<div class="ma-cs-video" style="direction:ltr">
+<iframe data-src="https://app.vidzflow.com/v/fXJoP48i5K?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
 
-<div class="ma-content-inner">
-<div class="ma-content-text">
-<div class="ma-content-badge">🎈 Signature Format</div>
-<div class="ma-content-h">Produkt-Placements, die <span>nicht wie Werbung wirken</span></div>
-<p class="ma-content-p">In den Überraschungsballons versteckt Mandre Produkte und überrascht damit Menschen auf der Straße. Die Marke wird Teil des Erlebnisses - authentisch, emotional und mit Millionenreichweite.</p>
-<div class="ma-content-highlights">
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-<div><div class="ma-content-hl-title">Echte Emotionen</div><div class="ma-content-hl-text">Überraschungsmomente, die viral gehen</div></div>
+<!-- ===== 3: SOCIAL IMPACT ===== -->
+<section class="sec ma-cs" id="social-impact">
+<div class="w">
+<div class="sh"><div class="tag">Social Impact · Vertical</div><h2>Für die, die am wenigsten haben. <span>Echt virral.</span></h2><p>Content mit Herz, der Millionen berührt. Mandre überrascht Rentner und supportet Menschen in Not.</p></div>
+<div class="ma-cs-inner rv-s">
+<div class="ma-cs-video">
+<iframe data-src="https://app.vidzflow.com/v/pgg9uNCjVH?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
 </div>
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-<div><div class="ma-content-hl-title">Native Placements</div><div class="ma-content-hl-text">Nintendo, Heuel & mehr - organisch integriert</div></div>
+<div>
+<div class="ma-cs-h">Überraschen. Supporten. <span>Schenken.</span></div>
+<div class="ma-cs-p">Ob ein neues Fahrrad für den Rentner, der seit Jahren zu Fuß geht, oder einfach mal Zeit und ein offenes Ohr - Mandre zeigt, dass Social Media auch etwas Gutes bewirken kann. Authentisch, emotional und echt virral.</div>
+<div class="ma-cs-highlights">
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="ma-cs-hl-text"><strong>Echte Menschen</strong> — Rentner überraschen, supporten, beschenken</div></div>
+<div class="ma-cs-hl"><div class="ma-cs-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="ma-cs-hl-text"><strong>Viraler Effekt</strong> — Emotionaler Content, der geteilt wird</div></div>
 </div>
-</div>
-<div class="ma-content-kpis">
-<div class="ma-content-kpi"><div class="ma-content-kpi-v">Mio.+</div><div class="ma-content-kpi-l">Views pro Video</div></div>
-<div class="ma-content-kpi"><div class="ma-content-kpi-v">9:16</div><div class="ma-content-kpi-l">Vertical Format</div></div>
-<div class="ma-content-kpi"><div class="ma-content-kpi-v">Top</div><div class="ma-content-kpi-l">Engagement</div></div>
+<a href="/anfrage" class="ma-cs-btn">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 </div>
+</div>
+</section>
 
-<div class="ma-visual" style="border:none;background:none;display:flex;justify-content:center">
-<div class="ma-phone" style="width:clamp(160px,16vw,200px)">
-<iframe data-src="https://app.vidzflow.com/v/hMj7nYheqn?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy" style="width:100%;height:100%;border:none"></iframe>
+<!-- ===== JOCHEN SCHWEIZER BRAND FACE ===== -->
+<section class="sec ma-js" id="jochen-schweizer">
+<div class="w">
+<div class="sh"><div class="tag" style="background:rgba(13,127,172,.1);border-color:rgba(13,127,172,.2);color:#0d7fac">Brand Face</div><h2>Jochen Schweizer <span style="color:#0d7fac">× Mandre</span></h2><p>Seit der Weihnachtskampagne 2025 ist Mandre festes Brand Face von Jochen Schweizer - mit eigenem Storytelling-Format und starken Ergebnissen.</p></div>
+<div class="ma-js-inner rv-s">
+<div class="ma-js-video">
+<iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
 </div>
-</div>
-</div>
-<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ma-btn-p">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
-</div>
+<div>
+<div class="ma-js-h">„Verschenk dein <span>Limit.</span>"</div>
+<div class="ma-js-p">Als Brand Face von Jochen Schweizer verbindet Mandre authentisches Storytelling mit emotionaler Markenkommunikation. Das Ergebnis: Erlebnisgeschenke, die durch echte Geschichten und echte Emotionen verkauft werden.</div>
 
-<!-- 2: MythBusters / Shortform -->
-<div class="ma-content-block rv">
-<div class="sh">
-<div class="tag">Shortform · Educational</div>
-<h2>MythBusters: <span>Was passiert, wenn...?</span></h2>
-<p>Educational Entertainment im Shortformat. Mandre testet Mythen und beantwortet Fragen, die sich jeder schon mal gestellt hat - mit aufwändigen Experimenten und starken Hooks.</p>
-</div>
-
-<div class="ma-content-inner reverse">
-<div class="ma-content-text">
-<div class="ma-content-badge">🔬 Educational Content</div>
-<div class="ma-content-h">Deine Brand wird Teil des <span>Experiments</span></div>
-<p class="ma-content-p">„Was passiert, wenn man in eine Kreissäge fasst?" - Fragen wie diese beantwortet Mandre mit aufwändigen Experimenten. Starke Hooks sorgen für hohe Watchtime - deine Marke kann nativ ins Experiment integriert werden.</p>
-<div class="ma-content-highlights">
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div>
-<div><div class="ma-content-hl-title">Starke Hooks</div><div class="ma-content-hl-text">Hohe Watchtime durch Neugier-getriebene Fragestellungen</div></div>
-</div>
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-<div><div class="ma-content-hl-title">Brand Integration</div><div class="ma-content-hl-text">Deine Marke wird Teil des Experiments - authentisch und kreativ</div></div>
-</div>
-</div>
-</div>
-
-<div class="ma-visual" style="border:none;background:none;display:flex;justify-content:center">
-<div class="ma-phone" style="width:clamp(160px,16vw,200px)">
-<iframe data-src="https://app.vidzflow.com/v/fXJoP48i5K?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy" style="width:100%;height:100%;border:none"></iframe>
-</div>
-</div>
-</div>
-<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ma-btn-p">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
-</div>
-
-<!-- 3: Rentner / Social Impact -->
-<div class="ma-content-block rv">
-<div class="sh">
-<div class="tag">Social Impact · Vertical</div>
-<h2>Für die, die am wenigsten haben. <span>Echt virral.</span></h2>
-<p>Mandre überrascht Rentner, supportet Menschen in Not und schenkt denen ein offenes Ohr, die es am meisten brauchen. Content mit Herz, der Millionen berührt.</p>
+<div class="ma-js-highlights">
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="ma-js-hl-text"><strong>Eigenes Storytelling-Format</strong> — „Verschenk dein Limit" mit Brand & Emotion</div></div>
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="ma-js-hl-text"><strong>22% des gesamten Engagements</strong> — durch nur 10 Mandre-Videos in 2025</div></div>
+<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="ma-js-hl-text"><strong>3× höhere Engagement-Rate</strong> — vs. Inhouse-Benchmark (1,9% vs. 0,6%)</div></div>
 </div>
 
-<div class="ma-content-inner">
-<div class="ma-content-text">
-<div class="ma-content-badge">❤️ Social Impact</div>
-<div class="ma-content-h">Überraschen. Supporten. <span>Schenken.</span></div>
-<p class="ma-content-p">Ob ein neues Fahrrad für den Rentner, der seit Jahren zu Fuß geht, oder einfach mal Zeit und ein offenes Ohr - Mandre zeigt, dass Social Media auch etwas Gutes bewirken kann. Authentisch, emotional und echt virral.</p>
-<div class="ma-content-highlights">
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-<div><div class="ma-content-hl-title">Echte Menschen</div><div class="ma-content-hl-text">Rentner überraschen, supporten, beschenken</div></div>
-</div>
-<div class="ma-content-hl">
-<div class="ma-content-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-<div><div class="ma-content-hl-title">Viraler Effekt</div><div class="ma-content-hl-text">Emotionaler Content, der geteilt wird</div></div>
-</div>
-</div>
+<div class="ma-js-kpis">
+<div class="ma-js-kpi"><strong>3,8 Mio.</strong><span>Views pro Video</span></div>
+<div class="ma-js-kpi"><strong>10,8 Mio.</strong><span>Kampagnen-Views</span></div>
+<div class="ma-js-kpi"><strong>572k</strong><span>Engagements</span></div>
+<div class="ma-js-kpi"><strong>1,9%</strong><span>Engagement-Rate</span></div>
 </div>
 
-<div class="ma-visual" style="border:none;background:none;display:flex;justify-content:center">
-<div class="ma-phone" style="width:clamp(160px,16vw,200px)">
-<iframe data-src="https://app.vidzflow.com/v/pgg9uNCjVH?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy" style="width:100%;height:100%;border:none"></iframe>
-</div>
-</div>
-</div>
-<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ma-btn-p">Mandre anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
-</div>
+<div class="ma-js-quote">„Virral hat unsere Brandkampagnen mit performancestarkem Vertical Content maßgeblich vorangetrieben."<div class="ma-js-quote-by">Fabian Heuel, Head of Social Media — Jochen Schweizer mydays Group</div></div>
 
+<a href="/jochen-schweizer" class="ma-js-btn">Case Study ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+</div>
 </div>
 </section>
 
@@ -514,39 +483,6 @@
 </div>
 </div>
 <div style="text-align:center;margin-top:clamp(32px,4vw,48px)"><a href="/anfrage" class="ma-btn-p">Format auswählen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
-</div>
-</section>
-
-<!-- ===== JOCHEN SCHWEIZER BRAND FACE ===== -->
-<section class="sec ma-js" id="jochen-schweizer">
-<div class="w">
-<div class="sh"><div class="tag" style="background:rgba(13,127,172,.1);border-color:rgba(13,127,172,.2);color:#0d7fac">Brand Face</div><h2>Jochen Schweizer <span style="color:#0d7fac">× Mandre</span></h2><p>Seit der Weihnachtskampagne 2025 ist Mandre festes Brand Face von Jochen Schweizer - mit eigenem Storytelling-Format und starken Ergebnissen.</p></div>
-<div class="ma-js-inner rv-s">
-<div class="ma-js-video">
-<iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23027ba6&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
-</div>
-<div>
-<div class="ma-js-h">„Verschenk dein <span>Limit.</span>"</div>
-<div class="ma-js-p">Als Brand Face von Jochen Schweizer verbindet Mandre authentisches Storytelling mit emotionaler Markenkommunikation. Das Ergebnis: Erlebnisgeschenke, die durch echte Geschichten und echte Emotionen verkauft werden.</div>
-
-<div class="ma-js-highlights">
-<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="ma-js-hl-text"><strong>Eigenes Storytelling-Format</strong> — „Verschenk dein Limit" mit Brand & Emotion</div></div>
-<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="ma-js-hl-text"><strong>22% des gesamten Engagements</strong> — durch nur 10 Mandre-Videos in 2025</div></div>
-<div class="ma-js-hl"><div class="ma-js-hl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="ma-js-hl-text"><strong>3× höhere Engagement-Rate</strong> — vs. Inhouse-Benchmark (1,9% vs. 0,6%)</div></div>
-</div>
-
-<div class="ma-js-kpis">
-<div class="ma-js-kpi"><strong>3,8 Mio.</strong><span>Views pro Video</span></div>
-<div class="ma-js-kpi"><strong>10,8 Mio.</strong><span>Kampagnen-Views</span></div>
-<div class="ma-js-kpi"><strong>572k</strong><span>Engagements</span></div>
-<div class="ma-js-kpi"><strong>1,9%</strong><span>Engagement-Rate</span></div>
-</div>
-
-<div class="ma-js-quote">„Virral hat unsere Brandkampagnen mit performancestarkem Vertical Content maßgeblich vorangetrieben."<div class="ma-js-quote-by">Fabian Heuel, Head of Social Media — Jochen Schweizer mydays Group</div></div>
-
-<a href="/jochen-schweizer" class="ma-js-btn">Case Study ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
-</div>
-</div>
 </div>
 </section>
 

@@ -31,8 +31,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .ow-hero-badge svg{width:14px;height:14px}
 .ow-mgmt-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd2);border-radius:100px;font-size:.7rem;font-weight:700;color:var(--w2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;margin-left:8px}
 .ow-mgmt-badge svg{width:14px;height:14px;color:var(--w3)}
-.ow-h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.05em;margin-bottom:20px}
-.ow-h1 span{background:linear-gradient(135deg,#fe2c55,#ff6b8a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ow-h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1.05;letter-spacing:-.05em;margin-bottom:20px}
+.ow-h1 span{background:linear-gradient(135deg,#fe2c55,#ff6b8a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline}
+.ow-h1 span::after{display:none}
 .ow-sub{font-size:clamp(.88rem,1.2vw,1rem);color:var(--w2);max-width:520px;line-height:1.8;margin-bottom:32px}
 .ow-hero-stats{display:flex;gap:clamp(20px,3vw,40px);flex-wrap:wrap;margin-bottom:36px}
 .ow-stat{text-align:left}
@@ -183,6 +184,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 .ow-cta-check-icon{width:20px;height:20px;border-radius:50%;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ow-cta-check-icon svg{width:12px;height:12px}
 .ow-cta-mgmt{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.72rem;font-weight:600;color:var(--w3);margin-top:20px}
+.ow-cta-avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--a);margin-top:-80px;box-shadow:0 12px 40px rgba(254,44,85,.25);flex-shrink:0;position:relative;z-index:2;background:var(--card)}
+.ow-cta-avatar img{width:100%;height:100%;object-fit:cover}
+.ow-cta-name{font-size:1.4rem;font-weight:800;margin-top:20px;margin-bottom:4px}
+.ow-cta-role{font-size:.85rem;color:var(--w3);margin-bottom:14px}
+.ow-cta-avail{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.15);border-radius:100px;font-size:.82rem;font-weight:600;color:#2ecc71;margin-bottom:32px}
+.ow-cta-avail .pd{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(46,204,113,.4)}50%{opacity:1;box-shadow:0 0 0 6px rgba(46,204,113,0)}}
+.ow-cta-phone{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--w2);text-decoration:none;margin-top:16px;transition:color .3s}
+.ow-cta-phone:hover{color:#fff}
 
 /* ===== REVEAL ===== */
 .rv,.rv-s{opacity:0;transform:translateY(32px);transition:opacity .8s var(--e),transform .8s var(--e)}.rv-s{transform:translateY(24px) scale(.97)}.rvv{opacity:1;transform:translateY(0) scale(1)}.rvd1{transition-delay:.1s}.rvd2{transition-delay:.2s}.rvd3{transition-delay:.3s}.rvd4{transition-delay:.4s}.rvd5{transition-delay:.5s}
@@ -254,7 +264,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 
 <div class="ow-hero-btns">
-<a href="/anfrage" class="ow-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Kooperation anfragen</a>
+<a href="/anfrage" class="ow-btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg> Opa Werner anfragen</a>
 <a href="#cases" class="ow-btn-s">Case Studies ansehen</a>
 </div>
 </div>
@@ -274,7 +284,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-mgmt">
 <div class="w">
 <div class="ow-mgmt-inner">
-<div class="ow-mgmt-text"><strong>Opa Werner</strong> ist ein Creator von <strong>hold my beer</strong>.</div>
+<div class="ow-mgmt-text"><strong>Opa Werner</strong> ist ein Creator von <strong>hold my b</strong>.</div>
 <div class="ow-mgmt-divider"></div>
 <div class="ow-mgmt-text"><strong>virral</strong> unterstützt bei der Vermarktung von Opa Werner für Werbekooperationen und Kampagnen.</div>
 </div>
@@ -344,13 +354,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-case-kpi"><div class="ow-case-kpi-v">2.600</div><div class="ow-case-kpi-l">Kommentare</div></div>
 </div>
 
-<a href="/anfrage" class="ow-btn-p">Ähnliche Kampagne anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 
 <div class="ow-case-visual">
 <img src="/img/Lidl.jpeg" alt="LIDL x Opa Werner - Matsche Latsche lohnt sich" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r3)">
 </div>
 </div>
+<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ow-btn-p">Opa Werner anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
 </div>
 
 <!-- CASE 2: SIXT -->
@@ -386,13 +396,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-case-kpi"><div class="ow-case-kpi-v">41K</div><div class="ow-case-kpi-l">Shares</div></div>
 </div>
 
-<a href="/anfrage" class="ow-btn-p">Event-Kooperation anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 
 <div class="ow-case-visual" style="aspect-ratio:9/16;max-width:320px;margin:0 auto">
 <iframe data-src="https://app.vidzflow.com/v/eufuLxZ0nj?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy" style="width:100%;height:100%;border:none;border-radius:var(--r3)"></iframe>
 </div>
 </div>
+<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ow-btn-p">Opa Werner anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
 </div>
 
 <!-- CASE 3: MORE NUTRITION -->
@@ -428,13 +438,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-case-kpi"><div class="ow-case-kpi-v">138K</div><div class="ow-case-kpi-l">Shares</div></div>
 </div>
 
-<a href="/anfrage" class="ow-btn-p">Produkt-Integration anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 
 <div class="ow-case-visual" style="aspect-ratio:9/16;max-width:320px;margin:0 auto">
 <iframe data-src="https://app.vidzflow.com/v/0NeEOlhAdg?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy" style="width:100%;height:100%;border:none;border-radius:var(--r3)"></iframe>
 </div>
 </div>
+<div style="text-align:center;margin-top:clamp(24px,3vw,32px)"><a href="/anfrage" class="ow-btn-p">Opa Werner anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
 </div>
 
 </div>
@@ -530,7 +540,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 </div>
 
 <p class="ow-zg-note">Quelle: TikTok & Instagram Analytics. Die Daten basieren auf Opa Werners Gesamtreichweite über alle Plattformen hinweg - eine junge, deutschsprachige Community mit überdurchschnittlichem Engagement und viralem Potenzial.</p>
-<div style="text-align:center;margin-top:clamp(28px,3vw,40px)"><a href="/anfrage" class="ow-btn-p">Zielgruppe anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
+<div style="text-align:center;margin-top:clamp(28px,3vw,40px)"><a href="/anfrage" class="ow-btn-p">Opa Werner anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
 </div>
 </div>
 </section>
@@ -575,7 +585,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-fmt-p">Langfristige Partnerschaft mit regelmäßigem Content über mehrere Plattformen - für nachhaltigen Markenaufbau mit Opa Werner als Testimonial.</div>
 </div>
 </div>
-<div style="text-align:center;margin-top:clamp(32px,4vw,48px)"><a href="/anfrage" class="ow-btn-p">Format auswählen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
+<div style="text-align:center;margin-top:clamp(32px,4vw,48px)"><a href="/anfrage" class="ow-btn-p">Opa Werner anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a></div>
 </div>
 </section>
 
@@ -585,9 +595,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="w">
 <div class="ow-cta-inner rv-s">
 
+<div class="ow-cta-avatar">
+<img loading="lazy" decoding="async" src="/img/Moritz.png" alt="Moritz von Schaabner">
+</div>
+
+<div class="ow-cta-name">Moritz von Schaabner</div>
+<div class="ow-cta-role">Strategische Projektplanung</div>
+<div class="ow-cta-avail"><div class="pd"></div>Verfügbar</div>
+
 <div class="ow-cta-label">Kostenfrei & unverbindlich</div>
-<h2>Opa Werner für eure <span>Kampagne buchen.</span></h2>
-<p>Ihr möchtet mit Opa Werner zusammenarbeiten? Wir übernehmen die Vermarktung und kümmern uns um alles - von der Idee bis zur fertigen Kampagne.</p>
+<h2>Du hast Lust auf eine <span>einzigartige Kampagne</span> mit Opa Werner?</h2>
+<p>Dann schreib uns - unser Team meldet sich schnellstmöglich bei dir und bespricht alles Weitere.</p>
 
 <div class="ow-cta-checks">
 <div class="ow-cta-check"><div class="ow-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>30 Min Call</div>
@@ -595,9 +613,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rg
 <div class="ow-cta-check"><div class="ow-cta-check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--a)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Antwort in 60 Min</div>
 </div>
 
-<a href="/anfrage" class="ow-btn-p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<a href="/anfrage" class="ow-btn-p">Jetzt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 
-<div class="ow-cta-mgmt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg> Vermarktung & Booking durch virral</div>
+<a href="tel:+4922129256316" class="ow-cta-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +49 221 29256316</a>
 </div>
 </div>
 </section>

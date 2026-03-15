@@ -36,15 +36,14 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 
 /* ===== HERO ===== */
 .ek-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
-.ek-hero-bg{position:absolute;inset:0;z-index:0}
-.ek-hero-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:300%;border:none;pointer-events:none}
-.ek-hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 0%,rgba(6,6,8,.3) 30%,rgba(6,6,8,.7) 60%,var(--bg) 100%)}
+.ek-hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#1a1a00 0%,#060608 40%,#0a0a02 70%,#060608 100%)}
+.ek-hero-grad{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 30% 50%,rgba(255,193,7,.08) 0%,transparent 60%)}
 .ek-hero-content{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,60px);max-width:760px}
 .ek-hero-top{display:flex;align-items:center;gap:16px;margin-bottom:28px}
 .ek-hero-logo{display:inline-block}
 .ek-hero-logo img{height:clamp(60px,10vw,90px);width:auto;border-radius:18px}
 .ek-hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(255,193,7,.12);border:1px solid rgba(255,193,7,.3);border-radius:100px;backdrop-filter:blur(12px)}
-.ek-hero-badge span{font-size:.78rem;font-weight:600;color:var(--w2)}
+.ek-hero-badge span{font-size:.78rem;font-weight:600;color:#1a1a1a}
 .ek-h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
 .ek-h1 span{color:var(--a)}
 .ek-sub{font-size:clamp(.88rem,1.2vw,1rem);color:var(--w2);line-height:1.75;margin-bottom:32px;max-width:560px}
@@ -87,7 +86,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .ek-about-vid{border-radius:var(--r2);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;transition:all .4s var(--e)}
 .ek-about-vid:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:var(--bd2)}
 .ek-about-vid iframe{width:100%;height:100%;border:none}
-.ek-camp-single{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;max-width:320px;box-shadow:0 20px 60px rgba(0,0,0,.5);transition:all .4s var(--e)}
+.ek-camp-single{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;max-width:320px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.5);transition:all .4s var(--e)}
 .ek-camp-single:hover{transform:translateY(-4px);box-shadow:0 24px 80px rgba(0,0,0,.6)}
 .ek-camp-single iframe{width:100%;height:100%;border:none}
 
@@ -95,7 +94,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .ek-camp{position:relative;overflow:hidden}
 .ek-camp::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,193,7,.08) 0%,transparent 70%);pointer-events:none}
 .ek-camp-inner{position:relative;z-index:1}
-.ek-camp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,56px);align-items:center}
+.ek-camp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,3vw,32px);align-items:center}
 .ek-camp-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ek-camp-vid{border-radius:var(--r2);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;transition:all .4s var(--e)}
 .ek-camp-vid:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:var(--bd2)}
@@ -183,7 +182,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
 .ek-camp-grid,.ek-about-grid,.ek-strat-grid{grid-template-columns:1fr}
-.ek-camp-single{max-width:260px}.ek-about-vids{max-width:400px}
+.ek-camp-single{max-width:260px}.ek-about-vids{max-width:320px;margin:0 auto}
 .ek-services-grid{grid-template-columns:repeat(3,1fr)}
 .ek-results-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -215,7 +214,6 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <!-- ==================== HERO ==================== -->
 <section class="ek-hero">
 <div class="ek-hero-bg">
-<iframe src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&playsinline=true&bc=%23ffc107&controls=" allow="autoplay" loading="eager"></iframe>
 <div class="ek-hero-grad"></div>
 </div>
 <div class="w">
@@ -229,7 +227,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 </div>
 </div>
 <h1 class="ek-h1">100 Videos.<br><span>42 Millionen Views.</span></h1>
-<p class="ek-sub">Wie EDEKA Südwest mit virral und Creator Finnel den Kanal EDEKA Karriere zu einer der stärksten Employer-Branding-Präsenzen im deutschen Lebensmitteleinzelhandel aufgebaut hat - auf TikTok, Instagram & YouTube.</p>
+<p class="ek-sub">Wie EDEKA Südwest mit virral und dem Creator Finnel den Kanal EDEKA Karriere zu einer der stärksten Employer-Branding-Präsenzen im deutschen Lebensmitteleinzelhandel aufgebaut hat - auf TikTok, Instagram & YouTube.</p>
 <div class="ek-hero-stats">
 <div class="ek-hero-stat"><strong>42 Mio.+</strong><span>Gesamt-Views</span></div>
 <div class="ek-hero-stat"><strong>100</strong><span>Virrale Videos</span></div>

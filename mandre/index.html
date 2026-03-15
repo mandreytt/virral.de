@@ -43,19 +43,9 @@
 .ma-btn-s:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
 
 /* Hero visual */
-.ma-hero-visual{display:flex;justify-content:center;align-items:center;position:relative}
-.ma-profile-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;width:100%;max-width:460px}
-.ma-profile-top{padding:clamp(24px,3vw,36px);padding-bottom:20px}
-.ma-profile-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r2);margin-bottom:20px}
-.ma-profile-name{font-size:1.8rem;font-weight:900;letter-spacing:-.03em;margin-bottom:4px}
-.ma-profile-handle{font-size:.82rem;color:var(--w3);margin-bottom:20px}
-.ma-profile-topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-.ma-profile-topic{padding:5px 14px;background:rgba(254,44,85,.06);border:1px solid rgba(254,44,85,.1);border-radius:100px;font-size:.68rem;font-weight:600;color:var(--a)}
-.ma-profile-platforms{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bd);border-top:1px solid var(--bd)}
-.ma-profile-platform{padding:16px;background:var(--card);display:flex;align-items:center;gap:10px}
-.ma-profile-platform svg{width:18px;height:18px;color:var(--w3);flex-shrink:0}
-.ma-profile-platform-name{font-size:.72rem;color:var(--w3);font-weight:500}
-.ma-profile-platform-v{font-size:.88rem;font-weight:800}
+.ma-hero-visual{display:flex;justify-content:center;align-items:flex-end;position:relative}
+.ma-hero-img{max-height:clamp(400px,55vh,600px);width:auto;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(254,44,85,.15)) drop-shadow(0 8px 24px rgba(0,0,0,.4));animation:maHeroFloat 6s ease-in-out infinite}
+@keyframes maHeroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 /* ===== SECTION SHARED ===== */
 .sec{padding:clamp(60px,10vw,120px) 0}
@@ -159,7 +149,7 @@
 
 /* ===== CTA ===== */
 .ma-cta{text-align:center;padding:clamp(80px,12vw,160px) 0;background:linear-gradient(180deg,#060608 0%,#10060a 40%,#0c0608 80%,#0c0c0f 100%)}
-.ma-cta-inner{background:linear-gradient(90deg,#fe2c55,#ff6b8a,#fe2c55) top/100% 4px no-repeat,var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:visible;position:relative;display:flex;flex-direction:column;align-items:center;padding:48px 48px 48px}
+.ma-cta-inner{background:linear-gradient(90deg,#fe2c55,#ff6b8a,#fe2c55) top/100% 4px no-repeat,var(--card);border:1px solid var(--bd);border-radius:var(--r3);overflow:visible;position:relative;display:flex;flex-direction:column;align-items:center;padding:0 48px 48px}
 .ma-cta-avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid var(--a);margin-top:-80px;box-shadow:0 12px 40px rgba(254,44,85,.25);flex-shrink:0;position:relative;z-index:2;background:var(--card)}
 .ma-cta-avatar img{width:100%;height:100%;object-fit:cover}
 .ma-cta-name{font-size:1.4rem;font-weight:800;margin-top:20px;margin-bottom:4px}
@@ -187,6 +177,7 @@
 @media(max-width:1024px){
 .ma-hero-grid{grid-template-columns:1fr}
 .ma-hero-visual{margin-top:32px}
+.ma-hero-img{max-height:350px}
 .ma-content-inner{grid-template-columns:1fr}
 .ma-content-inner.reverse{direction:ltr}
 .ma-yt-grid{grid-template-columns:1fr 1fr}
@@ -202,9 +193,8 @@
 .ma-stat-v{font-size:1.2rem}
 .ma-hero-btns{flex-direction:column}
 .ma-btn-p,.ma-btn-s{text-align:center;justify-content:center}
-.ma-profile-platforms{grid-template-columns:1fr}
 .ma-content-kpis{grid-template-columns:repeat(2,1fr)}
-.ma-cta-inner{padding:36px 24px 36px}
+.ma-cta-inner{padding:0 24px 36px}
 .ma-cta-checks{flex-direction:column;align-items:center;gap:12px}
 .ma-phones{gap:8px}
 .ma-phone{width:100px}
@@ -240,25 +230,7 @@
 </div></div>
 
 <div class="ma-hero-visual rv rvd2">
-<div class="ma-profile-card">
-<div class="ma-profile-top">
-<img src="/img/img-10.webp" alt="Mandre" class="ma-profile-img" loading="eager">
-<div class="ma-profile-name">Mandre</div>
-<div class="ma-profile-handle">@mandre · Entertainment Creator</div>
-<div class="ma-profile-topics">
-<span class="ma-profile-topic">Überraschungsballons</span>
-<span class="ma-profile-topic">MythBusters</span>
-<span class="ma-profile-topic">YouTube Longform</span>
-<span class="ma-profile-topic">Social Impact</span>
-</div>
-</div>
-<div class="ma-profile-platforms">
-<div class="ma-profile-platform"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 100 12.63 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1-.13z"/></svg><div><div class="ma-profile-platform-name">TikTok</div><div class="ma-profile-platform-v">391K</div></div></div>
-<div class="ma-profile-platform"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><div><div class="ma-profile-platform-name">YouTube</div><div class="ma-profile-platform-v">411K</div></div></div>
-<div class="ma-profile-platform"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947C23.784 2.69 21.365.272 17.013.072 15.733.014 15.325 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/></svg><div><div class="ma-profile-platform-name">Instagram</div><div class="ma-profile-platform-v">95.1K</div></div></div>
-<div class="ma-profile-platform"><svg viewBox="0 0 512 512" fill="currentColor"><path d="M256 32c-48 0-90 18-118 55-24 31-34 72-31 122l1 18c-8 4-18 7-30 9-8 1-13 7-12 14 1 6 5 11 13 13 3 1 7 1 11 2 12 2 20 4 22 10 1 4-1 10-5 20l-2 5c-14 33-35 60-62 78-10 7-13 13-12 18 2 8 16 14 41 18l5 1c3 0 5 5 8 13 2 5 4 11 8 17 5 7 12 11 22 11 7 0 15-2 25-5 16-5 34-11 58 2 18 10 34 15 49 15s31-5 49-15c24-13 42-7 58-2 10 3 18 5 25 5 10 0 17-4 22-11 4-6 6-12 8-17 3-8 5-13 8-13l5-1c25-4 39-10 41-18 1-5-2-11-12-18-27-18-48-45-62-78l-2-5c-4-10-6-16-5-20 2-6 10-8 22-10 4-1 8-1 11-2 8-2 12-7 13-13 1-7-4-13-12-14-12-2-22-5-30-9l1-18c3-50-7-91-31-122C346 50 304 32 256 32z"/></svg><div><div class="ma-profile-platform-name">Snapchat</div><div class="ma-profile-platform-v">126.5K</div></div></div>
-</div>
-</div>
+<img src="/img/Andre freigestellt.png" alt="Mandre" class="ma-hero-img" loading="eager">
 </div>
 </div>
 </div>

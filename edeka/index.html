@@ -32,10 +32,12 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .sh p{font-size:.92rem;color:var(--w2);max-width:520px;margin:0 auto;line-height:1.7}
 .tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--a);background:var(--as);border:1px solid rgba(255,193,7,.2);padding:5px 14px;border-radius:100px;margin-bottom:16px}
 
+.nc{color:#1a1a1a!important}
+
 /* ===== HERO ===== */
 .ek-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
 .ek-hero-bg{position:absolute;inset:0;z-index:0}
-.ek-hero-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(100vw,177.78vh);height:max(100vh,56.25vw);border:none;pointer-events:none}
+.ek-hero-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:300%;border:none;pointer-events:none}
 .ek-hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 0%,rgba(6,6,8,.3) 30%,rgba(6,6,8,.7) 60%,var(--bg) 100%)}
 .ek-hero-content{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,60px);max-width:760px}
 .ek-hero-top{display:flex;align-items:center;gap:16px;margin-bottom:28px}
@@ -81,6 +83,13 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 .ek-about-stat:hover{border-color:rgba(255,193,7,.2);transform:translateY(-2px)}
 .ek-about-stat strong{display:block;font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:900;letter-spacing:-.03em;background:linear-gradient(135deg,var(--a),#ffe082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
 .ek-about-stat span{font-size:.72rem;color:var(--w3);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.ek-about-vids{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ek-about-vid{border-radius:var(--r2);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;transition:all .4s var(--e)}
+.ek-about-vid:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:var(--bd2)}
+.ek-about-vid iframe{width:100%;height:100%;border:none}
+.ek-camp-single{border-radius:var(--r3);overflow:hidden;border:1px solid var(--bd);background:#000;aspect-ratio:9/16;max-width:320px;box-shadow:0 20px 60px rgba(0,0,0,.5);transition:all .4s var(--e)}
+.ek-camp-single:hover{transform:translateY(-4px);box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.ek-camp-single iframe{width:100%;height:100%;border:none}
 
 /* ===== CAMPAIGN SECTION ===== */
 .ek-camp{position:relative;overflow:hidden}
@@ -174,7 +183,7 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
 .ek-camp-grid,.ek-about-grid,.ek-strat-grid{grid-template-columns:1fr}
-.ek-camp-videos{max-width:500px}
+.ek-camp-single{max-width:260px}.ek-about-vids{max-width:400px}
 .ek-services-grid{grid-template-columns:repeat(3,1fr)}
 .ek-results-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -271,11 +280,9 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 </div>
 
 <div class="rv-s">
-<div class="ek-about-stats">
-<div class="ek-about-stat rvd1"><strong>42 Mio.+</strong><span>Organische Views</span></div>
-<div class="ek-about-stat rvd2"><strong>100</strong><span>Videos produziert</span></div>
-<div class="ek-about-stat rvd3"><strong>+50.000</strong><span>Neue Follower</span></div>
-<div class="ek-about-stat rvd4"><strong>885k</strong><span>Engagements</span></div>
+<div class="ek-about-vids">
+<div class="ek-about-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/cYhxpaYnLe?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="ek-about-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/2ENSUZCVRR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
 </div>
 </div>
 
@@ -330,10 +337,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{fon
 <div class="w">
 <div class="ek-camp-inner">
 <div class="ek-camp-grid">
-<div class="ek-camp-videos rv-s">
-<div class="ek-camp-vid rvd1"><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="ek-camp-vid rvd2"><iframe data-src="https://app.vidzflow.com/v/cYhxpaYnLe?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
-<div class="ek-camp-vid rvd3"><iframe data-src="https://app.vidzflow.com/v/2ENSUZCVRR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe></div>
+<div class="ek-camp-single rv-s">
+<iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23ffc107&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay" loading="lazy"></iframe>
 </div>
 
 <div class="rv-s">

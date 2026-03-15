@@ -31,7 +31,16 @@
 .mf-error-msg.visible{display:flex}
 @keyframes mf-shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
 .mf-phone-field{position:relative;display:flex;align-items:stretch}
-.mf-phone-prefix{display:flex;align-items:center;gap:6px;padding:0 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-right:none;border-radius:var(--r) 0 0 var(--r);font-size:.82rem;color:var(--w2);white-space:nowrap}
+.mf-phone-prefix{display:flex;align-items:center;gap:6px;padding:0 14px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-right:none;border-radius:var(--r) 0 0 var(--r);font-size:.82rem;color:var(--w2);white-space:nowrap;cursor:pointer;position:relative;user-select:none;transition:border-color .2s,background .2s}
+.mf-phone-prefix:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
+.mf-phone-prefix .mf-pp-arrow{font-size:.5rem;margin-left:2px;opacity:.5;transition:transform .2s}
+.mf-phone-prefix.open .mf-pp-arrow{transform:rotate(180deg)}
+.mf-pp-dropdown{position:absolute;top:100%;left:0;min-width:200px;max-height:260px;overflow-y:auto;background:var(--card);border:1px solid var(--bd2);border-radius:var(--r);box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:50;display:none;padding:4px 0}
+.mf-phone-prefix.open .mf-pp-dropdown{display:block}
+.mf-pp-item{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:.82rem;color:var(--w2);cursor:pointer;transition:background .15s}
+.mf-pp-item:hover{background:rgba(255,255,255,.06);color:var(--w)}
+.mf-pp-item.active{color:var(--a);background:rgba(254,44,85,.06)}
+.mf-pp-item span:first-child{font-size:1rem}
 .mf-phone-field input{border-radius:0 var(--r) var(--r) 0}
 .mf-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mf-option{padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:all .25s;font-size:.88rem;color:var(--w2)}
@@ -52,12 +61,14 @@
 .mf-privacy{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.75rem;color:var(--w3);line-height:1.6;cursor:pointer}
 .mf-privacy input[type="checkbox"]{width:18px;height:18px;border-radius:4px;accent-color:var(--a);margin-top:1px;flex-shrink:0;cursor:pointer}
 .mf-privacy a{color:var(--a);text-decoration:underline;text-underline-offset:2px}
-.mf-contact-bar{display:flex;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid var(--bd);flex-wrap:wrap}
-.mf-contact-item{display:flex;align-items:center;gap:10px;color:var(--w2);font-size:.78rem;transition:color .3s}
-.mf-contact-item:hover{color:var(--w)}
-.mf-contact-item svg{color:var(--w3);flex-shrink:0}
+.mf-contact-bar{display:flex;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--bd)}
+.mf-contact-item{display:flex;align-items:center;gap:10px;color:var(--w2);font-size:.78rem;transition:all .3s;flex:1;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);text-decoration:none}
+.mf-contact-item:hover{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:var(--w)}
+.mf-contact-item svg{color:var(--a);flex-shrink:0;opacity:.7}
+.mf-contact-item:hover svg{opacity:1}
 .mf-contact-item strong{display:block;color:var(--w);font-weight:600;font-size:.82rem}
-.mf-contact-item span{display:block;font-size:.7rem;color:var(--w3)}
+.mf-contact-item span{display:block;font-size:.68rem;color:var(--w3);margin-top:1px}
+@media(max-width:480px){.mf-contact-bar{flex-direction:column}}
 .mf-success{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:1;padding:40px 0}
 .mf-success-icon{width:64px;height:64px;border-radius:50%;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .mf-success-icon svg{width:32px;height:32px}
@@ -144,7 +155,21 @@
 <div class="mf-row">
 <div class="mf-field"><input type="text" name="company" placeholder="Unternehmen"></div>
 <div class="mf-field mf-phone-field">
-<div class="mf-phone-prefix"><span>🇩🇪</span> +49</div>
+<div class="mf-phone-prefix" id="mfPP"><span id="mfPPFlag">🇩🇪</span> <span id="mfPPCode">+49</span> <span class="mf-pp-arrow">▼</span>
+<div class="mf-pp-dropdown">
+<div class="mf-pp-item active" data-code="+49" data-flag="🇩🇪"><span>🇩🇪</span> Deutschland <span style="margin-left:auto;opacity:.5">+49</span></div>
+<div class="mf-pp-item" data-code="+43" data-flag="🇦🇹"><span>🇦🇹</span> Österreich <span style="margin-left:auto;opacity:.5">+43</span></div>
+<div class="mf-pp-item" data-code="+41" data-flag="🇨🇭"><span>🇨🇭</span> Schweiz <span style="margin-left:auto;opacity:.5">+41</span></div>
+<div class="mf-pp-item" data-code="+44" data-flag="🇬🇧"><span>🇬🇧</span> UK <span style="margin-left:auto;opacity:.5">+44</span></div>
+<div class="mf-pp-item" data-code="+1" data-flag="🇺🇸"><span>🇺🇸</span> USA <span style="margin-left:auto;opacity:.5">+1</span></div>
+<div class="mf-pp-item" data-code="+33" data-flag="🇫🇷"><span>🇫🇷</span> Frankreich <span style="margin-left:auto;opacity:.5">+33</span></div>
+<div class="mf-pp-item" data-code="+31" data-flag="🇳🇱"><span>🇳🇱</span> Niederlande <span style="margin-left:auto;opacity:.5">+31</span></div>
+<div class="mf-pp-item" data-code="+39" data-flag="🇮🇹"><span>🇮🇹</span> Italien <span style="margin-left:auto;opacity:.5">+39</span></div>
+<div class="mf-pp-item" data-code="+34" data-flag="🇪🇸"><span>🇪🇸</span> Spanien <span style="margin-left:auto;opacity:.5">+34</span></div>
+<div class="mf-pp-item" data-code="+48" data-flag="🇵🇱"><span>🇵🇱</span> Polen <span style="margin-left:auto;opacity:.5">+48</span></div>
+<div class="mf-pp-item" data-code="+90" data-flag="🇹🇷"><span>🇹🇷</span> Türkei <span style="margin-left:auto;opacity:.5">+90</span></div>
+</div>
+</div>
 <input type="tel" name="phone" placeholder="Deine Telefonnummer">
 </div>
 </div>
@@ -513,6 +538,34 @@
         legalConsentOptions: { consent: { consentToProcess: true, text: 'Newsletter-Anmeldung über Anfrage-Formular' } }
       })
     }).then(function(){ goTo(6); }).catch(function(){ goTo(6); });
+  });
+})();
+
+/* Phone prefix dropdown */
+(function(){
+  var pp=document.getElementById('mfPP');
+  if(!pp)return;
+  var flag=document.getElementById('mfPPFlag');
+  var code=document.getElementById('mfPPCode');
+  var items=pp.querySelectorAll('.mf-pp-item');
+
+  pp.addEventListener('click',function(e){
+    if(e.target.closest('.mf-pp-item'))return;
+    pp.classList.toggle('open');
+  });
+
+  items.forEach(function(item){
+    item.addEventListener('click',function(){
+      flag.textContent=item.dataset.flag;
+      code.textContent=item.dataset.code;
+      items.forEach(function(i){i.classList.remove('active')});
+      item.classList.add('active');
+      pp.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click',function(e){
+    if(!pp.contains(e.target))pp.classList.remove('open');
   });
 })();
 </script>

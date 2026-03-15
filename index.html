@@ -893,11 +893,24 @@ document.addEventListener('DOMContentLoaded',function(){
 <!-- Newsletter Chat Bubble -->
 <div id="nl-chat" style="position:fixed;bottom:24px;right:24px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none">
 
+<!-- Typing indicator -->
+<div id="nl-chat-typing" style="pointer-events:none;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(10px);transition:all .4s var(--e)">
+<div style="background:var(--card);border:1px solid var(--bd2);border-radius:16px 16px 4px 16px;padding:12px 18px;box-shadow:0 8px 32px rgba(0,0,0,.4);display:flex;align-items:center;gap:4px">
+<span class="nl-dot" style="width:6px;height:6px;border-radius:50%;background:var(--w3);animation:nlTyping 1.4s infinite;animation-delay:0s"></span>
+<span class="nl-dot" style="width:6px;height:6px;border-radius:50%;background:var(--w3);animation:nlTyping 1.4s infinite;animation-delay:.2s"></span>
+<span class="nl-dot" style="width:6px;height:6px;border-radius:50%;background:var(--w3);animation:nlTyping 1.4s infinite;animation-delay:.4s"></span>
+</div>
+</div>
+
 <!-- Chat message popup -->
 <div id="nl-chat-msg" style="pointer-events:auto;background:var(--card);border:1px solid var(--bd2);border-radius:16px 16px 4px 16px;padding:16px 18px;max-width:300px;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;transform:translateY(10px) scale(.95);transition:all .4s var(--e)">
-<div style="font-size:.82rem;font-weight:700;margin-bottom:6px">Hey! 👋 Kennst du schon unseren Newsletter?</div>
-<div style="font-size:.75rem;color:var(--w2);line-height:1.65;margin-bottom:12px">Alle 14 Tage exklusive Creator Insights von Millionen-Creators, Trend-Reports & Zugang zu Webinaren rund um Social Media Wachstum. Kostenlos.</div>
-<a href="#newsletter" id="nl-chat-cta" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--a);color:#fff;border-radius:100px;font-size:.78rem;font-weight:700;transition:all .3s;text-decoration:none;pointer-events:auto">Jetzt anmelden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+<div style="width:28px;height:28px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--a)"><img src="img/img-23.jpg" alt="Finnel" style="width:100%;height:100%;object-fit:cover"></div>
+<div style="font-size:.75rem;font-weight:800;color:var(--w)">Finnel</div>
+<div style="font-size:.6rem;color:var(--w3);font-weight:500">gerade eben</div>
+</div>
+<div style="font-size:.82rem;color:var(--w);line-height:1.65;margin-bottom:12px">Yo! Ich bins, Finnel. Kennst du eigentlich schon unseren Newsletter? Gibt alle 2 Wochen Creator Insights, Trend-Reports & Webinare - komplett kostenlos. Check mal rein!</div>
+<a href="#newsletter" id="nl-chat-cta" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--a);color:#fff;border-radius:100px;font-size:.78rem;font-weight:700;transition:all .3s;text-decoration:none;pointer-events:auto">Newsletter checken <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 <button id="nl-chat-close" style="position:absolute;top:8px;right:10px;background:none;border:none;color:var(--w3);font-size:1.1rem;cursor:pointer;padding:4px;line-height:1;pointer-events:auto">&times;</button>
 </div>
 
@@ -914,6 +927,7 @@ document.addEventListener('DOMContentLoaded',function(){
 #nl-chat-avatar:hover{transform:scale(1.1)!important;box-shadow:0 12px 36px rgba(254,44,85,.45)}
 #nl-chat-cta:hover{background:var(--ah);box-shadow:0 4px 16px rgba(254,44,85,.4)}
 @keyframes nlBubblePulse{0%,100%{box-shadow:0 8px 28px rgba(254,44,85,.35)}50%{box-shadow:0 8px 28px rgba(254,44,85,.55),0 0 0 8px rgba(254,44,85,.1)}}
+@keyframes nlTyping{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
 #nl-chat-avatar.pulse{animation:nlBubblePulse 2s ease-in-out infinite}
 @media(max-width:768px){#nl-chat{bottom:80px;right:16px}#nl-chat-msg{max-width:260px;padding:14px}#nl-chat-avatar{width:52px;height:52px}}
 </style>
@@ -922,42 +936,60 @@ document.addEventListener('DOMContentLoaded',function(){
 (function(){
   var msg=document.getElementById('nl-chat-msg');
   var avatar=document.getElementById('nl-chat-avatar');
+  var typing=document.getElementById('nl-chat-typing');
   var closeBtn=document.getElementById('nl-chat-close');
-  if(!msg||!avatar)return;
+  if(!msg||!avatar||!typing)return;
   var dismissed=false;
 
+  function showTyping(){
+    typing.style.opacity='1';
+    typing.style.transform='translateY(0)';
+  }
+  function hideTyping(){
+    typing.style.opacity='0';
+    typing.style.transform='translateY(10px)';
+  }
   function showMsg(){
-    msg.style.opacity='1';
-    msg.style.transform='translateY(0) scale(1)';
-    avatar.classList.remove('pulse');
+    hideTyping();
+    setTimeout(function(){
+      msg.style.opacity='1';
+      msg.style.transform='translateY(0) scale(1)';
+      avatar.classList.remove('pulse');
+    },300);
   }
   function hideMsg(){
     msg.style.opacity='0';
     msg.style.transform='translateY(10px) scale(.95)';
+    hideTyping();
     dismissed=true;
     avatar.style.opacity='0';
     avatar.style.transform='scale(.5)';
     avatar.classList.remove('pulse');
   }
 
-  // Show avatar after 3s
+  // 1. Show avatar after 3s
   setTimeout(function(){
     avatar.style.opacity='1';
     avatar.style.transform='scale(1)';
     avatar.classList.add('pulse');
   },3000);
 
-  // Show message after 6s - stays until closed
+  // 2. Show typing dots after 5s
+  setTimeout(function(){
+    if(!dismissed){ showTyping(); avatar.classList.remove('pulse'); }
+  },5000);
+
+  // 3. Replace typing with message after 7.5s
   setTimeout(function(){
     if(!dismissed) showMsg();
-  },6000);
+  },7500);
 
   // Avatar click: reopen if dismissed
   avatar.addEventListener('click',function(){
     if(dismissed){ dismissed=false; showMsg(); }
   });
 
-  // Close only on X click
+  // Close on X click
   closeBtn.addEventListener('click',function(e){
     e.stopPropagation();
     hideMsg();

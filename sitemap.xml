@@ -2,56 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://virral.de/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/jochen-schweizer/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/strabag/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/edeka/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/claas/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/finnel/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/mandre/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/opa-werner/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/anfrage/</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/impressum.html</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.2</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://virral.de/datenschutz.html</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.2</priority>
     <changefreq>yearly</changefreq>
   </url>

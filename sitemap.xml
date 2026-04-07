@@ -6,11 +6,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://virral.de/finnel/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://virral.de/jochen-schweizer/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
@@ -18,6 +13,31 @@
   <url>
     <loc>https://virral.de/strabag/</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/edeka/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/claas/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/finnel/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/mandre/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/opa-werner/</loc>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>

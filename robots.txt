@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /brandbook.html
 
 Sitemap: https://virral.de/sitemap.xml

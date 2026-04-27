@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>JS Erlebnisreisen 2026 - Konzept-Pitch | virral × Jochen Schweizer</title>
+<meta name="description" content="Konzept-Pitch für JS Erlebnisreisen 2026. Leuchtturm-Modell, 20 Mio. Impressions garantiert, validiert mit Creator Haus und Racing Day.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#fe2c55;
+  --ph:#e52249;
+  --pg:rgba(254,44,85,.22);
+  --ps:rgba(254,44,85,.08);
+  --bg:#060608;
+  --bg2:#0c0c0f;
+  --bg3:#121215;
+  --light:#f0ece6;
+  --light2:#e6e1d8;
+  --dark:#1a1a1a;
+  --dark2:#666666;
+  --dark3:#999999;
+  --bd:rgba(255,255,255,.08);
+  --bd2:rgba(255,255,255,.14);
+  --bdl:rgba(0,0,0,.08);
+  --bdl2:rgba(0,0,0,.14);
+  --f:'Inter',system-ui,-apple-system,sans-serif;
+  --r:12px;
+  --r2:20px;
+  --r3:28px;
+  --e:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;scroll-padding-top:72px}
+body{font-family:var(--f);background:var(--bg);color:var(--light);line-height:1.65;overflow-x:clip;font-size:15px}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* LAYOUT */
+.er-w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.er-w-narrow{max-width:980px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+
+/* SUB-NAV */
+.er-nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:14px 0;background:rgba(6,6,8,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);transform:translateY(-100%);transition:transform .5s var(--e),background .3s,border-color .3s}
+.er-nav.show{transform:translateY(0)}
+.er-nav-inner{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.er-nav-brand{display:inline-flex;align-items:center;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--light)}
+.er-nav-brand img{height:22px;width:auto}
+.er-nav-brand span{opacity:.6;font-weight:500}
+.er-nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.er-nav-links a{padding:8px 12px;font-size:.74rem;font-weight:600;letter-spacing:.02em;color:var(--light);opacity:.65;border-radius:8px;transition:all .3s var(--e);white-space:nowrap}
+.er-nav-links a:hover{opacity:1;background:rgba(255,255,255,.05)}
+.er-nav-links a.active{opacity:1;color:var(--p)}
+.er-nav-cta{padding:8px 16px;background:var(--p);color:#fff!important;border-radius:100px;font-size:.74rem;font-weight:700;opacity:1!important;letter-spacing:.02em}
+.er-nav-cta:hover{background:var(--ph)!important}
+@media(max-width:900px){
+  .er-nav-links a:not(.er-nav-cta){display:none}
+  .er-nav-links{gap:0}
+}
+
+/* SECTION BASE */
+.er-sec{position:relative;padding:clamp(80px,11vw,140px) 0;scroll-margin-top:60px}
+.er-sec-dark{background:var(--bg);color:var(--light)}
+.er-sec-light{background:var(--light);color:var(--dark)}
+.er-sec-light .er-eyebrow{color:var(--p)}
+.er-sec-light .er-h2 span{color:var(--p)}
+
+/* TYPOGRAPHY */
+.er-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.er-eyebrow::before{content:'';width:24px;height:2px;background:var(--p);border-radius:2px}
+.er-h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:900;letter-spacing:-.045em;line-height:.98;margin-bottom:24px}
+.er-h1 span{color:var(--p)}
+.er-h2{font-size:clamp(1.9rem,4.2vw,3.2rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:20px}
+.er-h2 span{color:var(--p)}
+.er-h3{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.er-sub{font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.7;font-weight:400;color:var(--light);opacity:.78;max-width:720px}
+.er-sec-light .er-sub{color:var(--dark2);opacity:1}
+.er-lead{font-size:clamp(1.1rem,1.7vw,1.4rem);line-height:1.55;font-weight:600;letter-spacing:-.01em;max-width:820px}
+
+/* REVEAL ANIMATION */
+.er-reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--e),transform .9s var(--e)}
+.er-reveal.in{opacity:1;transform:translateY(0)}
+.er-reveal-d1{transition-delay:.08s}
+.er-reveal-d2{transition-delay:.16s}
+.er-reveal-d3{transition-delay:.24s}
+.er-reveal-d4{transition-delay:.32s}
+@media(prefers-reduced-motion:reduce){
+  .er-reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:0.001ms!important;animation-iteration-count:1!important;transition-duration:0.001ms!important;scroll-behavior:auto!important}
+}
+
+/* FOOTER */
+.er-foot{padding:48px 0 32px;border-top:1px solid var(--bd);background:var(--bg);color:var(--light)}
+.er-foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.er-foot-brand{display:flex;align-items:center;gap:12px}
+.er-foot-brand img{height:24px}
+.er-foot-meta{font-size:.78rem;color:rgba(240,236,230,.5)}
+
+/* SECTION 1 — HERO */
+.er-hero{min-height:100vh;display:flex;align-items:center;justify-content:flex-start;padding:120px 0 80px;position:relative;overflow:hidden;background:var(--bg)}
+.er-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(254,44,85,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 100%,rgba(254,44,85,.1) 0%,transparent 60%);pointer-events:none;z-index:0}
+.er-hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:32px 32px;mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 0%,transparent 80%);pointer-events:none;z-index:0}
+.er-hero-inner{position:relative;z-index:2;width:100%}
+.er-hero-h1{font-size:clamp(3rem,9vw,7.4rem);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-bottom:32px}
+.er-hero-h1 .line{display:block;overflow:hidden}
+.er-hero-h1 .line span{display:inline-block;background:linear-gradient(180deg,#fff 0%,#cfc8be 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.er-hero-h1 .line.accent span{background:linear-gradient(135deg,#fe2c55 0%,#ff6b8a 60%,#ffb3c4 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.er-hero-h1 .line span{transform:translateY(110%);animation:erHeroLine 1s var(--e) forwards}
+.er-hero-h1 .line:nth-child(1) span{animation-delay:.15s}
+.er-hero-h1 .line:nth-child(2) span{animation-delay:.35s}
+@keyframes erHeroLine{to{transform:translateY(0)}}
+.er-hero-sub{font-size:clamp(1.05rem,1.6vw,1.35rem);max-width:680px;line-height:1.6;color:rgba(240,236,230,.78);margin-bottom:48px;opacity:0;transform:translateY(16px);animation:erFadeUp .9s var(--e) .9s forwards}
+@keyframes erFadeUp{to{opacity:1;transform:translateY(0)}}
+.er-hero-cta{display:inline-flex;align-items:center;gap:12px;padding:14px 28px;background:rgba(255,255,255,.05);border:1px solid var(--bd2);border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--light);transition:all .3s var(--e);opacity:0;animation:erFadeUp .9s var(--e) 1.1s forwards}
+.er-hero-cta:hover{background:rgba(254,44,85,.15);border-color:var(--p);transform:translateY(-2px)}
+.er-hero-cta .ar{display:inline-block;animation:erBob 2s ease-in-out infinite}
+@keyframes erBob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.er-hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.3);border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:32px;backdrop-filter:blur(8px);opacity:0;animation:erFadeUp .9s var(--e) 0s forwards}
+.er-hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--p);box-shadow:0 0 12px var(--p);animation:erPulse 2s ease-in-out infinite}
+@keyframes erPulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.er-hero-meta{position:absolute;bottom:36px;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:rgba(240,236,230,.4);opacity:0;animation:erFadeUp .9s var(--e) 1.4s forwards}
+.er-hero-meta .er-w{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;width:100%}
+.er-hero-meta-stack{display:flex;flex-direction:column;gap:4px}
+@media(max-width:700px){
+  .er-hero{padding:120px 0 100px}
+  .er-hero-meta{position:static;margin-top:60px;animation-delay:1s}
+  .er-hero-meta .er-w{padding:0;flex-wrap:wrap}
+}
+
+/* SECTION 2 — LEUCHTTURM */
+.er-lt-head{margin-bottom:80px;max-width:880px}
+.er-lt-block{margin-bottom:clamp(72px,10vw,120px)}
+.er-lt-block:last-child{margin-bottom:0}
+.er-lt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.er-lt-block-num{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.er-lt-block-num span{font-family:var(--f);font-size:.7rem;background:var(--p);color:#fff;padding:3px 8px;border-radius:6px;letter-spacing:0}
+.er-lt-block-h{font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:18px;color:var(--dark)}
+.er-lt-block-p{font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.7;color:var(--dark2)}
+.er-lt-block-p strong{color:var(--dark);font-weight:700}
+
+/* 2.1 Klumpenrisiko — 4 circles */
+.er-risk{display:flex;gap:18px;justify-content:center;align-items:center;padding:40px 20px;flex-wrap:wrap}
+.er-risk-c{width:clamp(80px,12vw,130px);aspect-ratio:1;border-radius:50%;background:#fff;border:2px solid var(--bdl2);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--dark2);font-size:.9rem;position:relative;transition:all .8s var(--e)}
+.er-risk-c::after{content:'Creator';position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dark2);white-space:nowrap}
+.er-risk-c.fail{border-color:#d11;background:#fff5f5;color:#d11;transform:translateY(0) rotate(0);opacity:1;transition-delay:.1s}
+.er-risk-c.fail::after{content:'Floppt';color:#d11}
+.in .er-risk-c.fail{transform:translateY(40px) rotate(-12deg);opacity:.45;transition-delay:.5s}
+.er-risk-label{text-align:center;margin-top:48px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d11}
+
+/* 2.2 Domino */
+.er-domino{margin-top:32px;background:linear-gradient(180deg,var(--light) 0%,#ece7df 100%);border-radius:var(--r3);padding:clamp(40px,6vw,72px) clamp(24px,4vw,48px);position:relative;overflow:hidden;border:1px solid var(--bdl)}
+.er-domino-stage{position:relative;height:200px;display:flex;align-items:flex-end;justify-content:flex-start;gap:14px;padding-bottom:20px}
+.er-domino-stone{width:14px;height:120px;background:var(--dark);border-radius:3px;transform-origin:bottom right;transition:transform .55s var(--e);box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.er-domino-stone.big{width:28px;height:170px;background:var(--p);box-shadow:0 8px 24px rgba(254,44,85,.4)}
+.er-domino.in .er-domino-stone{transform:rotate(-65deg)}
+.er-domino-stone:nth-child(1){transition-delay:0s}
+.er-domino-stone:nth-child(2){transition-delay:.12s}
+.er-domino-stone:nth-child(3){transition-delay:.22s}
+.er-domino-stone:nth-child(4){transition-delay:.31s}
+.er-domino-stone:nth-child(5){transition-delay:.39s}
+.er-domino-stone:nth-child(6){transition-delay:.46s}
+.er-domino-stone:nth-child(7){transition-delay:.52s}
+.er-domino-stone:nth-child(8){transition-delay:.57s}
+.er-domino-stone:nth-child(9){transition-delay:.61s}
+.er-domino-stone:nth-child(10){transition-delay:.64s}
+.er-domino-stone:nth-child(11){transition-delay:.66s}
+.er-domino-stone:nth-child(12){transition-delay:.67s}
+.er-domino-floor{position:absolute;left:0;right:0;bottom:20px;height:2px;background:var(--dark);opacity:.15}
+.er-domino-quote{margin-top:36px;font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.7;color:var(--dark)}
+.er-domino-quote p{margin-bottom:10px}
+.er-domino-quote p strong{color:var(--p);font-weight:700}
+
+/* 2.3 Compare table */
+.er-compare{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--light);border:1px solid var(--bdl);border-radius:var(--r2);overflow:hidden;margin-top:32px}
+.er-compare-col{padding:clamp(28px,4vw,40px)}
+.er-compare-col.hi{background:#fff;border-left:1px solid var(--bdl)}
+.er-compare-h{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px}
+.er-compare-col:not(.hi) .er-compare-h{color:var(--dark2)}
+.er-compare-col.hi .er-compare-h{color:var(--p)}
+.er-compare-row{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--bdl);font-size:.95rem;line-height:1.5}
+.er-compare-row:first-of-type{border-top:none;padding-top:0}
+.er-compare-row .ic{width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;margin-top:2px}
+.er-compare-col:not(.hi) .ic{background:rgba(0,0,0,.08);color:var(--dark2)}
+.er-compare-col.hi .ic{background:var(--p);color:#fff}
+.er-compare-col:not(.hi) .er-compare-row{color:var(--dark2)}
+.er-compare-col.hi .er-compare-row{color:var(--dark);font-weight:500}
+
+/* 2.4 Validation box */
+.er-valid{margin-top:32px;background:linear-gradient(135deg,#fff 0%,#f7f3ec 100%);border:2px solid var(--p);border-radius:var(--r3);padding:clamp(36px,5vw,56px);position:relative;overflow:hidden}
+.er-valid::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(254,44,85,.15) 0%,transparent 70%);pointer-events:none}
+.er-valid-h{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;letter-spacing:-.025em;line-height:1.2;margin-bottom:24px;color:var(--dark);position:relative}
+.er-valid-cases{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px;position:relative}
+.er-valid-case{padding:18px 22px;background:rgba(254,44,85,.06);border:1px solid rgba(254,44,85,.18);border-radius:var(--r);display:flex;align-items:center;gap:14px}
+.er-valid-case-name{font-weight:800;font-size:1.05rem;color:var(--dark)}
+.er-valid-case-kpi{font-size:.78rem;color:var(--p);font-weight:700;letter-spacing:.04em}
+.er-valid-case-check{width:32px;height:32px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800}
+.er-valid-p{font-size:1.05rem;line-height:1.7;color:var(--dark);position:relative}
+.er-valid-p strong{color:var(--p)}
+
+@media(max-width:760px){
+  .er-lt-grid{grid-template-columns:1fr;gap:32px}
+  .er-compare{grid-template-columns:1fr}
+  .er-compare-col.hi{border-left:none;border-top:2px solid var(--p)}
+  .er-valid-cases{grid-template-columns:1fr}
+  .er-domino-stage{height:160px;gap:8px}
+  .er-domino-stone{width:10px;height:90px}
+  .er-domino-stone.big{width:20px;height:130px}
+}
+
+/* SECTION 3 — DIE KAMPAGNE */
+.er-cmp-head{margin-bottom:64px;text-align:left}
+.er-cmp-statement{font-size:clamp(1.5rem,3vw,2.4rem);font-weight:800;line-height:1.2;letter-spacing:-.025em;text-align:center;max-width:980px;margin:0 auto 80px;padding:48px clamp(20px,4vw,40px);background:linear-gradient(135deg,rgba(254,44,85,.08) 0%,rgba(254,44,85,.02) 100%);border:1px solid rgba(254,44,85,.18);border-radius:var(--r3);position:relative}
+.er-cmp-statement::before,.er-cmp-statement::after{content:'';position:absolute;width:32px;height:32px;border:2px solid var(--p);opacity:.6}
+.er-cmp-statement::before{top:16px;left:16px;border-right:none;border-bottom:none}
+.er-cmp-statement::after{bottom:16px;right:16px;border-left:none;border-top:none}
+.er-cmp-statement strong{color:var(--p)}
+
+/* Trip cards */
+.er-cmp-flow{display:grid;grid-template-columns:1fr 80px 1fr;gap:24px;align-items:stretch;margin-bottom:24px}
+.er-trip{position:relative;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r3);padding:clamp(28px,4vw,40px);transition:all .4s var(--e);overflow:hidden}
+.er-trip::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--p);transform-origin:left;transform:scaleX(0);transition:transform .8s var(--e) .2s}
+.er-trip.in::before{transform:scaleX(1)}
+.er-trip:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.er-trip-eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:14px}
+.er-trip-h{font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:900;letter-spacing:-.025em;line-height:1.1;margin-bottom:8px}
+.er-trip-sub{font-size:.95rem;color:rgba(240,236,230,.65);margin-bottom:24px;line-height:1.5}
+.er-trip-block{background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r);padding:18px 20px;margin-bottom:16px}
+.er-trip-block:last-child{margin-bottom:0}
+.er-trip-block-h{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,236,230,.55);margin-bottom:12px}
+.er-trip-list{display:flex;flex-direction:column;gap:8px}
+.er-trip-list-item{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;color:var(--light)}
+.er-trip-list-item .num{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 8px;border-radius:8px;background:rgba(254,44,85,.15);color:var(--p);font-weight:800;font-size:.78rem;font-variant-numeric:tabular-nums}
+.er-trip-list-item.hi .num{background:var(--p);color:#fff}
+.er-trip-block-p{font-size:.92rem;line-height:1.6;color:rgba(240,236,230,.78)}
+.er-trip-block-p strong{color:var(--light);font-weight:700}
+.er-trip-pull{margin-top:14px;padding:14px 16px;background:rgba(254,44,85,.08);border-left:3px solid var(--p);border-radius:8px;font-size:.88rem;line-height:1.5;color:rgba(240,236,230,.85);font-style:italic}
+
+/* Connector arrow */
+.er-cmp-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--p)}
+.er-cmp-arrow svg{width:36px;height:36px}
+.er-cmp-arrow-l{font-size:.65rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--p);writing-mode:horizontal-tb;text-align:center}
+
+/* Auswertung between */
+.er-eval{margin:0 auto 24px;max-width:520px;padding:28px 32px;background:linear-gradient(180deg,rgba(254,44,85,.08) 0%,transparent 100%);border:1px dashed rgba(254,44,85,.4);border-radius:var(--r2)}
+.er-eval-h{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);text-align:center;margin-bottom:18px}
+.er-eval-list{display:flex;flex-direction:column;gap:10px}
+.er-eval-q{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;color:rgba(240,236,230,.85);line-height:1.5}
+.er-eval-q .qm{display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(254,44,85,.2);color:var(--p);align-items:center;justify-content:center;font-weight:800;font-size:.7rem;flex-shrink:0;margin-top:1px}
+
+@media(max-width:900px){
+  .er-cmp-flow{grid-template-columns:1fr;gap:18px}
+  .er-cmp-arrow svg{transform:rotate(90deg)}
+}
+
+/* SECTION 4 — CREATOR-SETUP */
+.er-cs-head{margin-bottom:56px}
+.er-cs-tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:48px}
+.er-cs-tier{background:#fff;border:1px solid var(--bdl);border-radius:var(--r2);padding:clamp(20px,2.5vw,28px);position:relative;overflow:hidden;transition:all .4s var(--e)}
+.er-cs-tier::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--bdl2)}
+.er-cs-tier.hi::before{background:var(--p)}
+.er-cs-tier:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08);border-color:var(--bdl2)}
+.er-cs-tier-icon{width:40px;height:40px;border-radius:10px;background:rgba(0,0,0,.05);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--dark2)}
+.er-cs-tier.hi .er-cs-tier-icon{background:rgba(254,44,85,.1);color:var(--p)}
+.er-cs-tier-icon svg{width:20px;height:20px}
+.er-cs-tier-count{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:4px;color:var(--dark);font-variant-numeric:tabular-nums}
+.er-cs-tier-count .x{font-size:.55em;font-weight:700;color:var(--dark2);margin-left:4px}
+.er-cs-tier-label{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--dark2);margin-bottom:14px}
+.er-cs-tier.hi .er-cs-tier-label{color:var(--p)}
+.er-cs-tier-h{font-size:1.05rem;font-weight:800;letter-spacing:-.015em;margin-bottom:8px;color:var(--dark);line-height:1.2}
+.er-cs-tier-p{font-size:.86rem;line-height:1.55;color:var(--dark2)}
+
+/* Differenz statement */
+.er-cs-diff{padding:clamp(36px,5vw,56px);background:linear-gradient(135deg,var(--p) 0%,#ff5470 100%);border-radius:var(--r3);color:#fff;position:relative;overflow:hidden;margin-bottom:48px}
+.er-cs-diff::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.er-cs-diff-h{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin-bottom:18px;position:relative}
+.er-cs-diff-p{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.65;font-weight:500;position:relative;max-width:880px}
+.er-cs-diff-p strong{font-weight:800}
+.er-cs-diff-p .quote-line{display:block;margin-top:14px;padding-left:16px;border-left:3px solid rgba(255,255,255,.4)}
+
+/* Creator placeholder */
+.er-cs-placeholder{display:flex;align-items:center;gap:24px;padding:clamp(28px,4vw,40px);background:#fff;border:2px dashed var(--bdl2);border-radius:var(--r2);color:var(--dark2)}
+.er-cs-placeholder-icon{flex-shrink:0;width:56px;height:56px;border-radius:14px;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;color:var(--p)}
+.er-cs-placeholder-icon svg{width:28px;height:28px}
+.er-cs-placeholder-h{font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+.er-cs-placeholder-p{font-size:.9rem;line-height:1.5}
+
+@media(max-width:920px){.er-cs-tiers{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.er-cs-tiers{grid-template-columns:1fr}.er-cs-placeholder{flex-direction:column;text-align:center;align-items:center}}
+
+/* SECTION 5 — CONTENT & PLATTFORM */
+.er-ct-head{margin-bottom:64px}
+
+/* Asset visualization — big numbers */
+.er-ct-assets{display:grid;grid-template-columns:1fr auto 1fr auto 1.2fr;gap:clamp(16px,3vw,40px);align-items:center;padding:clamp(40px,5vw,64px) clamp(24px,4vw,48px);background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);border:1px solid var(--bd);border-radius:var(--r3);margin-bottom:64px}
+.er-ct-asset{text-align:center}
+.er-ct-asset-num{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--light);font-variant-numeric:tabular-nums;display:block;margin-bottom:8px}
+.er-ct-asset.hi .er-ct-asset-num{color:var(--p)}
+.er-ct-asset.total .er-ct-asset-num{background:linear-gradient(135deg,#fe2c55 0%,#ff6b8a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.er-ct-asset-label{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,236,230,.55)}
+.er-ct-asset-platform{display:block;margin-top:6px;font-size:.78rem;font-weight:500;color:rgba(240,236,230,.78);letter-spacing:.02em;text-transform:none}
+.er-ct-op{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:rgba(254,44,85,.6);line-height:1}
+
+/* Format-Logik 3 columns */
+.er-ct-fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px}
+.er-ct-fmt-col{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,32px)}
+.er-ct-fmt-h{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.er-ct-fmt-name{font-size:1.2rem;font-weight:800;color:var(--light);margin-bottom:18px;letter-spacing:-.015em}
+.er-ct-fmt-list{display:flex;flex-direction:column;gap:10px}
+.er-ct-fmt-li{display:flex;align-items:center;gap:12px;padding:10px 12px;background:rgba(255,255,255,.03);border-radius:8px;font-size:.92rem;color:var(--light)}
+.er-ct-fmt-li .qt{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:24px;padding:0 8px;background:var(--p);color:#fff;font-weight:800;border-radius:6px;font-size:.78rem}
+
+/* Plattform cards */
+.er-ct-pf{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.er-ct-pf-card{padding:clamp(24px,3vw,32px);background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);position:relative;overflow:hidden;transition:all .4s var(--e)}
+.er-ct-pf-card:hover{border-color:var(--bd2);transform:translateY(-3px)}
+.er-ct-pf-icon{width:44px;height:44px;border-radius:12px;background:rgba(254,44,85,.1);display:flex;align-items:center;justify-content:center;color:var(--p);margin-bottom:18px}
+.er-ct-pf-icon svg{width:22px;height:22px}
+.er-ct-pf-name{font-size:1.2rem;font-weight:800;letter-spacing:-.015em;margin-bottom:8px;color:var(--light)}
+.er-ct-pf-p{font-size:.9rem;line-height:1.6;color:rgba(240,236,230,.7)}
+
+/* Twitch disclaimer */
+.er-ct-twitch{padding:clamp(28px,4vw,40px);background:rgba(255,255,255,.02);border:1px solid var(--bd);border-radius:var(--r2);position:relative}
+.er-ct-twitch::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:#9146ff;opacity:.6;border-radius:2px 0 0 2px}
+.er-ct-twitch-h{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.er-ct-twitch-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(145,70,255,.15);border:1px solid rgba(145,70,255,.4);border-radius:100px;font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#b58aff}
+.er-ct-twitch-h h3{font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:800;letter-spacing:-.02em;color:var(--light);line-height:1.3}
+.er-ct-twitch-p{font-size:1rem;line-height:1.65;color:rgba(240,236,230,.8);margin-bottom:18px}
+.er-ct-twitch-list{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.er-ct-twitch-li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;line-height:1.55;color:rgba(240,236,230,.85)}
+.er-ct-twitch-li strong{color:var(--light);font-weight:700;display:block;margin-bottom:2px}
+.er-ct-twitch-li::before{content:'×';display:inline-block;width:18px;height:18px;background:rgba(145,70,255,.2);color:#b58aff;border-radius:50%;font-size:.75rem;font-weight:800;text-align:center;line-height:18px;flex-shrink:0;margin-top:2px}
+.er-ct-twitch-disc{padding:14px 16px;background:rgba(255,255,255,.02);border-radius:8px;font-size:.84rem;line-height:1.55;color:rgba(240,236,230,.5);font-style:italic}
+
+@media(max-width:900px){
+  .er-ct-assets{grid-template-columns:1fr;gap:24px}
+  .er-ct-op{transform:rotate(90deg)}
+  .er-ct-fmt{grid-template-columns:1fr}
+  .er-ct-pf{grid-template-columns:1fr}
+}
+
+/* SECTION 6 — REICHWEITE */
+.er-rw-head{margin-bottom:48px}
+
+.er-rw-table{background:#fff;border:1px solid var(--bdl);border-radius:var(--r2);overflow:hidden;margin-bottom:48px}
+.er-rw-tr{display:grid;grid-template-columns:2.4fr 1fr 1fr 1.4fr;gap:8px;padding:14px clamp(20px,3vw,32px);align-items:center;border-bottom:1px solid var(--bdl);font-size:.95rem;color:var(--dark2)}
+.er-rw-tr:last-child{border-bottom:none}
+.er-rw-tr.head{background:#f7f3ec;font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--dark2);padding-top:18px;padding-bottom:18px}
+.er-rw-tr.row{color:var(--dark)}
+.er-rw-tr.total{background:linear-gradient(135deg,rgba(254,44,85,.08),rgba(254,44,85,.02));font-weight:800;color:var(--dark);font-size:1.05rem;padding-top:20px;padding-bottom:20px;border-top:2px solid var(--p);border-bottom:none}
+.er-rw-tr.total .lbl{color:var(--p);font-weight:900;letter-spacing:-.01em}
+.er-rw-tr .num{font-variant-numeric:tabular-nums;font-weight:600}
+.er-rw-tr .num.big{font-size:1.2rem;font-weight:900;color:var(--p);letter-spacing:-.01em}
+.er-rw-tr .em{font-style:italic;color:var(--dark3)}
+
+/* Range bar chart */
+.er-rw-range{padding:clamp(28px,4vw,40px);background:#fff;border:1px solid var(--bdl);border-radius:var(--r2);margin-bottom:48px}
+.er-rw-range-h{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--dark2);margin-bottom:24px}
+.er-rw-bars{display:flex;flex-direction:column;gap:18px}
+.er-rw-bar{display:grid;grid-template-columns:140px 1fr 110px;gap:18px;align-items:center;font-size:.95rem}
+.er-rw-bar-l{font-weight:700;color:var(--dark);font-size:.92rem}
+.er-rw-bar-l small{display:block;font-weight:500;color:var(--dark2);font-size:.78rem;margin-top:2px}
+.er-rw-bar-track{height:18px;background:rgba(0,0,0,.06);border-radius:100px;position:relative;overflow:hidden}
+.er-rw-bar-fill{position:absolute;top:0;left:0;bottom:0;border-radius:100px;transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--e)}
+.er-rw-bar.in .er-rw-bar-fill{transform:scaleX(1)}
+.er-rw-bar.floor .er-rw-bar-fill{background:var(--dark);width:71.5%}
+.er-rw-bar.cons .er-rw-bar-fill{background:linear-gradient(90deg,#fe2c55 0%,#ff5470 100%);width:77%}
+.er-rw-bar.real .er-rw-bar-fill{background:linear-gradient(90deg,#fe2c55 0%,#ff8aa1 100%);width:100%}
+.er-rw-bar-v{font-weight:800;font-variant-numeric:tabular-nums;color:var(--dark);text-align:right;font-size:1.05rem}
+.er-rw-bar-v small{font-weight:500;color:var(--dark2)}
+
+/* Garantie */
+.er-rw-guar{padding:clamp(36px,5vw,56px);background:linear-gradient(135deg,var(--p) 0%,#ff5470 100%);color:#fff;border-radius:var(--r3);position:relative;overflow:hidden}
+.er-rw-guar::before{content:'';position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.er-rw-guar-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:100px;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;position:relative}
+.er-rw-guar-h{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;letter-spacing:-.025em;line-height:1.2;margin-bottom:18px;position:relative}
+.er-rw-guar-p{font-size:1.05rem;line-height:1.65;max-width:780px;position:relative;opacity:.95}
+.er-rw-guar-p strong{font-weight:800}
+
+@media(max-width:760px){
+  .er-rw-tr{grid-template-columns:1.8fr 0.6fr 0.7fr 1fr;gap:6px;font-size:.82rem;padding-left:18px;padding-right:18px}
+  .er-rw-tr.head{font-size:.6rem}
+  .er-rw-bar{grid-template-columns:1fr;gap:6px}
+  .er-rw-bar-v{text-align:left}
+}
+
+/* SECTION 7 — BRANDING */
+.er-br-head{margin-bottom:48px}
+.er-br-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:48px}
+.er-br-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,32px);transition:all .4s var(--e);position:relative;overflow:hidden}
+.er-br-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),transparent);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--e) .2s}
+.er-br-card.in::before{transform:scaleX(1)}
+.er-br-card:hover{border-color:var(--bd2);transform:translateY(-3px)}
+.er-br-card-icon{width:44px;height:44px;border-radius:12px;background:rgba(254,44,85,.1);border:1px solid rgba(254,44,85,.2);display:flex;align-items:center;justify-content:center;color:var(--p);margin-bottom:18px}
+.er-br-card-icon svg{width:22px;height:22px}
+.er-br-card-h{font-size:1.15rem;font-weight:800;letter-spacing:-.015em;margin-bottom:14px;color:var(--light)}
+.er-br-card-list{display:flex;flex-direction:column;gap:10px}
+.er-br-card-li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;line-height:1.55;color:rgba(240,236,230,.78)}
+.er-br-card-li::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--p);margin-top:9px}
+
+.er-br-close{padding:clamp(28px,4vw,40px);background:rgba(255,255,255,.02);border:1px solid var(--bd);border-radius:var(--r2);font-size:1rem;line-height:1.7;color:rgba(240,236,230,.85);position:relative;padding-left:clamp(40px,5vw,56px)}
+.er-br-close::before{content:'';position:absolute;left:clamp(20px,3vw,28px);top:50%;transform:translateY(-50%);width:3px;height:60%;background:var(--p);border-radius:2px}
+.er-br-close strong{color:var(--light);font-weight:700}
+
+@media(max-width:900px){.er-br-grid{grid-template-columns:1fr}}
+
+/* SECTION 8 — BUDGET */
+.er-bd-head{margin-bottom:48px}
+.er-bd-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,5vw,72px);align-items:center;margin-bottom:32px}
+.er-donut-wrap{position:relative;width:100%;max-width:380px;aspect-ratio:1;margin:0 auto}
+.er-donut{width:100%;height:100%;transform:rotate(0deg)}
+.er-donut-track{stroke:rgba(0,0,0,.06);stroke-width:30}
+.er-donut-seg{fill:none;stroke-width:30;stroke-linecap:butt;stroke-dasharray:0 502.65;transition:stroke-dasharray 1.4s var(--e)}
+.er-donut.in .er-donut-seg.s1{stroke-dasharray:276.46 226.19;stroke:#fe2c55}
+.er-donut.in .er-donut-seg.s2{stroke-dasharray:75.40 427.25;stroke:#ff5470;transition-delay:.15s}
+.er-donut.in .er-donut-seg.s3{stroke-dasharray:60.32 442.33;stroke:#ff8aa1;transition-delay:.3s}
+.er-donut.in .er-donut-seg.s4{stroke-dasharray:40.21 462.44;stroke:#ffb3c4;transition-delay:.45s}
+.er-donut.in .er-donut-seg.s5{stroke-dasharray:50.27 452.38;stroke:#1a1a1a;transition-delay:.6s}
+.er-donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:var(--dark)}
+.er-donut-total{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--dark)}
+.er-donut-label{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--dark2);margin-top:6px}
+.er-bd-legend{display:flex;flex-direction:column;gap:14px}
+.er-bd-leg-item{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:1px solid var(--bdl);border-radius:var(--r);transition:all .3s var(--e)}
+.er-bd-leg-item:hover{transform:translateX(4px);border-color:var(--bdl2)}
+.er-bd-leg-dot{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+.er-bd-leg-label{flex:1;font-size:.95rem;font-weight:700;color:var(--dark)}
+.er-bd-leg-pct{font-size:1.05rem;font-weight:900;color:var(--p);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.er-bd-disclaim{font-size:.84rem;color:var(--dark2);font-style:italic;text-align:center;margin-top:24px;line-height:1.5}
+
+@media(max-width:760px){
+  .er-bd-grid{grid-template-columns:1fr;gap:32px}
+}
+
+/* SECTION 9 — TIMELINE */
+.er-tl-head{margin-bottom:64px}
+.er-tl{position:relative;padding:40px 0 60px}
+.er-tl-line{position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(255,255,255,.08);transform:translateY(-50%);z-index:0}
+.er-tl-line::after{content:'';position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--p),#ff8aa1);transform-origin:left;transform:scaleX(0);transition:transform 2.4s var(--e) .2s}
+.er-tl.in .er-tl-line::after{transform:scaleX(1)}
+.er-tl-line::after{width:100%}
+.er-tl-rail{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.er-tl-rail::-webkit-scrollbar{height:4px}
+.er-tl-rail::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+.er-tl-item{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;min-width:120px;text-align:center;position:relative;padding:0 8px}
+.er-tl-item-kw{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,236,230,.5);margin-bottom:18px;height:32px;display:flex;align-items:center}
+.er-tl-item.hi .er-tl-item-kw{color:var(--p)}
+.er-tl-dot{width:14px;height:14px;border-radius:50%;background:#1a1a1a;border:3px solid rgba(255,255,255,.3);transition:all .5s var(--e);position:relative;z-index:2}
+.er-tl-item.hi .er-tl-dot{background:var(--p);border-color:#fff;width:20px;height:20px;box-shadow:0 0 0 6px rgba(254,44,85,.2),0 0 24px rgba(254,44,85,.5)}
+.er-tl-item-phase{margin-top:18px;font-size:.82rem;font-weight:600;color:rgba(240,236,230,.78);line-height:1.4;max-width:140px}
+.er-tl-item.hi .er-tl-item-phase{color:var(--light);font-weight:800}
+
+.er-tl-mobile{display:none;flex-direction:column;gap:0;margin-top:8px}
+.er-tl-mob-item{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:flex-start;padding:14px 0;position:relative}
+.er-tl-mob-item::before{content:'';position:absolute;left:7px;top:30px;bottom:-14px;width:2px;background:rgba(255,255,255,.1)}
+.er-tl-mob-item:last-child::before{display:none}
+.er-tl-mob-dot{width:16px;height:16px;border-radius:50%;background:#1a1a1a;border:2px solid rgba(255,255,255,.3);margin-top:5px;flex-shrink:0;position:relative;z-index:1}
+.er-tl-mob-item.hi .er-tl-mob-dot{background:var(--p);border-color:#fff;box-shadow:0 0 0 4px rgba(254,44,85,.2)}
+.er-tl-mob-kw{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,236,230,.55);margin-bottom:2px}
+.er-tl-mob-item.hi .er-tl-mob-kw{color:var(--p)}
+.er-tl-mob-phase{font-size:.95rem;font-weight:600;color:rgba(240,236,230,.85)}
+.er-tl-mob-item.hi .er-tl-mob-phase{color:var(--light);font-weight:800}
+
+@media(max-width:780px){
+  .er-tl{display:none}
+  .er-tl-mobile{display:flex}
+}
+
+/* SECTION 10 — VIRRAL CLOSING */
+.er-vr{background:linear-gradient(180deg,var(--bg) 0%,#0a0a0d 100%);position:relative;overflow:hidden}
+.er-vr::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(254,44,85,.18) 0%,transparent 60%);pointer-events:none}
+.er-vr-head{margin-bottom:64px;text-align:center;position:relative}
+.er-vr-head .er-h2{margin-bottom:0}
+.er-vr-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px;position:relative}
+.er-vr-block{padding:clamp(28px,3.5vw,36px);background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);transition:all .4s var(--e)}
+.er-vr-block:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.er-vr-block-h{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:14px}
+.er-vr-block-t{font-size:1.1rem;font-weight:800;color:var(--light);margin-bottom:12px;letter-spacing:-.015em}
+.er-vr-block-p{font-size:.92rem;line-height:1.65;color:rgba(240,236,230,.7)}
+
+.er-vr-cta{padding:clamp(48px,7vw,80px) clamp(24px,4vw,56px);background:linear-gradient(135deg,#fe2c55 0%,#ff5470 100%);border-radius:var(--r3);position:relative;overflow:hidden;text-align:center;color:#fff}
+.er-vr-cta::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.er-vr-cta::after{content:'';position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);pointer-events:none}
+.er-vr-cta-h{font-size:clamp(1.8rem,4.5vw,3.4rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:32px;position:relative}
+.er-vr-cta-info{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 36px;margin-bottom:32px;font-size:.92rem;font-weight:600;position:relative;opacity:.95}
+.er-vr-cta-info span{display:inline-flex;align-items:center;gap:8px}
+.er-vr-cta-info span::before{content:'';width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.7)}
+.er-vr-cta-info span:first-child::before{display:none}
+.er-vr-btn{display:inline-flex;align-items:center;gap:12px;padding:18px 36px;background:#fff;color:var(--p);font-weight:800;font-size:1rem;border-radius:100px;transition:all .3s var(--e);border:none;cursor:pointer;letter-spacing:.02em;position:relative}
+.er-vr-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.er-vr-btn svg{width:18px;height:18px}
+
+@media(max-width:760px){
+  .er-vr-blocks{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ STICKY SUB-NAV ============ -->
+<nav class="er-nav" id="erNav">
+<div class="er-nav-inner">
+<a href="#top" class="er-nav-brand"><img src="/img/logo-white.svg" alt="virral"><span>× JS Erlebnisreisen 2026</span></a>
+<div class="er-nav-links">
+<a href="#leuchtturm">Modell</a>
+<a href="#kampagne">Kampagne</a>
+<a href="#creator">Creator</a>
+<a href="#reichweite">Reichweite</a>
+<a href="#timeline">Timeline</a>
+<a href="#virral" class="er-nav-cta">Kontakt</a>
+</div>
+</div>
+</nav>
+
+<!-- ============ SECTIONS GO HERE ============ -->
+<main id="top">
+<!-- ============ SECTION 1 — HERO ============ -->
+<section class="er-hero" id="hero">
+<div class="er-w er-hero-inner">
+<div class="er-hero-tag"><span class="dot"></span> Jochen Schweizer × virral · Konzept-Pitch</div>
+<h1 class="er-hero-h1">
+<span class="line"><span>20 Mio. Impressions.</span></span>
+<span class="line accent"><span>Garantiert.</span></span>
+</h1>
+<p class="er-hero-sub">Eine Kampagne. Zwei Wellen. Ein Modell, das wir mit JS bereits zweimal validiert haben.</p>
+<a href="#leuchtturm" class="er-hero-cta">Modell ansehen <span class="ar">↓</span></a>
+</div>
+<div class="er-hero-meta">
+<div class="er-w">
+<div class="er-hero-meta-stack"><span style="color:rgba(240,236,230,.7)">JS Erlebnisreisen 2026</span><span>Pitch · Q2 / KW 27–30</span></div>
+<div class="er-hero-meta-stack" style="text-align:right;align-items:flex-end"><span style="color:rgba(240,236,230,.7)">virral GmbH</span><span>Köln · 2026</span></div>
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 2 — LEUCHTTURM-MODELL ============ -->
+<section class="er-sec er-sec-light" id="leuchtturm">
+<div class="er-w">
+
+<div class="er-lt-head er-reveal">
+<p class="er-eyebrow">Das Leuchtturm-Modell</p>
+<h2 class="er-h2">Wir liefern keine Kampagne. <span>Wir liefern eine Methode.</span></h2>
+</div>
+
+<!-- 2.1 Klumpenrisiko -->
+<div class="er-lt-block">
+<div class="er-lt-grid">
+<div class="er-reveal">
+<div class="er-lt-block-num"><span>2.1</span> Das Klumpenrisiko</div>
+<div class="er-lt-block-h">Vier Top-Creator. Vier Wetten.</div>
+<p class="er-lt-block-p">Floppt eine, ist <strong>ein Viertel der Kampagne weg</strong>. Das ist Standard im Markt — und wir machen es nicht so.</p>
+</div>
+<div class="er-reveal er-reveal-d2">
+<div class="er-risk" data-anim="risk">
+<div class="er-risk-c">A</div>
+<div class="er-risk-c">B</div>
+<div class="er-risk-c fail">C</div>
+<div class="er-risk-c">D</div>
+</div>
+<div class="er-risk-label">Klumpenrisiko</div>
+</div>
+</div>
+</div>
+
+<!-- 2.2 Domino -->
+<div class="er-lt-block">
+<div class="er-reveal">
+<div class="er-lt-block-num"><span>2.2</span> Domino-Mechanik</div>
+<div class="er-lt-block-h">Ein großer Stein. Eine kontrollierte Welle.</div>
+</div>
+<div class="er-domino er-reveal" data-anim="domino">
+<div class="er-domino-stage">
+<div class="er-domino-stone big"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-stone"></div>
+<div class="er-domino-floor"></div>
+</div>
+<div class="er-domino-quote">
+<p><strong>Vorne:</strong> Top-Creator. Geiles Face für die Kampagne. Setzt den Standard.</p>
+<p><strong>Dahinter:</strong> Skalierungs-Welle. Kuratierte Creator, die das validierte Konzept übersetzen.</p>
+<p><strong>Effekt:</strong> Statt linearer Reichweite entsteht ein Trend, den wir kontrollieren.</p>
+</div>
+</div>
+</div>
+
+<!-- 2.3 Tendenz zur Mitte -->
+<div class="er-lt-block">
+<div class="er-reveal">
+<div class="er-lt-block-num"><span>2.3</span> Tendenz zur Mitte</div>
+<div class="er-lt-block-h">Klassisch vs. Leuchtturm.</div>
+</div>
+<div class="er-compare er-reveal er-reveal-d2">
+<div class="er-compare-col">
+<div class="er-compare-h">Klassischer Ansatz</div>
+<div class="er-compare-row"><span class="ic">×</span><span>Reichweite prognostiziert</span></div>
+<div class="er-compare-row"><span class="ic">×</span><span>Klumpenrisiko bei 3–4 Creatorn</span></div>
+<div class="er-compare-row"><span class="ic">×</span><span>Eine Wette, keine Lernkurve</span></div>
+</div>
+<div class="er-compare-col hi">
+<div class="er-compare-h">Leuchtturm-Modell</div>
+<div class="er-compare-row"><span class="ic">✓</span><span>Reichweite garantiert</span></div>
+<div class="er-compare-row"><span class="ic">✓</span><span>Risiko verteilt auf gesamtes Setup</span></div>
+<div class="er-compare-row"><span class="ic">✓</span><span>Zwei Wellen, datenbasierte Optimierung</span></div>
+</div>
+</div>
+</div>
+
+<!-- 2.4 Validierung -->
+<div class="er-lt-block">
+<div class="er-reveal">
+<div class="er-lt-block-num"><span>2.4</span> Validierung mit JS</div>
+<div class="er-lt-block-h">Zweimal in real-life mit JS validiert.</div>
+</div>
+<div class="er-valid er-reveal er-reveal-d1">
+<div class="er-valid-h">Wir haben das Modell mit JS bereits zweimal validiert.</div>
+<div class="er-valid-cases">
+<div class="er-valid-case">
+<div class="er-valid-case-check">✓</div>
+<div>
+<div class="er-valid-case-name">Creator Haus</div>
+<div class="er-valid-case-kpi">KPIs übertroffen</div>
+</div>
+</div>
+<div class="er-valid-case">
+<div class="er-valid-case-check">✓</div>
+<div>
+<div class="er-valid-case-name">Racing Day</div>
+<div class="er-valid-case-kpi">KPIs übertroffen</div>
+</div>
+</div>
+</div>
+<p class="er-valid-p">Mit Erlebnisreisen heben wir es auf das nächste Level: <strong>neue Zielgruppe, neue Top-Creator-Tier, neue Skalierungslogik.</strong></p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 3 — DIE KAMPAGNE ============ -->
+<section class="er-sec er-sec-dark" id="kampagne">
+<div class="er-w">
+
+<div class="er-cmp-head er-reveal">
+<p class="er-eyebrow">Die Kampagne</p>
+<h2 class="er-h2">Eine Reise. <span>Zweimal.</span></h2>
+</div>
+
+<div class="er-cmp-statement er-reveal er-reveal-d1">
+Wir fahren <strong>dieselbe Erlebnisreise zweimal</strong> — mit zwei verschiedenen Creator-Wellen und datenbasierter Optimierung dazwischen.
+</div>
+
+<div class="er-cmp-flow">
+
+<!-- Trip 1 -->
+<div class="er-trip er-reveal er-reveal-d1" id="trip1">
+<div class="er-trip-eyebrow">Trip 1 · KW 27</div>
+<h3 class="er-trip-h">Pilot-Welle</h3>
+<p class="er-trip-sub">Maximale Produktionsqualität. Reichweiten-Peak.</p>
+
+<div class="er-trip-block">
+<div class="er-trip-block-h">Creator vor Ort</div>
+<div class="er-trip-list">
+<div class="er-trip-list-item hi"><span class="num">1×</span> Travel-Leuchtturm <span style="opacity:.6;font-weight:400">· extern</span></div>
+<div class="er-trip-list-item hi"><span class="num">1×</span> Finnel <span style="opacity:.6;font-weight:400">· intern</span></div>
+<div class="er-trip-list-item"><span class="num">2×</span> Longform-Creator <span style="opacity:.6;font-weight:400">· extern</span></div>
+<div class="er-trip-list-item"><span class="num">2×</span> Shortform-Creator <span style="opacity:.6;font-weight:400">· extern</span></div>
+</div>
+</div>
+
+<div class="er-trip-block">
+<div class="er-trip-block-h">Was hier entsteht</div>
+<p class="er-trip-block-p"><strong>Hero-Material.</strong> Erster Dominostein. Performance-Daten als Grundlage für Welle 2.</p>
+</div>
+</div>
+
+<!-- Connector -->
+<div class="er-cmp-arrow er-reveal er-reveal-d2">
+<div class="er-cmp-arrow-l">Auswertung</div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+<div class="er-cmp-arrow-l" style="opacity:.5">+1 Woche</div>
+</div>
+
+<!-- Trip 2 -->
+<div class="er-trip er-reveal er-reveal-d3" id="trip2">
+<div class="er-trip-eyebrow">Trip 2 · KW 28</div>
+<h3 class="er-trip-h">Skalierungs-Welle</h3>
+<p class="er-trip-sub">Validiertes Konzept. Übertragen auf weitere Communities.</p>
+
+<div class="er-trip-block">
+<div class="er-trip-block-h">Creator vor Ort</div>
+<div class="er-trip-list">
+<div class="er-trip-list-item"><span class="num">1×</span> Longform-Creator <span style="opacity:.6;font-weight:400">· extern</span></div>
+<div class="er-trip-list-item"><span class="num">1×</span> Shortform-Creator <span style="opacity:.6;font-weight:400">· extern</span></div>
+</div>
+</div>
+
+<div class="er-trip-block">
+<div class="er-trip-block-h">Was hier passiert</div>
+<p class="er-trip-block-p">Briefing basiert auf <strong>Performance-Daten aus Welle 1</strong>. Hero-Material als Referenz.</p>
+<div class="er-trip-pull">„Ich bin in derselben Kampagne wie der Travel-Leuchtturm und Finnel" — genau dieses Cool-Moment zieht den Effort hoch.</div>
+</div>
+</div>
+
+</div>
+
+<!-- Auswertung dazwischen -->
+<div class="er-eval er-reveal er-reveal-d2">
+<div class="er-eval-h">Was wir zwischen Trip 1 & 2 auswerten</div>
+<div class="er-eval-list">
+<div class="er-eval-q"><span class="qm">?</span><span>Welche Erlebnisse performen am stärksten?</span></div>
+<div class="er-eval-q"><span class="qm">?</span><span>Welche Hooks, Cuts, Längen funktionieren?</span></div>
+<div class="er-eval-q"><span class="qm">?</span><span>Welche Branding-Integration wirkt organisch?</span></div>
+<div class="er-eval-q"><span class="qm">?</span><span>Welche Creator overperformen?</span></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 4 — CREATOR-SETUP ============ -->
+<section class="er-sec er-sec-light" id="creator">
+<div class="er-w">
+
+<div class="er-cs-head er-reveal">
+<p class="er-eyebrow">Das Creator-Setup</p>
+<h2 class="er-h2">Acht Creator. Drei Tiers. <span>Ein System.</span></h2>
+</div>
+
+<div class="er-cs-tiers">
+
+<div class="er-cs-tier hi er-reveal er-reveal-d1">
+<div class="er-cs-tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+<div class="er-cs-tier-count">1<span class="x">×</span></div>
+<div class="er-cs-tier-label">Intern</div>
+<div class="er-cs-tier-h">Top-Creator (Finnel)</div>
+<div class="er-cs-tier-p">Mechanik-Träger. Reichweiten-Floor. JS-Bestandscommunity.</div>
+</div>
+
+<div class="er-cs-tier hi er-reveal er-reveal-d2">
+<div class="er-cs-tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/><circle cx="12" cy="12" r="10"/></svg></div>
+<div class="er-cs-tier-count">1<span class="x">×</span></div>
+<div class="er-cs-tier-label">Extern · Hero</div>
+<div class="er-cs-tier-h">Travel-Leuchtturm</div>
+<div class="er-cs-tier-p">Hero-Asset. Öffnung neuer Travel-Communities.</div>
+</div>
+
+<div class="er-cs-tier er-reveal er-reveal-d3">
+<div class="er-cs-tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+<div class="er-cs-tier-count">3<span class="x">×</span></div>
+<div class="er-cs-tier-label">Extern</div>
+<div class="er-cs-tier-h">Longform-Creator</div>
+<div class="er-cs-tier-p">YouTube-Vlogs. Narrative Tiefe.</div>
+</div>
+
+<div class="er-cs-tier er-reveal er-reveal-d4">
+<div class="er-cs-tier-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4V8Z"/></svg></div>
+<div class="er-cs-tier-count">3<span class="x">×</span></div>
+<div class="er-cs-tier-label">Extern</div>
+<div class="er-cs-tier-h">Shortform-Creator</div>
+<div class="er-cs-tier-p">Frequenz. Hook-Dichte. Plattform-Reichweite.</div>
+</div>
+
+</div>
+
+<div class="er-cs-diff er-reveal er-reveal-d2">
+<div class="er-cs-diff-h">Was uns unterscheidet</div>
+<p class="er-cs-diff-p">Klassische Datenbank-Modelle aktivieren hunderte Creator und kaufen den Top-Creator von außen ein. Wir kombinieren beide Welten: <strong>eigene Top-Creator im Haus (Finnel, Mandre) plus kuratierte Skalierungs-Pipeline.</strong>
+<span class="quote-line">Differenz: „Wir hoffen, dass es funktioniert" vs. „Wir wissen, wo der Floor liegt."</span>
+</p>
+</div>
+
+<div class="er-cs-placeholder er-reveal er-reveal-d1">
+<div class="er-cs-placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+<div>
+<div class="er-cs-placeholder-h">Konkrete Creator-Vorschläge folgen</div>
+<div class="er-cs-placeholder-p">Namen, Reichweiten und InfluData-Insights pro Creator. Filterbar nach Tier — Travel-Leuchtturm, Longform, Shortform.</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 5 — CONTENT & PLATTFORM ============ -->
+<section class="er-sec er-sec-dark" id="content">
+<div class="er-w">
+
+<div class="er-ct-head er-reveal">
+<p class="er-eyebrow">Content & Plattform</p>
+<h2 class="er-h2">44 Assets. Drei Plattformen. <span>Ein Trend.</span></h2>
+</div>
+
+<!-- Asset breakdown -->
+<div class="er-ct-assets er-reveal er-reveal-d1">
+<div class="er-ct-asset"><span class="er-ct-asset-num" data-counter="4">4</span><div class="er-ct-asset-label">Longform-Vlogs<span class="er-ct-asset-platform">YouTube</span></div></div>
+<div class="er-ct-op">+</div>
+<div class="er-ct-asset hi"><span class="er-ct-asset-num" data-counter="40">40</span><div class="er-ct-asset-label">Shorts<span class="er-ct-asset-platform">TikTok · Reels · Shorts</span></div></div>
+<div class="er-ct-op">=</div>
+<div class="er-ct-asset total"><span class="er-ct-asset-num" data-counter="44">44</span><div class="er-ct-asset-label">Assets total<span class="er-ct-asset-platform">über die gesamte Kampagne</span></div></div>
+</div>
+
+<!-- Format-Logik -->
+<div class="er-ct-fmt">
+<div class="er-ct-fmt-col er-reveal er-reveal-d1">
+<div class="er-ct-fmt-h">Tier 1</div>
+<div class="er-ct-fmt-name">Longform-Creator (4×)</div>
+<div class="er-ct-fmt-list">
+<div class="er-ct-fmt-li"><span class="qt">1×</span> Hero-Vlog · gesamte Reise</div>
+<div class="er-ct-fmt-li"><span class="qt">4×</span> Shorts · je ein Erlebnis</div>
+</div>
+</div>
+
+<div class="er-ct-fmt-col er-reveal er-reveal-d2">
+<div class="er-ct-fmt-h">Tier 2</div>
+<div class="er-ct-fmt-name">Shortform-Creator (3×)</div>
+<div class="er-ct-fmt-list">
+<div class="er-ct-fmt-li"><span class="qt">1×</span> Reise-Short</div>
+<div class="er-ct-fmt-li"><span class="qt">4×</span> Erlebnis-Shorts</div>
+</div>
+</div>
+
+<div class="er-ct-fmt-col er-reveal er-reveal-d3">
+<div class="er-ct-fmt-h">Mechanik-Träger</div>
+<div class="er-ct-fmt-name">Finnel (1×)</div>
+<div class="er-ct-fmt-list">
+<div class="er-ct-fmt-li"><span class="qt">5×</span> Shorts als Mechanik-Träger</div>
+</div>
+</div>
+</div>
+
+<!-- Plattform-Strategie -->
+<div class="er-reveal" style="margin-bottom:24px"><h3 class="er-h3">Plattform-Strategie</h3></div>
+<div class="er-ct-pf">
+<div class="er-ct-pf-card er-reveal er-reveal-d1">
+<div class="er-ct-pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></div>
+<div class="er-ct-pf-name">YouTube</div>
+<div class="er-ct-pf-p">Narratives Rückgrat. Tiefen-Content. Inspirationsphase.</div>
+</div>
+
+<div class="er-ct-pf-card er-reveal er-reveal-d2">
+<div class="er-ct-pf-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.3a4.85 4.85 0 0 1-3-1.04 4.85 4.85 0 0 1-1.85-3.45h-3.4v13.7a2.86 2.86 0 1 1-2-2.74V9.3a6.26 6.26 0 1 0 5.4 6.2V8.85a8.16 8.16 0 0 0 4.85 1.55V7.05c-.05-.05-.05 0 0-.75z"/></svg></div>
+<div class="er-ct-pf-name">TikTok</div>
+<div class="er-ct-pf-p">Reichweiten-Maschine. Hook-Dichte. Großteil der Impressions.</div>
+</div>
+
+<div class="er-ct-pf-card er-reveal er-reveal-d3">
+<div class="er-ct-pf-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+<div class="er-ct-pf-name">Instagram</div>
+<div class="er-ct-pf-p">Wiedererkennung. Community-Bindung. Organische Begleitung.</div>
+</div>
+</div>
+
+<!-- Twitch disclaimer -->
+<div class="er-ct-twitch er-reveal er-reveal-d1">
+<div class="er-ct-twitch-h">
+<span class="er-ct-twitch-tag">Bewusst nicht</span>
+<h3>Warum wir Twitch in dieser Kampagne nicht empfehlen.</h3>
+</div>
+<p class="er-ct-twitch-p">Das Briefing nennt Twitch als möglichen Plattformbestandteil. Wir raten in dieser Kampagne explizit davon ab.</p>
+<div class="er-ct-twitch-list">
+<div class="er-ct-twitch-li"><span><strong>Demografische Lücke.</strong>Twitch-Communities liegen deutlich unter dem Briefing-Korridor 25–45.</span></div>
+<div class="er-ct-twitch-li"><span><strong>Kannibalisierung.</strong>Streamer-Communities überlappen massiv mit Finnel — keine inkrementelle Reichweite.</span></div>
+</div>
+<div class="er-ct-twitch-disc">Twitch ist im Erlebnis-Kontext grundsätzlich hochrelevant. Für Folgekampagnen mit anderer Zielgruppen-Ausrichtung empfehlen wir, Twitch aktiv mitzudenken. Für Sommer 2026 ist es der falsche Hebel.</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 6 — REICHWEITE ============ -->
+<section class="er-sec er-sec-light" id="reichweite">
+<div class="er-w">
+
+<div class="er-rw-head er-reveal">
+<p class="er-eyebrow">Reichweite</p>
+<h2 class="er-h2">20 Mio. ist der Floor. <span>Nicht das Ziel.</span></h2>
+</div>
+
+<!-- Konservative Berechnung -->
+<div class="er-rw-table er-reveal er-reveal-d1">
+<div class="er-rw-tr head">
+<div>Asset-Block</div>
+<div>Anzahl</div>
+<div>Ø Views</div>
+<div style="text-align:right">Summe</div>
+</div>
+<div class="er-rw-tr row">
+<div>Longform-Vlogs</div>
+<div class="num">4</div>
+<div class="num">800.000</div>
+<div class="num" style="text-align:right">3.200.000</div>
+</div>
+<div class="er-rw-tr row">
+<div>Reise-Shorts</div>
+<div class="num">7</div>
+<div class="num">250.000</div>
+<div class="num" style="text-align:right">1.750.000</div>
+</div>
+<div class="er-rw-tr row">
+<div>Erlebnis-Shorts</div>
+<div class="num">28</div>
+<div class="num">200.000</div>
+<div class="num" style="text-align:right">5.600.000</div>
+</div>
+<div class="er-rw-tr row">
+<div>Finnel-Shorts</div>
+<div class="num">5</div>
+<div class="num">800.000</div>
+<div class="num" style="text-align:right">4.000.000</div>
+</div>
+<div class="er-rw-tr row">
+<div>Owned-Channel-Distribution</div>
+<div class="em">–</div>
+<div class="em">–</div>
+<div class="num" style="text-align:right">2.000.000</div>
+</div>
+<div class="er-rw-tr row">
+<div>Paid-Boosting Top-Performer</div>
+<div class="em">–</div>
+<div class="em">–</div>
+<div class="num" style="text-align:right">5.000.000</div>
+</div>
+<div class="er-rw-tr total">
+<div class="lbl">Total konservativ</div>
+<div></div>
+<div></div>
+<div class="num big" style="text-align:right">21.550.000</div>
+</div>
+</div>
+
+<!-- Range bar chart -->
+<div class="er-rw-range er-reveal er-reveal-d1">
+<div class="er-rw-range-h">Realistische Range</div>
+<div class="er-rw-bars">
+<div class="er-rw-bar floor er-reveal-anim" data-anim="bar">
+<div class="er-rw-bar-l">Floor<small>vertraglich garantiert</small></div>
+<div class="er-rw-bar-track"><div class="er-rw-bar-fill"></div></div>
+<div class="er-rw-bar-v">20 Mio.<small>Impressions</small></div>
+</div>
+<div class="er-rw-bar cons er-reveal-anim" data-anim="bar">
+<div class="er-rw-bar-l">Konservativ<small>aus Tabelle</small></div>
+<div class="er-rw-bar-track"><div class="er-rw-bar-fill"></div></div>
+<div class="er-rw-bar-v">21,5 Mio.<small>Impressions</small></div>
+</div>
+<div class="er-rw-bar real er-reveal-anim" data-anim="bar">
+<div class="er-rw-bar-l">Realistisch<small>bei Performer-Boost</small></div>
+<div class="er-rw-bar-track"><div class="er-rw-bar-fill"></div></div>
+<div class="er-rw-bar-v">22–28 Mio.<small>Impressions</small></div>
+</div>
+</div>
+</div>
+
+<!-- Garantie -->
+<div class="er-rw-guar er-reveal er-reveal-d1">
+<div class="er-rw-guar-tag">Garantie</div>
+<div class="er-rw-guar-h">20 Mio. Impressions. Vertraglich.</div>
+<p class="er-rw-guar-p">Sollte die organische Reichweite den Floor unterschreiten, kompensieren wir mit <strong>zusätzlichen Assets über die Finnel-Kanäle</strong> bis zur Zielerreichung. Kein „nice to have" — sondern verbindlich.</p>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 7 — BRANDING ============ -->
+<section class="er-sec er-sec-dark" id="branding">
+<div class="er-w">
+
+<div class="er-br-head er-reveal">
+<p class="er-eyebrow">Branding</p>
+<h2 class="er-h2">Sichtbar. <span>Nicht aufgesetzt.</span></h2>
+</div>
+
+<div class="er-br-grid">
+
+<div class="er-br-card er-reveal er-reveal-d1">
+<div class="er-br-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M5 12H1m22 0h-4M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg></div>
+<div class="er-br-card-h">Visuell</div>
+<div class="er-br-card-list">
+<div class="er-br-card-li">Gebrandetes Equipment vor Ort</div>
+<div class="er-br-card-li">Kuratierte JS-Kollektion für alle Creator</div>
+<div class="er-br-card-li">Branding-Touchpoints in der Erlebnisumgebung</div>
+</div>
+</div>
+
+<div class="er-br-card er-reveal er-reveal-d2">
+<div class="er-br-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+<div class="er-br-card-h">Auditiv</div>
+<div class="er-br-card-list">
+<div class="er-br-card-li">Verbale Markennennung mind. 2× pro Video</div>
+<div class="er-br-card-li">Wiederkehrendes Audio-Element als Trend-Träger</div>
+</div>
+</div>
+
+<div class="er-br-card er-reveal er-reveal-d3">
+<div class="er-br-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+<div class="er-br-card-h">Inhaltlich</div>
+<div class="er-br-card-list">
+<div class="er-br-card-li">JS als Erlebnis-Enabler, nicht als Sponsor</div>
+<div class="er-br-card-li">Storytelling-Brücke in die Produktwelt</div>
+</div>
+</div>
+
+</div>
+
+<div class="er-br-close er-reveal er-reveal-d2">
+Wir reviewen jedes Asset vor Veröffentlichung gemeinsam mit JS auf Brand-Integration — und schützen gleichzeitig die <strong>kreative Hoheit der Creator</strong>. Overproducing zerstört genau die Glaubwürdigkeit, für die wir die Creator gebucht haben.
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 8 — BUDGET ============ -->
+<section class="er-sec er-sec-light" id="budget">
+<div class="er-w">
+
+<div class="er-bd-head er-reveal">
+<p class="er-eyebrow">Budget</p>
+<h2 class="er-h2">200.000 €. <span>Allokiert.</span></h2>
+</div>
+
+<div class="er-bd-grid">
+
+<div class="er-donut-wrap er-reveal er-reveal-d1">
+<svg class="er-donut" viewBox="0 0 200 200" data-anim="donut" aria-label="Budget-Verteilung Donut Chart">
+<circle class="er-donut-track" cx="100" cy="100" r="80" fill="none"/>
+<circle class="er-donut-seg s1" cx="100" cy="100" r="80" transform="rotate(-90 100 100)"/>
+<circle class="er-donut-seg s2" cx="100" cy="100" r="80" transform="rotate(108 100 100)"/>
+<circle class="er-donut-seg s3" cx="100" cy="100" r="80" transform="rotate(162 100 100)"/>
+<circle class="er-donut-seg s4" cx="100" cy="100" r="80" transform="rotate(205.2 100 100)"/>
+<circle class="er-donut-seg s5" cx="100" cy="100" r="80" transform="rotate(234 100 100)"/>
+</svg>
+<div class="er-donut-center">
+<div class="er-donut-total">200K €</div>
+<div class="er-donut-label">Total</div>
+</div>
+</div>
+
+<div class="er-bd-legend">
+<div class="er-bd-leg-item er-reveal er-reveal-d1"><span class="er-bd-leg-dot" style="background:#fe2c55"></span><span class="er-bd-leg-label">Creator Fees</span><span class="er-bd-leg-pct">55%</span></div>
+<div class="er-bd-leg-item er-reveal er-reveal-d2"><span class="er-bd-leg-dot" style="background:#ff5470"></span><span class="er-bd-leg-label">Reisekosten & Produktion</span><span class="er-bd-leg-pct">15%</span></div>
+<div class="er-bd-leg-item er-reveal er-reveal-d3"><span class="er-bd-leg-dot" style="background:#ff8aa1"></span><span class="er-bd-leg-label">Postproduktion</span><span class="er-bd-leg-pct">12%</span></div>
+<div class="er-bd-leg-item er-reveal er-reveal-d4"><span class="er-bd-leg-dot" style="background:#ffb3c4"></span><span class="er-bd-leg-label">Buyouts & Paid-Lizenzen</span><span class="er-bd-leg-pct">8%</span></div>
+<div class="er-bd-leg-item er-reveal er-reveal-d4"><span class="er-bd-leg-dot" style="background:#1a1a1a"></span><span class="er-bd-leg-label">Agenturleistung</span><span class="er-bd-leg-pct">10%</span></div>
+</div>
+
+</div>
+
+<div class="er-bd-disclaim">Finale Allokation in der Detailkalkulation nach Pitch-Go.</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 9 — TIMELINE ============ -->
+<section class="er-sec er-sec-dark" id="timeline">
+<div class="er-w">
+
+<div class="er-tl-head er-reveal">
+<p class="er-eyebrow">Timeline</p>
+<h2 class="er-h2">Vom Pitch zum Launch in <span>11 Wochen.</span></h2>
+</div>
+
+<!-- Desktop horizontal -->
+<div class="er-tl er-reveal er-reveal-d1" data-anim="timeline">
+<div class="er-tl-line"></div>
+<div class="er-tl-rail">
+<div class="er-tl-item"><div class="er-tl-item-kw">KW 18–19<br>Mai</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Auswertung & Beauftragung</div></div>
+<div class="er-tl-item"><div class="er-tl-item-kw">KW 19–22<br>Mai</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Detailplanung & Booking</div></div>
+<div class="er-tl-item"><div class="er-tl-item-kw">KW 23<br>Juni</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Kick-off mit JS</div></div>
+<div class="er-tl-item hi"><div class="er-tl-item-kw">KW 27</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Trip 1 — Pilot-Welle</div></div>
+<div class="er-tl-item"><div class="er-tl-item-kw">KW 27/28</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Postproduktion + Auswertung</div></div>
+<div class="er-tl-item hi"><div class="er-tl-item-kw">KW 28</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Trip 2 — Skalierungs-Welle</div></div>
+<div class="er-tl-item"><div class="er-tl-item-kw">KW 28/29</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Postproduktion</div></div>
+<div class="er-tl-item hi"><div class="er-tl-item-kw">KW 30</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Hauptausspielung</div></div>
+<div class="er-tl-item"><div class="er-tl-item-kw">August</div><div class="er-tl-dot"></div><div class="er-tl-item-phase">Reporting</div></div>
+</div>
+</div>
+
+<!-- Mobile vertical -->
+<div class="er-tl-mobile er-reveal er-reveal-d1">
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 18–19 · Mai</div><div class="er-tl-mob-phase">Auswertung & Beauftragung</div></div></div>
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 19–22 · Mai</div><div class="er-tl-mob-phase">Detailplanung & Booking</div></div></div>
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 23 · Juni</div><div class="er-tl-mob-phase">Kick-off mit JS</div></div></div>
+<div class="er-tl-mob-item hi"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 27</div><div class="er-tl-mob-phase">Trip 1 — Pilot-Welle</div></div></div>
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 27/28</div><div class="er-tl-mob-phase">Postproduktion + Auswertung</div></div></div>
+<div class="er-tl-mob-item hi"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 28</div><div class="er-tl-mob-phase">Trip 2 — Skalierungs-Welle</div></div></div>
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 28/29</div><div class="er-tl-mob-phase">Postproduktion</div></div></div>
+<div class="er-tl-mob-item hi"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">KW 30</div><div class="er-tl-mob-phase">Hauptausspielung</div></div></div>
+<div class="er-tl-mob-item"><div class="er-tl-mob-dot"></div><div><div class="er-tl-mob-kw">August</div><div class="er-tl-mob-phase">Reporting</div></div></div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 10 — VIRRAL CLOSING ============ -->
+<section class="er-sec er-sec-dark er-vr" id="virral">
+<div class="er-w">
+
+<div class="er-vr-head er-reveal">
+<p class="er-eyebrow" style="display:inline-flex">Wer wir sind</p>
+<h2 class="er-h2">Wir sind <span>virral.</span></h2>
+</div>
+
+<div class="er-vr-blocks">
+
+<div class="er-vr-block er-reveal er-reveal-d1">
+<div class="er-vr-block-h">Top-Creator im Haus</div>
+<div class="er-vr-block-t">Eigene Reichweite, eigener Floor.</div>
+<div class="er-vr-block-p">Finnel (~6,7 Mio. cross-platform), Mandre (~1,1 Mio.), Opa Werner.</div>
+</div>
+
+<div class="er-vr-block er-reveal er-reveal-d2">
+<div class="er-vr-block-h">Brand-Portfolio</div>
+<div class="er-vr-block-t">Marken, die wiederkommen.</div>
+<div class="er-vr-block-p">Kaufland, Jochen Schweizer mydays, EDEKA, STRABAG.</div>
+</div>
+
+<div class="er-vr-block er-reveal er-reveal-d3">
+<div class="er-vr-block-h">Validierte JS-Cases</div>
+<div class="er-vr-block-t">Zwei Lehrstücke, beide grün.</div>
+<div class="er-vr-block-p">Creator Haus. Racing Day. Beide KPIs übertroffen.</div>
+</div>
+
+</div>
+
+<div class="er-vr-cta er-reveal er-reveal-d1">
+<h2 class="er-vr-cta-h">Lasst uns das nächste Level<br>zusammen gehen.</h2>
+<div class="er-vr-cta-info">
+<span>virral GmbH</span>
+<span>Im Zollhafen 12 · 50678 Köln</span>
+<span>virral.de</span>
+</div>
+<a href="mailto:hello@virral.de?subject=JS%20Erlebnisreisen%202026%20%E2%80%94%20Pitch-Feedback" class="er-vr-btn">hello@virral.de schreiben <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+</div>
+
+</div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="er-foot">
+<div class="er-w er-foot-inner">
+<div class="er-foot-brand"><img src="/img/logo-white.svg" alt="virral"><span class="er-foot-meta">virral GmbH · Köln</span></div>
+<div class="er-foot-meta">Konzept-Pitch · vertraulich · noindex</div>
+</div>
+</footer>
+
+<!-- ============ JS ============ -->
+<script>
+(function(){
+  const nav=document.getElementById('erNav');
+  let lastY=0;
+  function onScroll(){
+    const y=window.scrollY;
+    if(y>120) nav.classList.add('show'); else nav.classList.remove('show');
+    lastY=y;
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // Reveal observer
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.er-reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.er-reveal').forEach(el=>el.classList.add('in'));
+  }
+
+  // Active nav link based on visible section
+  const sections=document.querySelectorAll('main section[id]');
+  const navLinks=document.querySelectorAll('.er-nav-links a[href^="#"]');
+  if(sections.length && navLinks.length && 'IntersectionObserver' in window){
+    const navIo=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id=e.target.id;
+          navLinks.forEach(l=>{
+            const match=l.getAttribute('href')==='#'+id;
+            l.classList.toggle('active',match && !l.classList.contains('er-nav-cta'));
+          });
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(s=>navIo.observe(s));
+  }
+
+  // Component-specific animations triggered when entering view
+  if('IntersectionObserver' in window && !reduce){
+    const animIo=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const t=e.target;
+          t.classList.add('in');
+          // Counter animation
+          if(t.dataset.counter && !t.dataset.counted){
+            t.dataset.counted='1';
+            const target=parseInt(t.dataset.counter,10);
+            const dur=1400;
+            const start=performance.now();
+            const ease=p=>1-Math.pow(1-p,3);
+            function step(now){
+              const p=Math.min((now-start)/dur,1);
+              t.textContent=Math.round(target*ease(p)).toString();
+              if(p<1) requestAnimationFrame(step); else t.textContent=target.toString();
+            }
+            requestAnimationFrame(step);
+          }
+          animIo.unobserve(t);
+        }
+      });
+    },{threshold:.3});
+    document.querySelectorAll('[data-anim],[data-counter]').forEach(el=>animIo.observe(el));
+  } else {
+    document.querySelectorAll('[data-anim]').forEach(el=>el.classList.add('in'));
+  }
+})();
+</script>
+
+</body>
+</html>

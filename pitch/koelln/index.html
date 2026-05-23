@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Kölln Social-First Proposal | virral</title>
+<meta name="description" content="Social-First Proposal für Kölln. Drei Phasen, ein Mechanismus. 10 Mio. Views in 6 Monaten, organisch und garantiert.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060608">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#fe2c55;
+  --ph:#e52249;
+  --pg:rgba(254,44,85,.22);
+  --ps:rgba(254,44,85,.08);
+  --bg:#060608;
+  --bg2:#0c0c0f;
+  --bg3:#121215;
+  --card:#16161a;
+  --light:#f0ece6;
+  --light2:#d8d3c8;
+  --mute:rgba(240,236,230,.62);
+  --mute2:rgba(240,236,230,.42);
+  --bd:rgba(255,255,255,.08);
+  --bd2:rgba(255,255,255,.14);
+  --f:'Inter',system-ui,-apple-system,sans-serif;
+  --r:12px;
+  --r2:20px;
+  --r3:28px;
+  --e:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:clip;scroll-padding-top:72px}
+body{font-family:var(--f);background:var(--bg);color:var(--light);line-height:1.65;overflow-x:clip;font-size:15px}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* LAYOUT */
+.kl-w{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.kl-w-narrow{max-width:980px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+
+/* STICKY NAV */
+.kl-nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:14px 0;background:rgba(6,6,8,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);transform:translateY(-100%);transition:transform .5s var(--e)}
+.kl-nav.show{transform:translateY(0)}
+.kl-nav-inner{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.kl-nav-brand{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--light)}
+.kl-nav-brand img{height:22px;width:auto}
+.kl-nav-brand span{opacity:.55;font-weight:500}
+.kl-nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.kl-nav-links a{padding:8px 12px;font-size:.74rem;font-weight:600;color:var(--light);opacity:.6;border-radius:8px;transition:all .3s var(--e);white-space:nowrap}
+.kl-nav-links a:hover{opacity:1;background:rgba(255,255,255,.05)}
+.kl-nav-links a.active{opacity:1;color:var(--p)}
+.kl-nav-cta{padding:8px 16px!important;background:var(--p);color:#fff!important;border-radius:100px;font-weight:700;opacity:1!important}
+.kl-nav-cta:hover{background:var(--ph)!important}
+@media(max-width:900px){.kl-nav-links a:not(.kl-nav-cta){display:none}}
+
+/* SECTION BASE */
+.kl-sec{position:relative;padding:clamp(80px,11vw,140px) 0;scroll-margin-top:60px}
+.kl-sec-dark{background:var(--bg);color:var(--light)}
+.kl-sec-soft{background:var(--bg2);color:var(--light)}
+.kl-sec-accent{background:linear-gradient(180deg,#0a0a0d 0%,#11070b 50%,#0a0a0d 100%);color:var(--light)}
+
+/* TYPOGRAPHY */
+.kl-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.kl-eyebrow::before{content:'';width:24px;height:2px;background:var(--p);border-radius:2px}
+.kl-h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:900;letter-spacing:-.045em;line-height:1;margin-bottom:24px}
+.kl-h1 span{color:var(--p)}
+.kl-h2{font-size:clamp(1.9rem,4.2vw,3.2rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:20px}
+.kl-h2 span{color:var(--p)}
+.kl-h3{font-size:clamp(1.25rem,2.3vw,1.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
+.kl-sub{font-size:clamp(1.02rem,1.4vw,1.18rem);line-height:1.7;color:var(--mute);max-width:760px}
+.kl-lead{font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;font-weight:500;color:var(--light);max-width:820px}
+
+/* REVEAL */
+.kl-reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--e),transform .9s var(--e)}
+.kl-reveal.in{opacity:1;transform:translateY(0)}
+.kl-reveal-d1{transition-delay:.08s}
+.kl-reveal-d2{transition-delay:.16s}
+.kl-reveal-d3{transition-delay:.24s}
+.kl-reveal-d4{transition-delay:.32s}
+.kl-reveal-d5{transition-delay:.40s}
+@media(prefers-reduced-motion:reduce){
+  .kl-reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
+/* CARD BASE */
+.kl-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(24px,3vw,32px);transition:all .35s var(--e)}
+.kl-card:hover{border-color:var(--bd2);transform:translateY(-3px)}
+
+/* FOOTER */
+.kl-foot{padding:48px 0 32px;border-top:1px solid var(--bd);background:var(--bg)}
+.kl-foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.kl-foot-brand{display:flex;align-items:center;gap:12px}
+.kl-foot-brand img{height:24px}
+.kl-foot-meta{font-size:.78rem;color:var(--mute2)}
+.kl-foot-meta a{color:var(--mute);transition:color .2s}
+.kl-foot-meta a:hover{color:var(--p)}
+
+/* SECTION 1 - COVER */
+.kl-cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:48px 0 60px;position:relative;overflow:hidden}
+.kl-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(254,44,85,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 95% 100%,rgba(254,44,85,.1) 0%,transparent 60%);pointer-events:none;z-index:0}
+.kl-cover::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:32px 32px;mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 0%,transparent 80%);pointer-events:none;z-index:0}
+.kl-cover-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.kl-cover-logo{display:inline-flex;align-items:center}
+.kl-cover-logo img{height:32px;width:auto}
+.kl-cover-meta{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:right}
+.kl-cover-body{position:relative;z-index:2;margin:auto 0}
+.kl-cover-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.3);border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:32px;backdrop-filter:blur(8px)}
+.kl-cover-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--p);box-shadow:0 0 12px var(--p);animation:klPulse 2s ease-in-out infinite}
+@keyframes klPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.kl-cover-h1{font-size:clamp(3rem,9vw,7.4rem);font-weight:900;letter-spacing:-.05em;line-height:.93;margin-bottom:32px}
+.kl-cover-h1 .line{display:block;overflow:hidden}
+.kl-cover-h1 .line span{display:inline-block;background:linear-gradient(180deg,#fff 0%,#cfc8be 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;transform:translateY(110%);animation:klLine 1s var(--e) forwards}
+.kl-cover-h1 .line.accent span{background:linear-gradient(135deg,#fe2c55 0%,#ff6b8a 60%,#ffb3c4 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kl-cover-h1 .line:nth-child(1) span{animation-delay:.18s}
+.kl-cover-h1 .line:nth-child(2) span{animation-delay:.38s}
+@keyframes klLine{to{transform:translateY(0)}}
+.kl-cover-lead{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:740px;color:var(--mute);line-height:1.6;opacity:0;transform:translateY(16px);animation:klFadeUp .9s var(--e) .85s forwards}
+@keyframes klFadeUp{to{opacity:1;transform:translateY(0)}}
+.kl-cover-foot{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:32px;border-top:1px solid var(--bd);opacity:0;transform:translateY(16px);animation:klFadeUp .9s var(--e) 1.15s forwards}
+.kl-cover-foot-item{display:flex;flex-direction:column;gap:4px}
+.kl-cover-foot-l{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mute2)}
+.kl-cover-foot-v{font-size:.96rem;font-weight:600;color:var(--light);line-height:1.4}
+.kl-cover-foot-v small{display:block;font-size:.82rem;font-weight:400;color:var(--mute);margin-top:2px}
+@media(max-width:680px){
+  .kl-cover-foot{grid-template-columns:1fr;gap:16px}
+  .kl-cover-meta{font-size:.62rem}
+}
+
+/* SECTION 2 - STATUS QUO */
+.kl-sq-head{margin-bottom:56px;max-width:880px}
+.kl-sq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.kl-sq-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(28px,3vw,36px);position:relative;overflow:hidden;transition:all .35s var(--e)}
+.kl-sq-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),transparent);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--e) .25s}
+.kl-sq-card.in::before{transform:scaleX(1)}
+.kl-sq-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.kl-sq-card-num{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:14px}
+.kl-sq-card-h{font-size:1.2rem;font-weight:800;color:var(--light);margin-bottom:12px;letter-spacing:-.015em;line-height:1.25}
+.kl-sq-card-p{font-size:.96rem;line-height:1.65;color:var(--mute)}
+@media(max-width:840px){.kl-sq-grid{grid-template-columns:1fr}}
+
+/* SECTION 3 - DER BEWEIS */
+.kl-pr-head{margin-bottom:64px;max-width:880px}
+.kl-case{padding:clamp(36px,5vw,56px) 0;border-top:1px solid var(--bd);position:relative}
+.kl-case:first-of-type{border-top:none;padding-top:0}
+.kl-case-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(32px,5vw,72px);align-items:start}
+.kl-case-meta{position:sticky;top:90px}
+.kl-case-name{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:16px}
+.kl-case-kpi{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;letter-spacing:-.045em;line-height:.95;margin-bottom:18px;background:linear-gradient(135deg,#fff 0%,#cfc8be 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kl-case-kpi-sub{font-size:.92rem;font-weight:600;color:var(--mute);margin-bottom:18px}
+.kl-case-desc{font-size:1rem;line-height:1.65;color:var(--mute)}
+.kl-case-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kl-case-videos.single{grid-template-columns:minmax(0,420px)}
+
+/* VIDEO CARD */
+.kl-vc{display:block;background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;transition:all .35s var(--e);cursor:pointer;color:inherit}
+.kl-vc:hover{border-color:var(--p);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.kl-vc.disabled{cursor:default;opacity:.55}
+.kl-vc.disabled:hover{transform:none;border-color:var(--bd);box-shadow:none}
+.kl-vc-preview{aspect-ratio:9/16;background:linear-gradient(135deg,#1a1a1d 0%,#0a0a0d 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.kl-vc-preview::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(254,44,85,.18) 0%,transparent 60%);pointer-events:none}
+.kl-vc-preview::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.6) 100%);pointer-events:none}
+.kl-vc-views{position:relative;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.035em;color:#fff;font-variant-numeric:tabular-nums;text-align:center;line-height:1;text-shadow:0 4px 24px rgba(0,0,0,.6);z-index:1}
+.kl-vc-views small{display:block;font-size:.6em;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.85);margin-top:6px}
+.kl-vc-platform{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;z-index:2}
+.kl-vc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(254,44,85,.92);display:flex;align-items:center;justify-content:center;z-index:2;opacity:0;transition:all .35s var(--e)}
+.kl-vc:not(.disabled):hover .kl-vc-play{opacity:1;transform:translate(-50%,-50%) scale(1.1)}
+.kl-vc-play svg{width:18px;height:18px;color:#fff;margin-left:2px}
+.kl-vc-meta{padding:14px 16px;background:var(--card);border-top:1px solid var(--bd);font-size:.82rem;color:var(--mute);line-height:1.4;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.kl-vc-meta-label{font-weight:600;color:var(--light)}
+.kl-vc-meta-tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p)}
+.kl-vc-placeholder{color:var(--mute2);font-style:italic}
+
+/* virral footnote */
+.kl-pr-note{margin-top:48px;padding:24px 28px;background:rgba(255,255,255,.02);border:1px dashed var(--bd2);border-radius:var(--r);font-size:.94rem;line-height:1.6;color:var(--mute);display:flex;gap:14px;align-items:flex-start}
+.kl-pr-note::before{content:'';flex-shrink:0;width:4px;height:32px;background:var(--p);border-radius:2px;margin-top:2px}
+.kl-pr-note strong{color:var(--light);font-weight:700}
+
+@media(max-width:900px){
+  .kl-case-grid{grid-template-columns:1fr;gap:24px}
+  .kl-case-meta{position:static}
+  .kl-case-videos{grid-template-columns:repeat(2,1fr)}
+  .kl-case-videos.single{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .kl-case-videos{grid-template-columns:1fr}
+}
+
+/* SECTION 4 - MODELL ÜBERBLICK */
+.kl-md-head{margin-bottom:64px;max-width:880px}
+.kl-md-flow{display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;gap:0;align-items:stretch;margin-bottom:48px}
+.kl-md-phase{padding:clamp(28px,4vw,40px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);position:relative;overflow:hidden;transition:all .35s var(--e)}
+.kl-md-phase:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-md-phase::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--p);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--e) .2s}
+.kl-md-phase.in::before{transform:scaleX(1)}
+.kl-md-phase-num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.25);color:var(--p);font-weight:900;font-size:1.1rem;margin-bottom:18px;letter-spacing:-.02em}
+.kl-md-phase-l{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:8px}
+.kl-md-phase-h{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:800;letter-spacing:-.025em;color:var(--light);margin-bottom:10px;line-height:1.2}
+.kl-md-phase-p{font-size:.94rem;line-height:1.6;color:var(--mute)}
+.kl-md-arrow{display:flex;align-items:center;justify-content:center;color:var(--p);opacity:.6}
+.kl-md-arrow svg{width:28px;height:28px}
+.kl-md-core{padding:24px 28px;background:linear-gradient(135deg,rgba(254,44,85,.08) 0%,rgba(254,44,85,.02) 100%);border:1px solid rgba(254,44,85,.2);border-radius:var(--r2);text-align:center;font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:700;color:var(--light);letter-spacing:-.01em;line-height:1.4}
+.kl-md-core strong{color:var(--p);font-weight:800}
+@media(max-width:920px){
+  .kl-md-flow{grid-template-columns:1fr;gap:14px}
+  .kl-md-arrow{padding:8px 0}
+  .kl-md-arrow svg{transform:rotate(90deg);width:22px;height:22px}
+}
+
+/* PHASE LABEL */
+.kl-phase-label{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.3);border-radius:100px;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:20px}
+
+/* SECTION 5 - PHASE 1 INTRO */
+.kl-p1-head{margin-bottom:56px;max-width:880px}
+.kl-p1-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.kl-p1-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(28px,3vw,36px);transition:all .35s var(--e);display:flex;flex-direction:column;gap:14px}
+.kl-p1-card:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-p1-card-icon{width:42px;height:42px;border-radius:12px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.22);display:flex;align-items:center;justify-content:center;color:var(--p);margin-bottom:4px}
+.kl-p1-card-icon svg{width:20px;height:20px}
+.kl-p1-card-h{font-size:1.15rem;font-weight:800;color:var(--light);letter-spacing:-.015em;line-height:1.25}
+.kl-p1-card-p{font-size:.94rem;line-height:1.65;color:var(--mute);margin:0}
+@media(max-width:840px){.kl-p1-grid{grid-template-columns:1fr}}
+
+/* SECTION 6 - ALWAYS-ON MECHANIK */
+.kl-mc-head{margin-bottom:56px;max-width:880px}
+.kl-mc-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,5vw,64px);align-items:start}
+.kl-mc-stats{display:flex;flex-direction:column;gap:18px}
+.kl-mc-stat{padding:24px 28px;background:rgba(255,255,255,.03);border:1px solid var(--bd);border-radius:var(--r2);transition:all .3s var(--e)}
+.kl-mc-stat:hover{border-color:var(--bd2);background:rgba(255,255,255,.05)}
+.kl-mc-stat-v{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--p);font-variant-numeric:tabular-nums;margin-bottom:6px}
+.kl-mc-stat-l{font-size:.84rem;font-weight:600;color:var(--mute)}
+.kl-mc-stat.result .kl-mc-stat-v{background:linear-gradient(135deg,#fff 0%,#cfc8be 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.kl-mc-stat.result{border-color:rgba(254,44,85,.3);background:linear-gradient(135deg,rgba(254,44,85,.06) 0%,transparent 100%)}
+
+/* Calendar grid */
+.kl-mc-cal{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);padding:clamp(28px,3vw,36px)}
+.kl-mc-cal-h{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.kl-mc-cal-h .month{color:var(--light)}
+.kl-mc-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:20px}
+.kl-mc-cal-dow{font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mute2);text-align:center;padding-bottom:4px}
+.kl-mc-cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:600;color:var(--mute2);background:rgba(255,255,255,.02);border-radius:8px;position:relative;transition:all .3s var(--e)}
+.kl-mc-cal-day.empty{background:transparent}
+.kl-mc-cal-day.upload{color:#fff;font-weight:800}
+.kl-mc-cal-day[data-pf="tt"]{background:#1b1b1f;color:#fff;box-shadow:inset 0 0 0 1.5px #25f4ee,0 4px 16px rgba(254,44,85,.08)}
+.kl-mc-cal-day[data-pf="yt"]{background:#1b0e0f;color:#fff;box-shadow:inset 0 0 0 1.5px #ff0033}
+.kl-mc-cal-day[data-pf="ig"]{background:#1b1015;color:#fff;box-shadow:inset 0 0 0 1.5px #c13584}
+.kl-mc-cal-day[data-pf="sn"]{background:#1b1a08;color:#fff;box-shadow:inset 0 0 0 1.5px #fffc00}
+.kl-mc-cal-day.upload::after{content:'';position:absolute;top:3px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--p);box-shadow:0 0 8px var(--p)}
+.kl-mc-cal-legend{display:flex;flex-wrap:wrap;gap:10px}
+.kl-mc-cal-leg{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:100px;font-size:.74rem;font-weight:700;color:var(--light)}
+.kl-mc-cal-leg-dot{width:10px;height:10px;border-radius:3px}
+
+@media(max-width:840px){
+  .kl-mc-grid{grid-template-columns:1fr;gap:32px}
+}
+
+/* SECTION 7 - DREI SÄULEN ÜBERSICHT */
+.kl-cp-head{margin-bottom:56px;max-width:880px}
+.kl-cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.kl-cp-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(28px,3vw,36px);transition:all .35s var(--e);position:relative;overflow:hidden}
+.kl-cp-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--p);transform:scaleY(0);transform-origin:top;transition:transform .8s var(--e) .2s}
+.kl-cp-card.in::before{transform:scaleY(1)}
+.kl-cp-card:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-cp-card-l{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:14px}
+.kl-cp-card-h{font-size:1.3rem;font-weight:800;color:var(--light);letter-spacing:-.02em;margin-bottom:10px;line-height:1.2}
+.kl-cp-card-p{font-size:.95rem;line-height:1.65;color:var(--mute)}
+@media(max-width:840px){.kl-cp-grid{grid-template-columns:1fr}}
+
+/* SECTION 8/9/10 - SÄULEN DETAIL */
+.kl-sa-head{margin-bottom:48px;max-width:900px}
+.kl-sa-head .kl-sub{margin-top:18px}
+.kl-sa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.kl-sa-grid.single{grid-template-columns:minmax(0,520px);justify-content:center}
+.kl-sa-note{margin-top:32px;font-size:.9rem;color:var(--mute);font-style:italic;text-align:center}
+@media(max-width:900px){.kl-sa-grid{grid-template-columns:repeat(2,1fr)}.kl-sa-grid.single{grid-template-columns:1fr}}
+@media(max-width:560px){.kl-sa-grid{grid-template-columns:1fr}}
+
+/* SECTION 11 - PHASE 2 */
+.kl-p2-head{margin-bottom:48px;max-width:880px}
+.kl-p2-head .kl-sub{margin-top:18px}
+.kl-p2-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:32px}
+.kl-p2-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:clamp(26px,3vw,34px);transition:all .35s var(--e);display:flex;flex-direction:column;gap:12px}
+.kl-p2-card:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-p2-card-step{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--p)}
+.kl-p2-card-h{font-size:1.15rem;font-weight:800;color:var(--light);letter-spacing:-.015em;line-height:1.25}
+.kl-p2-card-p{font-size:.94rem;line-height:1.65;color:var(--mute);margin:0}
+.kl-p2-note{padding:18px 22px;background:rgba(255,255,255,.03);border:1px dashed var(--bd2);border-radius:var(--r);font-size:.9rem;color:var(--mute);line-height:1.5}
+.kl-p2-note strong{color:var(--light);font-weight:600}
+@media(max-width:840px){.kl-p2-grid{grid-template-columns:1fr}}
+
+/* SECTION 12 - PHASE 3 */
+.kl-p3-head{margin-bottom:48px;max-width:880px}
+.kl-p3-head .kl-sub{margin-top:18px}
+.kl-p3-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:48px}
+.kl-p3-step{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:24px 20px;text-align:center;transition:all .35s var(--e)}
+.kl-p3-step:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-p3-step-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.22);color:var(--p);font-weight:900;font-size:.78rem;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.kl-p3-step-h{font-size:.98rem;font-weight:800;color:var(--light);letter-spacing:-.015em;margin-bottom:6px}
+.kl-p3-step-p{font-size:.82rem;line-height:1.5;color:var(--mute)}
+
+.kl-p3-ref{padding:clamp(36px,5vw,56px);background:linear-gradient(135deg,var(--p) 0%,#ff5470 100%);color:#fff;border-radius:var(--r3);position:relative;overflow:hidden;margin-bottom:32px}
+.kl-p3-ref::before{content:'';position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.kl-p3-ref-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:100px;font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;position:relative}
+.kl-p3-ref-h{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;letter-spacing:-.025em;line-height:1.15;margin-bottom:16px;position:relative}
+.kl-p3-ref-p{font-size:1rem;line-height:1.65;max-width:780px;position:relative;opacity:.95;margin-bottom:20px}
+.kl-p3-ref-kpis{display:flex;gap:32px;flex-wrap:wrap;position:relative;padding-top:18px;border-top:1px solid rgba(255,255,255,.25)}
+.kl-p3-ref-kpi{display:flex;flex-direction:column;gap:2px}
+.kl-p3-ref-kpi-v{font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:900;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.kl-p3-ref-kpi-l{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+
+@media(max-width:920px){.kl-p3-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.kl-p3-flow{grid-template-columns:1fr}.kl-p3-ref-kpis{flex-direction:column;gap:14px}}
+
+/* SECTION 13 - GARANTIE */
+.kl-gr-head{margin-bottom:48px;max-width:880px;text-align:center;margin-left:auto;margin-right:auto}
+.kl-gr-head .kl-h2{text-align:center}
+.kl-gr-head .kl-sub{text-align:center;margin-left:auto;margin-right:auto}
+.kl-gr-main{display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(48px,7vw,80px) clamp(24px,4vw,48px);background:linear-gradient(135deg,rgba(254,44,85,.1) 0%,rgba(254,44,85,.02) 50%,transparent 100%);border:2px solid rgba(254,44,85,.3);border-radius:var(--r3);margin-bottom:32px;position:relative;overflow:hidden}
+.kl-gr-main::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(254,44,85,.18) 0%,transparent 60%);pointer-events:none}
+.kl-gr-num{font-size:clamp(5rem,15vw,11rem);font-weight:900;letter-spacing:-.06em;line-height:.95;background:linear-gradient(135deg,#fe2c55 0%,#ff8aa1 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-variant-numeric:tabular-nums;margin-bottom:16px;position:relative}
+.kl-gr-num-sub{font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:700;color:var(--light);letter-spacing:-.015em;margin-bottom:24px;position:relative}
+.kl-gr-detail{font-size:.95rem;line-height:1.65;color:var(--mute);max-width:560px;position:relative}
+.kl-gr-detail strong{color:var(--light);font-weight:700}
+.kl-gr-side{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.kl-gr-side-card{padding:clamp(24px,3vw,32px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .35s var(--e)}
+.kl-gr-side-card:hover{border-color:var(--bd2);transform:translateY(-3px)}
+.kl-gr-side-h{font-size:1.1rem;font-weight:800;color:var(--light);letter-spacing:-.015em;margin-bottom:10px}
+.kl-gr-side-p{font-size:.92rem;line-height:1.6;color:var(--mute);margin:0}
+@media(max-width:680px){.kl-gr-side{grid-template-columns:1fr}}
+
+/* SECTION 14 - DAS ANGEBOT */
+.kl-ag-head{margin-bottom:48px;max-width:880px}
+.kl-ag-head .kl-sub{margin-top:18px}
+.kl-ag-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.kl-ag-block{padding:clamp(32px,4vw,44px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);position:relative;overflow:hidden;transition:all .35s var(--e)}
+.kl-ag-block::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--p);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--e) .2s}
+.kl-ag-block.in::before{transform:scaleX(1)}
+.kl-ag-block:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-ag-block-tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.22);border-radius:100px;font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.kl-ag-block-h{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:900;letter-spacing:-.025em;line-height:1.15;color:var(--light);margin-bottom:18px}
+.kl-ag-block-h span{color:var(--p)}
+.kl-ag-block-p{font-size:1rem;line-height:1.7;color:var(--mute);margin:0}
+.kl-ag-block-p strong{color:var(--light);font-weight:600}
+@media(max-width:840px){.kl-ag-grid{grid-template-columns:1fr}}
+
+/* SECTION 15 - LEISTUNGSKATALOG + FAHRPLAN + PREIS */
+.kl-lk-head{margin-bottom:48px;max-width:880px}
+.kl-lk-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:56px}
+.kl-lk-col{padding:clamp(28px,3.5vw,40px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .35s var(--e)}
+.kl-lk-col:hover{border-color:var(--bd2)}
+.kl-lk-col-h{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.kl-lk-col-h2{font-size:1.2rem;font-weight:800;color:var(--light);margin-bottom:20px;letter-spacing:-.015em}
+.kl-lk-list{display:flex;flex-direction:column;gap:0}
+.kl-lk-li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--bd);font-size:.95rem;line-height:1.5;color:var(--light)}
+.kl-lk-li:first-child{border-top:none;padding-top:0}
+.kl-lk-li-ic{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:rgba(254,44,85,.15);color:var(--p);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;margin-top:2px}
+
+/* Fahrplan */
+.kl-fp-h{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:900;letter-spacing:-.025em;line-height:1.2;margin-bottom:24px;color:var(--light)}
+.kl-fp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:56px}
+.kl-fp-card{padding:clamp(24px,3vw,32px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .35s var(--e);position:relative;overflow:hidden}
+.kl-fp-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--p);transform:scaleY(0);transform-origin:top;transition:transform .8s var(--e) .2s}
+.kl-fp-card.in::before{transform:scaleY(1)}
+.kl-fp-card:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-fp-when{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:6px}
+.kl-fp-phase{font-size:1.15rem;font-weight:800;color:var(--light);letter-spacing:-.015em;margin-bottom:14px}
+.kl-fp-desc{font-size:.92rem;line-height:1.6;color:var(--mute)}
+
+/* Preisblock */
+.kl-pb{padding:clamp(40px,5vw,64px);background:linear-gradient(135deg,#0a0a0d 0%,#15080c 100%);border:1px solid var(--bd2);border-radius:var(--r3);position:relative;overflow:hidden;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.kl-pb::before{content:'';position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(254,44,85,.15) 0%,transparent 70%);pointer-events:none}
+.kl-pb-l{position:relative}
+.kl-pb-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(254,44,85,.15);border:1px solid rgba(254,44,85,.3);border-radius:100px;font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:18px}
+.kl-pb-price{font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:900;letter-spacing:-.045em;line-height:.95;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#cfc8be 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.kl-pb-sub{font-size:1rem;color:var(--mute);margin-bottom:14px}
+.kl-pb-incl{font-size:.92rem;line-height:1.6;color:var(--mute);max-width:520px}
+.kl-pb-incl strong{color:var(--light);font-weight:600}
+.kl-pb-r{position:relative;padding:24px 28px;background:rgba(255,255,255,.03);border:1px dashed var(--bd2);border-radius:var(--r);font-size:.92rem;line-height:1.6;color:var(--mute)}
+.kl-pb-r strong{color:var(--light);font-weight:600;display:block;margin-bottom:6px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--p)}
+@media(max-width:920px){.kl-fp-grid{grid-template-columns:1fr}.kl-pb{grid-template-columns:1fr;gap:24px}}
+@media(max-width:680px){.kl-lk-grid{grid-template-columns:1fr}}
+
+/* SECTION 16 - CLOSING */
+.kl-cl{background:linear-gradient(180deg,var(--bg) 0%,#0a0a0d 100%);position:relative;overflow:hidden}
+.kl-cl::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(254,44,85,.18) 0%,transparent 60%);pointer-events:none}
+.kl-cl-head{margin-bottom:48px;text-align:center;position:relative}
+.kl-cl-head .kl-h2{text-align:center}
+.kl-cl-head .kl-lead{margin:18px auto 0;text-align:center}
+.kl-cl-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px;position:relative}
+.kl-cl-step{padding:clamp(24px,3vw,32px);background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);transition:all .35s var(--e);display:flex;gap:14px;align-items:flex-start}
+.kl-cl-step:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.kl-cl-step-n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(254,44,85,.12);color:var(--p);font-weight:900;font-size:.74rem;flex-shrink:0;letter-spacing:-.01em}
+.kl-cl-step-t{font-size:.95rem;line-height:1.55;color:var(--light);font-weight:500}
+@media(max-width:760px){.kl-cl-steps{grid-template-columns:1fr}}
+
+.kl-cl-cta{padding:clamp(40px,6vw,72px) clamp(28px,4vw,56px);background:linear-gradient(135deg,#fe2c55 0%,#ff5470 100%);border-radius:var(--r3);position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center}
+.kl-cl-cta::before{content:'';position:absolute;top:-150px;right:-150px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.18) 0%,transparent 70%);pointer-events:none}
+.kl-cl-cta-logo{position:relative;display:flex;align-items:center}
+.kl-cl-cta-logo img{height:48px;width:auto;filter:brightness(0) invert(1)}
+.kl-cl-cta-info{position:relative}
+.kl-cl-cta-name{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.kl-cl-cta-role{font-size:.84rem;font-weight:500;opacity:.9;margin-bottom:6px}
+.kl-cl-cta-contact{font-size:.92rem;font-weight:500;display:flex;gap:14px;flex-wrap:wrap;opacity:.95}
+.kl-cl-cta-contact a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.kl-cl-btn{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;background:#fff;color:var(--p);font-weight:800;font-size:.95rem;border-radius:100px;transition:all .3s var(--e);letter-spacing:.02em;position:relative;white-space:nowrap}
+.kl-cl-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.kl-cl-btn svg{width:16px;height:16px}
+@media(max-width:780px){
+  .kl-cl-cta{grid-template-columns:1fr;text-align:left}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ STICKY SUB-NAV ============ -->
+<nav class="kl-nav" id="klNav">
+<div class="kl-nav-inner">
+<a href="#top" class="kl-nav-brand"><img src="/img/logo-white.svg" alt="virral"><span>für Kölln</span></a>
+<div class="kl-nav-links">
+<a href="#statusquo">Status Quo</a>
+<a href="#beweis">Beweis</a>
+<a href="#phase1">Phase 1</a>
+<a href="#phase2">Phase 2</a>
+<a href="#phase3">Phase 3</a>
+<a href="#angebot">Angebot</a>
+<a href="#kontakt" class="kl-nav-cta">Kontakt</a>
+</div>
+</div>
+</nav>
+
+<!-- ============ MAIN ============ -->
+<main id="top">
+<!-- ============ SECTION 1 - COVER ============ -->
+<section class="kl-cover kl-sec-dark" id="cover">
+<div class="kl-w kl-cover-top">
+<a href="#top" class="kl-cover-logo"><img src="/img/logo-white.svg" alt="virral"></a>
+<div class="kl-cover-meta">Proposal · Mai 2026 · Vertraulich</div>
+</div>
+
+<div class="kl-w kl-cover-body">
+<div class="kl-cover-tag"><span class="dot"></span> Social-First Proposal für Kölln</div>
+<h1 class="kl-cover-h1">
+<span class="line"><span>Social-First.</span></span>
+<span class="line accent"><span>Für Kölln.</span></span>
+</h1>
+<p class="kl-cover-lead">Ein Vorschlag, wie Kölln über Social in drei Phasen von einer Traditionsmarke zu einer Community-Marke wird.</p>
+</div>
+
+<div class="kl-w kl-cover-foot">
+<div class="kl-cover-foot-item">
+<span class="kl-cover-foot-l">Für</span>
+<span class="kl-cover-foot-v">Friederike Driftmann<small>Kölln</small></span>
+</div>
+<div class="kl-cover-foot-item">
+<span class="kl-cover-foot-l">Umfang</span>
+<span class="kl-cover-foot-v">Phase 1<small>Juli bis Dezember 2026</small></span>
+</div>
+<div class="kl-cover-foot-item">
+<span class="kl-cover-foot-l">Von</span>
+<span class="kl-cover-foot-v">André Schröder<small>virral GmbH</small></span>
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 2 - STATUS QUO ============ -->
+<section class="kl-sec kl-sec-dark" id="statusquo">
+<div class="kl-w">
+
+<div class="kl-sq-head kl-reveal">
+<p class="kl-eyebrow">Status Quo</p>
+<h2 class="kl-h2">Wo Kölln <span>heute steht.</span></h2>
+<p class="kl-sub" style="margin-top:20px">Kölln ist eine starke Traditionsmarke und auf Social bereits aktiv. Der Kanal läuft aber als klassischer Markenkanal, das Potenzial liegt brach.</p>
+</div>
+
+<div class="kl-sq-grid">
+
+<div class="kl-sq-card kl-reveal kl-reveal-d1">
+<div class="kl-sq-card-num">01</div>
+<div class="kl-sq-card-h">Markenkanal statt Community.</div>
+<p class="kl-sq-card-p">Der Content zeigt Produkte und Rezepte. Solide, aber ohne Bindung. Es fehlen Gesichter, denen eine Community folgt.</p>
+</div>
+
+<div class="kl-sq-card kl-reveal kl-reveal-d2">
+<div class="kl-sq-card-num">02</div>
+<div class="kl-sq-card-h">Reichweite ohne System.</div>
+<p class="kl-sq-card-p">Kölln erreicht Menschen, aber ohne Methode. Es fehlt die Mechanik, die aus einzelnen Posts planbare, wachsende Reichweite macht.</p>
+</div>
+
+<div class="kl-sq-card kl-reveal kl-reveal-d3">
+<div class="kl-sq-card-num">03</div>
+<div class="kl-sq-card-h">Kein Fundament für den Sprung.</div>
+<p class="kl-sq-card-p">Für eine echte Transformation braucht Kölln zuerst ein belastbares Social-Fundament aus Bekanntheit und Reichweite.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 3 - DER BEWEIS ============ -->
+<section class="kl-sec kl-sec-soft" id="beweis">
+<div class="kl-w">
+
+<div class="kl-pr-head kl-reveal">
+<p class="kl-eyebrow">virral Track Record</p>
+<h2 class="kl-h2">Wir liefern <span>Reichweite, die messbar wirkt.</span></h2>
+<p class="kl-sub" style="margin-top:20px">virral ist als Social Lead für Marken vom Familienunternehmen bis zum Konzern verantwortlich und baut eigene Marken von null auf.</p>
+</div>
+
+<!-- Case effect Energy -->
+<div class="kl-case kl-reveal">
+<div class="kl-case-grid">
+<div class="kl-case-meta">
+<div class="kl-case-name">Case effect Energy</div>
+<div class="kl-case-kpi">90 Mio. Views<br>in 90 Tagen.</div>
+<p class="kl-case-desc">Always-On-Content, der in kürzester Zeit massive Reichweite erzeugt.</p>
+</div>
+<div class="kl-case-videos">
+<div class="kl-vc disabled" aria-label="Video 1, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">Video 1<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">effect Energy</span><span class="kl-vc-meta-tag">Reel</span></div>
+</div>
+<div class="kl-vc disabled" aria-label="Video 2, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">Video 2<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">effect Energy</span><span class="kl-vc-meta-tag">Reel</span></div>
+</div>
+<div class="kl-vc disabled" aria-label="Video 3, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">Video 3<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">effect Energy</span><span class="kl-vc-meta-tag">Reel</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Case EDEKA -->
+<div class="kl-case kl-reveal">
+<div class="kl-case-grid">
+<div class="kl-case-meta">
+<div class="kl-case-name">Case EDEKA</div>
+<div class="kl-case-kpi">42 Mio. organische Views<br>in 12 Monaten.</div>
+<p class="kl-case-desc">Für die Arbeitgebermarke EDEKA Südwest eine junge Zielgruppe dort erreicht, wo sie wirklich ist.</p>
+</div>
+<div class="kl-case-videos single">
+<div class="kl-vc disabled" aria-label="EDEKA Performance">
+<div class="kl-vc-preview" style="aspect-ratio:16/10"><div class="kl-vc-platform">EDEKA Südwest</div><div class="kl-vc-views">42 Mio.<small>organische Views</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">Arbeitgeberkanal, 12 Monate</span><span class="kl-vc-meta-tag">Always-On</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Case BabyOne -->
+<div class="kl-case kl-reveal">
+<div class="kl-case-grid">
+<div class="kl-case-meta">
+<div class="kl-case-name">Case BabyOne</div>
+<div class="kl-case-kpi">50 Mio. Views<br>in 6 Monaten.</div>
+<p class="kl-case-desc">Kontinuierlicher Reichweitenaufbau über einen längeren Zeitraum.</p>
+</div>
+<div class="kl-case-videos">
+<div class="kl-vc disabled" aria-label="Video 1, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">Reel</div><div class="kl-vc-views">Video 1<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">BabyOne</span><span class="kl-vc-meta-tag">Always-On</span></div>
+</div>
+<div class="kl-vc disabled" aria-label="Video 2, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">Reel</div><div class="kl-vc-views">Video 2<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">BabyOne</span><span class="kl-vc-meta-tag">Always-On</span></div>
+</div>
+<div class="kl-vc disabled" aria-label="Video 3, Link folgt">
+<div class="kl-vc-preview"><div class="kl-vc-platform">Reel</div><div class="kl-vc-views">Video 3<small>Link folgt</small></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-placeholder">BabyOne</span><span class="kl-vc-meta-tag">Always-On</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="kl-pr-note kl-reveal">
+<span>virral kommt aus der Creator Economy, gegründet von <strong>André Schröder</strong> und dem Creator <strong>Finnel</strong>. Strategie und Produktion aus einem Haus, mit Creatorn im Team.</span>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 4 - MODELL ÜBERBLICK ============ -->
+<section class="kl-sec kl-sec-dark" id="modell">
+<div class="kl-w">
+
+<div class="kl-md-head kl-reveal">
+<p class="kl-eyebrow">Das Modell</p>
+<h2 class="kl-h2">Drei Phasen, <span>ein Mechanismus.</span></h2>
+<p class="kl-sub" style="margin-top:20px">virral arbeitet nicht in Einzelmaßnahmen, sondern nach einem klaren, aufeinander aufbauenden System.</p>
+</div>
+
+<div class="kl-md-flow">
+
+<div class="kl-md-phase kl-reveal kl-reveal-d1">
+<div class="kl-md-phase-num">1</div>
+<div class="kl-md-phase-l">Phase 1</div>
+<div class="kl-md-phase-h">Always On</div>
+<p class="kl-md-phase-p">Reichweite und Bekanntheit aufbauen.</p>
+</div>
+
+<div class="kl-md-arrow kl-reveal kl-reveal-d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></div>
+
+<div class="kl-md-phase kl-reveal kl-reveal-d2">
+<div class="kl-md-phase-num">2</div>
+<div class="kl-md-phase-l">Phase 2</div>
+<div class="kl-md-phase-h">Schärfung</div>
+<p class="kl-md-phase-p">Aus Reichweite Bedeutung machen.</p>
+</div>
+
+<div class="kl-md-arrow kl-reveal kl-reveal-d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></div>
+
+<div class="kl-md-phase kl-reveal kl-reveal-d3">
+<div class="kl-md-phase-num">3</div>
+<div class="kl-md-phase-l">Phase 3</div>
+<div class="kl-md-phase-h">Skalierung</div>
+<p class="kl-md-phase-p">Über Creator in die Breite gehen.</p>
+</div>
+
+</div>
+
+<div class="kl-md-core kl-reveal kl-reveal-d2">Jede Phase ist die <strong>Voraussetzung</strong> für die nächste.</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 5 - PHASE 1 INTRO ============ -->
+<section class="kl-sec kl-sec-soft" id="phase1">
+<div class="kl-w">
+
+<div class="kl-p1-head kl-reveal">
+<div class="kl-phase-label">Phase 1</div>
+<h2 class="kl-h2">Erst Aufmerksamkeit, <span>dann Botschaft.</span></h2>
+<p class="kl-sub" style="margin-top:20px">Phase 1 baut Reichweite auf, bevor die Marke inhaltlich aufgeladen wird. Wer sofort mit Markenbotschaft startet, ohne dass jemand hinschaut, verbrennt sie. Deshalb steht am Anfang Traffic, nicht Inhalt.</p>
+</div>
+
+<div class="kl-p1-grid">
+
+<div class="kl-p1-card kl-reveal kl-reveal-d1">
+<div class="kl-p1-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg></div>
+<div class="kl-p1-card-h">Reichweite zuerst.</div>
+<p class="kl-p1-card-p">Der Content ist bewusst Traffic-getrieben. Ziel ist Sichtbarkeit, nicht sofortige Markenbotschaft.</p>
+</div>
+
+<div class="kl-p1-card kl-reveal kl-reveal-d2">
+<div class="kl-p1-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<div class="kl-p1-card-h">Erprobte Mechanik.</div>
+<p class="kl-p1-card-p">Die Formate orientieren sich an Content-Mechaniken, die bei vergleichbaren Marken nachweislich Millionenreichweite erzeugt haben.</p>
+</div>
+
+<div class="kl-p1-card kl-reveal kl-reveal-d3">
+<div class="kl-p1-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21V12h6v9"/></svg></div>
+<div class="kl-p1-card-h">Das Fundament.</div>
+<p class="kl-p1-card-p">Am Ende von Phase 1 steht eine bekannte Marke mit echter Reichweite. Die Basis für alles Weitere.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 6 - ALWAYS-ON MECHANIK ============ -->
+<section class="kl-sec kl-sec-accent" id="mechanik">
+<div class="kl-w">
+
+<div class="kl-mc-head kl-reveal">
+<p class="kl-eyebrow">Die Mechanik</p>
+<h2 class="kl-h2">So entstehen <span>10 Millionen Views.</span></h2>
+<p class="kl-sub" style="margin-top:20px">Phase 1 folgt einem festen Produktionsrhythmus. Konstanz statt Sprints.</p>
+</div>
+
+<div class="kl-mc-grid">
+
+<div class="kl-mc-stats">
+<div class="kl-mc-stat kl-reveal kl-reveal-d1">
+<div class="kl-mc-stat-v" data-counter="12">12</div>
+<div class="kl-mc-stat-l">Videos pro Monat</div>
+</div>
+<div class="kl-mc-stat kl-reveal kl-reveal-d2">
+<div class="kl-mc-stat-v">2-3</div>
+<div class="kl-mc-stat-l">Tage Upload-Takt</div>
+</div>
+<div class="kl-mc-stat kl-reveal kl-reveal-d3">
+<div class="kl-mc-stat-v" data-counter="4">4</div>
+<div class="kl-mc-stat-l">Plattformen im Wechsel</div>
+</div>
+<div class="kl-mc-stat result kl-reveal kl-reveal-d4">
+<div class="kl-mc-stat-v">10 Mio.+</div>
+<div class="kl-mc-stat-l">Views in 6 Monaten, organisch</div>
+</div>
+</div>
+
+<div class="kl-mc-cal kl-reveal kl-reveal-d2">
+<div class="kl-mc-cal-h"><span class="month">Beispielmonat</span><span>12 Uploads, Plattform-Rotation</span></div>
+<div class="kl-mc-cal-grid">
+<div class="kl-mc-cal-dow">Mo</div><div class="kl-mc-cal-dow">Di</div><div class="kl-mc-cal-dow">Mi</div><div class="kl-mc-cal-dow">Do</div><div class="kl-mc-cal-dow">Fr</div><div class="kl-mc-cal-dow">Sa</div><div class="kl-mc-cal-dow">So</div>
+
+<div class="kl-mc-cal-day empty"></div>
+<div class="kl-mc-cal-day">1</div>
+<div class="kl-mc-cal-day upload" data-pf="tt">2</div>
+<div class="kl-mc-cal-day">3</div>
+<div class="kl-mc-cal-day upload" data-pf="yt">4</div>
+<div class="kl-mc-cal-day">5</div>
+<div class="kl-mc-cal-day upload" data-pf="ig">6</div>
+
+<div class="kl-mc-cal-day">7</div>
+<div class="kl-mc-cal-day upload" data-pf="sn">8</div>
+<div class="kl-mc-cal-day">9</div>
+<div class="kl-mc-cal-day upload" data-pf="tt">10</div>
+<div class="kl-mc-cal-day">11</div>
+<div class="kl-mc-cal-day upload" data-pf="yt">12</div>
+<div class="kl-mc-cal-day">13</div>
+
+<div class="kl-mc-cal-day upload" data-pf="ig">14</div>
+<div class="kl-mc-cal-day">15</div>
+<div class="kl-mc-cal-day upload" data-pf="sn">16</div>
+<div class="kl-mc-cal-day">17</div>
+<div class="kl-mc-cal-day upload" data-pf="tt">18</div>
+<div class="kl-mc-cal-day">19</div>
+<div class="kl-mc-cal-day upload" data-pf="yt">20</div>
+
+<div class="kl-mc-cal-day">21</div>
+<div class="kl-mc-cal-day upload" data-pf="ig">22</div>
+<div class="kl-mc-cal-day">23</div>
+<div class="kl-mc-cal-day upload" data-pf="sn">24</div>
+<div class="kl-mc-cal-day">25</div>
+<div class="kl-mc-cal-day">26</div>
+<div class="kl-mc-cal-day">27</div>
+
+<div class="kl-mc-cal-day">28</div>
+<div class="kl-mc-cal-day">29</div>
+<div class="kl-mc-cal-day">30</div>
+<div class="kl-mc-cal-day empty"></div>
+<div class="kl-mc-cal-day empty"></div>
+<div class="kl-mc-cal-day empty"></div>
+<div class="kl-mc-cal-day empty"></div>
+</div>
+<div class="kl-mc-cal-legend">
+<div class="kl-mc-cal-leg"><span class="kl-mc-cal-leg-dot" style="background:#25f4ee"></span>TikTok</div>
+<div class="kl-mc-cal-leg"><span class="kl-mc-cal-leg-dot" style="background:#ff0033"></span>YouTube</div>
+<div class="kl-mc-cal-leg"><span class="kl-mc-cal-leg-dot" style="background:#c13584"></span>Instagram</div>
+<div class="kl-mc-cal-leg"><span class="kl-mc-cal-leg-dot" style="background:#fffc00"></span>Snapchat</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 7 - DREI SÄULEN ÜBERSICHT ============ -->
+<section class="kl-sec kl-sec-dark" id="saeulen">
+<div class="kl-w">
+
+<div class="kl-cp-head kl-reveal">
+<p class="kl-eyebrow">Phase 1, Content</p>
+<h2 class="kl-h2">Drei Arten von Content. <span>Ein Ziel.</span></h2>
+<p class="kl-sub" style="margin-top:20px">Der Always-On-Content ist kein wahlloser Stream. Er folgt drei klar definierten Content-Säulen, die zusammen Reichweite und erste Markenbindung erzeugen.</p>
+</div>
+
+<div class="kl-cp-grid">
+
+<div class="kl-cp-card kl-reveal kl-reveal-d1">
+<div class="kl-cp-card-l">Säule 1</div>
+<div class="kl-cp-card-h">Brand Awareness.</div>
+<p class="kl-cp-card-p">Reiner Reichweiten-Content, der Aufmerksamkeit erzeugt.</p>
+</div>
+
+<div class="kl-cp-card kl-reveal kl-reveal-d2">
+<div class="kl-cp-card-l">Säule 2</div>
+<div class="kl-cp-card-h">People &amp; Culture.</div>
+<p class="kl-cp-card-p">Content über das Unternehmen, die Menschen und die Kultur dahinter.</p>
+</div>
+
+<div class="kl-cp-card kl-reveal kl-reveal-d3">
+<div class="kl-cp-card-l">Säule 3</div>
+<div class="kl-cp-card-h">Product Infotainment.</div>
+<p class="kl-cp-card-p">Content, der das Produkt unterhaltsam erklärt.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 8 - SÄULE 1, BRAND AWARENESS ============ -->
+<section class="kl-sec kl-sec-soft" id="saeule1">
+<div class="kl-w">
+<div class="kl-sa-head kl-reveal">
+<div class="kl-phase-label">Content-Säule 1</div>
+<h2 class="kl-h2">Brand <span>Awareness.</span></h2>
+<p class="kl-sub">Reiner Reichweiten-Content. Traffic-getrieben, schnell konsumierbar, gemacht, um Kölln in kurzer Zeit sichtbar zu machen. Der Inhalt steht hier noch im Hintergrund, die Reichweite zählt. Mechanik in Anlehnung an erprobte Formate, hier am Beispiel Hitschies.</p>
+</div>
+
+<div class="kl-sa-grid kl-reveal kl-reveal-d1">
+<a class="kl-vc" href="https://vm.tiktok.com/ZGdHsLNBv/" target="_blank" rel="noopener">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">3,1 Mio.<small>Aufrufe</small></div><div class="kl-vc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">Hitschies</span><span class="kl-vc-meta-tag">Brand Awareness</span></div>
+</a>
+<a class="kl-vc" href="https://vm.tiktok.com/ZGdHs2tne/" target="_blank" rel="noopener">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">1,9 Mio.<small>Aufrufe</small></div><div class="kl-vc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">Hitschies</span><span class="kl-vc-meta-tag">Brand Awareness</span></div>
+</a>
+<a class="kl-vc" href="https://vm.tiktok.com/ZGdHsMyMm/" target="_blank" rel="noopener">
+<div class="kl-vc-preview"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">1,2 Mio.<small>Aufrufe</small></div><div class="kl-vc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">Hitschies</span><span class="kl-vc-meta-tag">Brand Awareness</span></div>
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 9 - SÄULE 2, PEOPLE & CULTURE ============ -->
+<section class="kl-sec kl-sec-dark" id="saeule2">
+<div class="kl-w">
+<div class="kl-sa-head kl-reveal">
+<div class="kl-phase-label">Content-Säule 2</div>
+<h2 class="kl-h2">People &amp; <span>Culture.</span></h2>
+<p class="kl-sub">Content über die Menschen, das Unternehmen und die Kultur hinter der Marke. Er macht Kölln nahbar und gibt der Reichweite ein Gesicht.</p>
+</div>
+
+<div class="kl-sa-grid single kl-reveal kl-reveal-d1">
+<a class="kl-vc" href="https://vm.tiktok.com/ZGdHsNVLF/" target="_blank" rel="noopener">
+<div class="kl-vc-preview" style="aspect-ratio:9/14"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">1,5 Mio.<small>Aufrufe</small></div><div class="kl-vc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">STRABAG, People &amp; Culture</span><span class="kl-vc-meta-tag">Case</span></div>
+</a>
+</div>
+
+<p class="kl-sa-note kl-reveal kl-reveal-d2">Für STRABAG hat virral gezeigt, wie ein Unternehmen über seine Menschen und seinen Arbeitsalltag eine große, junge Zielgruppe erreicht.</p>
+</div>
+</section>
+
+<!-- ============ SECTION 10 - SÄULE 3, PRODUCT INFOTAINMENT ============ -->
+<section class="kl-sec kl-sec-accent" id="saeule3">
+<div class="kl-w">
+<div class="kl-sa-head kl-reveal">
+<div class="kl-phase-label">Content-Säule 3</div>
+<h2 class="kl-h2">Product <span>Infotainment.</span></h2>
+<p class="kl-sub">Content, der das Produkt unterhaltsam erklärt. Er verbindet Reichweite mit echter Produktbotschaft, ohne belehrend zu wirken.</p>
+</div>
+
+<div class="kl-sa-grid single kl-reveal kl-reveal-d1">
+<a class="kl-vc" href="https://vm.tiktok.com/ZGdHseS2J/" target="_blank" rel="noopener">
+<div class="kl-vc-preview" style="aspect-ratio:9/14"><div class="kl-vc-platform">TikTok</div><div class="kl-vc-views">7 Mio.<small>Aufrufe</small></div><div class="kl-vc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div></div>
+<div class="kl-vc-meta"><span class="kl-vc-meta-label">STRABAG, Product Infotainment</span><span class="kl-vc-meta-tag">Award-nominiert</span></div>
+</a>
+</div>
+
+<p class="kl-sa-note kl-reveal kl-reveal-d2">Dieses Video für STRABAG wurde mehrfach für Marketing-Awards nominiert. Ein Beispiel, wie Infotainment Reichweite und Markenbotschaft vereint.</p>
+</div>
+</section>
+
+<!-- ============ SECTION 11 - PHASE 2 ============ -->
+<section class="kl-sec kl-sec-soft" id="phase2">
+<div class="kl-w">
+<div class="kl-p2-head kl-reveal">
+<div class="kl-phase-label">Phase 2</div>
+<h2 class="kl-h2">Aus Reichweite <span>wird Bedeutung.</span></h2>
+<p class="kl-sub">Sobald die Reichweite steht, wird die Marke inhaltlich aufgeladen. Der Fokus verengt sich von breitem Traffic auf die echte Hauptzielgruppe.</p>
+</div>
+
+<div class="kl-p2-grid">
+<div class="kl-p2-card kl-reveal kl-reveal-d1">
+<div class="kl-p2-card-step">Schritt 01</div>
+<div class="kl-p2-card-h">Markensprache schärfen.</div>
+<p class="kl-p2-card-p">Tonalität, Bildwelt und Haltung von Kölln werden klar definiert und konsequent umgesetzt.</p>
+</div>
+<div class="kl-p2-card kl-reveal kl-reveal-d2">
+<div class="kl-p2-card-step">Schritt 02</div>
+<div class="kl-p2-card-h">Formate entwickeln.</div>
+<p class="kl-p2-card-p">Aus dem, was in Phase 1 funktioniert hat, werden eigene wiederkehrende Formate mit Wiedererkennung.</p>
+</div>
+<div class="kl-p2-card kl-reveal kl-reveal-d3">
+<div class="kl-p2-card-step">Schritt 03</div>
+<div class="kl-p2-card-h">Zielgruppe fokussieren.</div>
+<p class="kl-p2-card-p">Der Content richtet sich gezielt an Köllns Hauptzielgruppe, statt nur breite Reichweite zu suchen.</p>
+</div>
+</div>
+
+<div class="kl-p2-note kl-reveal kl-reveal-d1"><strong>Hinweis:</strong> Umfang und Konditionen von Phase 2 werden nach Abschluss von Phase 1 gemeinsam festgelegt.</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 12 - PHASE 3 ============ -->
+<section class="kl-sec kl-sec-dark" id="phase3">
+<div class="kl-w">
+<div class="kl-p3-head kl-reveal">
+<div class="kl-phase-label">Phase 3</div>
+<h2 class="kl-h2">Bekanntheit wird <span>zum Hebel.</span></h2>
+<p class="kl-sub">Am Ende von Phase 2 ist Kölln bekannt genug, dass Creator die Marke aus eigenem Antrieb bewerben, kostenfrei oder zu geringen Kosten, weil sie selbst von der Sichtbarkeit profitieren. virral baut dafür ein vollständiges Creator-Programm.</p>
+</div>
+
+<div class="kl-p3-flow">
+<div class="kl-p3-step kl-reveal kl-reveal-d1"><div class="kl-p3-step-num">01</div><div class="kl-p3-step-h">Akquise</div><p class="kl-p3-step-p">Passende Creator finden und ansprechen.</p></div>
+<div class="kl-p3-step kl-reveal kl-reveal-d2"><div class="kl-p3-step-num">02</div><div class="kl-p3-step-h">Selektion</div><p class="kl-p3-step-p">Die richtigen für Marke und Zielgruppe auswählen.</p></div>
+<div class="kl-p3-step kl-reveal kl-reveal-d3"><div class="kl-p3-step-num">03</div><div class="kl-p3-step-h">Prüfung</div><p class="kl-p3-step-p">Reichweite, Engagement und Markenfit verlässlich bewerten.</p></div>
+<div class="kl-p3-step kl-reveal kl-reveal-d4"><div class="kl-p3-step-num">04</div><div class="kl-p3-step-h">Vertrag</div><p class="kl-p3-step-p">Konditionen, Rechte und Abwicklung sauber regeln.</p></div>
+<div class="kl-p3-step kl-reveal kl-reveal-d5"><div class="kl-p3-step-num">05</div><div class="kl-p3-step-h">Tracking</div><p class="kl-p3-step-p">Performance jedes Creators messbar machen.</p></div>
+</div>
+
+<div class="kl-p3-ref kl-reveal kl-reveal-d1">
+<div class="kl-p3-ref-tag">Referenz</div>
+<h3 class="kl-p3-ref-h">Jochen Schweizer, Xmas Creator House.</h3>
+<p class="kl-p3-ref-p">7 Creator, ein Haus, drei Tage. virral hat ein Haus gemietet, Erlebnisse ermöglicht und Creator ohne Media-Budget eingeladen, um die Marke physisch erlebbar zu machen. Der Beweis, dass virral Creator auch ohne Media-Budget im großen Maßstab aktiviert.</p>
+<div class="kl-p3-ref-kpis">
+<div class="kl-p3-ref-kpi"><div class="kl-p3-ref-kpi-v">7</div><div class="kl-p3-ref-kpi-l">Creator</div></div>
+<div class="kl-p3-ref-kpi"><div class="kl-p3-ref-kpi-v">3 Tage</div><div class="kl-p3-ref-kpi-l">Aktivierung</div></div>
+<div class="kl-p3-ref-kpi"><div class="kl-p3-ref-kpi-v">20 Mio.</div><div class="kl-p3-ref-kpi-l">Views mit Markennennung</div></div>
+<div class="kl-p3-ref-kpi"><div class="kl-p3-ref-kpi-v">+16 Mio.</div><div class="kl-p3-ref-kpi-l">über Erwartung</div></div>
+</div>
+</div>
+
+<div class="kl-p2-note kl-reveal kl-reveal-d1"><strong>Hinweis:</strong> Umfang und Konditionen von Phase 3 werden nach Abschluss von Phase 2 gemeinsam festgelegt.</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 13 - GARANTIE ============ -->
+<section class="kl-sec kl-sec-accent" id="garantie">
+<div class="kl-w-narrow">
+<div class="kl-gr-head kl-reveal">
+<p class="kl-eyebrow" style="display:inline-flex">Die Garantie</p>
+<h2 class="kl-h2">Ein Fundament, <span>das wir garantieren.</span></h2>
+<p class="kl-sub" style="margin-top:18px">virral verkauft kein Versprechen, sondern ein messbares Ergebnis.</p>
+</div>
+
+<div class="kl-gr-main kl-reveal kl-reveal-d1">
+<div class="kl-gr-num" data-counter="10">10</div>
+<div class="kl-gr-num-sub">Millionen organische Views</div>
+<p class="kl-gr-detail">Innerhalb der <strong>sechs Monate von Phase 1</strong>, rein organisch, ohne Mediabudget, vertraglich zugesichert.</p>
+</div>
+
+<div class="kl-gr-side">
+<div class="kl-gr-side-card kl-reveal kl-reveal-d1">
+<div class="kl-gr-side-h">Planbar statt zufällig.</div>
+<p class="kl-gr-side-p">Reichweite wird kein Glücksspiel, sondern eine zugesicherte Größe.</p>
+</div>
+<div class="kl-gr-side-card kl-reveal kl-reveal-d2">
+<div class="kl-gr-side-h">Das Sprungbrett.</div>
+<p class="kl-gr-side-p">Auf diesem Fundament wird Phase 2 aufgesetzt.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 14 - DAS ANGEBOT ============ -->
+<section class="kl-sec kl-sec-soft" id="angebot">
+<div class="kl-w">
+<div class="kl-ag-head kl-reveal">
+<p class="kl-eyebrow">Das Angebot</p>
+<h2 class="kl-h2">Beratung und Umsetzung, <span>aus einer Hand.</span></h2>
+<p class="kl-sub">virral liefert nicht nur Strategie und nicht nur Produktion, sondern beides verzahnt.</p>
+</div>
+
+<div class="kl-ag-grid">
+<div class="kl-ag-block kl-reveal kl-reveal-d1">
+<div class="kl-ag-block-tag">Teil A, Beratung</div>
+<h3 class="kl-ag-block-h">Die <span>Strategie.</span></h3>
+<p class="kl-ag-block-p">Setup und Audit, Entwicklung der Social-Strategie und Positionierung, Konzeption der Content-Säulen und Format-Welten, Aufbau des <strong>Zwei-Kanal-Modells</strong> (Friederikes CEO-Kanal und der Kölln-Brand-Account) und des Brand-Face-Systems.</p>
+</div>
+
+<div class="kl-ag-block kl-reveal kl-reveal-d2">
+<div class="kl-ag-block-tag">Teil B, Umsetzung</div>
+<h3 class="kl-ag-block-h">Die <span>Produktion.</span></h3>
+<p class="kl-ag-block-p">Laufende Always-On-Produktion von <strong>12 Videos pro Monat</strong> über die drei Content-Säulen, Casting und Begleitung der Brand Faces, Aufbau von Friederikes Kanal, Community-Management und monatliches Reporting.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ SECTION 15 - LEISTUNGSKATALOG + FAHRPLAN + PREIS ============ -->
+<section class="kl-sec kl-sec-dark" id="leistungen">
+<div class="kl-w">
+
+<div class="kl-lk-head kl-reveal">
+<p class="kl-eyebrow">Leistungskatalog &amp; Fahrplan</p>
+<h2 class="kl-h2">Phase 1 <span>im Detail.</span></h2>
+</div>
+
+<!-- Zwei-Spalten Leistungslisten -->
+<div class="kl-lk-grid">
+<div class="kl-lk-col kl-reveal kl-reveal-d1">
+<div class="kl-lk-col-h">Spalte A</div>
+<div class="kl-lk-col-h2">Beratung &amp; Strategie</div>
+<div class="kl-lk-list">
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Setup und Audit des bestehenden Kanals</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Social-Strategie und Positionierung</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Konzeption der drei Content-Säulen und Format-Welten</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Aufbau des Zwei-Kanal-Modells</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Brand-Face-Konzept und Casting-Strategie</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Monatliche Strategie-Reviews</span></div>
+</div>
+</div>
+
+<div class="kl-lk-col kl-reveal kl-reveal-d2">
+<div class="kl-lk-col-h">Spalte B</div>
+<div class="kl-lk-col-h2">Produktion &amp; Betrieb</div>
+<div class="kl-lk-list">
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>12 Videos pro Monat, Always-On-Produktion</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Ausspielung über TikTok, YouTube, Instagram und Snapchat</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Aufbau und Begleitung von Friederikes CEO-Kanal</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Casting und Onboarding der ersten Brand Faces</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Community-Management auf allen Kanälen</span></div>
+<div class="kl-lk-li"><span class="kl-lk-li-ic">✓</span><span>Monatliches Performance-Reporting</span></div>
+</div>
+</div>
+</div>
+
+<!-- Fahrplan -->
+<div class="kl-reveal"><h3 class="kl-fp-h">Der Fahrplan, drei Etappen.</h3></div>
+<div class="kl-fp-grid">
+<div class="kl-fp-card kl-reveal kl-reveal-d1">
+<div class="kl-fp-when">Juli bis August</div>
+<div class="kl-fp-phase">Setup.</div>
+<p class="kl-fp-desc">Audit, Strategie, Positionierung. Always-On-Produktion startet. Casting der ersten Brand Faces. Friederikes Kanal wird vorbereitet.</p>
+</div>
+<div class="kl-fp-card kl-reveal kl-reveal-d2">
+<div class="kl-fp-when">September bis Oktober</div>
+<div class="kl-fp-phase">Launch.</div>
+<p class="kl-fp-desc">Voller Produktionsrhythmus, beide Kanäle aktiv, die Content-Säulen werden im Markt getestet.</p>
+</div>
+<div class="kl-fp-card kl-reveal kl-reveal-d3">
+<div class="kl-fp-when">November bis Dezember</div>
+<div class="kl-fp-phase">Skalierung.</div>
+<p class="kl-fp-desc">Was funktioniert, wird verstärkt. Die Reichweite wächst Richtung Garantieziel, das Fundament für Phase 2 steht.</p>
+</div>
+</div>
+
+<!-- Preisblock -->
+<div class="kl-pb kl-reveal">
+<div class="kl-pb-l">
+<div class="kl-pb-tag">Gesamtinvestition Phase 1</div>
+<div class="kl-pb-price">190.000 €</div>
+<div class="kl-pb-sub">6 Monate, zzgl. MwSt.</div>
+<p class="kl-pb-incl"><strong>Beratung, Produktion und Betrieb vollständig inklusive.</strong> Casting, Community-Management und monatliches Reporting sind Teil des Preises.</p>
+</div>
+<div class="kl-pb-r">
+<strong>Phase 2 und 3</strong>
+Schließen inhaltlich an. Umfang und Konditionen werden nach Phase 1 gemeinsam festgelegt.
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ SECTION 16 - CLOSING ============ -->
+<section class="kl-sec kl-cl" id="kontakt">
+<div class="kl-w-narrow">
+
+<div class="kl-cl-head kl-reveal">
+<p class="kl-eyebrow" style="display:inline-flex">Nächster Schritt</p>
+<h2 class="kl-h2">Lass uns <span>starten.</span></h2>
+<p class="kl-lead">Dieses Proposal ist die Grundlage. Im gemeinsamen Termin gehen wir es durch, schärfen die Details und legen den Start von Phase 1 im Juli fest.</p>
+</div>
+
+<div class="kl-cl-steps">
+<div class="kl-cl-step kl-reveal kl-reveal-d1"><div class="kl-cl-step-n">01</div><div class="kl-cl-step-t">Proposal gemeinsam durchgehen und offene Punkte klären.</div></div>
+<div class="kl-cl-step kl-reveal kl-reveal-d2"><div class="kl-cl-step-n">02</div><div class="kl-cl-step-t">Die Positionierung für Kölln gemeinsam schärfen.</div></div>
+<div class="kl-cl-step kl-reveal kl-reveal-d3"><div class="kl-cl-step-n">03</div><div class="kl-cl-step-t">Start im Juli, das Social-Fundament wird gebaut.</div></div>
+</div>
+
+<div class="kl-cl-cta kl-reveal kl-reveal-d1">
+<div class="kl-cl-cta-logo"><img src="/img/logo-white.svg" alt="virral"></div>
+<div class="kl-cl-cta-info">
+<div class="kl-cl-cta-name">André Schröder</div>
+<div class="kl-cl-cta-role">Geschäftsführer, virral GmbH</div>
+<div class="kl-cl-cta-contact"><a href="mailto:andre@virral.de">andre@virral.de</a><span>virral.de</span></div>
+</div>
+<a href="mailto:andre@virral.de?subject=K%C3%B6lln%20Social-First%20Proposal%2C%20Termin" class="kl-cl-btn">Termin vereinbaren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+</div>
+
+</div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="kl-foot">
+<div class="kl-w kl-foot-inner">
+<div class="kl-foot-brand"><img src="/img/logo-white.svg" alt="virral"><span class="kl-foot-meta">virral GmbH, Köln</span></div>
+<div class="kl-foot-meta">Vertraulich, Mai 2026, <a href="mailto:andre@virral.de">andre@virral.de</a></div>
+</div>
+</footer>
+
+<!-- ============ JS ============ -->
+<script>
+(function(){
+  const nav=document.getElementById('klNav');
+  function onScroll(){
+    if(window.scrollY>120) nav.classList.add('show'); else nav.classList.remove('show');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.kl-reveal').forEach(el=>io.observe(el));
+
+    const animIo=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const t=e.target;
+          t.classList.add('in');
+          if(t.dataset.counter && !t.dataset.counted){
+            t.dataset.counted='1';
+            const target=parseFloat(t.dataset.counter);
+            const dur=1500;
+            const decimals=(t.dataset.counter.split('.')[1]||'').length;
+            const start=performance.now();
+            const ease=p=>1-Math.pow(1-p,3);
+            (function step(now){
+              const p=Math.min((now-start)/dur,1);
+              const v=target*ease(p);
+              t.textContent=decimals?v.toFixed(decimals).replace('.',','):Math.round(v).toLocaleString('de-DE');
+              if(p<1) requestAnimationFrame(step); else t.textContent=decimals?target.toFixed(decimals).replace('.',','):target.toLocaleString('de-DE');
+            })(start);
+          }
+          animIo.unobserve(t);
+        }
+      });
+    },{threshold:.25});
+    document.querySelectorAll('[data-anim],[data-counter]').forEach(el=>animIo.observe(el));
+  } else {
+    document.querySelectorAll('.kl-reveal,[data-anim]').forEach(el=>el.classList.add('in'));
+  }
+
+  const sections=document.querySelectorAll('main section[id]');
+  const navLinks=document.querySelectorAll('.kl-nav-links a[href^="#"]');
+  if(sections.length && 'IntersectionObserver' in window){
+    const navIo=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id=e.target.id;
+          navLinks.forEach(l=>{
+            const match=l.getAttribute('href')==='#'+id;
+            l.classList.toggle('active',match && !l.classList.contains('kl-nav-cta'));
+          });
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(s=>navIo.observe(s));
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -395,17 +395,24 @@ header .w{max-width:1320px}
 .meth-close span{color:var(--a)}
 @media(max-width:880px){.meth-grid{grid-template-columns:1fr}}
 
-/* ===== Process / Ablauf ===== */
-.proc-steps{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;position:relative}
-.proc-steps::before{content:'';position:absolute;top:26px;left:7%;right:7%;height:2px;background:var(--bd);z-index:0}
-.pstep{position:relative;z-index:1}
-.pstep .pn{width:52px;height:52px;border-radius:15px;background:var(--card);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:var(--a);margin-bottom:15px;box-shadow:var(--sh)}
-.pstep.hot .pn{background:var(--a);color:#fff;border-color:var(--a);box-shadow:0 8px 26px rgba(254,44,85,.45)}
-.pstep h4{font-size:.95rem;font-weight:800;margin-bottom:6px;letter-spacing:-.01em}
-.pstep p{font-size:.8rem;color:var(--w2);line-height:1.55}
-.pstep .ptag{display:inline-block;margin-top:9px;font-size:.62rem;font-weight:800;color:var(--a);background:var(--ag);padding:3px 9px;border-radius:100px}
-@media(max-width:980px){.proc-steps{grid-template-columns:repeat(2,1fr);gap:24px}.proc-steps::before{display:none}}
-@media(max-width:520px){.proc-steps{grid-template-columns:1fr}}
+/* ===== Ablauf & Leistungen (Timeline) ===== */
+.tl{position:relative;max-width:880px;margin:0 auto}
+.tl::before{content:'';position:absolute;left:27px;top:16px;bottom:16px;width:2px;background:var(--bd)}
+.tli{position:relative;padding-left:80px;padding-bottom:24px}
+.tli:last-child{padding-bottom:0}
+.tl-n{position:absolute;left:0;top:0;width:56px;height:56px;border-radius:16px;background:var(--card);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:var(--a);z-index:1;box-shadow:var(--sh)}
+.tli.hot .tl-n{background:var(--a);color:#fff;border-color:var(--a);box-shadow:0 8px 26px rgba(254,44,85,.45)}
+.tl-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:24px 26px;transition:.3s var(--e)}
+.tl-card:hover{border-color:var(--bd2);background:var(--card2)}
+.tli.hot .tl-card{border-color:rgba(254,44,85,.4);background:linear-gradient(120deg,rgba(254,44,85,.06),var(--card))}
+.tl-tag{font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--a);margin-bottom:6px}
+.tl-card h3{font-size:1.18rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.tl-card p{font-size:.86rem;color:var(--w2);line-height:1.7;margin-bottom:16px}
+.tl-list{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;list-style:none}
+.tl-list li{display:flex;gap:9px;align-items:flex-start;font-size:.82rem;color:var(--w);line-height:1.4}
+.tl-list .ck{width:18px;height:18px;border-radius:50%;background:var(--ag);color:var(--a);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.tl-list .ck svg{width:10px;height:10px}
+@media(max-width:620px){.tl-list{grid-template-columns:1fr}.tli{padding-left:64px}.tl-card{padding:18px 18px}.tl::before{left:23px}.tl-n{width:48px;height:48px}}
 
 /* ===== Signature case (Mall / Dreilaendergalerie) ===== */
 .sig-steps{display:flex;flex-direction:column;gap:clamp(60px,8vw,100px);position:relative}
@@ -435,7 +442,10 @@ header .w{max-width:1320px}
 @media(max-width:860px){.sig-line{display:none}.sig-step{grid-template-columns:1fr}.sig-step:nth-child(even) .sig-txt{order:0}}
 
 /* ===== Cases ===== */
-.cases-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.case-logo.logo-effect{background:#0a0a0a;color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:-.03em}
+.case-logo.logo-krass{background:var(--a);color:#fff;font-weight:800;font-size:.72rem;text-align:center;line-height:1.1}
+.case-logo.logo-mall{background:var(--a);color:#fff;font-weight:800;font-size:.58rem;text-align:center;line-height:1.05}
 .case{background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);padding:30px;box-shadow:var(--sh);transition:.4s var(--e);display:flex;flex-direction:column}
 .case:hover{transform:translateY(-6px);border-color:var(--bd2);background:var(--card2)}
 .case.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.25fr;gap:34px;align-items:center}
@@ -610,7 +620,7 @@ header .w{max-width:1320px}
 <a href="#plattform" class="lnk">Plattform</a>
 <a href="#module" class="lnk">Module</a>
 <a href="#live-calls" class="lnk">Live Calls</a>
-<a href="#methode" class="lnk">Methode</a>
+<a href="#ablauf" class="lnk">Ablauf</a>
 <a href="#mall" class="lnk">Mall-Case</a>
 <a href="#stimmen" class="lnk">Stimmen</a>
 <a href="#pakete" class="lnk">Pakete</a>
@@ -626,7 +636,7 @@ header .w{max-width:1320px}
 <a href="#plattform">Plattform</a>
 <a href="#module">Module</a>
 <a href="#live-calls">Live Calls</a>
-<a href="#methode">Methode</a>
+<a href="#ablauf">Ablauf</a>
 <a href="#mall">Mall-Case</a>
 <a href="#stimmen">Stimmen</a>
 <a href="#pakete">Pakete</a>
@@ -883,54 +893,122 @@ header .w{max-width:1320px}
 </div>
 </section>
 
-<!-- ========== METHODE ========== -->
-<section class="sec" id="methode">
-<div class="w">
-<div class="sh center rv">
-<div class="eyebrow">So funktioniert die Academy</div>
-<h2>Drei Bausteine zur eigenen <span class="hl">Content-Maschine.</span></h2>
-<span class="accent-line center"></span>
-</div>
-<div class="meth-grid">
-<div class="meth-card rv rvd1">
-<div class="meth-n">01 · Strategie & Fundament</div>
-<h3>Der klare Plan, bevor die erste Kamera läuft.</h3>
-<p>Wettbewerbs- und Zielgruppenanalyse, Positionierung, Kanal- und Profilstrategie, Content-Säulen, Formatentwicklung, Trend-Logik und Redaktionsplan.</p>
-<div class="tags"><span>Positionierung</span><span>Content-Säulen</span><span>Redaktionsplan</span></div>
-</div>
-<div class="meth-card rv rvd2">
-<div class="meth-n">02 · Inhouse-Qualifizierung</div>
-<h3>Ein Produktionszyklus macht euch eigenständig.</h3>
-<p>24 maßgeschneiderte Skripte, Dreh-Begleitung, professioneller Schnitt von 24 Videos, Auswertung. Geführt in <strong>vier Online 1:1 Calls</strong>. In jedem Call sitzt zusätzlich zu eurem virral Mentor <strong>Fabian</strong> mit am Tisch, ein <strong>externer CMO (Chief Marketing Officer) eines etablierten Unternehmens</strong>. So bekommt ihr echtes Entscheider-Wissen aus erster Hand, neben der Social-Expertise von virral.</p>
-<div class="tags"><span>24 Skripte</span><span>4 Live Calls</span><span>CMO Fabian</span></div>
-</div>
-<div class="meth-card rv rvd3">
-<div class="meth-n">03 · E-Learning & Community</div>
-<h3>Zwölf Monate Begleitung auf der Plattform.</h3>
-<p>E-Learning-Plattform mit <strong>über 100 Modulen</strong>, <strong>wöchentliche Live Calls</strong> zu aktuellen Social-Themen, <strong>eine eigene WhatsApp-Gruppe</strong> nur mit eurem virral Mentor und Fabian für 1:1 Support, plus Zugang zu einer der größten deutschen Content-Communities.</p>
-<div class="tags"><span>100+ Module</span><span>24/7 Support</span><span>Community</span></div>
-</div>
-</div>
-<p class="meth-close rv">Professioneller Content entsteht <span>ab dem ersten Drehtag.</span> Nach zwölf Monaten läuft die Produktion eigenständig aus eurem Team.</p>
-</div>
-</section>
-
-<!-- ========== ABLAUF / PROZESS ========== -->
+<!-- ========== ABLAUF & LEISTUNGEN ========== -->
 <section class="sec" id="ablauf">
 <div class="w">
 <div class="sh center rv">
-<div class="eyebrow">So läuft es ab</div>
-<h2>Von der ersten Idee zur eigenen <span class="hl">Content-Maschine.</span></h2>
+<div class="eyebrow">Ablauf & Leistungen</div>
+<h2>Alles, was drin ist. <span class="hl">Schritt für Schritt.</span></h2>
 <span class="accent-line center"></span>
-<p class="lead">Ein klarer Ablauf in sechs Schritten. Vom Kennenlernen bis zum laufenden 1:1 Support.</p>
+<p class="lead">Von der ersten Idee bis zur eigenständigen Produktion. Das komplette Programm im Überblick.</p>
 </div>
-<div class="proc-steps rv">
-<div class="pstep"><div class="pn">1</div><h4>Kennenlernen</h4><p>Unverbindliches Erstgespräch. Wir analysieren eure Social-Präsenz und prüfen, ob ein Slot zu euch passt.</p></div>
-<div class="pstep"><div class="pn">2</div><h4>Onboarding</h4><p>Gemeinsamer Kickoff. Wir lernen euer Team, eure Ziele und eure Marke kennen und richten alles ein.</p></div>
-<div class="pstep"><div class="pn">3</div><h4>Konzept</h4><p>Wir erstellen euer Strategie- und Content-Konzept: Positionierung, Formate, Content-Säulen und Redaktionsplan.</p></div>
-<div class="pstep"><div class="pn">4</div><h4>Freischaltung der Academy</h4><p>Voller Zugang zur E-Learning Plattform mit über 100 Modulen für euer ganzes Team.</p></div>
-<div class="pstep"><div class="pn">5</div><h4>Wöchentliche Live Calls</h4><p>Laufende Begleitung in echten Calls: Format-Reviews und Q&A mit eurem Mentor und Fabian.</p></div>
-<div class="pstep hot"><div class="pn">6</div><h4>Eigene WhatsApp-Gruppe</h4><p>Eine private Gruppe nur mit virral und euch. 1:1 Support, ohne andere Kunden.</p><span class="ptag">1:1 Support</span></div>
+<div class="tl rv">
+
+<div class="tli">
+<div class="tl-n">1</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 1 · Start</div>
+<h3>Kennenlernen</h3>
+<p>Unverbindliches Erstgespräch. Wir schauen uns eure Social-Präsenz an, definieren gemeinsam die Ziele und prüfen, ob ein Slot zu euch passt.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Analyse eurer Social-Präsenz</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Zieldefinition & Wachstumshebel</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Potenzial-Check</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Slot-Verfügbarkeit</li>
+</ul>
+</div>
+</div>
+
+<div class="tli">
+<div class="tl-n">2</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 2 · Setup</div>
+<h3>Onboarding</h3>
+<p>Gemeinsamer Kickoff. Wir lernen euer Team und eure Marke kennen, klären Rollen und richten alles für die nächsten zwölf Monate ein.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Kickoff mit eurem Team</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Rollen & Verantwortlichkeiten</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Technisches Setup & Zugänge</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Zeitplan über 12 Monate</li>
+</ul>
+</div>
+</div>
+
+<div class="tli">
+<div class="tl-n">3</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 3 · Fundament</div>
+<h3>Strategie & Konzept</h3>
+<p>Der klare Plan, bevor die erste Kamera läuft. Wir entwickeln euer komplettes strategisches Fundament für Social Commerce.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Wettbewerbs- & Zielgruppenanalyse</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Positionierung & Kanalstrategie</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Content-Säulen & Formatentwicklung</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Trend-Logik & Redaktionsplan</li>
+</ul>
+</div>
+</div>
+
+<div class="tli">
+<div class="tl-n">4</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 4 · E-Learning</div>
+<h3>Freischaltung der Academy</h3>
+<p>Voller Zugang zur E-Learning Plattform für euer ganzes Team. Lernen im eigenen Tempo, jederzeit abrufbar.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Über 100 Module</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>10 strukturierte Lernpfade</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Zugang für das ganze Team</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Fortschritt & Zertifikate</li>
+</ul>
+</div>
+</div>
+
+<div class="tli">
+<div class="tl-n">5</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 5 · Begleitung</div>
+<h3>Wöchentliche Live Calls</h3>
+<p>Jede Woche live mit eurem virral Mentor und Fabian, einem externen CMO. Reviews, Antworten und aktuelle Trends direkt aus der Praxis.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Format- & Content-Reviews</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Q&A in Echtzeit</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aktuelle Trends & Updates</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aufzeichnungen on demand</li>
+</ul>
+</div>
+</div>
+
+<div class="tli hot">
+<div class="tl-n">6</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 6 · 1:1 Support</div>
+<h3>Eigene WhatsApp-Gruppe</h3>
+<p>Eine private Gruppe nur mit virral und euch. Kein anderer Kunde ist dabei. Direkter Draht zu eurem Mentor und Fabian, wann immer ihr ihn braucht.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>1:1 Support, ohne andere</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mentor & Fabian (CMO)</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Schnelle Antworten</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Zugang zur Content-Community</li>
+</ul>
+</div>
+</div>
+
+<div class="tli">
+<div class="tl-n">7</div>
+<div class="tl-card">
+<div class="tl-tag">Phase 7 · Ergebnis</div>
+<h3>Eigenständige Produktion</h3>
+<p>Nach zwölf Monaten produziert euer Team eigenständig weiter. Die Content-Kompetenz ist im Haus und bleibt dort.</p>
+<ul class="tl-list">
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>1 Drehtag / Monat = 15 Videos</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>40+ Uploads über 4 Plattformen</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Eine studentische Fachkraft genügt</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Inhouse-Kompetenz, die bleibt</li>
+</ul>
+</div>
+</div>
+
 </div>
 <div style="text-align:center;margin-top:clamp(36px,5vw,52px)" class="rv">
 <a href="/anfrage" class="btn btn-p">Slot sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
@@ -1000,25 +1078,7 @@ header .w{max-width:1320px}
 <div class="case wide rv">
 <div>
 <div class="case-head">
-<div class="case-logo" style="background:var(--a);color:#fff;font-weight:800;font-size:.58rem;text-align:center;line-height:1.05">DIE<br>MALL</div>
-<div><div class="ct">Signature-Case · TikTok</div><h3>Die Mall</h3></div>
-</div>
-<div class="case-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Die erste Mall auf TikTok</div>
-<p>Datenbasierte Formate, skaliert auf Millionen-Views. <a href="#mall" style="color:var(--a);font-weight:700">Ganze Story ansehen →</a></p>
-<div class="case-kpis four">
-<div class="kpi"><div class="kv"><span class="ctr" data-count="43" data-suffix=" Mio.">0</span></div><div class="kl">Views Account</div></div>
-<div class="kpi"><div class="kv"><span class="ctr" data-count="54" data-suffix=" Mio.">0</span></div><div class="kl">#Dreiländergalerie</div></div>
-<div class="kpi"><div class="kv"><span class="ctr" data-count="9.4" data-dec="1" data-suffix=" Mio.">0</span></div><div class="kl">Top-Video</div></div>
-<div class="kpi"><div class="kv"><span class="ctr" data-count="6.2" data-dec="1" data-suffix=" Mio.">0</span></div><div class="kl">80-Euro-Challenge</div></div>
-</div>
-</div>
-<div class="case-media"><a href="#mall"><img class="mall-img" src="/img/mall-welle2.png" alt="Die Mall auf TikTok: Millionen-Views auf breiter Front"></a></div>
-</div>
-
-<div class="case wide rv rvd1">
-<div>
-<div class="case-head">
-<div class="case-logo" style="background:#0a0a0a;color:#fff;font-weight:800;font-size:.7rem">effect®</div>
+<div class="case-logo logo-effect">effect</div>
 <div><div class="ct">Organisch · ohne Ad-Budget</div><h3>effect® energy</h3></div>
 </div>
 <div class="case-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>80 Mio. Views in 4 Wochen</div>
@@ -1037,9 +1097,45 @@ header .w{max-width:1320px}
 </div>
 </div>
 
+<div class="case wide rv rvd1">
+<div>
+<div class="case-head">
+<div class="case-logo fill"><img src="/img/img-18.webp" alt="Jochen Schweizer Logo"></div>
+<div><div class="ct">Full Service · 2 Jahre Partnerschaft</div><h3>Jochen Schweizer / mydays</h3></div>
+</div>
+<p>Als feste Social-Agentur verantworten wir die komplette Social-Präsenz. Höchster Brand-Lift, stark gesteigerte Watchtime.</p>
+<div class="case-kpis four">
+<div class="kpi"><div class="kv"><span class="ctr" data-count="100" data-suffix=" Mio.">0</span></div><div class="kl">Views</div></div>
+<div class="kpi"><div class="kv">&gt; 5 %</div><div class="kl">Engagement-Rate</div></div>
+<div class="kpi"><div class="kv"><span class="ctr" data-count="400" data-prefix="+" data-suffix=" %">0</span></div><div class="kl">Watchtime</div></div>
+<div class="kpi"><div class="kv">Höchster</div><div class="kl">Brand-Lift</div></div>
+</div>
+</div>
+<div class="case-media">
+<div class="phone"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 1"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>5,1 Mio</div></div>
+<div class="phone"><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 2"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>3,8 Mio</div></div>
+<div class="phone"><iframe data-src="https://app.vidzflow.com/v/19XrYmDTge?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 3"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>2,4 Mio</div></div>
+</div>
+</div>
+
+<div class="case rv">
+<div class="case-head">
+<div class="case-logo logo-mall">DIE<br>MALL</div>
+<div><div class="ct">Signature-Case · TikTok</div><h3>Die Mall</h3></div>
+</div>
+<div class="case-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Die erste Mall auf TikTok</div>
+<p>Datenbasierte Formate, skaliert auf Millionen-Views. <a href="#mall" style="color:var(--a);font-weight:700">Ganze Story ansehen →</a></p>
+<div class="case-kpis four">
+<div class="kpi"><div class="kv"><span class="ctr" data-count="43" data-suffix=" Mio.">0</span></div><div class="kl">Views Account</div></div>
+<div class="kpi"><div class="kv"><span class="ctr" data-count="54" data-suffix=" Mio.">0</span></div><div class="kl">#Dreiländergalerie</div></div>
+<div class="kpi"><div class="kv"><span class="ctr" data-count="9.4" data-dec="1" data-suffix=" Mio.">0</span></div><div class="kl">Top-Video</div></div>
+<div class="kpi"><div class="kv"><span class="ctr" data-count="6.2" data-dec="1" data-suffix=" Mio.">0</span></div><div class="kl">80-Euro-Challenge</div></div>
+</div>
+</div>
+
 <div class="case rv rvd1">
 <div class="case-head">
-<div class="case-logo" style="background:var(--a);color:#fff;font-weight:800;font-size:.62rem;text-align:center;line-height:1.1">KRASS</div>
+<div class="case-logo logo-krass">KRASS</div>
 <div><div class="ct">Employer Branding</div><h3>Krass Altenheim</h3></div>
 </div>
 <div class="case-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>100K Follower nach 5 Videos</div>
@@ -1059,7 +1155,7 @@ header .w{max-width:1320px}
 <div><div class="ct">Brand Channel · Employer Branding</div><h3>EDEKA</h3></div>
 </div>
 <p>Strategisch neu entwickelter Social-Auftritt für die junge Zielgruppe. Komplett organisch in die Spitze des Arbeitgeber-Rankings.</p>
-<div class="case-kpis">
+<div class="case-kpis four">
 <div class="kpi"><div class="kv"><span class="ctr" data-count="42.8" data-dec="1" data-suffix=" Mio.">0</span></div><div class="kl">Organische Views</div></div>
 <div class="kpi"><div class="kv"><span class="ctr" data-count="75000" data-prefix="+">0</span></div><div class="kl">Neue Follower</div></div>
 <div class="kpi"><div class="kv">Top 3</div><div class="kl">Arbeitgeber-Ranking</div></div>
@@ -1073,32 +1169,11 @@ header .w{max-width:1320px}
 <div><div class="ct">Brand Channel · 2025/2026</div><h3>STRABAG</h3></div>
 </div>
 <p>Der Beweis, dass die Baubranche bereit ist für Entertainment-Formate. Zweistellige Millionenreichweiten, komplett organisch.</p>
-<div class="case-kpis">
+<div class="case-kpis four">
 <div class="kpi"><div class="kv"><span class="ctr" data-count="41" data-suffix=" Mio.">0</span></div><div class="kl">Organische Views</div></div>
 <div class="kpi"><div class="kv"><span class="ctr" data-count="400000">0</span></div><div class="kl">ø Views / Video</div></div>
 <div class="kpi"><div class="kv"><span class="ctr" data-count="54000" data-prefix="+">0</span></div><div class="kl">Neue Follower</div></div>
 <div class="kpi"><div class="kv">2</div><div class="kl">Plattformen</div></div>
-</div>
-</div>
-
-<div class="case wide rv rvd2">
-<div>
-<div class="case-head">
-<div class="case-logo fill"><img src="/img/img-18.webp" alt="Jochen Schweizer Logo"></div>
-<div><div class="ct">Full Service · 2 Jahre Partnerschaft</div><h3>Jochen Schweizer / mydays</h3></div>
-</div>
-<p>Als feste Social-Agentur verantworten wir die komplette Social-Präsenz. Höchster Brand-Lift, stark gesteigerte Watchtime.</p>
-<div class="case-kpis four">
-<div class="kpi"><div class="kv"><span class="ctr" data-count="100" data-suffix=" Mio.">0</span></div><div class="kl">Views</div></div>
-<div class="kpi"><div class="kv">&gt; 5 %</div><div class="kl">Engagement-Rate</div></div>
-<div class="kpi"><div class="kv"><span class="ctr" data-count="400" data-prefix="+" data-suffix=" %">0</span></div><div class="kl">Watchtime</div></div>
-<div class="kpi"><div class="kv">Höchster</div><div class="kl">Brand-Lift</div></div>
-</div>
-</div>
-<div class="case-phones">
-<div class="phone"><iframe data-src="https://app.vidzflow.com/v/7auSemGIho?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 1"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>5,1 Mio</div></div>
-<div class="phone"><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 2"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>3,8 Mio</div></div>
-<div class="phone"><iframe data-src="https://app.vidzflow.com/v/19XrYmDTge?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" allow="autoplay;fullscreen" title="Jochen Schweizer Case Video 3"></iframe><div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>2,4 Mio</div></div>
 </div>
 </div>
 
@@ -1137,7 +1212,7 @@ header .w{max-width:1320px}
 </div>
 </div>
 <div class="flow-foot rv">
-<div class="ff-t">Veröffentlichung alle 2 bis 3 Tage über vier Plattformen. Dafür reicht eine <span>studentische Fachkraft.</span> Wir übernehmen die komplette Formatentwicklung von über 24 Assets, werten aus und schreiben neue Skripte auf Basis echter Daten.</div>
+<div class="ff-t">Veröffentlichung alle 2 bis 3 Tage über vier Plattformen. Dafür reicht eine <span>studentische Fachkraft.</span> Wir übernehmen die komplette Formatentwicklung, werten jedes Video aus und entwickeln neue Formate auf Basis echter Daten.</div>
 <a href="/anfrage" class="btn btn-p">Slot sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 </div>
 </div>
@@ -1267,7 +1342,7 @@ header .w{max-width:1320px}
 <div class="pak-d">Strategie, Qualifizierung und ein Jahr auf der Plattform.</div>
 <ul>
 <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Alles aus Foundation</li>
-<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>24 Skripte + Schnitt von 24 Videos</li>
+<li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Strategie- & Content-Konzept</li>
 <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>4 Online 1:1 Calls mit Fabian (CMO)</li>
 <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>E-Learning Plattform mit 100+ Modulen</li>
 <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Wöchentliche Live Calls</li>
@@ -1303,7 +1378,7 @@ header .w{max-width:1320px}
 <span class="accent-line center"></span>
 </div>
 <div class="faq-wrap">
-<div class="faq"><button class="faq-q">Wie viel Zeit kostet uns das intern?<span class="pl"></span></button><div class="faq-a"><p>Eine studentische Fachkraft genügt. Ein Drehtag pro Monat reicht für 15 Videos. Den Rest, von der Formatentwicklung bis zum Schnitt, übernehmen wir gemeinsam mit eurem Team.</p></div></div>
+<div class="faq"><button class="faq-q">Wie viel Zeit kostet uns das intern?<span class="pl"></span></button><div class="faq-a"><p>Eine studentische Fachkraft genügt. Ein Drehtag pro Monat reicht für 15 Videos. Den Rest, von der Formatentwicklung bis zur Auswertung, übernehmen wir gemeinsam mit eurem Team.</p></div></div>
 <div class="faq"><button class="faq-q">Wie funktioniert die E-Learning Plattform?<span class="pl"></span></button><div class="faq-a"><p>Zwölf Monate Zugang zu über 100 Modulen, wöchentlichen Live Calls, 24/7 WhatsApp-Support und der Community. Euer Team lernt im eigenen Tempo und vertieft jedes Thema direkt in der Praxis.</p></div></div>
 <div class="faq"><button class="faq-q">Wann sehen wir erste Ergebnisse?<span class="pl"></span></button><div class="faq-a"><p>Professioneller Content entsteht ab dem ersten Drehtag. Schon in der ersten Welle veröffentlicht ihr Videos auf hohem Niveau und sammelt die ersten echten Daten.</p></div></div>
 <div class="faq"><button class="faq-q">Was passiert nach den zwölf Monaten?<span class="pl"></span></button><div class="faq-a"><p>Das Team produziert eigenständig weiter. Die Kompetenz entsteht im Haus und bleibt dort. Aus dem Programm wird eure dauerhafte Inhouse-Content-Maschine.</p></div></div>
@@ -1338,7 +1413,7 @@ header .w{max-width:1320px}
 <ul class="ft-ls">
 <li><a href="#plattform">Plattform</a></li>
 <li><a href="#module">Module</a></li>
-<li><a href="#methode">Methode</a></li>
+<li><a href="#ablauf">Ablauf</a></li>
 <li><a href="#pakete">Pakete</a></li>
 <li><a href="/">Zur Hauptseite</a></li>
 </ul>

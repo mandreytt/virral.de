@@ -110,6 +110,9 @@ header .w{max-width:1320px}
 .trustbar .tb-txt b{color:var(--w);font-weight:800}
 .trustbar .tb-stars{color:var(--a);font-size:.72rem;letter-spacing:1px}
 @media(max-width:560px){.tbl:nth-child(n+5){display:none}}
+.hero-top{margin-bottom:clamp(24px,3.5vw,40px)}
+.hero-top h1{margin-bottom:0;font-size:clamp(2rem,4.6vw,3.2rem);white-space:nowrap}
+@media(max-width:1100px){.hero-top h1{white-space:normal;font-size:clamp(2rem,6vw,2.8rem)}}
 .hero h1{margin-bottom:22px}
 .hero h1 .word{display:inline-block;opacity:0;transform:translateY(20px);transition:opacity .6s var(--e),transform .6s var(--e)}
 .hero h1 .word.in{opacity:1;transform:none}
@@ -179,6 +182,17 @@ header .w{max-width:1320px}
 .fc-foll .ctr{color:var(--a)}
 .fc-plat{position:absolute;top:11px;right:11px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:.56rem;font-weight:800;color:#fff;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border:1px solid var(--bd2);padding:4px 9px;border-radius:100px}
 .fc-plat svg{width:12px;height:12px;fill:#fff}
+/* creators minimal */
+.cr2{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
+.cr2-card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r2);padding:34px 32px;text-align:center;transition:.4s var(--e)}
+.cr2-card:hover{border-color:var(--bd2);transform:translateY(-4px)}
+.cr2-av{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;margin:0 auto 18px;border:2px solid var(--bd2)}
+.cr2-quote{font-size:.95rem;font-style:italic;color:var(--w);line-height:1.6;margin-bottom:18px}
+.cr2-name{font-size:1.05rem;font-weight:800}
+.cr2-role{font-size:.74rem;color:var(--w2);font-weight:600;margin-top:2px}
+.cr2-foll{margin-top:12px;font-size:.82rem;font-weight:700;color:var(--w2)}
+.cr2-foll .ctr{color:var(--a);font-weight:800}
+@media(max-width:680px){.cr2{grid-template-columns:1fr;max-width:420px}}
 
 /* Hero platform mockup */
 .appwrap{position:relative;perspective:1800px}
@@ -651,10 +665,13 @@ header .w{max-width:1320px}
 <!-- ========== HERO ========== -->
 <section class="hero">
 <div class="hero-glow"></div><div class="hero-glow2"></div>
-<div class="w"><div class="hero-grid">
-<div>
+<div class="w">
+<div class="hero-top">
 <div class="eyebrow rv">virral Academy · Die E-Learning Plattform</div>
 <h1 id="heroH1">Mach dein Team zu <span class="hl">Social Media Profis.</span></h1>
+</div>
+<div class="hero-grid">
+<div>
 <p class="lead rv rvd2">Die E-Learning Plattform, mit der dein Team inhouse zur Social Commerce Brand wird. Über 100 Module, wöchentliche Live Calls, eigene WhatsApp Gruppe und eine der größten Content Communities.</p>
 <div class="hbtns rv rvd3">
 <a href="/anfrage" class="btn btn-p">Slot sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
@@ -824,6 +841,33 @@ header .w{max-width:1320px}
 </div>
 </div>
 
+</div>
+</section>
+
+<!-- ========== CREATOR (minimal) ========== -->
+<section class="sec" id="creator">
+<div class="w">
+<div class="sh center rv">
+<div class="eyebrow">Von Creators gebaut</div>
+<h2>Die Köpfe hinter den <span class="hl">Reichweiten.</span></h2>
+<span class="accent-line center"></span>
+</div>
+<div class="cr2 rv">
+<div class="cr2-card">
+<img class="cr2-av" src="/img/img-23.jpg" alt="Finnel">
+<p class="cr2-quote">„Reichweite ist kein Zufall, sondern System. Genau das gebe ich an euer Team weiter."</p>
+<div class="cr2-name">Finnel</div>
+<div class="cr2-role">YouTube Creator des Jahres</div>
+<div class="cr2-foll"><span class="ctr" data-count="7.3" data-dec="1" data-suffix=" Mio.">0</span> Follower</div>
+</div>
+<div class="cr2-card">
+<img class="cr2-av" src="/img/Profilbild%20Andre%20(2).jpg" alt="Mandre">
+<p class="cr2-quote">„Was bei uns Millionen Views bringt, lernt ihr Schritt für Schritt selbst zu bauen."</p>
+<div class="cr2-name">Mandre</div>
+<div class="cr2-role">Creator · virral</div>
+<div class="cr2-foll"><span class="ctr" data-count="1.1" data-dec="1" data-suffix=" Mio.">0</span> Follower</div>
+</div>
+</div>
 </div>
 </section>
 
@@ -1281,39 +1325,6 @@ header .w{max-width:1320px}
 </div>
 </section>
 
-<!-- ========== CREATOR ========== -->
-<section class="sec" id="creator">
-<div class="w">
-<div class="sh center rv">
-<div class="eyebrow">Die Creator hinter virral</div>
-<h2>Reichweite, die für sich <span class="hl">spricht.</span></h2>
-<span class="accent-line center"></span>
-<p class="lead">virral wurde von Creators für Brands gebaut. Dieselben Köpfe, die diese Reichweiten aufgebaut haben, stecken hinter der Academy und geben ihr Wissen an euer Team weiter.</p>
-</div>
-<div class="faces-row creators-row rv">
-<div class="fc fc-lg">
-<img src="/img/img-23.jpg" alt="Finnel, Creator">
-<div class="fc-ov"></div>
-<div class="fc-plat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 100 12.63 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1-.13z"/></svg>TikTok</div>
-<div class="fc-meta">
-<div class="fc-name">Finnel</div>
-<div class="fc-role">Creator · YouTube Creator des Jahres</div>
-<div class="fc-foll"><span class="ctr" data-count="7.3" data-dec="1" data-suffix=" Mio.">0</span> Follower</div>
-</div>
-</div>
-<div class="fc fc-lg">
-<img src="/img/Profilbild%20Andre%20(2).jpg" alt="Mandre, Creator">
-<div class="fc-ov"></div>
-<div class="fc-plat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.77 0 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 100 12.63 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.82a4.84 4.84 0 01-1-.13z"/></svg>TikTok</div>
-<div class="fc-meta">
-<div class="fc-name">Mandre</div>
-<div class="fc-role">Creator · virral</div>
-<div class="fc-foll"><span class="ctr" data-count="1.1" data-dec="1" data-suffix=" Mio.">0</span> Follower</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 <!-- ========== PAKETE (no prices) ========== -->
 <section class="sec alt" id="pakete">
@@ -1397,7 +1408,7 @@ header .w{max-width:1320px}
 <div class="w rv">
 <div class="final-person"><img src="/img/Moritz.png" alt="Moritz aus dem virral-Team"><span class="fp-dot"></span></div>
 <div class="eyebrow" style="justify-content:center">Jetzt starten</div>
-<h2>Lass uns euch zur <span class="hl">Social Commerce Brand</span> machen.</h2>
+<h2>Lass uns dein Team zu <span class="hl">Social Media Profis</span> machen.</h2>
 <p>30 Minuten, unverbindlich. Wir analysieren eure Social Präsenz und zeigen die Wachstumshebel.</p>
 <a href="/anfrage" class="btn btn-p">Strategiegespräch sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
 <div class="resp"><span class="dot"></span> Moritz meldet sich · Antwort in 60 Minuten.</div>

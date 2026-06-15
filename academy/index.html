@@ -148,6 +148,29 @@ header .w{max-width:1320px}
 @media(max-width:1024px){.hero-grid{grid-template-columns:1fr}.hvis{height:480px;margin-top:24px}}
 @media(max-width:560px){.hvis{height:430px}.phone{width:150px}.hcard{width:175px;padding:11px}.hcard.hc1{left:-2%}.hcard.hc2{right:-2%}}
 
+/* Hero faces (Andre + Finnel) + reach */
+.faces{position:relative;display:flex;flex-direction:column;gap:16px}
+.faces .fh{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--w3)}
+.faces .fh::before{content:'';width:18px;height:2px;background:var(--a)}
+.faces-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fc{position:relative;border-radius:var(--r2);overflow:hidden;aspect-ratio:4/5;border:1px solid var(--bd2);box-shadow:var(--sh2);transition:transform .4s var(--e)}
+.fc:hover{transform:translateY(-5px)}
+.fc>img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
+.fc-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 28%,rgba(6,6,8,.95))}
+.fc-meta{position:absolute;left:14px;right:14px;bottom:13px;z-index:2}
+.fc-name{font-size:1.05rem;font-weight:800;letter-spacing:-.01em}
+.fc-role{font-size:.68rem;color:var(--w2);font-weight:600;margin-top:1px}
+.fc-chip{display:inline-flex;align-items:center;gap:5px;margin-top:9px;font-size:.6rem;font-weight:800;color:#fff;background:rgba(254,44,85,.92);padding:4px 10px;border-radius:100px}
+.fc-badge{position:absolute;top:11px;left:11px;z-index:3;display:inline-flex;align-items:center;gap:5px;font-size:.56rem;font-weight:800;color:#fff;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border:1px solid var(--bd2);padding:4px 9px;border-radius:100px}
+.fc-badge svg{width:12px;height:12px;fill:#fff}
+.reach{background:rgba(20,20,24,.92);border:1px solid var(--bd2);border-radius:var(--r2);padding:20px 22px;box-shadow:var(--sh);backdrop-filter:blur(8px)}
+.reach-t{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--a);margin-bottom:16px}
+.reach-t .rdot{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulseDot 2s infinite}
+.reach-g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.reach-i .rn{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;letter-spacing:-.02em;color:var(--w)}
+.reach-i .rl{font-size:.66rem;color:var(--w3);font-weight:600;margin-top:2px;line-height:1.3}
+@media(max-width:1024px){.faces{max-width:520px;margin:0 auto}}
+
 /* ===== Marquee ===== */
 .marquee{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:32px 0;overflow:hidden;background:var(--bg)}
 .marquee-l{text-align:center;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--w3);margin-bottom:22px}
@@ -509,7 +532,7 @@ header .w{max-width:1320px}
 </div>
 </div>
 <div class="eyebrow rv rvd1">virral Academy · E-Learning Plattform</div>
-<h1 id="heroH1">Die Plattform, die euer Team zur <span class="hl">Social-Commerce-Brand</span> macht.</h1>
+<h1 id="heroH1">Werde zur <span class="hl">Social-Commerce-Brand.</span></h1>
 <p class="lead rv rvd2">Über 100 Module, wöchentliche Live-Seminare, 24/7 WhatsApp-Support und eine der größten Content-Communities. Ein Jahr Begleitung, mit dem die Content-Kompetenz im Team entsteht und im Haus bleibt.</p>
 <div class="hbtns rv rvd3">
 <a href="/anfrage" class="btn btn-p">Slot sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
@@ -521,19 +544,36 @@ header .w{max-width:1320px}
 <div class="hm"><span class="hmv">24/7</span><span class="hml">WhatsApp-Support</span></div>
 </div>
 </div>
-<div class="hvis rv-s rvd2">
-<div class="hcard hc1">
-<div class="hc-row"><div class="hc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><div class="hc-t">Modul 12 · Hooks</div><div class="hc-s">abgeschlossen</div></div></div>
-<div class="hc-prog"><i style="width:82%"></i></div>
+<div class="faces rv-s rvd2">
+<div class="fh">Die Gesichter hinter der virral Academy</div>
+<div class="faces-row">
+<div class="fc">
+<img src="/img/Profilbild%20Andre%20(2).jpg" alt="Andre Braun, Gründer von virral" loading="eager">
+<div class="fc-ov"></div>
+<div class="fc-meta">
+<div class="fc-name">Andre</div>
+<div class="fc-role">Gründer · virral</div>
+<span class="fc-chip">10+ Mio im Netzwerk</span>
 </div>
-<div class="phone phone-main">
-<div class="notch"></div>
-<div class="live"><span class="ld"></span>Live</div>
-<iframe data-src="https://app.vidzflow.com/v/UmDUdVbjNP?dq=576&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=true&playsinline=false&bc=%23fe2c55&controls=false" allow="autoplay;fullscreen" allowfullscreen title="virral Content Beispiel"></iframe>
-<div class="pv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>4,2 Mio</div>
 </div>
-<div class="hcard hc2">
-<div class="hc-row"><div class="hc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><div class="hc-t">CMO antwortet</div><div class="hc-s">gerade eben · 24/7</div></div></div>
+<div class="fc">
+<img src="/img/img-23.jpg" alt="Finnel, YouTube Creator des Jahres" loading="eager">
+<div class="fc-ov"></div>
+<div class="fc-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Creator des Jahres</div>
+<div class="fc-meta">
+<div class="fc-name">Finnel</div>
+<div class="fc-role">Creator · YouTube DE #1</div>
+<span class="fc-chip">4,2 Mio TikTok</span>
+</div>
+</div>
+</div>
+<div class="reach">
+<div class="reach-t"><span class="rdot"></span>Unsere Reichweite auf Social</div>
+<div class="reach-g">
+<div class="reach-i"><div class="rn"><span class="ctr" data-count="5" data-suffix=" Mrd.">0</span></div><div class="rl">Views gesamt</div></div>
+<div class="reach-i"><div class="rn"><span class="ctr" data-count="10" data-suffix="+">0</span></div><div class="rl">Mio. Abonnenten</div></div>
+<div class="reach-i"><div class="rn"><span class="ctr" data-count="150" data-suffix="+">0</span></div><div class="rl">Mio. Views / Monat</div></div>
+</div>
 </div>
 </div>
 </div></div>

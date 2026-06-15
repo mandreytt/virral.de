@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"virral Academy E-Learning Plattform","description":"E-Learning Plattform mit über 100 Modulen, wöchentlichen Live-Seminaren, 24/7 WhatsApp-Support und Community. Enablement-Programm, mit dem Brands inhouse zur Social-Commerce-Brand werden.","provider":{"@type":"Organization","name":"virral GmbH","url":"https://virral.de"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"P12M"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie viel Zeit kostet uns das intern?","acceptedAnswer":{"@type":"Answer","text":"Eine studentische Fachkraft genügt. Pro Welle reicht ein Drehtag fuer 10 bis 12 Videos."}},{"@type":"Question","name":"Wie funktioniert die E-Learning Plattform?","acceptedAnswer":{"@type":"Answer","text":"Zwoelf Monate Zugang zu ueber 100 Modulen, woechentlichen Live-Seminaren, 24/7 WhatsApp-Support und Community."}},{"@type":"Question","name":"Was passiert nach den zwoelf Monaten?","acceptedAnswer":{"@type":"Answer","text":"Das Team produziert eigenstaendig weiter. Die Kompetenz bleibt im Haus."}},{"@type":"Question","name":"Wer ist der externe CMO?","acceptedAnswer":{"@type":"Answer","text":"Ein erfahrener Marketing-Entscheider eines etablierten Unternehmens, fest pro Projekt integriert."}},{"@type":"Question","name":"Brauchen wir Vorerfahrung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Wir bringen euch von null auf professionelles Niveau."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"virral Academy E-Learning Plattform","description":"E-Learning Plattform mit über 100 Modulen, wöchentlichen Live-Seminaren, 24/7 WhatsApp-Support und Community. Enablement-Programm, mit dem Brands inhouse zur Social-Commerce-Brand werden.","provider":{"@type":"Organization","name":"virral GmbH","url":"https://virral.de"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"P12M"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie viel Zeit kostet uns das intern?","acceptedAnswer":{"@type":"Answer","text":"Eine studentische Fachkraft genügt. Ein Drehtag pro Monat reicht fuer 15 Videos."}},{"@type":"Question","name":"Wie funktioniert die E-Learning Plattform?","acceptedAnswer":{"@type":"Answer","text":"Zwoelf Monate Zugang zu ueber 100 Modulen, woechentlichen Live-Seminaren, 24/7 WhatsApp-Support und Community."}},{"@type":"Question","name":"Was passiert nach den zwoelf Monaten?","acceptedAnswer":{"@type":"Answer","text":"Das Team produziert eigenstaendig weiter. Die Kompetenz bleibt im Haus."}},{"@type":"Question","name":"Wer ist der externe CMO?","acceptedAnswer":{"@type":"Answer","text":"Ein erfahrener Marketing-Entscheider eines etablierten Unternehmens, fest pro Projekt integriert."}},{"@type":"Question","name":"Brauchen wir Vorerfahrung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Wir bringen euch von null auf professionelles Niveau."}}]}]}</script>
 <style>
 :root{
   --bg:#060608;--bg2:#0c0c0f;--bg3:#121215;--card:#141418;--card2:#1b1b20;
@@ -277,6 +277,34 @@ header .w{max-width:1320px}
 .modc .mc b{color:var(--a)}
 @media(max-width:920px){.mod-grid{grid-template-columns:repeat(2,1fr)}}
 
+/* ===== Live Calls ===== */
+.calls-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,4vw,56px);align-items:center}
+.calls-feat{display:flex;flex-direction:column;gap:16px;margin:24px 0 28px}
+.calls-feat .cf{display:flex;gap:12px;align-items:flex-start}
+.calls-feat .cf .ci{width:38px;height:38px;border-radius:11px;background:var(--ag);color:var(--a);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.calls-feat .cf .ci svg{width:19px;height:19px}
+.calls-feat .cf h4{font-size:.92rem;font-weight:800}
+.calls-feat .cf p{font-size:.8rem;color:var(--w2);line-height:1.5}
+.callui{background:#0f0f13;border:1px solid var(--bd2);border-radius:18px;overflow:hidden;box-shadow:var(--sh2)}
+.callui-bar{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--bd);background:#16161b}
+.cb-live{display:inline-flex;align-items:center;gap:6px;background:var(--a);color:#fff;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+.cb-live .ld{width:6px;height:6px;border-radius:50%;background:#fff;animation:liveDot 1.4s infinite}
+.callui-bar .cb-t{font-size:.76rem;font-weight:700}
+.callui-bar .cb-n{margin-left:auto;font-size:.66rem;color:var(--w3);display:inline-flex;align-items:center;gap:5px}
+.callui-bar .cb-n svg{width:12px;height:12px}
+.callui-stage{position:relative;aspect-ratio:16/9}
+.callui-stage>img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.cs-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.65))}
+.cs-name{position:absolute;bottom:10px;left:12px;z-index:2;font-size:.72rem;font-weight:700;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);padding:4px 11px;border-radius:7px}
+.cs-cap{position:absolute;top:10px;right:12px;z-index:2;font-size:.62rem;font-weight:700;color:#fff;background:rgba(254,44,85,.9);padding:4px 10px;border-radius:7px}
+.callui-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:8px;background:#0c0c0f}
+.callui-tiles .ct{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;border:1px solid var(--bd)}
+.callui-tiles .ct img{width:100%;height:100%;object-fit:cover}
+.callui-tiles .ct .cn{position:absolute;bottom:3px;left:4px;right:4px;font-size:.5rem;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:2}
+.callui-tiles .ct.cmo{border-color:var(--a)}
+.callui-tiles .ct.cmo::after{content:'CMO';position:absolute;top:3px;right:3px;font-size:.42rem;font-weight:800;color:#fff;background:var(--a);padding:1px 4px;border-radius:4px;z-index:2}
+@media(max-width:920px){.calls-grid{grid-template-columns:1fr}}
+
 /* ===== Methode ===== */
 .meth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .meth-card{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:var(--r3);padding:34px 30px;box-shadow:var(--sh);transition:.4s var(--e);overflow:hidden}
@@ -301,7 +329,8 @@ header .w{max-width:1320px}
 .sig-badge{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--a);background:rgba(254,44,85,.08);border:1px solid rgba(254,44,85,.25);padding:7px 14px;border-radius:100px;margin-bottom:16px}
 .sig-step h3{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
 .sig-step p{font-size:.92rem;color:var(--w2);line-height:1.75}
-.sig-vis{background:var(--card);border:1px solid var(--bd2);border-radius:var(--r2);padding:16px;box-shadow:var(--sh2)}
+.sig-vis{background:var(--card);border:1px solid var(--bd2);border-radius:var(--r2);padding:10px;box-shadow:var(--sh2)}
+.sig-img{width:100%;display:block;border-radius:12px}
 .vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .vtile{position:relative;aspect-ratio:9/15;border-radius:10px;overflow:hidden;transition:.5s var(--e);background:#222}
 .vtile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -490,6 +519,7 @@ header .w{max-width:1320px}
 <nav class="hnav">
 <a href="#plattform" class="lnk">Plattform</a>
 <a href="#module" class="lnk">Module</a>
+<a href="#live-calls" class="lnk">Live Calls</a>
 <a href="#methode" class="lnk">Methode</a>
 <a href="#mall" class="lnk">Mall-Case</a>
 <a href="#stimmen" class="lnk">Stimmen</a>
@@ -505,6 +535,7 @@ header .w{max-width:1320px}
 <button class="mob-close" id="mobClose" aria-label="Menü schließen">&times;</button>
 <a href="#plattform">Plattform</a>
 <a href="#module">Module</a>
+<a href="#live-calls">Live Calls</a>
 <a href="#methode">Methode</a>
 <a href="#mall">Mall-Case</a>
 <a href="#stimmen">Stimmen</a>
@@ -721,6 +752,49 @@ header .w{max-width:1320px}
 </div>
 </section>
 
+<!-- ========== LIVE CALLS ========== -->
+<section class="sec" id="live-calls">
+<div class="w">
+<div class="calls-grid">
+<div class="rv">
+<div class="eyebrow">Live Calls</div>
+<h2>Jede Woche <span class="hl">live.</span> Mit Berater und CMO.</h2>
+<span class="accent-line"></span>
+<p class="lead" style="margin-top:16px">Auf der Plattform sitzt ihr wöchentlich in echten Live Calls. Ihr stellt Fragen, lasst eure Formate reviewen und bekommt Feedback direkt aus der Praxis. Verpasst ihr einen Call, schaut ihr ihn als Aufzeichnung.</p>
+<div class="calls-feat">
+<div class="cf"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div><h4>Wöchentliche Gruppen-Calls</h4><p>Feste Termine zu aktuellen Social-Themen und Trends.</p></div></div>
+<div class="cf"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h4>Q&A in Echtzeit</h4><p>Stellt eure Fragen direkt dem Berater und dem externen CMO.</p></div></div>
+<div class="cf"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><div><h4>Format- & Content-Reviews</h4><p>Wir gehen live durch eure Videos und schärfen jedes Format.</p></div></div>
+<div class="cf"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h4>Aufzeichnungen on demand</h4><p>Jeder Call landet in der Mediathek. Nachschauen, wann ihr wollt.</p></div></div>
+</div>
+<a href="/anfrage" class="btn btn-p">Slot sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div>
+<div class="rv-s rvd1">
+<div class="callui">
+<div class="callui-bar">
+<span class="cb-live"><span class="ld"></span>Live</span>
+<span class="cb-t">Format-Review · Live Call</span>
+<span class="cb-n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>142</span>
+</div>
+<div class="callui-stage">
+<img src="/img/Profilbild%20Andre%20(2).jpg" alt="virral Live Call mit Andre">
+<div class="cs-ov"></div>
+<div class="cs-cap">teilt Bildschirm: eure Analytics</div>
+<div class="cs-name">Andre · virral</div>
+</div>
+<div class="callui-tiles">
+<div class="ct cmo"><img src="/img/img-13.webp" alt="" loading="lazy"><span class="cn">Externer CMO</span></div>
+<div class="ct"><img src="/img/img-12.avif" alt="" loading="lazy"><span class="cn">Manuel</span></div>
+<div class="ct"><img src="/img/img-14.webp" alt="" loading="lazy"><span class="cn">Lena</span></div>
+<div class="ct"><img src="/img/img-09.webp" alt="" loading="lazy"><span class="cn">Team</span></div>
+<div class="ct"><img src="/img/img-10.webp" alt="" loading="lazy"><span class="cn">Team</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <!-- ========== METHODE ========== -->
 <section class="sec" id="methode">
 <div class="w">
@@ -773,18 +847,7 @@ header .w{max-width:1320px}
 <h3>Verschiedene Formate getestet.</h3>
 <p>Zum Start wird breit getestet: unterschiedliche Formate, Hooks und Themen. Das Ergebnis ist eine solide Reichweite und vor allem eine wertvolle Datenbasis für die nächste Welle.</p>
 </div>
-<div class="sig-vis">
-<div class="vgrid">
-<div class="vtile dim"><img src="/img/img-09.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">120K</div></div>
-<div class="vtile dim"><img src="/img/img-19.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">240K</div></div>
-<div class="vtile"><img src="/img/img-17.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">380K</div></div>
-<div class="vtile dim"><img src="/img/img-10.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">90K</div></div>
-<div class="vtile"><img src="/img/img-23.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">510K</div></div>
-<div class="vtile dim"><img src="/img/img-11.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">170K</div></div>
-<div class="vtile"><img src="/img/img-24.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">420K</div></div>
-<div class="vtile dim"><img src="/img/_Q1A5440.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">260K</div></div>
-</div>
-</div>
+<div class="sig-vis"><img class="sig-img" src="/img/mall-welle1.webp" alt="TikTok-Grid der Dreiländergalerie in Welle 1: getestete Formate mit solider Reichweite" loading="lazy"></div>
 </div>
 
 <!-- Schritt 2 -->
@@ -794,18 +857,7 @@ header .w{max-width:1320px}
 <h3>Zwei Formate brechen aus.</h3>
 <p>Die Daten sind eindeutig. Die <strong>80-Euro-Challenge</strong> mit <strong><span class="ctr" data-count="6.2" data-dec="1" data-suffix=" Mio.">0</span></strong> Views und das <strong>Glücklich-Format</strong> mit <strong><span class="ctr" data-count="1.7" data-dec="1" data-suffix=" Mio.">0</span></strong>. Genau diese werden skaliert.</p>
 </div>
-<div class="sig-vis">
-<div class="vgrid">
-<div class="vtile dim"><img src="/img/img-10.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">210K</div></div>
-<div class="vtile win"><img src="/img/img-17.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-lab">80 € Challenge</div><div class="vt-n">6,2 Mio.</div></div>
-<div class="vtile dim"><img src="/img/img-11.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">180K</div></div>
-<div class="vtile dim"><img src="/img/img-24.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">150K</div></div>
-<div class="vtile dim"><img src="/img/_Q1A3703.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">240K</div></div>
-<div class="vtile dim"><img src="/img/img-09.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">130K</div></div>
-<div class="vtile win"><img src="/img/img-23.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-lab">Glücklich</div><div class="vt-n">1,7 Mio.</div></div>
-<div class="vtile dim"><img src="/img/img-19.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">200K</div></div>
-</div>
-</div>
+<div class="sig-vis"><img class="sig-img" src="/img/mall-skalierung.webp" alt="Auswertung: Die 80-Euro-Challenge mit 6,2 Mio. und das Glücklich-Format mit 1,7 Mio. Views brechen aus und werden skaliert" loading="lazy"></div>
 </div>
 
 <!-- Schritt 3 -->
@@ -815,18 +867,7 @@ header .w{max-width:1320px}
 <h3>Millionen-Views auf breiter Front.</h3>
 <p>Die Learnings werden übernommen. Top-Video <strong><span class="ctr" data-count="9.4" data-dec="1" data-suffix=" Mio.">0</span></strong>, jedes zweite Video über 1 Mio. Der <strong>#Dreiländergalerie</strong> erreicht <strong><span class="ctr" data-count="54" data-suffix=" Mio.">0</span></strong> Aufrufe, <strong><span class="ctr" data-count="43" data-suffix=" Mio.">0</span></strong> Views auf dem Account.</p>
 </div>
-<div class="sig-vis">
-<div class="vgrid">
-<div class="vtile hot"><img src="/img/img-17.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">9,4 Mio.</div></div>
-<div class="vtile"><img src="/img/img-19.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">2,1 Mio.</div></div>
-<div class="vtile hot"><img src="/img/img-23.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">3,8 Mio.</div></div>
-<div class="vtile"><img src="/img/img-24.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">1,4 Mio.</div></div>
-<div class="vtile"><img src="/img/img-09.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">1,9 Mio.</div></div>
-<div class="vtile hot"><img src="/img/_Q1A5440.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">5,2 Mio.</div></div>
-<div class="vtile"><img src="/img/img-10.webp" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">1,1 Mio.</div></div>
-<div class="vtile hot"><img src="/img/_Q1A3703.jpg" alt="" loading="lazy"><div class="vt-ov"></div><div class="vt-n">2,7 Mio.</div></div>
-</div>
-</div>
+<div class="sig-vis"><img class="sig-img" src="/img/mall-welle2.png" alt="TikTok-Grid der Dreiländergalerie in Welle 2: Millionen-Views auf breiter Front, Top-Video 9,4 Mio." loading="lazy"></div>
 </div>
 </div>
 
@@ -945,12 +986,12 @@ header .w{max-width:1320px}
 <div class="flow">
 <div class="fnode rv rvd1">
 <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-<div class="fv">1</div><div class="fl">Drehtag</div>
+<div class="fv">1 / Monat</div><div class="fl">Drehtag</div>
 </div>
 <div class="farrow rv rvd1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
 <div class="fnode rv rvd2">
 <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
-<div class="fv">10 bis 12</div><div class="fl">Videos</div>
+<div class="fv">15</div><div class="fl">Videos</div>
 </div>
 <div class="farrow rv rvd2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
 <div class="fnode rv rvd3">
@@ -1096,7 +1137,7 @@ header .w{max-width:1320px}
 <span class="accent-line center"></span>
 </div>
 <div class="faq-wrap">
-<div class="faq"><button class="faq-q">Wie viel Zeit kostet uns das intern?<span class="pl"></span></button><div class="faq-a"><p>Eine studentische Fachkraft genügt. Pro Welle reicht ein Drehtag für 10 bis 12 Videos. Den Rest, von der Formatentwicklung bis zum Schnitt, übernehmen wir gemeinsam mit eurem Team.</p></div></div>
+<div class="faq"><button class="faq-q">Wie viel Zeit kostet uns das intern?<span class="pl"></span></button><div class="faq-a"><p>Eine studentische Fachkraft genügt. Ein Drehtag pro Monat reicht für 15 Videos. Den Rest, von der Formatentwicklung bis zum Schnitt, übernehmen wir gemeinsam mit eurem Team.</p></div></div>
 <div class="faq"><button class="faq-q">Wie funktioniert die E-Learning Plattform?<span class="pl"></span></button><div class="faq-a"><p>Zwölf Monate Zugang zu über 100 Modulen, wöchentlichen Live-Seminaren, 24/7 WhatsApp-Support und der Community. Euer Team lernt im eigenen Tempo und vertieft jedes Thema direkt in der Praxis.</p></div></div>
 <div class="faq"><button class="faq-q">Wann sehen wir erste Ergebnisse?<span class="pl"></span></button><div class="faq-a"><p>Professioneller Content entsteht ab dem ersten Drehtag. Schon in der ersten Welle veröffentlicht ihr Videos auf hohem Niveau und sammelt die ersten echten Daten.</p></div></div>
 <div class="faq"><button class="faq-q">Was passiert nach den zwölf Monaten?<span class="pl"></span></button><div class="faq-a"><p>Das Team produziert eigenständig weiter. Die Kompetenz entsteht im Haus und bleibt dort. Aus dem Programm wird eure dauerhafte Inhouse-Content-Maschine.</p></div></div>

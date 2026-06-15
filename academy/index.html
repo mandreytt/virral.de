@@ -110,9 +110,15 @@ header .w{max-width:1320px}
 .trustbar .tb-txt b{color:var(--w);font-weight:800}
 .trustbar .tb-stars{color:var(--a);font-size:.72rem;letter-spacing:1px}
 @media(max-width:560px){.tbl:nth-child(n+5){display:none}}
-.hero-top{margin-bottom:clamp(24px,3.5vw,40px)}
-.hero-top h1{margin-bottom:0;font-size:clamp(2rem,4.6vw,3.2rem);white-space:nowrap}
+.hero-top{margin-bottom:clamp(22px,3vw,34px)}
+.hero-top h1{margin-bottom:18px;font-size:clamp(2rem,4.6vw,3.2rem);white-space:nowrap}
 @media(max-width:1100px){.hero-top h1{white-space:normal;font-size:clamp(2rem,6vw,2.8rem)}}
+.os-bridge{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.os-lock{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid var(--bd2);padding:10px 16px;border-radius:13px}
+.os-logo{height:21px;width:auto;color:var(--w);fill:currentColor}
+.os-badge{background:var(--a);color:#fff;font-weight:800;font-size:.85rem;padding:3px 9px;border-radius:7px;letter-spacing:.03em}
+.os-tag{font-size:1rem;color:var(--w2);font-weight:600;line-height:1.5;max-width:520px}
+@media(max-width:560px){.os-tag{font-size:.9rem}}
 .hero h1{margin-bottom:22px}
 .hero h1 .word{display:inline-block;opacity:0;transform:translateY(20px);transition:opacity .6s var(--e),transform .6s var(--e)}
 .hero h1 .word.in{opacity:1;transform:none}
@@ -260,9 +266,10 @@ header .w{max-width:1320px}
 /* ===== Marquee ===== */
 .marquee{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:32px 0;overflow:hidden;background:var(--bg)}
 .marquee-l{text-align:center;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--w3);margin-bottom:22px}
-.mtrack{display:flex;align-items:center;width:max-content;animation:mq 38s linear infinite;will-change:transform}
-.mtrack img{height:30px;width:auto;margin:0 22px;background:#fff;padding:9px 16px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.25);object-fit:contain;transition:transform .3s}
-.mtrack img:hover{transform:translateY(-3px) scale(1.04)}
+.mtrack{display:flex;align-items:center;width:max-content;animation:mq 55s linear infinite;will-change:transform}
+.mtrack .mc{flex-shrink:0;width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;margin:0 13px;transition:transform .3s}
+.mtrack .mc:hover{transform:translateY(-4px) scale(1.06)}
+.mtrack .mc img{width:66%;height:66%;object-fit:contain}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== Platform showcase ===== */
@@ -667,8 +674,12 @@ header .w{max-width:1320px}
 <div class="hero-glow"></div><div class="hero-glow2"></div>
 <div class="w">
 <div class="hero-top">
-<div class="eyebrow rv">virral OS · Die E-Learning Plattform</div>
+<div class="eyebrow rv">Die E-Learning Plattform für Social Media</div>
 <h1 id="heroH1">Mach dein Team zu <span class="hl">Social Media Profis.</span></h1>
+<div class="os-bridge rv rvd1">
+<span class="os-lock"><svg class="os-logo" viewBox="0 0 1312 368" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1172.64 180.255V360.51H1312V309.01H1238.66V0H1172.64V180.255ZM307.227 47.8238V80.9308H373.235V14.7135H307.227V47.8238ZM0 103.001L96.5756 360.504H179.829L268.226 103.001H194.466L163.853 198.649L135.994 283.259L106.318 193.132L76.641 103.004M307.227 231.759V360.51H373.235V103.004H307.227V231.759ZM446.586 231.759V360.51H505.26V154.505H629.933V103.004H446.579V231.759M666.604 231.759V360.51H725.278V154.505H849.951V103.004H666.597V231.759M886.622 128.755V154.505H952.63C1018.15 154.505 1018.63 154.642 1018.63 172.898C1018.63 189.625 1015.81 191.295 987.466 191.331C891.223 191.459 829.344 257.607 864.255 323.042C887.3 366.243 969.072 382.427 1016.8 353.235C1036.25 341.337 1040.63 340.666 1040.63 349.585C1040.63 358.035 1050.6 360.51 1084.63 360.51H1128.65V334.76C1128.65 311.053 1126.9 309.01 1106.65 309.01H1084.64V103.004H886.622V128.755ZM1025.98 261.52C1025.98 302.419 968.236 331.132 935.009 306.757C900.587 281.511 939.904 244.292 1002.14 243.208C1022.9 242.848 1025.97 245.212 1025.97 261.52" fill="currentColor"/></svg><span class="os-badge">OS</span></span>
+<span class="os-tag">Strategie, über 100 Module und Live Begleitung an einem Ort.</span>
+</div>
 </div>
 <div class="hero-grid">
 <div>
@@ -684,6 +695,9 @@ header .w{max-width:1320px}
 <span class="tbl"><img src="/img/img-04.svg" alt="STRABAG" loading="eager"></span>
 <span class="tbl"><img src="/img/img-03.webp" alt="CLAAS" loading="eager"></span>
 <span class="tbl"><img src="/img/img-06.webp" alt="Nintendo" loading="eager"></span>
+<span class="tbl"><img src="/img/img-05.webp" alt="mydays" loading="eager"></span>
+<span class="tbl"><img src="/img/img-07.webp" alt="Hitschies" loading="eager"></span>
+<span class="tbl"><img src="/img/img-08.webp" alt="BabyOne" loading="eager"></span>
 </div>
 <div>
 <div class="tb-stars">★★★★★</div>
@@ -731,22 +745,54 @@ header .w{max-width:1320px}
 <section class="marquee">
 <div class="marquee-l">Vertraut von führenden Marken</div>
 <div class="mtrack" id="mtrack">
-<img src="/img/img-01.webp" alt="Jochen Schweizer" loading="lazy" style="height:28px">
-<img src="/img/img-02.webp" alt="EDEKA" loading="lazy" style="height:38px">
-<img src="/img/img-03.webp" alt="CLAAS" loading="lazy" style="height:28px">
-<img src="/img/img-04.svg" alt="STRABAG" loading="lazy" style="height:26px">
-<img src="/img/img-05.webp" alt="mydays" loading="lazy" style="height:48px;border-radius:50%">
-<img src="/img/img-06.webp" alt="Nintendo" loading="lazy" style="height:28px">
-<img src="/img/img-07.webp" alt="Hitschies" loading="lazy" style="height:34px">
-<img src="/img/img-08.webp" alt="BabyOne" loading="lazy" style="height:28px">
-<img src="/img/img-01.webp" alt="" aria-hidden="true" loading="lazy" style="height:28px">
-<img src="/img/img-02.webp" alt="" aria-hidden="true" loading="lazy" style="height:38px">
-<img src="/img/img-03.webp" alt="" aria-hidden="true" loading="lazy" style="height:28px">
-<img src="/img/img-04.svg" alt="" aria-hidden="true" loading="lazy" style="height:26px">
-<img src="/img/img-05.webp" alt="" aria-hidden="true" loading="lazy" style="height:48px;border-radius:50%">
-<img src="/img/img-06.webp" alt="" aria-hidden="true" loading="lazy" style="height:28px">
-<img src="/img/img-07.webp" alt="" aria-hidden="true" loading="lazy" style="height:34px">
-<img src="/img/img-08.webp" alt="" aria-hidden="true" loading="lazy" style="height:28px">
+<span class="mc"><img src="/img/img-01.webp" alt="Jochen Schweizer" loading="lazy"></span>
+<span class="mc"><img src="/img/img-02.webp" alt="EDEKA" loading="lazy"></span>
+<span class="mc"><img src="/img/img-03.webp" alt="CLAAS" loading="lazy"></span>
+<span class="mc"><img src="/img/img-04.svg" alt="STRABAG" loading="lazy"></span>
+<span class="mc"><img src="/img/img-05.webp" alt="mydays" loading="lazy"></span>
+<span class="mc"><img src="/img/img-06.webp" alt="Nintendo" loading="lazy"></span>
+<span class="mc"><img src="/img/img-07.webp" alt="Hitschies" loading="lazy"></span>
+<span class="mc"><img src="/img/img-08.webp" alt="BabyOne" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-01.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-02.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-03.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-04.svg" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-05.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-06.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-07.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-08.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-01.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-02.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-03.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-04.svg" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-05.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-06.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-07.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-08.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-01.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-02.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-03.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-04.svg" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-05.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-06.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-07.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-08.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-01.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-02.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-03.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-04.svg" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-05.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-06.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-07.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-08.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-01.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-02.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-03.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-04.svg" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-05.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-06.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-07.webp" alt="" loading="lazy"></span>
+<span class="mc" aria-hidden="true"><img src="/img/img-08.webp" alt="" loading="lazy"></span>
 </div>
 </section>
 

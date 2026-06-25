@@ -7,6 +7,18 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://virral.de/andre-schroeder/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virral.de/academy/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://virral.de/jochen-schweizer/</loc>
     <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>

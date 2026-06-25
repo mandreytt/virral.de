@@ -178,7 +178,7 @@
 | | |
 |---|---|
 | **Firma** | virral GmbH |
-| **Adresse** | Im Zollhafen 12, 50678 Köln |
+| **Adresse** | Spichernstraße 34 A, 50672 Köln |
 | **Telefon** | +49 221 29256316 |
 | **E-Mail** | hello@virral.de |
 | **Web** | [virral.de](https://virral.de) |

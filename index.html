@@ -107,9 +107,10 @@
 </section>
 
 <!-- VIDEO SLIDER -->
-<section class="vids">
+<section class="vids" id="vidsSlider">
+<style>.vids .vt{animation:none!important;transition:transform .1s linear;will-change:transform}</style>
 <div class="w"><div class="sh"><div class="tag">Case Studies</div><h2>Ein kleiner <span>Einblick</span></h2><p class="sd">In unsere bereits realisierten und aktuell laufenden Social- &amp; Creator-Kampagnen.</p></div></div>
-<div class="vt">
+<div class="vt" id="vidsTrack">
 <div class="vc" style=""><iframe data-src="https://app.vidzflow.com/v/lpdLIi6eXR?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allow="autoplay;fullscreen" loading="lazy"></iframe><div class="vc-views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>5,1 Mio</div><div class="vb">Jochen Schweizer</div></div>
 <div class="vc" style=""><iframe data-src="https://app.vidzflow.com/v/YY4FKiXtNK?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allow="autoplay;fullscreen" loading="lazy"></iframe><div class="vc-views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>3,2 Mio</div><div class="vb">STRABAG</div></div>
 <div class="vc" style=""><iframe data-src="https://app.vidzflow.com/v/H72EJ90QJ3?dq=576&ap=false&muted=false&loop=false&ctp=true&bv=false&piv=false&playsinline=false&bc=%23fe2c55&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allow="autoplay;fullscreen" loading="lazy"></iframe><div class="vc-views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>12,4 Mio</div><div class="vb">EDEKA</div></div>
@@ -897,6 +898,57 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.rv,.rv-s,.rv-l,.rv-r').forEach(function(el){obs.observe(el)});
+})();
+</script>
+
+<script>
+(function(){
+  var sec=document.getElementById('vidsSlider');
+  var track=document.getElementById('vidsTrack');
+  if(!sec||!track) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    track.style.transform='translateX(0)';
+    return;
+  }
+  var maxShift=0;
+  var visible=false;
+  function measure(){
+    // Track ist doppelt (dupliziert) - halbe Breite ist die einmalige Länge
+    var tw=track.scrollWidth/2;
+    var vw=sec.clientWidth;
+    maxShift=Math.max(0, tw - vw + 40);
+  }
+  function update(){
+    if(!visible) return;
+    var r=sec.getBoundingClientRect();
+    var vh=window.innerHeight||document.documentElement.clientHeight;
+    // progress: 0 wenn Sektion gerade eintritt (top==vh), 1 wenn sie austritt (bottom==0)
+    var total=vh + r.height;
+    var travelled=vh - r.top;
+    var p=Math.max(0, Math.min(1, travelled/total));
+    track.style.transform='translate3d('+(-p*maxShift).toFixed(1)+'px,0,0)';
+  }
+  var ticking=false;
+  function onScroll(){
+    if(!ticking){
+      requestAnimationFrame(function(){ update(); ticking=false; });
+      ticking=true;
+    }
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      visible=entries[0].isIntersecting;
+      if(visible){ measure(); update(); }
+    },{threshold:0, rootMargin:'100px 0px'});
+    io.observe(sec);
+  } else {
+    visible=true;
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', function(){ measure(); update(); }, {passive:true});
+  // initial measure nach Layout
+  if(document.readyState==='complete'){ measure(); update(); }
+  else window.addEventListener('load', function(){ measure(); update(); });
 })();
 </script>
 
